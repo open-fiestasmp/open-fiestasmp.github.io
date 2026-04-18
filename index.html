@@ -163,6 +163,8 @@
     flex-direction: column;
     gap: 0;
     overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff20 #ffffff10;
   }
 
   .neo-header {
@@ -311,12 +313,12 @@
     from {
       opacity: 0.3;
       filter: blur(5px);
-      transform: translateY(40px);
+      transform: scale(0.7);
     }
     to {
       opacity: 1;
       filter: blur(0);
-      transform: translateY(0);
+      transform: scale(1)
     }
   }
 
@@ -350,7 +352,7 @@
 
   .ip-copy {
     cursor: pointer;
-    padding: 0.4rem 0.8rem;
+    padding: 0.2rem 0.4rem;
     background: rgba(74, 246, 38, 0.1);
     border: 1px solid var(--green);
     border-radius: 4px;
@@ -5728,7 +5730,7 @@ class SmpDetail {
 /* ── ADD YOUR SERVER DETAILS HERE ── */
 new SmpDetail("IP",       "fiesta.giize.com", { copy: true });
 new SmpDetail("Version",  "1.21.11", { tag: "JAVA" });
-new SmpDetail("Map",  "bluemap: http://129.159.232.235:8100/#world:69451:63:676804:57:0:0:0:1:flat", { link: true });
+new SmpDetail("Map",  "http://129.159.232.235:8100/#world:flat", { link: true });
 new SmpDetail("Discord",  "https://discord.gg/9ZuRV6QD", { link: true });
 new SmpDetail("Mode",     "Survival");
 new SmpDetail("Instagram",      "https://www.instagram.com/fiestasmp/", { link: true });
