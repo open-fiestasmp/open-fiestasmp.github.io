@@ -6,7 +6,7 @@ Direct 1:1 pixel-perfect clone of the official Google Sites prototype (`https://
 
 ## Pages
 
-- **[Home](https://open-fiestasmp.github.io/)** (`index.html` / `home.html`) — Banner title `fiestasmp`, 2-column server specs with screenshot, live Google Calendar agenda stream schedule, and footer contacts.
+- **[Home](https://open-fiestasmp.github.io/)** (`index.html` / `home.html`) — Banner title `FiestaSMP`, 2-column server specs with screenshot, live Google Calendar agenda stream schedule, and footer contacts.
 - **[Terms](https://open-fiestasmp.github.io/terms.html)** (`terms.html`) — Official server terms, allowed mechanics, prohibited exploits, barter economy charter, season lifecycle rules, and community conduct.
 - **[Gallery](https://open-fiestasmp.github.io/gallery.html)** (`gallery.html`) — Google Sites authentic 3-column + 1-column image grid displaying community world captures.
 - **[Socials](https://open-fiestasmp.github.io/socials.html)** (`socials.html`) — Live streaming platforms (Twitch, Kick, YouTube), communications channels (Mail, Discord, X), and core development contributors.
