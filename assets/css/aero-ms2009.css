@@ -1,0 +1,1415 @@
+/* ==========================================================================
+   FIESTA SMP — MICROSOFT 2009 / WINDOWS 7 AERO THEME
+   Inspired by Microsoft.com (October 2009 Windows 7 Release Era)
+   Authentic Frutiger Aero / Glossy Tech Web UI
+   ========================================================================== */
+
+:root {
+  /* Aero Blue & Glass Color Palette */
+  --aero-bg-page: #edf3f8;
+  --aero-page-border: #a4c2db;
+  --aero-container-bg: #ffffff;
+  
+  --aero-glass-top: #eaf4fc;
+  --aero-glass-mid: #d4e8f7;
+  --aero-glass-bot: #b8daf2;
+  --aero-glass-border: #9ec3e2;
+  --aero-glass-shadow: 0 4px 18px rgba(0, 60, 120, 0.14);
+  
+  --aero-blue-primary: #0066cc;
+  --aero-blue-hover: #004d99;
+  --aero-blue-dark: #003366;
+  --aero-blue-light: #4da6ff;
+  
+  /* Navigation Gradients */
+  --nav-bg-grad: linear-gradient(180deg, #f5f9fd 0%, #d8eaf7 48%, #b8daf2 50%, #d4e8f7 100%);
+  --nav-border: #8ab6dc;
+  --nav-hover-grad: linear-gradient(180deg, #ffffff 0%, #e6f3fd 48%, #c5e4f9 50%, #e0effb 100%);
+  --nav-active-grad: linear-gradient(180deg, #4da4e8 0%, #2183d4 48%, #146ebd 50%, #2f8fdc 100%);
+  --nav-active-text: #ffffff;
+  
+  /* Aero Buttons */
+  --btn-aero-grad: linear-gradient(180deg, #ffffff 0%, #edf5fc 46%, #d0e4f7 50%, #e1effb 100%);
+  --btn-aero-border: #7faed4;
+  --btn-aero-text: #003366;
+  --btn-aero-hover: linear-gradient(180deg, #ffffff 0%, #e2f0fb 46%, #bfe0f8 50%, #d5e9fa 100%);
+  --btn-aero-active: linear-gradient(180deg, #cde4f7 0%, #b2d6f4 48%, #93c3ec 50%, #aed2f2 100%);
+  
+  --btn-primary-grad: linear-gradient(180deg, #5fb4f8 0%, #2689e2 48%, #1072ce 50%, #288de4 100%);
+  --btn-primary-border: #0e5ea8;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: linear-gradient(180deg, #74c1fa 0%, #3598ee 48%, #197fdf 50%, #3e9eec 100%);
+  --btn-primary-active: linear-gradient(180deg, #1f79cb 0%, #1066b5 48%, #095195 50%, #156ebf 100%);
+  
+  /* Text & Surface */
+  --text-main: #333333;
+  --text-heading: #003366;
+  --text-muted: #555555;
+  --text-subtle: #777777;
+  --border-light: #cde0ef;
+  --border-card: #bcd6eb;
+  
+  /* Fonts */
+  --font-segoe: "Segoe UI", "SegoeUI", Tahoma, Arial, Helvetica, sans-serif;
+  --font-mono: "Consolas", "Courier New", Courier, monospace;
+}
+
+/* ── BASE RESETS & TYPOGRAPHY ──────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 13px;
+  line-height: 1.5;
+  background-color: var(--aero-bg-page);
+  color: var(--text-main);
+  font-family: var(--font-segoe);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #dceaf6 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.05"><path d="M0 0h100v100H0z" fill="none"/><circle cx="50" cy="50" r="40" stroke="%230066cc" stroke-width="1" fill="none"/></svg>') repeat;
+  background-image: 
+    linear-gradient(180deg, #d1e5f5 0%, #e8f2fa 300px, #edf5fa 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--aero-blue-primary);
+  text-decoration: none;
+  transition: color 0.12s ease;
+}
+
+a:hover {
+  color: var(--aero-blue-dark);
+  text-decoration: underline;
+}
+
+/* ── TOP UTILITY STRIP (MICROSOFT 2009 STYLE) ─────────────── */
+.aero-top-strip {
+  background: linear-gradient(180deg, #ffffff 0%, #f0f5fa 100%);
+  border-bottom: 1px solid #c8dcf0;
+  font-size: 11px;
+  color: #555555;
+  padding: 4px 20px;
+}
+
+.aero-top-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-strip-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.top-strip-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-pill-btn {
+  color: #333333;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.top-pill-btn:hover {
+  color: var(--aero-blue-primary);
+  text-decoration: none;
+}
+
+/* Search Box (2009 Windows/MS Search) */
+.aero-search-form {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #7faed4;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  height: 22px;
+}
+
+.aero-search-input {
+  border: none;
+  outline: none;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-family: var(--font-segoe);
+  color: #333333;
+  width: 160px;
+}
+
+.aero-search-input::placeholder {
+  color: #888888;
+}
+
+.aero-search-btn {
+  background: var(--btn-primary-grad);
+  border: none;
+  border-left: 1px solid var(--btn-primary-border);
+  color: #ffffff;
+  padding: 0 8px;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aero-search-btn:hover {
+  background: var(--btn-primary-hover);
+}
+
+/* ── MAIN CONTAINER / AERO WINDOW FRAME ────────────────────── */
+.aero-page-wrapper {
+  max-width: 1080px;
+  margin: 10px auto 25px;
+  background: var(--aero-container-bg);
+  border: 1px solid var(--aero-page-border);
+  box-shadow: 0 4px 20px rgba(0, 50, 110, 0.12), 0 1px 3px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── AERO HEADER BAR & LOGO ─────────────────────────────────── */
+.aero-header {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8fc 60%, #e2effa 100%);
+  padding: 14px 24px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #bdd7ed;
+  position: relative;
+}
+
+.aero-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.aero-brand:hover {
+  text-decoration: none;
+}
+
+/* Windows 7 Aero 4-Color Glowing Flag/Orb */
+.aero-flag-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #b8defc 40%, #2087e0 80%, #0d5ea6 100%);
+  box-shadow: 0 2px 6px rgba(0, 60, 130, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+  border: 1px solid #5da5dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.aero-flag-icon::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  right: 4px;
+  height: 16px;
+  border-radius: 50% 50% 40% 40%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.05) 100%);
+}
+
+.aero-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.aero-brand-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1a4d7c;
+  line-height: 1.1;
+  font-style: italic;
+}
+
+.aero-brand-title span {
+  color: #0066cc;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.aero-brand-sub {
+  font-size: 11px;
+  color: #557799;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+}
+
+/* Server Quick IP Badge in Header */
+.aero-header-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.aero-ip-pill {
+  background: var(--btn-aero-grad);
+  border: 1px solid var(--btn-aero-border);
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: bold;
+  color: #004080;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.12s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.aero-ip-pill:hover {
+  background: var(--btn-aero-hover);
+  border-color: #5b9ed2;
+  box-shadow: 0 1px 4px rgba(0, 100, 200, 0.18);
+}
+
+.aero-ip-pill:active {
+  background: var(--btn-aero-active);
+}
+
+/* ── ICONIC MICROSOFT 2009 AERO NAVIGATION BAR ────────────── */
+.aero-nav-bar {
+  background: var(--nav-bg-grad);
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid var(--nav-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0 10px;
+  box-shadow: 0 2px 4px rgba(0, 40, 80, 0.06);
+}
+
+.aero-nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.aero-nav-menu li {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.aero-nav-menu a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  color: #003366;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  border-right: 1px solid rgba(138, 182, 220, 0.45);
+  border-left: 1px solid rgba(255, 255, 255, 0.65);
+  position: relative;
+  transition: all 0.12s ease;
+}
+
+.aero-nav-menu a:hover {
+  background: var(--nav-hover-grad);
+  color: #004080;
+  text-decoration: none;
+  box-shadow: inset 0 1px 0 #ffffff;
+}
+
+.aero-nav-menu a.active {
+  background: var(--nav-active-grad);
+  color: #ffffff !important;
+  border-color: #0d5ca4;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.35), 0 1px 0 rgba(255, 255, 255, 0.4);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* ── LIVE TELEMETRY / STATUS RIBBON ────────────────────────── */
+.aero-telemetry-ribbon {
+  background: linear-gradient(180deg, #f2f7fc 0%, #e2eef8 100%);
+  border-bottom: 1px solid #bdd6ec;
+  padding: 5px 18px;
+  font-size: 11px;
+  color: #2b557a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.telemetry-status-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.aero-status-led {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #33cc33;
+  box-shadow: 0 0 5px #33cc33;
+  display: inline-block;
+  animation: aero-pulse 2s infinite ease-in-out;
+}
+
+@keyframes aero-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.9); }
+}
+
+.telemetry-ticker {
+  font-size: 11px;
+  color: #4a6c8c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── HERO BANNER: "GET WINDOWS 7 TODAY" STYLE ─────────────── */
+.hero-ms2009 {
+  background: #eef6fd url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="900" height="340" viewBox="0 0 900 340"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%23d6ebfa"/><stop offset="50%" stop-color="%23edf6fd"/><stop offset="100%" stop-color="%23cbe4f7"/></linearGradient><radialGradient id="r" cx="25%" cy="30%" r="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.8"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><rect width="900" height="340" fill="url(%23g)"/><circle cx="200" cy="100" r="180" fill="url(%23r)"/></svg>') center/cover no-repeat;
+  border-bottom: 1px solid #b4d3ec;
+  padding: 30px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glass shine on top */
+.hero-ms2009::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.05) 100%);
+  pointer-events: none;
+}
+
+.hero-main-layout {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 28px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-aero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(180deg, #ffffff 0%, #e2f0fc 100%);
+  border: 1px solid #9ec4e5;
+  color: #004d99;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 12px;
+  align-self: flex-start;
+  box-shadow: 0 1px 3px rgba(0, 60, 120, 0.08);
+}
+
+.hero-headline {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  line-height: 1.15;
+  color: #003366;
+  margin: 0;
+}
+
+.hero-headline span {
+  color: #0066cc;
+}
+
+.hero-subtext {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #335577;
+  margin: 0;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+/* Chevron bullet links (Signature 2009 Microsoft look) */
+.hero-chevron-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.chevron-link {
+  color: #0055aa;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chevron-link:hover {
+  color: #002244;
+  text-decoration: underline;
+}
+
+.chevron-link::before {
+  content: '›';
+  font-size: 15px;
+  line-height: 1;
+  color: #0066cc;
+  font-weight: bold;
+}
+
+/* Hero Right: "Will your PC run Windows 7?" style promo card */
+.hero-promo-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f9fd 100%);
+  border: 1px solid #a8cce8;
+  border-radius: 4px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 14px rgba(0, 50, 110, 0.1), inset 0 1px 0 #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.promo-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #d8e8f5;
+  padding-bottom: 8px;
+}
+
+.promo-card-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #003366;
+  font-weight: 700;
+}
+
+.promo-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+}
+
+.promo-spec-table td {
+  padding: 3px 0;
+  border-bottom: 1px dashed #dce8f2;
+}
+
+.promo-spec-table td.lbl {
+  font-weight: 600;
+  color: #4a6c8a;
+  width: 45%;
+}
+
+.promo-spec-table td.val {
+  color: #003366;
+  font-weight: 700;
+}
+
+/* Hero Bottom Tab Strip (Highlights, Latest Releases, etc.) */
+.hero-tabs-strip {
+  display: flex;
+  border-top: 1px solid #c2dbf0;
+  margin-top: 22px;
+  padding-top: 10px;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.hero-tab-pill {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 4px 12px;
+  border-radius: 3px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #2b557a;
+  cursor: pointer;
+  transition: all 0.1s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hero-tab-pill:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: #bcd5ea;
+  color: #003366;
+}
+
+.hero-tab-pill.active {
+  background: var(--btn-primary-grad);
+  border-color: var(--btn-primary-border);
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* ── 4-COLUMN FEATURE GRID (MICROSOFT 2009 SIGNATURE) ──────── */
+.aero-section-wrap {
+  padding: 22px 24px;
+}
+
+.aero-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+}
+
+.aero-section-header h2 {
+  font-size: 18px;
+  color: #003366;
+  margin: 0;
+  font-weight: 700;
+}
+
+.aero-section-header .section-meta {
+  font-size: 11px;
+  color: #6688aa;
+}
+
+.feature-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.feat-col-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0, 40, 80, 0.05);
+}
+
+.feat-col-card:hover {
+  border-color: #5b9ed2;
+  box-shadow: 0 3px 10px rgba(0, 70, 150, 0.12);
+}
+
+.feat-card-header-bar {
+  background: linear-gradient(180deg, #f3f8fc 0%, #e1effa 100%);
+  border-bottom: 1px solid #c9dff0;
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #004d99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feat-card-body {
+  padding: 12px 14px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feat-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #003366;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.feat-card-desc {
+  font-size: 12px;
+  color: #444444;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.feat-card-links {
+  margin-top: auto;
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ── 2-COLUMN SPOTLIGHT & PROMO BANNERS ─────────────────────── */
+.spotlight-row-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.aero-spotlight-box {
+  background: linear-gradient(180deg, #f7fafc 0%, #ebf3f9 100%);
+  border: 1px solid #b8d4eb;
+  border-radius: 3px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: 0 2px 6px rgba(0, 40, 90, 0.05);
+}
+
+.spotlight-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  background: var(--btn-primary-grad);
+  border: 1px solid var(--btn-primary-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 50, 110, 0.2);
+}
+
+.spotlight-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.spotlight-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #003366;
+  margin: 0;
+}
+
+.spotlight-desc {
+  font-size: 12px;
+  color: #444444;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* ── 3-COLUMN QUICK DESTINATIONS & DOWNLOADS ───────────────── */
+.destination-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border-top: 1px solid #d4e5f2;
+  padding-top: 18px;
+  margin-bottom: 16px;
+}
+
+.dest-col-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #003366;
+  border-bottom: 1px solid #0066cc;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+.dest-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dest-list li a {
+  font-size: 12px;
+  color: #004d99;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dest-list li a:hover {
+  color: #002244;
+  text-decoration: underline;
+}
+
+.dest-list li a::before {
+  content: '›';
+  font-size: 13px;
+  color: #0066cc;
+  font-weight: bold;
+}
+
+/* ── BUTTON STYLES (AERO GLASS & SATIN) ────────────────────── */
+.btn-aero-primary {
+  background: var(--btn-primary-grad);
+  border: 1px solid var(--btn-primary-border);
+  color: var(--btn-primary-text) !important;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 5px 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 1px 3px rgba(0, 40, 80, 0.2);
+  text-decoration: none !important;
+  transition: all 0.12s ease;
+  line-height: 1.3;
+}
+
+.btn-aero-primary:hover {
+  background: var(--btn-primary-hover);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 2px 6px rgba(0, 60, 120, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-aero-primary:active {
+  background: var(--btn-primary-active);
+  transform: translateY(1px);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.btn-aero-classic {
+  background: var(--btn-aero-grad);
+  border: 1px solid var(--btn-aero-border);
+  color: var(--btn-aero-text) !important;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 5px 13px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: inset 0 1px 0 #ffffff, 0 1px 2px rgba(0, 0, 0, 0.08);
+  text-decoration: none !important;
+  transition: all 0.12s ease;
+  line-height: 1.3;
+}
+
+.btn-aero-classic:hover {
+  background: var(--btn-aero-hover);
+  border-color: #5b9ed2;
+  box-shadow: inset 0 1px 0 #ffffff, 0 1px 4px rgba(0, 60, 120, 0.15);
+}
+
+.btn-aero-classic:active {
+  background: var(--btn-aero-active);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* ── NEWS PAGE STYLES (WINDOWS 7 AERO BULLETIN) ────────────── */
+.news-hero-bar {
+  background: linear-gradient(180deg, #e4f1fb 0%, #cce5f7 100%);
+  border-bottom: 1px solid #abcfe8;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-hero-bar h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #003366;
+  margin: 0 0 4px 0;
+}
+
+.news-hero-bar p {
+  font-size: 12.5px;
+  color: #335577;
+  margin: 0;
+}
+
+.news-layout {
+  display: grid;
+  grid-template-columns: 2.2fr 0.8fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+.news-article-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 4px;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 40, 80, 0.04);
+}
+
+.news-article-card.featured-post {
+  border-top: 3px solid #0066cc;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbfe 100%);
+}
+
+.news-meta-strip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: #6688aa;
+  margin-bottom: 8px;
+}
+
+.news-tag-badge {
+  background: #e1effa;
+  border: 1px solid #b8daf2;
+  color: #004d99;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 2px;
+  font-size: 10.5px;
+}
+
+.news-article-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #003366;
+  margin: 0 0 10px 0;
+  line-height: 1.25;
+}
+
+.news-article-title a {
+  color: #003366;
+}
+
+.news-article-title a:hover {
+  color: #0066cc;
+}
+
+.news-article-excerpt {
+  font-size: 12.5px;
+  color: #444444;
+  line-height: 1.55;
+  margin: 0 0 12px 0;
+}
+
+.news-sidebar-box {
+  background: #f7fafc;
+  border: 1px solid var(--border-card);
+  border-radius: 3px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.news-sidebar-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #003366;
+  border-bottom: 1px solid #d4e5f2;
+  padding-bottom: 6px;
+  margin: 0 0 10px 0;
+}
+
+/* ── TERMS & RULES (WINDOWS 7 EXPLORER STYLE) ──────────────── */
+.terms-explorer-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 600px;
+  border-top: 1px solid #b8daf2;
+}
+
+.terms-sidebar-pane {
+  background: #f0f5fa;
+  border-right: 1px solid #bdd7ed;
+  padding: 18px 14px;
+}
+
+.terms-pane-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #557799;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  padding-left: 6px;
+}
+
+.terms-tree-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.terms-tree-nav a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 3px;
+  color: #003366;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.terms-tree-nav a:hover {
+  background: #e2effa;
+  border-color: #bcd9f2;
+}
+
+.terms-tree-nav a.is-active {
+  background: var(--btn-primary-grad);
+  border-color: var(--btn-primary-border);
+  color: #ffffff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+}
+
+.terms-content-pane {
+  padding: 22px 28px;
+  background: #ffffff;
+}
+
+.rule-group-card {
+  border: 1px solid var(--border-card);
+  border-radius: 3px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 40, 80, 0.04);
+}
+
+.rule-group-header {
+  background: linear-gradient(180deg, #f2f7fc 0%, #e2eff9 100%);
+  border-bottom: 1px solid #bdd7ed;
+  padding: 8px 14px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #003366;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rule-group-body {
+  padding: 14px 18px;
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+
+.tag-strip-aero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.tag-aero {
+  background: #f0f5fa;
+  border: 1px solid #bcd5eb;
+  color: #004080;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 2px;
+}
+
+.tag-aero.allowed {
+  background: #eef9ee;
+  border-color: #b0e2b0;
+  color: #006622;
+}
+
+.tag-aero.prohibited {
+  background: #fdf0f0;
+  border-color: #f5baba;
+  color: #b31414;
+}
+
+.aero-notice-box {
+  background: #fffcee;
+  border: 1px solid #eedc82;
+  border-radius: 3px;
+  padding: 12px 16px;
+  margin: 18px 0;
+  font-size: 12px;
+  color: #554400;
+  line-height: 1.5;
+}
+
+/* ── GALLERY PAGE (WINDOWS PHOTO VIEWER STYLE) ─────────────── */
+.gallery-grid-aero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 20px 24px;
+}
+
+.gallery-photo-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 3px;
+  padding: 8px;
+  box-shadow: 0 2px 6px rgba(0, 40, 80, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.gallery-photo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 60, 120, 0.18);
+  border-color: #5b9ed2;
+}
+
+.photo-thumb-wrap {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #c9dff0;
+  border-radius: 2px;
+  background: #111111;
+  aspect-ratio: 16/9;
+}
+
+.photo-thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.gallery-photo-card:hover .photo-thumb-wrap img {
+  transform: scale(1.03);
+}
+
+.photo-meta-bar {
+  padding: 8px 4px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #003366;
+}
+
+/* Lightbox Modal (Windows 7 Aero Window Style) */
+dialog#lb {
+  border: 1px solid #5b9ed2;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 10px 35px rgba(0, 30, 80, 0.35);
+  padding: 0;
+  max-width: 90vw;
+  max-height: 90vh;
+  outline: none;
+}
+
+dialog#lb::backdrop {
+  background: rgba(10, 30, 60, 0.65);
+  backdrop-filter: blur(2px);
+}
+
+.lb-window-header {
+  background: linear-gradient(180deg, #e6f2fc 0%, #bddcf6 100%);
+  border-bottom: 1px solid #9ec3e2;
+  padding: 6px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #003366;
+}
+
+.lb-close-btn {
+  background: linear-gradient(180deg, #f58282 0%, #d83c3c 100%);
+  border: 1px solid #a82020;
+  color: #ffffff;
+  border-radius: 2px;
+  padding: 1px 7px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* ── SOCIALS & DIRECTORY ───────────────────────────────────── */
+.socials-category-wrap {
+  padding: 20px 24px;
+}
+
+.social-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.social-card-item {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 3px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 1px 3px rgba(0, 40, 80, 0.05);
+  transition: all 0.12s ease;
+  text-decoration: none;
+}
+
+.social-card-item:hover {
+  border-color: #5b9ed2;
+  box-shadow: 0 3px 10px rgba(0, 60, 120, 0.12);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.social-card-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.social-card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-card-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #003366;
+}
+
+.social-card-sub {
+  font-size: 11px;
+  color: #557799;
+}
+
+/* ── SUPPORT & CONTACT HUB ─────────────────────────────────── */
+.support-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 20px 24px 10px;
+}
+
+.support-action-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 3px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 1px 3px rgba(0, 40, 80, 0.05);
+}
+
+.support-action-card h3 {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #003366;
+  margin: 0 0 6px 0;
+}
+
+.support-action-card p {
+  font-size: 12px;
+  color: #444444;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* FAQ Accordion */
+.faq-wrap-aero {
+  padding: 10px 24px 24px;
+}
+
+.faq-item-aero {
+  border: 1px solid var(--border-card);
+  border-radius: 3px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.faq-question-aero {
+  background: linear-gradient(180deg, #f7fafc 0%, #ebf3f9 100%);
+  padding: 10px 14px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #003366;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer-aero {
+  padding: 12px 14px;
+  background: #ffffff;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #333333;
+  border-top: 1px solid #d8e8f5;
+}
+
+/* ── TOAST NOTIFICATIONS ───────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: linear-gradient(180deg, #2b8ee5 0%, #1072ce 100%);
+  border: 1px solid #0b5095;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 50, 110, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ── CORPORATE 2009 FOOTER ─────────────────────────────────── */
+.aero-footer {
+  background: linear-gradient(180deg, #e4eef6 0%, #d1e2ef 100%);
+  border-top: 1px solid #adcbe2;
+  padding: 18px 24px;
+  font-size: 11px;
+  color: #446688;
+}
+
+.footer-nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.footer-nav-links a {
+  color: #004d99;
+  font-weight: 500;
+}
+
+.footer-copy-text {
+  text-align: center;
+  color: #557799;
+  line-height: 1.5;
+}
+
+/* ── RESPONSIVE ADAPTATIONS ─────────────────────────────────── */
+@media (max-width: 960px) {
+  .hero-main-layout {
+    grid-template-columns: 1fr;
+  }
+  .feature-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .spotlight-row-2 {
+    grid-template-columns: 1fr;
+  }
+  .destination-grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .news-layout {
+    grid-template-columns: 1fr;
+  }
+  .terms-explorer-layout {
+    grid-template-columns: 1fr;
+  }
+  .gallery-grid-aero {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .social-cards-grid,
+  .support-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .feature-grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .gallery-grid-aero {
+    grid-template-columns: 1fr;
+  }
+  .aero-top-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .aero-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .hero-headline {
+    font-size: 24px;
+  }
+}

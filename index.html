@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Fiesta SMP — Survival with the safety off</title>
-  <meta name="description" content="Fiesta SMP — Survival with the safety off. Pure physical barter, raids enabled, long-haul seasons, crossplay for Java & Bedrock.">
-  <meta name="theme-color" content="#006622">
+  <title>Fiesta SMP — Official Minecraft Survival Server</title>
+  <meta name="description" content="Fiesta SMP is a long-haul Minecraft survival server for Java &amp; Bedrock (1.8 → 26.3+). Pure physical barter, raids enabled, seasons lasting years. IP: fiesta.debarkak.xyz">
+  <meta name="theme-color" content="#2087e0">
 
-  <!-- Icons -->
+  <!-- Favicons & Icons -->
   <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/icon-192.png">
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fiesta SMP">
   <meta property="og:title" content="Fiesta SMP — Survival with the safety off">
@@ -19,669 +19,413 @@
   <meta property="og:image" content="assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Green Console Theme Stylesheet -->
-  <link rel="stylesheet" href="assets/css/console-site.css">
+  <!-- Windows 7 Aero & Microsoft 2009 Stylesheet -->
+  <link rel="stylesheet" href="assets/css/aero-ms2009.css">
 
-  <script>
-    (function(d,n){
-      var c=d.documentElement;
-      c.className+=' js';
-      var m=n.deviceMemory, h=n.hardwareConcurrency, s=n.connection&&n.connection.saveData;
-      if((m&&m<=2)||(h&&h<=2)||s) c.className+=' lite';
-    })(document,navigator);
-  </script>
-
-  <!-- Client-side Interactivity -->
+  <!-- Client-side Logic -->
   <script src="assets/js/site.js" defer></script>
-
 </head>
-<body data-base="assets/">
+<body>
 
-  <div class="console-frame">
-    <!-- ── CONSOLE TOP HEADER ─────────────────────────────────── -->
-    <header class="header-bar">
-      <a class="brand-container" href="index.html" title="Fiesta SMP Gateway Console">
-        <img class="brand-logo-img" src="assets/img/server-icon.webp" alt="Fiesta SMP Icon" width="44" height="44">
-        <div class="brand-text">
-          <span class="brand-name">FIESTA <b>SMP</b></span>
-          <span class="brand-sub">Survival · Est. 2021 · Barter or die!</span>
+  <!-- ── 1. TOP UTILITY STRIP (MICROSOFT 2009 CORPORATE HEADER) ──────── -->
+  <div class="aero-top-strip">
+    <div class="aero-top-inner">
+      <div class="top-strip-left">
+        <span class="top-pill-btn">
+          <b>Edition:</b> Global Java &amp; Bedrock Network
+        </span>
+        <span style="color:#a8cce8;">|</span>
+        <span style="color:#557799;">Minecraft 1.8 &rarr; 26.3+</span>
+      </div>
+
+      <div class="top-strip-right">
+        <form class="aero-search-form" onsubmit="event.preventDefault(); window.location.href='news.html';">
+          <input type="text" class="aero-search-input" placeholder="Search FiestaSMP.com" aria-label="Search">
+          <button type="submit" class="aero-search-btn" title="Search">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </form>
+        <span style="color:#a8cce8;">|</span>
+        <a class="top-pill-btn" href="https://fiesta.debarkak.xyz/login" target="_blank" rel="noopener">
+          [ Staff Portal ]
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MAIN PAGE WRAPPER ─────────────────────────────────────────── -->
+  <div class="aero-page-wrapper">
+
+    <!-- ── 2. BRANDING & HEADER ─────────────────────────────────────── -->
+    <header class="aero-header">
+      <a class="aero-brand" href="index.html" title="Fiesta SMP — Official Home">
+        <div class="aero-flag-icon" aria-hidden="true">
+          <!-- 4-Color Windows-inspired Emblem -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M3 4.5C6.5 3 10 5.5 13.5 4C17 2.5 20 4.5 21 5V14C20 13.5 17 11.5 13.5 13C10 14.5 6.5 12 3 13.5V4.5Z" fill="#ffffff" opacity="0.95"/>
+            <path d="M12 4.2V13.8" stroke="#1072ce" stroke-width="1.2"/>
+            <path d="M3 9H21" stroke="#1072ce" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <div class="aero-brand-text">
+          <span class="aero-brand-title">Fiesta<span>SMP</span></span>
+          <span class="aero-brand-sub">Survival &middot; Est. 2021 &middot; Barter or die!</span>
         </div>
       </a>
 
-      <div class="header-meta">
-        <div class="header-model">GATEWAY FS-GATEWAY-PRO · PORT 25565 / 19132</div>
-        <div class="header-quick-links">
-          <button type="button" class="btn-satin" data-copy="fiesta.debarkak.xyz" title="Click to copy server IP address">
-            <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-copy"/></svg>
-            <span data-copy-label>fiesta.debarkak.xyz</span>
-          </button>
-          <a class="btn-classic btn-discord" href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener" title="Join official Discord">
-            <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-discord"/></svg>
-            <span>Discord</span>
-          </a>
-          <a class="btn-classic" href="https://fiesta.debarkak.xyz/login" title="Staff &amp; Admin Management Portal">
-            <span>[ Admin Portal ]</span>
-          </a>
-        </div>
+      <div class="aero-header-badge">
+        <button type="button" class="aero-ip-pill" data-copy="fiesta.debarkak.xyz" title="Click to copy server IP address">
+          <span>IP: <b>fiesta.debarkak.xyz</b></span>
+          <span style="font-size:10px; color:#0066cc;" data-copy-label>[ COPY ]</span>
+        </button>
+        <span style="font-size:10px; color:#557799;">Java: 25565 &middot; Bedrock: 19132</span>
       </div>
     </header>
 
-    <!-- ── ROUTER NAVIGATION BAR ─────────────────────────────── -->
-    <nav class="nav-bar" aria-label="Console Navigation">
-      <ul class="nav-tabs">
-        <li>
-          <a href="index.html" class="active">
-            <span class="tab-idx">01</span>
-            <span>Home</span>
-          </a>
-        </li>
-        <li>
-          <a href="terms.html" class="">
-            <span class="tab-idx">02</span>
-            <span>Terms &amp; Rules</span>
-          </a>
-        </li>
-        <li>
-          <a href="gallery.html" class="">
-            <span class="tab-idx">03</span>
-            <span>Gallery</span>
-          </a>
-        </li>
-        <li>
-          <a href="socials.html" class="">
-            <span class="tab-idx">04</span>
-            <span>Socials</span>
-          </a>
-        </li>
-        <li>
-          <a href="support.html" class="">
-            <span class="tab-idx">05</span>
-            <span>Support</span>
-          </a>
-        </li>
+    <!-- ── 3. ICONIC MICROSOFT 2009 NAVIGATION BAR ──────────────────── -->
+    <nav class="aero-nav-bar" aria-label="Main Navigation">
+      <ul class="aero-nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="terms.html">Terms &amp; Rules</a></li>
+        <li><a href="news.html">News &amp; Updates</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="socials.html">Community &amp; Socials</a></li>
+        <li><a href="support.html">Contact &amp; Support</a></li>
       </ul>
-
-      <div class="nav-actions">
-        <a class="btn-satin" href="index.html#join" style="padding: 4px 10px; font-size: 10.5px;">
-          <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-gamepad"/></svg>
-          <span>Play Now</span>
-        </a>
-      </div>
     </nav>
 
-    <!-- ── TELEMETRY & STATUS STRIP ───────────────────────────── -->
-    <div class="telemetry-strip" data-status-root>
-      <div class="telemetry-left">
-        <span class="led-indicator "></span>
-        <span class="telemetry-status-text">
-          
-            STATUS: ONLINE
-          
-        </span>
-        <span class="telemetry-specs">
-          [ JAVA: 25565 · BEDROCK: 19132 · 1.8 → 26.3+ · PURE BARTER ]
-        </span>
+    <!-- ── 4. LIVE TELEMETRY RIBBON ─────────────────────────────────── -->
+    <div class="aero-telemetry-ribbon">
+      <div class="telemetry-status-block">
+        <span class="aero-status-led"></span>
+        <span>STATUS: <b data-live-status style="color:#008800;">ONLINE</b></span>
+        <span style="color:#99b8d4;">|</span>
+        <span>Players: <b data-live-players>0</b> / <span data-live-max>69</span></span>
+        <span style="color:#99b8d4;">|</span>
+        <span>Core: <span data-live-version>Paper 1.21.x</span> (1.8 &rarr; 26.3+)</span>
       </div>
       <div class="telemetry-ticker">
-        [SYS] Trust no one · Trade anyway · Join the stream · Bring gifts · Guard your coords · Party hats mandatory · Est. 2021
+        [ANNOUNCEMENT] Trust no one &middot; Trade anyway &middot; Saturdays are Showtime &middot; Guard your coords &middot; Pure Barter
       </div>
     </div>
 
-    <!-- ── WORKSPACE AREA ────────────────────────────────────── -->
-    <main class="workspace-area">
-      
-<!-- ── HERO GATEWAY BANNER ───────────────────────────────────── -->
-<section class="hero-gateway">
-  <div class="hero-left">
-    <div>
-      <div class="hero-chip-badge">
-        <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-star"/></svg>
-        <span>OFFICIAL SERVER GATEWAY // SURVIVAL EST. 2021</span>
-      </div>
-      <h1 class="hero-heading">
-        Survival, with the <span class="hl-green">safety off</span>.
-      </h1>
-      <p class="hero-lead">
-        A long-haul survival world with the safety off. Barter for everything, guard your coords, and build something worth raiding &mdash; on Java or Bedrock.
-      </p>
-    </div>
-
-    <!-- Diagnostic IP Connect Widget -->
-    <div class="ip-connect-box" data-ipw>
-      <div class="ip-tabs">
-        <button type="button" class="ip-tab-btn active" data-ed="java">Java Edition (PC/Mac)</button>
-        <button type="button" class="ip-tab-btn" data-ed="bedrock">Bedrock (Console/Mobile/Win)</button>
-      </div>
-
-      <div class="ip-display-row">
-        <div class="ip-val-group">
-          <span class="ip-address-text">fiesta.debarkak.xyz</span>
-          <span class="ip-port-meta">Java Edition &middot; port <b>25565</b></span>
-        </div>
-
-        <div style="display:flex; gap:6px;">
-          <button type="button" class="btn-satin" data-copy="fiesta.debarkak.xyz" title="Copy server address">
-            <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-copy"/></svg>
-            <span data-copy-label>Copy IP</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-actions-row">
-      <a class="btn-classic btn-discord" href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener">
-        <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-discord"/></svg>
-        <span>Join the Discord</span>
-      </a>
-      <a class="btn-classic" href="terms.html">
-        <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-shield"/></svg>
-        <span>House Rules</span>
-      </a>
-      <a class="btn-classic" href="gallery.html">
-        <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-heart"/></svg>
-        <span>Server Gallery</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- Hero Right: Gateway Telemetry & Hardware Diagnostics Monitor -->
-  <div class="hero-right-viewport router-monitor-box">
-    <div class="radar-header">
-      <span class="mon-title">[ DIAGNOSTICS: GATEWAY TELEMETRY // FS-GATEWAY-PRO ]</span>
-      <span style="display:flex; align-items:center; gap:5px;">
-        <span class="led-indicator" style="width:7px; height:7px;"></span>
-        <span>ONLINE &middot; 1000M FD</span>
-      </span>
-    </div>
-
-    <div class="monitor-body">
-      <!-- Status Matrix Grid -->
-      <div class="monitor-grid">
-        <div class="mon-cell">
-          <div class="mon-lbl">TICK ENGINE (TPS)</div>
-          <div class="mon-val hl-green">20.00 <span class="mon-unit">/ 20.0 (100%)</span></div>
-          <div class="mon-bar-wrap"><div class="mon-bar-fill" style="width:100%;"></div></div>
-        </div>
-        <div class="mon-cell">
-          <div class="mon-lbl">MEMORY ALLOCATION</div>
-          <div class="mon-val">8,412 <span class="mon-unit">/ 32,768 MB ECC</span></div>
-          <div class="mon-bar-wrap"><div class="mon-bar-fill" style="width:26%;"></div></div>
-        </div>
-        <div class="mon-cell">
-          <div class="mon-lbl">NETWORK LINK</div>
-          <div class="mon-val">1 Gbps <span class="mon-unit">WAN (0.00% Loss)</span></div>
-          <div class="mon-bar-wrap"><div class="mon-bar-fill" style="width:99%;"></div></div>
-        </div>
-        <div class="mon-cell">
-          <div class="mon-lbl">CROSSPLAY BRIDGE</div>
-          <div class="mon-val hl-green">ACTIVE <span class="mon-unit">Geyser v2.4</span></div>
-          <div class="mon-bar-wrap"><div class="mon-bar-fill" style="width:100%;"></div></div>
-        </div>
-      </div>
-
-      <!-- Live Topology Visualizer -->
-      <div class="topology-strip">
-        <span class="topo-label">ROUTING TOPOLOGY:</span>
-        <div class="topo-nodes">
-          <span class="topo-node">[WAN: fiesta.debarkak.xyz]</span>
-          <span class="topo-arrow">&rarr;</span>
-          <span class="topo-node">[VELOCITY PROXY]</span>
-          <span class="topo-arrow">&rarr;</span>
-          <span class="topo-node hl-green">[PURPUR 1.21.x]</span>
-          <span class="topo-arrow">&rarr;</span>
-          <span class="topo-node">[BEDROCK: 19132]</span>
-        </div>
-      </div>
-
-      <!-- Live Diagnostic Event Stream Terminal -->
-      <div class="terminal-screen">
-        <div class="terminal-line"><span class="t-ts">[SYS_BOOT]</span> FS-GATEWAY-PRO v2.6.3-SMP kernel online.</div>
-        <div class="terminal-line"><span class="t-ts">[NET_BIND]</span> Bound TCP:25565 (Java) &amp; UDP:19132 (Bedrock)... OK.</div>
-        <div class="terminal-line"><span class="t-ts">[AUTH_MOD]</span> Geyser-Floodgate open authentication active.</div>
-        <div class="terminal-line"><span class="t-ts">[RULE_ENG]</span> Physical barter enforced. Raids &amp; PvP enabled.</div>
-        <div class="terminal-line"><span class="t-ts">[SECURITY]</span> Anti-cheat telemetry operational. Ready for players.<span class="terminal-cursor">_</span></div>
-      </div>
-    </div>
-
-    <div class="radar-overlay-footer">
-      <span>LATENCY: ~18ms &middot; 0 DROPPED TICKS</span>
-      <span>CHUNK STATUS: TICKING (842 LOADED)</span>
-    </div>
-  </div>
-</section>
-
-<!-- ── KEY STATS SUMMARY STRIP ──────────────────────────────── -->
-<div class="stats-banner-strip">
-  <div class="stat-item">
-    <span class="stat-val">2021</span>
-    <span class="stat-lbl">Running Since</span>
-  </div>
-  <div class="stat-item">
-    <span class="stat-val">2&times;</span>
-    <span class="stat-lbl">Editions, One World</span>
-  </div>
-  <div class="stat-item">
-    <span class="stat-val">1.5&ndash;3 yr</span>
-    <span class="stat-lbl">Per Season</span>
-  </div>
-  <div class="stat-item">
-    <span class="stat-val">0</span>
-    <span class="stat-lbl">Server Shops</span>
-  </div>
-</div>
-
-<!-- ── SECTION 01: THE WORLD ────────────────────────────────── -->
-<div class="section-bar">
-  <div class="section-bar-title">
-    <span class="sec-tag">01</span>
-    <span>The World &mdash; Survival, No Safety Net</span>
-  </div>
-  <span style="font-size: 10px; opacity: 0.9;">GAMEPLAY SPECIFICATIONS</span>
-</div>
-
-<p style="margin: 0 0 14px; font-size: 12.5px; color: var(--text-sub);">
-  No claims babysitting, no server shop, no pay-to-win. Just a big world, your wits, and whatever you can trade, build or take.
-</p>
-
-<div class="cards-grid-3">
-  <!-- Card 1 -->
-  <div class="console-card">
-    <div class="card-top-bar">
-      <span>Raids are real.</span>
-      <span class="card-tag">COMBAT</span>
-    </div>
-    <div class="card-content">
-      <p>
-        PvP, raiding, theft and clan warfare are all fair game. Anything you leave unprotected is up for grabs &mdash; so guard your coordinates and your gear.
-      </p>
-      <div class="tags-strip">
-        <span class="tag-pill">PvP</span>
-        <span class="tag-pill">Raiding</span>
-        <span class="tag-pill">Theft</span>
-        <span class="tag-pill">Clan wars</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 2 -->
-  <div class="console-card">
-    <div class="card-top-bar">
-      <span>Barter only</span>
-      <span class="card-tag">ECONOMY</span>
-    </div>
-    <div class="card-content">
-      <p>
-        No currency, no <code>/pay</code>, no server shop. Every deal is a face-to-face trade &mdash; and a chance to get betrayed.
-      </p>
-      <div class="tags-strip">
-        <span class="tag-pill">No /pay</span>
-        <span class="tag-pill">Zero virtual cash</span>
-        <span class="tag-pill">Face-to-face</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="console-card">
-    <div class="card-top-bar">
-      <span>Seasons last years</span>
-      <span class="card-tag">LIFECYCLE</span>
-    </div>
-    <div class="card-content">
-      <p>
-        Each season runs roughly 1.5&ndash;3 years. Wipes only happen when a new season launches, and they’re announced well ahead.
-      </p>
-      <div class="tags-strip">
-        <span class="tag-pill">1.5&ndash;3 yrs</span>
-        <span class="tag-pill">No sudden wipes</span>
-        <span class="tag-pill">Advance notice</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 4 -->
-  <div class="console-card">
-    <div class="card-top-bar">
-      <span>Any version, both editions</span>
-      <span class="card-tag">COMPATIBILITY</span>
-    </div>
-    <div class="card-content">
-      <p>
-        Java and Bedrock play together, from 1.8 all the way to 26.3+. Offline clients welcome.
-      </p>
-      <div class="tags-strip">
-        <span class="tag-pill">Java + Bedrock</span>
-        <span class="tag-pill">1.8 &rarr; 26.3+</span>
-        <span class="tag-pill">Offline clients OK</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 5 -->
-  <div class="console-card">
-    <div class="card-top-bar">
-      <span>Cheaters get the hammer</span>
-      <span class="card-tag">SECURITY</span>
-    </div>
-    <div class="card-content">
-      <p>
-        Killaura, fly, Baritone, freecam, dupes, lag machines: instant permanent IP + hardware ban.
-      </p>
-      <div class="tags-strip">
-        <span class="tag-pill prohibited">Zero tolerance</span>
-        <span class="tag-pill prohibited">Permanent IP ban</span>
-        <span class="tag-pill prohibited">Hardware ban</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 6 -->
-  <div class="console-card">
-    <div class="card-top-bar">
-      <span>Voice chat &amp; perf mods</span>
-      <span class="card-tag">CLIENT MODS</span>
-    </div>
-    <div class="card-content">
-      <p>
-        Simple Voice Chat is allowed, plus Sodium, Iris and Lithium for buttery frames.
-      </p>
-      <div class="tags-strip">
-        <span class="tag-pill">Simple Voice Chat</span>
-        <span class="tag-pill">Sodium</span>
-        <span class="tag-pill">Iris</span>
-        <span class="tag-pill">Lithium</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── SECTION 02: LIVE STATUS ──────────────────────────────── -->
-<div class="section-bar">
-  <div class="section-bar-title">
-    <span class="sec-tag">02</span>
-    <span>Live Server Status &mdash; Right Now</span>
-  </div>
-  <span style="font-size: 10px; opacity: 0.9;">REAL-TIME MULTIPLAYER TELEMETRY</span>
-</div>
-
-<div class="stream-box" style="margin-bottom: 24px;">
-  <!-- Left Status Diagnostic -->
-  <div>
-    <div style="display:flex; align-items:center; gap:8px; margin-bottom: 8px;">
-      <span class="led-indicator"></span>
-      <span style="font-family:var(--font-mono); font-weight:bold; font-size:12px; color:var(--green-primary);" data-s="pill">
-        Checking server status&hellip;
-      </span>
-    </div>
-
-    <div style="background:#ffffff; border:1px solid #c8d4c8; padding:10px 12px; border-radius:3px; margin-bottom:12px;">
-      <div style="font-size:11px; color:#888; text-transform:uppercase; font-family:var(--font-mono); margin-bottom:4px;">
-        Server Message of the Day (MOTD)
-      </div>
-      <div style="font-family:var(--font-mono); font-size:12.5px; color:#222; font-weight:bold; min-height:36px; line-height:1.4;" data-s="motd">
-        Fiesta SMP &mdash; Survival with the safety off<br>
-        <span style="color:#006622;">Barter or die!</span>
-      </div>
-    </div>
-
-    <div style="display:flex; gap:8px;">
-      <button type="button" class="btn-satin" data-copy="fiesta.debarkak.xyz">
-        <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-copy"/></svg>
-        <span data-copy-label>Copy Server IP</span>
-      </button>
-      <a class="btn-classic btn-discord" href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener">
-        <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-discord"/></svg>
-        <span>Join Discord</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- Right Spec Table -->
-  <div>
-    <table class="console-table" style="margin:0;">
-      <tbody>
-        <tr>
-          <th style="width: 38%;">Java Host / Port</th>
-          <td><code>fiesta.debarkak.xyz:25565</code></td>
-        </tr>
-        <tr>
-          <th>Bedrock Port</th>
-          <td><code>19132</code> (Default Bedrock)</td>
-        </tr>
-        <tr>
-          <th>Players Online</th>
-          <td><b style="color:var(--green-primary);"><span data-s="players">0</span> / <span data-s="max">69</span></b></td>
-        </tr>
-        <tr>
-          <th>Server Software</th>
-          <td><span data-s="software">Paper / Purpur 1.21.x</span></td>
-        </tr>
-        <tr>
-          <th>Supported Versions</th>
-          <td>1.8 &rarr; 26.3+ (Java) / Bedrock Latest</td>
-        </tr>
-        <tr>
-          <th>Offline Clients</th>
-          <td><b style="color:#006622;">Supported (Open Auth)</b></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<!-- ── SECTION 03: HOW TO JOIN ──────────────────────────────── -->
-<div class="section-bar" id="join">
-  <div class="section-bar-title">
-    <span class="sec-tag">03</span>
-    <span>Join &mdash; In-Game in Under a Minute</span>
-  </div>
-  <span style="font-size: 10px; opacity: 0.9;">QUICK SETUP GUIDE</span>
-</div>
-
-<div class="steps-container">
-  <!-- Step 1 -->
-  <div class="step-card">
-    <div class="step-num-badge">1</div>
-    <div class="step-title">Launch Minecraft</div>
-    <div class="step-desc">
-      Java or Bedrock, any version from 1.8 to 26.3+. Offline clients work too.
-    </div>
-  </div>
-
-  <!-- Step 2 -->
-  <div class="step-card">
-    <div class="step-num-badge">2</div>
-    <div class="step-title">Add the Server</div>
-    <div class="step-desc">
-      Multiplayer &rarr; Add Server &rarr; <code>fiesta.debarkak.xyz</code>. On Bedrock, set the port to <b>19132</b>.
-    </div>
-    <button type="button" class="btn-classic" data-copy="fiesta.debarkak.xyz" style="margin-top:auto; font-size:10.5px;">
-      <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-copy"/></svg>
-      <span data-copy-label>Copy fiesta.debarkak.xyz</span>
-    </button>
-  </div>
-
-  <!-- Step 3 -->
-  <div class="step-card">
-    <div class="step-num-badge">3</div>
-    <div class="step-title">Say Hi on Discord</div>
-    <div class="step-desc">
-      Catch announcements, find allies (or targets), and open a ticket if you ever need staff.
-    </div>
-    <a class="btn-classic btn-discord" href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener" style="margin-top:auto; font-size:10.5px;">
-      <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-discord"/></svg>
-      <span>discord.gg/marqvC9UrP</span>
-    </a>
-  </div>
-</div>
-
-<!-- ── SECTION 04: LIVE STREAMS ─────────────────────────────── -->
-<div class="section-bar">
-  <div class="section-bar-title">
-    <span class="sec-tag">04</span>
-    <span>Live &mdash; Saturdays are Showtime</span>
-  </div>
-  <span style="font-size: 10px; opacity: 0.9;">COMMUNITY BROADCASTS</span>
-</div>
-
-<div class="stream-box" data-sat>
-  <div>
-    <div style="font-size:11px; font-weight:bold; color:var(--green-primary); text-transform:uppercase; font-family:var(--font-mono); margin-bottom:4px;" data-sat-state>
-      Next Stream &middot; Saturday Afternoon
-    </div>
-    <h3 style="margin:0 0 8px; font-size:16px; color:var(--text-bold);" data-sat-when>
-      Every Saturday afternoon &middot; live on stream
-    </h3>
-    <p style="margin:0 0 12px; font-size:12px; color:var(--text-sub); line-height:1.5;">
-      We stream almost every Saturday. Hop on the server in the afternoon and you’re part of the show &mdash; raids, trades, betrayals and all. Bring friends, bring gifts &mdash; or bring a sword.
-    </p>
-
-    <!-- Week schedule strip -->
-    <ul class="week-strip week">
-      <li>Mon</li>
-      <li>Tue</li>
-      <li>Wed</li>
-      <li>Thu</li>
-      <li>Fri</li>
-      <li class="sat">Sat &bull; STREAM</li>
-      <li>Sun</li>
-    </ul>
-
-    <p style="margin:8px 0 0; font-size:11px; color:var(--text-muted);">
-      Almost every Saturday &mdash; exact start times and any skipped weeks get posted on <a href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener">Discord</a>.
-    </p>
-  </div>
-
-  <div style="display:flex; flex-direction:column; justify-content:space-between; gap:12px;">
-    <div>
-      <div style="font-size:11.5px; font-weight:bold; margin-bottom:8px;">Stream Channels:</div>
-      <div style="display:flex; flex-direction:column; gap:6px;">
-        <a class="btn-classic btn-twitch" href="https://twitch.tv/fiestasmp" target="_blank" rel="noopener">
-          <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-twitch"/></svg>
-          <span>Twitch &middot; twitch.tv/fiestasmp</span>
-        </a>
-        <a class="btn-classic btn-kick" href="https://kick.com/fiestasmp" target="_blank" rel="noopener">
-          <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-kick"/></svg>
-          <span>Kick &middot; kick.com/fiestasmp</span>
-        </a>
-        <a class="btn-classic btn-youtube" href="https://youtube.com/@fiestamc-yt" target="_blank" rel="noopener">
-          <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-youtube"/></svg>
-          <span>YouTube &middot; @fiestamc-yt</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Google Calendar on-demand expander -->
-    <div class="cal-frame" style="background:#f4f7f4; border:1px solid #c8d4c8; padding:10px 12px; border-radius:3px;">
-      <div style="font-size:11px; font-weight:bold; margin-bottom:4px;">Full Stream Calendar:</div>
-      <div class="cal-hint" style="font-size:11px; color:var(--text-sub); margin-bottom:8px;">
-        Exact start times and skipped Saturdays powered by Google Calendar.
-      </div>
-      <button type="button" class="btn-classic" data-cal="https://calendar.google.com/calendar/embed?src=fiestamg%40murena.io&amp;ctz=UTC" style="font-size:10.5px;">
-        <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-tv"/></svg>
-        <span>Load Calendar Embed</span>
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- ── CALL TO ACTION STRIP ──────────────────────────────────── -->
-<div class="cta-panel">
-  <div>
-    <h2 class="cta-title">The fiesta’s already started.</h2>
-    <p class="cta-sub">Bring gifts. Guard your chests. Trust no one &mdash; trade anyway.</p>
-  </div>
-  <div style="display:flex; gap:8px; flex-wrap:wrap;">
-    <button type="button" class="btn-satin" data-copy="fiesta.debarkak.xyz">
-      <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-copy"/></svg>
-      <span data-copy-label>Copy fiesta.debarkak.xyz</span>
-    </button>
-    <a class="btn-classic btn-discord" href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener">
-      <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-discord"/></svg>
-      <span>Join the Discord</span>
-    </a>
-  </div>
-</div>
-
-    </main>
-
-    <!-- ── DIAGNOSTIC FOOTER ─────────────────────────────────── -->
-    <footer class="console-footer">
-      <div class="footer-diagnostic-bar">
-        <span>FS-GATEWAY-PRO // OFFICIAL FIESTA SMP GATEWAY</span>
-        <span>FIRMWARE: v2.6.3-SMP · PUBLIC INTERFACE</span>
-        <span>HOST: fiesta.debarkak.xyz</span>
-      </div>
-
-      <div class="footer-top-grid">
-        <div class="footer-col">
-          <div style="display:flex; align-items:center; gap:8px; margin-bottom: 8px;">
-            <img src="assets/img/server-icon.webp" alt="Fiesta SMP" width="28" height="28" style="border-radius:2px;">
-            <span style="font-family: var(--font-display); font-weight:800; color:#fff; font-size:14px;">FIESTA <b>SMP</b></span>
+    <!-- ── 5. HERO SHOWCASE ("GET WINDOWS 7 TODAY" STYLE) ───────────── -->
+    <section class="hero-ms2009">
+      <div class="hero-main-layout">
+        <div class="hero-main-content">
+          <div class="hero-aero-pill">
+            <span>OFFICIAL SERVER SHOWCASE // EST. 2021</span>
           </div>
-          <p style="margin:0 0 10px 0; font-size:11.5px; line-height:1.45; color: #aaa;">
-            A long-haul survival server for Java &amp; Bedrock. Barter-only, raid-friendly, streamed live. Est. 2021.
+
+          <h1 class="hero-headline">
+            Survival, with the <span>safety off</span>.
+          </h1>
+
+          <p class="hero-subtext">
+            A long-haul survival world with the safety off. Barter for everything, guard your coords, and build something worth raiding &mdash; seamlessly connected for Java and Bedrock editions.
           </p>
-          <div style="display:flex; gap:10px; margin-top:8px;">
-            <a href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener" title="Discord" style="color:#ffffff;">
-              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-discord"/></svg>
+
+          <!-- Primary Actions -->
+          <div class="hero-cta-group" data-ipw>
+            <button type="button" class="btn-aero-primary" data-copy="fiesta.debarkak.xyz">
+              <span data-copy-label>Connect: fiesta.debarkak.xyz</span>
+            </button>
+            <a class="btn-aero-classic" href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener">
+              Join Official Discord
             </a>
-            <a href="https://twitch.tv/fiestasmp" target="_blank" rel="noopener" title="Twitch" style="color:#ffffff;">
-              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-twitch"/></svg>
+            <a class="btn-aero-classic" href="news.html">
+              Latest News
             </a>
-            <a href="https://kick.com/fiestasmp" target="_blank" rel="noopener" title="Kick" style="color:#ffffff;">
-              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-kick"/></svg>
-            </a>
-            <a href="https://youtube.com/@fiestamc-yt" target="_blank" rel="noopener" title="YouTube" style="color:#ffffff;">
-              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-youtube"/></svg>
-            </a>
-            <a href="https://github.com/open-fiestasmp" target="_blank" rel="noopener" title="GitHub" style="color:#ffffff;">
-              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-github"/></svg>
-            </a>
+          </div>
+
+          <!-- Signature 2009 Chevron Bullet Links -->
+          <div class="hero-chevron-links">
+            <a href="index.html#connect" class="chevron-link">Copy Java Edition IP (port 25565)</a>
+            <a href="index.html#connect" class="chevron-link">Copy Bedrock Edition Port (port 19132)</a>
+            <a href="terms.html" class="chevron-link">Read the 2026 Combat &amp; Trading Charter</a>
+            <a href="support.html" class="chevron-link">Ban Appeals and Player Support Desk</a>
           </div>
         </div>
 
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="terms.html">Terms &amp; Rules</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="socials.html">Socials</a></li>
-            <li><a href="support.html">Support</a></li>
-            <li><a href="index.html#join">Play Now</a></li>
-          </ul>
-        </div>
+        <!-- Right Promo Card: "Will your client run Fiesta SMP?" -->
+        <div class="hero-promo-card">
+          <div class="promo-card-header">
+            <div>
+              <h3>Server Compatibility</h3>
+              <span style="font-size:11px; color:#557799;">Supported Client Platforms</span>
+            </div>
+          </div>
 
-        <div class="footer-col">
-          <h4>Watch</h4>
-          <ul>
-            <li><a href="https://twitch.tv/fiestasmp" target="_blank" rel="noopener">Twitch</a></li>
-            <li><a href="https://kick.com/fiestasmp" target="_blank" rel="noopener">Kick</a></li>
-            <li><a href="https://youtube.com/@fiestamc-yt" target="_blank" rel="noopener">YouTube</a></li>
-          </ul>
-        </div>
+          <table class="promo-spec-table">
+            <tbody>
+              <tr>
+                <td class="lbl">Java Host / Port</td>
+                <td class="val"><code>fiesta.debarkak.xyz:25565</code></td>
+              </tr>
+              <tr>
+                <td class="lbl">Bedrock Port</td>
+                <td class="val"><code>19132</code> (Default)</td>
+              </tr>
+              <tr>
+                <td class="lbl">Supported Versions</td>
+                <td class="val">Minecraft 1.8 &rarr; 26.3+</td>
+              </tr>
+              <tr>
+                <td class="lbl">Offline Clients</td>
+                <td class="val" style="color:#008800;">Supported (Open Auth)</td>
+              </tr>
+              <tr>
+                <td class="lbl">Season Duration</td>
+                <td class="val">1.5 &ndash; 3 Years per Season</td>
+              </tr>
+              <tr>
+                <td class="lbl">Economy Model</td>
+                <td class="val">100% Pure Physical Barter</td>
+              </tr>
+            </tbody>
+          </table>
 
-        <div class="footer-col">
-          <h4>Contact &amp; Help</h4>
-          <ul>
-            <li><a href="mailto:fiestamg@murena.io">fiestamg@murena.io</a></li>
-            <li><a href="support.html">Ban Appeal Form</a></li>
-            <li><a href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener">Discord Ticket</a></li>
-            <li><a href="https://fiesta.debarkak.xyz/login">[ Admin Portal ]</a></li>
-          </ul>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px;">
+            <span style="font-size:10.5px; color:#557799;">No mods required to join</span>
+            <button type="button" class="btn-aero-primary" data-copy="fiesta.debarkak.xyz" style="font-size:11px; padding:3px 10px;">
+              Copy Address
+            </button>
+          </div>
         </div>
       </div>
 
-      <div class="footer-bottom-copy">
-        <div>&copy; 2026 Fiesta Media Group &middot; &copy; 2021&ndash;2026 debarkak</div>
-        <div style="font-size: 10px; opacity: 0.75; margin-top: 3px;">
-          Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.
+      <!-- Hero Bottom Tab Navigation Strip -->
+      <div class="hero-tabs-strip">
+        <button type="button" class="hero-tab-pill active" data-target="#features">Highlights &rsaquo;</button>
+        <button type="button" class="hero-tab-pill" data-target="#features">Survival &amp; Raids</button>
+        <button type="button" class="hero-tab-pill" data-target="#features">Barter Economy</button>
+        <button type="button" class="hero-tab-pill" data-target="#connect">Crossplay Specs</button>
+        <button type="button" class="hero-tab-pill" data-target="#streams">Saturday Streams</button>
+        <button type="button" class="hero-tab-pill" onclick="window.location.href='news.html'">Newsroom &rsaquo;</button>
+      </div>
+    </section>
+
+    <!-- ── 6. 4-COLUMN FEATURE SPOTLIGHT (MICROSOFT 2009 SIGNATURE) ── -->
+    <div class="aero-section-wrap" id="features">
+      <div class="aero-section-header">
+        <h2>Core Server Specifications</h2>
+        <span class="section-meta">LONG-HAUL GAMEPLAY &middot; ESTABLISHED 2021</span>
+      </div>
+
+      <div class="feature-grid-4">
+        <!-- Feature 1 -->
+        <div class="feat-col-card">
+          <div class="feat-card-header-bar">
+            <span>01 &middot; COMBAT</span>
+            <span>ENABLED</span>
+          </div>
+          <div class="feat-card-body">
+            <h3 class="feat-card-title">Raids are real.</h3>
+            <p class="feat-card-desc">
+              PvP, raiding, theft, and clan warfare are fair game. Anything you leave unprotected is up for grabs &mdash; guard your coordinates and your gear.
+            </p>
+            <div class="feat-card-links">
+              <a href="terms.html#combat" class="chevron-link">Combat &amp; raiding rules</a>
+              <a href="terms.html#combat" class="chevron-link">Griefing policy</a>
+            </div>
+          </div>
         </div>
+
+        <!-- Feature 2 -->
+        <div class="feat-col-card">
+          <div class="feat-card-header-bar">
+            <span>02 &middot; ECONOMY</span>
+            <span>PURE BARTER</span>
+          </div>
+          <div class="feat-card-body">
+            <h3 class="feat-card-title">Time is money.</h3>
+            <p class="feat-card-desc">
+              No virtual currency, no <code>/pay</code> command, and zero server shops. Every deal is a face-to-face player trade &mdash; and a chance to get betrayed.
+            </p>
+            <div class="feat-card-links">
+              <a href="terms.html#economy" class="chevron-link">Trading guidelines</a>
+              <a href="terms.html#economy" class="chevron-link">Scam risk disclaimer</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feat-col-card">
+          <div class="feat-card-header-bar">
+            <span>03 &middot; LIFECYCLE</span>
+            <span>LONG-HAUL</span>
+          </div>
+          <div class="feat-card-body">
+            <h3 class="feat-card-title">Seasons last years.</h3>
+            <p class="feat-card-desc">
+              Each season runs roughly 1.5 to 3 years. Resets happen exclusively when a new season launches, announced months in advance with world downloads.
+            </p>
+            <div class="feat-card-links">
+              <a href="terms.html#seasons" class="chevron-link">Season timeline</a>
+              <a href="news.html" class="chevron-link">View latest roadmap</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feat-col-card">
+          <div class="feat-card-header-bar">
+            <span>04 &middot; CROSSPLAY</span>
+            <span>JAVA + BEDROCK</span>
+          </div>
+          <div class="feat-card-body">
+            <h3 class="feat-card-title">Any edition, any version.</h3>
+            <p class="feat-card-desc">
+              Java and Bedrock players share one persistent world, from 1.8 all the way to 26.3+. Offline clients are fully supported with open authentication.
+            </p>
+            <div class="feat-card-links">
+              <a href="index.html#connect" class="chevron-link">Bedrock port details</a>
+              <a href="support.html" class="chevron-link">Connection help</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 7. 2-COLUMN SPOTLIGHT BANNERS ──────────────────────────── -->
+      <div class="spotlight-row-2">
+        <!-- Spotlight Box 1 -->
+        <div class="aero-spotlight-box">
+          <div class="spotlight-icon-wrap" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="spotlight-content">
+            <h3 class="spotlight-title">Fiesta Security: Zero Tolerance for Cheaters</h3>
+            <p class="spotlight-desc">
+              Killaura, fly, speed, Baritone, freecam, Chest-ESP, packet hacks, dupes, and lag machines trigger an immediate permanent IP and hardware ban. We keep the survival world fair.
+            </p>
+            <div style="margin-top:6px;">
+              <a href="terms.html#combat" class="chevron-link">Read banned modifications list</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spotlight Box 2 -->
+        <div class="aero-spotlight-box" id="streams">
+          <div class="spotlight-icon-wrap" aria-hidden="true" style="background: linear-gradient(180deg, #8855e6 0%, #582ec4 100%); border-color:#4820a8;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+              <polyline points="17 2 12 7 7 2"></polyline>
+            </svg>
+          </div>
+          <div class="spotlight-content">
+            <h3 class="spotlight-title">Saturdays are Showtime: Live Broadcasts</h3>
+            <p class="spotlight-desc">
+              We stream almost every Saturday afternoon. Hop on the server in the afternoon and you're part of the show &mdash; raids, trades, betrayals, and community builds.
+            </p>
+            <div style="margin-top:6px; display:flex; gap:12px; flex-wrap:wrap;">
+              <a href="socials.html" class="chevron-link">Twitch, Kick &amp; YouTube channels</a>
+              <a href="socials.html#calendar" class="chevron-link">Google Calendar schedule</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 8. QUICK JOIN INSTRUCTIONS (3-COLUMN BOX) ──────────────── -->
+      <div id="connect" style="background:#f4f9fd; border:1px solid #bdd7ed; border-radius:3px; padding:18px 20px; margin-bottom:24px;">
+        <div style="border-bottom:1px solid #cce1f2; padding-bottom:8px; margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="margin:0; font-size:16px; color:#003366;">In-Game in Under a Minute</h3>
+          <span style="font-size:11px; color:#557799;">QUICK SETUP GUIDE</span>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;">
+          <div>
+            <div style="font-weight:700; color:#003366; margin-bottom:4px;">1. Launch Minecraft</div>
+            <p style="font-size:12px; color:#444444; margin:0 0 8px;">
+              Java or Bedrock, any version from 1.8 to 26.3+. Offline and official accounts welcome.
+            </p>
+          </div>
+          <div>
+            <div style="font-weight:700; color:#003366; margin-bottom:4px;">2. Add the Server Address</div>
+            <p style="font-size:12px; color:#444444; margin:0 0 8px;">
+              Multiplayer &rarr; Add Server &rarr; <code>fiesta.debarkak.xyz</code>. On Bedrock, set port to <b>19132</b>.
+            </p>
+            <button type="button" class="btn-aero-classic" data-copy="fiesta.debarkak.xyz" style="font-size:11px; padding:3px 8px;">
+              Copy fiesta.debarkak.xyz
+            </button>
+          </div>
+          <div>
+            <div style="font-weight:700; color:#003366; margin-bottom:4px;">3. Say Hi on Discord</div>
+            <p style="font-size:12px; color:#444444; margin:0 0 8px;">
+              Catch announcements, find trading partners, and open a support ticket if you ever need staff.
+            </p>
+            <a class="btn-aero-primary" href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener" style="font-size:11px; padding:3px 8px;">
+              discord.gg/marqvC9UrP
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 9. 3-COLUMN DIRECTORY & QUICK LINKS (MICROSOFT 2009) ────── -->
+      <div class="destination-grid-3">
+        <!-- Col 1 -->
+        <div class="dest-col">
+          <div class="dest-col-title">Popular Downloads &amp; Mods</div>
+          <ul class="dest-list">
+            <li><a href="https://modrinth.com/mod/sodium" target="_blank" rel="noopener">Sodium Optimization Engine</a></li>
+            <li><a href="https://modrinth.com/mod/iris" target="_blank" rel="noopener">Iris Shaderpack Pipeline</a></li>
+            <li><a href="https://modrinth.com/mod/lithium" target="_blank" rel="noopener">Lithium Physics Optimization</a></li>
+            <li><a href="https://modrinth.com/plugin/simple-voice-chat" target="_blank" rel="noopener">Simple Voice Chat (Proximity)</a></li>
+            <li><a href="news.html">Season 3 World Download Archive</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="dest-col">
+          <div class="dest-col-title">Top Player Topics</div>
+          <ul class="dest-list">
+            <li><a href="terms.html#economy">How physical barter works without currency</a></li>
+            <li><a href="terms.html#combat">Protecting your coordinates from raiders</a></li>
+            <li><a href="terms.html#seasons">How long seasons run and wipe policies</a></li>
+            <li><a href="terms.html#combat">Allowed client performance mods</a></li>
+            <li><a href="socials.html">Saturday stream start times and links</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="dest-col">
+          <div class="dest-col-title">Frequent Destinations</div>
+          <ul class="dest-list">
+            <li><a href="https://forms.gle/T55D8uwPe256R1zT7" target="_blank" rel="noopener">Official Ban Appeal Form</a></li>
+            <li><a href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener">Discord Support Ticket Desk</a></li>
+            <li><a href="gallery.html">Community Postcard &amp; Build Gallery</a></li>
+            <li><a href="support.html">Staff Communication Policy (~72h)</a></li>
+            <li><a href="mailto:fiestamg@murena.io">Direct Inquiries: fiestamg@murena.io</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 10. CORPORATE 2009 FOOTER ────────────────────────────────── -->
+    <footer class="aero-footer">
+      <div class="footer-nav-links">
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms of Service &amp; Rules</a>
+        <a href="news.html">News &amp; Updates</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="socials.html">Socials</a>
+        <a href="support.html">Contact &amp; Support</a>
+        <a href="https://fiesta.debarkak.xyz/login" target="_blank" rel="noopener">[ Staff Portal ]</a>
+      </div>
+
+      <div class="footer-copy-text">
+        &copy; 2026 Fiesta Media Group &middot; &copy; 2021&ndash;2026 debarkak. All rights reserved.<br>
+        <span style="font-size:10px; color:#7799bb;">
+          Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.
+        </span>
       </div>
     </footer>
+
   </div>
 
-  
 </body>
 </html>

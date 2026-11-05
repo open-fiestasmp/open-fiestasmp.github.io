@@ -3,386 +3,297 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Fiesta SMP — Socials</title>
-  <meta name="description" content="Fiesta SMP — Survival with the safety off. Pure physical barter, raids enabled, long-haul seasons, crossplay for Java & Bedrock.">
-  <meta name="theme-color" content="#006622">
+  <title>Socials &amp; Community — Fiesta SMP Official Directory</title>
+  <meta name="description" content="Official community hubs, streaming channels, live Saturday broadcasts, and development links for Fiesta SMP.">
+  <meta name="theme-color" content="#2087e0">
 
-  <!-- Icons -->
+  <!-- Favicons & Icons -->
   <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/icon-192.png">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Fiesta SMP">
-  <meta property="og:title" content="Fiesta SMP — Community Socials &amp; Channels">
-  <meta property="og:description" content="Streams, updates, memes, and development repositories for Fiesta SMP.">
-  <meta property="og:image" content="assets/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
+  <!-- Windows 7 Aero & Microsoft 2009 Stylesheet -->
+  <link rel="stylesheet" href="assets/css/aero-ms2009.css">
 
-  <!-- Green Console Theme Stylesheet -->
-  <link rel="stylesheet" href="assets/css/console-site.css">
-
-  <script>
-    (function(d,n){
-      var c=d.documentElement;
-      c.className+=' js';
-      var m=n.deviceMemory, h=n.hardwareConcurrency, s=n.connection&&n.connection.saveData;
-      if((m&&m<=2)||(h&&h<=2)||s) c.className+=' lite';
-    })(document,navigator);
-  </script>
-
-  <!-- Client-side Interactivity -->
+  <!-- Client-side Logic -->
   <script src="assets/js/site.js" defer></script>
-  
 </head>
-<body data-base="assets/">
+<body>
 
-  <div class="console-frame">
-    <!-- ── CONSOLE TOP HEADER ─────────────────────────────────── -->
-    <header class="header-bar">
-      <a class="brand-container" href="index.html" title="Fiesta SMP Gateway Console">
-        <img class="brand-logo-img" src="assets/img/server-icon.webp" alt="Fiesta SMP Icon" width="44" height="44">
-        <div class="brand-text">
-          <span class="brand-name">FIESTA <b>SMP</b></span>
-          <span class="brand-sub">Survival · Est. 2021 · Barter or die!</span>
+  <!-- ── 1. TOP UTILITY STRIP ──────────────────────────────────────── -->
+  <div class="aero-top-strip">
+    <div class="aero-top-inner">
+      <div class="top-strip-left">
+        <span class="top-pill-btn"><b>Edition:</b> Global Java &amp; Bedrock Network</span>
+        <span style="color:#a8cce8;">|</span>
+        <span style="color:#557799;">Minecraft 1.8 &rarr; 26.3+</span>
+      </div>
+
+      <div class="top-strip-right">
+        <form class="aero-search-form" onsubmit="event.preventDefault();">
+          <input type="text" class="aero-search-input" placeholder="Search Socials" aria-label="Search Socials">
+          <button type="submit" class="aero-search-btn" title="Search">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </form>
+        <span style="color:#a8cce8;">|</span>
+        <a class="top-pill-btn" href="https://fiesta.debarkak.xyz/login" target="_blank" rel="noopener">[ Staff Portal ]</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MAIN PAGE WRAPPER ─────────────────────────────────────────── -->
+  <div class="aero-page-wrapper">
+
+    <!-- ── 2. BRANDING & HEADER ─────────────────────────────────────── -->
+    <header class="aero-header">
+      <a class="aero-brand" href="index.html" title="Fiesta SMP — Official Home">
+        <div class="aero-flag-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M3 4.5C6.5 3 10 5.5 13.5 4C17 2.5 20 4.5 21 5V14C20 13.5 17 11.5 13.5 13C10 14.5 6.5 12 3 13.5V4.5Z" fill="#ffffff" opacity="0.95"/>
+            <path d="M12 4.2V13.8" stroke="#1072ce" stroke-width="1.2"/>
+            <path d="M3 9H21" stroke="#1072ce" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <div class="aero-brand-text">
+          <span class="aero-brand-title">Fiesta<span>SMP</span></span>
+          <span class="aero-brand-sub">Survival &middot; Est. 2021 &middot; Barter or die!</span>
         </div>
       </a>
 
-      <div class="header-meta">
-        <div class="header-model">GATEWAY FS-GATEWAY-PRO · PORT 25565 / 19132</div>
-        <div class="header-quick-links">
-          <button type="button" class="btn-satin" data-copy="fiesta.debarkak.xyz" title="Click to copy server IP address">
-            <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-copy"/></svg>
-            <span data-copy-label>fiesta.debarkak.xyz</span>
-          </button>
-          <a class="btn-classic btn-discord" href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener" title="Join official Discord">
-            <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-discord"/></svg>
-            <span>Discord</span>
-          </a>
-          <a class="btn-classic" href="https://fiesta.debarkak.xyz/login" title="Staff &amp; Admin Management Portal">
-            <span>[ Admin Portal ]</span>
-          </a>
-        </div>
+      <div class="aero-header-badge">
+        <button type="button" class="aero-ip-pill" data-copy="fiesta.debarkak.xyz" title="Click to copy server IP address">
+          <span>IP: <b>fiesta.debarkak.xyz</b></span>
+          <span style="font-size:10px; color:#0066cc;" data-copy-label>[ COPY ]</span>
+        </button>
+        <span style="font-size:10px; color:#557799;">Java: 25565 &middot; Bedrock: 19132</span>
       </div>
     </header>
 
-    <!-- ── ROUTER NAVIGATION BAR ─────────────────────────────── -->
-    <nav class="nav-bar" aria-label="Console Navigation">
-      <ul class="nav-tabs">
-        <li>
-          <a href="index.html" class="">
-            <span class="tab-idx">01</span>
-            <span>Home</span>
-          </a>
-        </li>
-        <li>
-          <a href="terms.html" class="">
-            <span class="tab-idx">02</span>
-            <span>Terms &amp; Rules</span>
-          </a>
-        </li>
-        <li>
-          <a href="gallery.html" class="">
-            <span class="tab-idx">03</span>
-            <span>Gallery</span>
-          </a>
-        </li>
-        <li>
-          <a href="socials.html" class="active">
-            <span class="tab-idx">04</span>
-            <span>Socials</span>
-          </a>
-        </li>
-        <li>
-          <a href="support.html" class="">
-            <span class="tab-idx">05</span>
-            <span>Support</span>
-          </a>
-        </li>
+    <!-- ── 3. NAVIGATION BAR ────────────────────────────────────────── -->
+    <nav class="aero-nav-bar" aria-label="Main Navigation">
+      <ul class="aero-nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="terms.html">Terms &amp; Rules</a></li>
+        <li><a href="news.html">News &amp; Updates</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="socials.html" class="active">Community &amp; Socials</a></li>
+        <li><a href="support.html">Contact &amp; Support</a></li>
       </ul>
-
-      <div class="nav-actions">
-        <a class="btn-satin" href="index.html#join" style="padding: 4px 10px; font-size: 10.5px;">
-          <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-gamepad"/></svg>
-          <span>Play Now</span>
-        </a>
-      </div>
     </nav>
 
-    <!-- ── TELEMETRY & STATUS STRIP ───────────────────────────── -->
-    <div class="telemetry-strip" data-status-root>
-      <div class="telemetry-left">
-        <span class="led-indicator "></span>
-        <span class="telemetry-status-text">
-          
-            STATUS: ONLINE
-          
-        </span>
-        <span class="telemetry-specs">
-          [ JAVA: 25565 · BEDROCK: 19132 · 1.8 → 26.3+ · PURE BARTER ]
-        </span>
-      </div>
-      <div class="telemetry-ticker">
-        [SYS] Trust no one · Trade anyway · Join the stream · Bring gifts · Guard your coords · Party hats mandatory · Est. 2021
-      </div>
-    </div>
-
-    <!-- ── WORKSPACE AREA ────────────────────────────────────── -->
-    <main class="workspace-area">
-      
-<div class="section-bar">
-  <div class="section-bar-title">
-    <span class="sec-tag">NETWORK</span>
-    <span>Community Socials &amp; External Links</span>
-  </div>
-  <span style="font-size: 10px; opacity: 0.9;">DIRECTORY // OFF-PLATFORM COMMS</span>
-</div>
-
-<h1 class="hero-heading" style="font-size:24px; margin:8px 0 4px 0;">Find us everywhere.</h1>
-<p style="margin: 0 0 16px; font-size: 13px; color: var(--text-sub); line-height: 1.5;">
-  Streams, updates, memes and the occasional existential crisis &mdash; pick your platform.
-</p>
-
-<!-- ── CATEGORY 1: LIVE STREAMING ────────────────────────────── -->
-<div class="sub-bar">
-  01 &middot; Live Streaming &mdash; Catch raids as they happen
-</div>
-
-<div class="socials-category-grid">
-  <!-- Twitch -->
-  <a class="social-link-card" href="https://twitch.tv/fiestasmp" target="_blank" rel="noopener">
-    <div class="social-info">
-      <div class="social-icon-box" style="background: #9146ff;">
-        <svg class="i" style="width:20px; height:20px;" aria-hidden="true"><use href="assets/img/icons.svg#b-twitch"/></svg>
+    <!-- ── 4. HEADER HERO BANNER ────────────────────────────────────── -->
+    <div class="news-hero-bar">
+      <div>
+        <h1>Community Socials &amp; External Links</h1>
+        <p>Live streams, updates, community banter, and open-source software &mdash; connect with us anywhere.</p>
       </div>
       <div>
-        <div class="social-name">Twitch</div>
-        <div class="social-handle">twitch.tv/fiestasmp</div>
+        <a class="btn-aero-primary" href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener">
+          Join Discord (Official Chat)
+        </a>
       </div>
     </div>
-    <span class="tag-pill">BROADCAST</span>
-  </a>
 
-  <!-- Kick -->
-  <a class="social-link-card" href="https://kick.com/fiestasmp" target="_blank" rel="noopener">
-    <div class="social-info">
-      <div class="social-icon-box" style="background: #53fc18; color: #0b1a03;">
-        <svg class="i" style="width:20px; height:20px;" aria-hidden="true"><use href="assets/img/icons.svg#b-kick"/></svg>
-      </div>
-      <div>
-        <div class="social-name">Kick</div>
-        <div class="social-handle">kick.com/fiestasmp</div>
-      </div>
-    </div>
-    <span class="tag-pill">BROADCAST</span>
-  </a>
+    <!-- ── 5. SOCIAL DIRECTORY CATEGORIES ───────────────────────────── -->
+    <main class="socials-category-wrap">
 
-  <!-- YouTube -->
-  <a class="social-link-card" href="https://youtube.com/@fiestamc-yt" target="_blank" rel="noopener">
-    <div class="social-info">
-      <div class="social-icon-box" style="background: #ff0000;">
-        <svg class="i" style="width:20px; height:20px;" aria-hidden="true"><use href="assets/img/icons.svg#b-youtube"/></svg>
+      <!-- Category 1: Live Streaming -->
+      <div class="aero-section-header">
+        <h2>01 &middot; Live Streaming Platforms</h2>
+        <span class="section-meta">SATURDAY AFTERNOON SHOWTIME</span>
       </div>
-      <div>
-        <div class="social-name">YouTube</div>
-        <div class="social-handle">youtube.com/@fiestamc-yt</div>
-      </div>
-    </div>
-    <span class="tag-pill">VODS &bull; SHORTS</span>
-  </a>
-</div>
 
-<!-- ── CATEGORY 2: COMMS & UPDATES ───────────────────────────── -->
-<div class="sub-bar">
-  02 &middot; Comms &amp; Updates &mdash; Announcements, tickets and memes
-</div>
+      <div class="social-cards-grid">
+        <!-- Twitch -->
+        <a class="social-card-item" href="https://twitch.tv/fiestasmp" target="_blank" rel="noopener">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="social-card-icon" style="background:#9146ff;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/>
+              </svg>
+            </div>
+            <div class="social-card-text">
+              <span class="social-card-name">Twitch</span>
+              <span class="social-card-sub">twitch.tv/fiestasmp</span>
+            </div>
+          </div>
+          <span class="tag-aero" style="background:#f4eeff; color:#6b1fd6; border-color:#d5baff;">LIVE STREAM</span>
+        </a>
 
-<div class="socials-category-grid">
-  <!-- Discord -->
-  <a class="social-link-card" href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener">
-    <div class="social-info">
-      <div class="social-icon-box" style="background: #5865f2;">
-        <svg class="i" style="width:20px; height:20px;" aria-hidden="true"><use href="assets/img/icons.svg#b-discord"/></svg>
-      </div>
-      <div>
-        <div class="social-name">Discord</div>
-        <div class="social-handle">discord.gg/marqvC9UrP</div>
-      </div>
-    </div>
-    <span class="tag-pill" style="background: #ebfaeb; color:#006622; font-weight:bold;">PRIMARY COMMS</span>
-  </a>
+        <!-- Kick -->
+        <a class="social-card-item" href="https://kick.com/fiestasmp" target="_blank" rel="noopener">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="social-card-icon" style="background:#53fc18; color:#0b1a03;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 2h5v6h2V4h5V2h6v8h-4v2h4v8h-6v-2h-5v-4H8v6H3V2z"/>
+              </svg>
+            </div>
+            <div class="social-card-text">
+              <span class="social-card-name">Kick</span>
+              <span class="social-card-sub">kick.com/fiestasmp</span>
+            </div>
+          </div>
+          <span class="tag-aero" style="background:#f0fee6; color:#207802; border-color:#bcf69a;">BROADCAST</span>
+        </a>
 
-  <!-- X / Twitter -->
-  <a class="social-link-card" href="https://x.com/fiestamg" target="_blank" rel="noopener">
-    <div class="social-info">
-      <div class="social-icon-box" style="background: #111111;">
-        <svg class="i" style="width:18px; height:18px;" aria-hidden="true"><use href="assets/img/icons.svg#b-x"/></svg>
+        <!-- YouTube -->
+        <a class="social-card-item" href="https://youtube.com/@fiestamc-yt" target="_blank" rel="noopener">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="social-card-icon" style="background:#ff0000;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </div>
+            <div class="social-card-text">
+              <span class="social-card-name">YouTube</span>
+              <span class="social-card-sub">youtube.com/@fiestamc-yt</span>
+            </div>
+          </div>
+          <span class="tag-aero" style="background:#fff0f0; color:#b81414; border-color:#f8c6c6;">VODS &amp; CLIPS</span>
+        </a>
       </div>
-      <div>
-        <div class="social-name">X (Twitter)</div>
-        <div class="social-handle">@fiestamg</div>
-      </div>
-    </div>
-    <span class="tag-pill">FEED</span>
-  </a>
 
-  <!-- Email -->
-  <a class="social-link-card" href="mailto:fiestamg@murena.io">
-    <div class="social-info">
-      <div class="social-icon-box" style="background: #1e6b36;">
-        <svg class="i" style="width:18px; height:18px;" aria-hidden="true"><use href="assets/img/icons.svg#p-mail"/></svg>
+      <!-- Category 2: Communications & Updates -->
+      <div class="aero-section-header">
+        <h2>02 &middot; Communications &amp; Updates</h2>
+        <span class="section-meta">OFFICIAL CHAT, TICKETS &amp; NOTICES</span>
       </div>
-      <div>
-        <div class="social-name">Email</div>
-        <div class="social-handle">fiestamg@murena.io</div>
-      </div>
-    </div>
-    <span class="tag-pill">OFFICIAL</span>
-  </a>
-</div>
 
-<!-- ── CATEGORY 3: DEVELOPMENT ───────────────────────────────── -->
-<div class="sub-bar">
-  03 &middot; Development &mdash; Open source, built by the community
-</div>
+      <div class="social-cards-grid">
+        <!-- Discord -->
+        <a class="social-card-item" href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="social-card-icon" style="background:#5865f2;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+              </svg>
+            </div>
+            <div class="social-card-text">
+              <span class="social-card-name">Discord</span>
+              <span class="social-card-sub">discord.gg/marqvC9UrP</span>
+            </div>
+          </div>
+          <span class="tag-aero" style="background:#edf0ff; color:#3a46c8; border-color:#c4cbff;">PRIMARY HUB</span>
+        </a>
 
-<div class="socials-category-grid">
-  <!-- Org GitHub -->
-  <a class="social-link-card" href="https://github.com/open-fiestasmp" target="_blank" rel="noopener">
-    <div class="social-info">
-      <div class="social-icon-box" style="background: #24292e;">
-        <svg class="i" style="width:20px; height:20px;" aria-hidden="true"><use href="assets/img/icons.svg#b-github"/></svg>
-      </div>
-      <div>
-        <div class="social-name">open-fiestasmp</div>
-        <div class="social-handle">github.com/open-fiestasmp</div>
-      </div>
-    </div>
-    <span class="tag-pill">MAIN GITHUB</span>
-  </a>
+        <!-- X (Twitter) -->
+        <a class="social-card-item" href="https://x.com/fiestamg" target="_blank" rel="noopener">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="social-card-icon" style="background:#111111;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </div>
+            <div class="social-card-text">
+              <span class="social-card-name">X (Twitter)</span>
+              <span class="social-card-sub">x.com/fiestamg</span>
+            </div>
+          </div>
+          <span class="tag-aero">NOTICES</span>
+        </a>
 
-  <!-- kytrakton -->
-  <a class="social-link-card" href="https://github.com/kytrakton" target="_blank" rel="noopener">
-    <div class="social-info">
-      <div class="social-icon-box" style="background: #333333;">
-        <svg class="i" style="width:20px; height:20px;" aria-hidden="true"><use href="assets/img/icons.svg#b-github"/></svg>
+        <!-- Mail -->
+        <a class="social-card-item" href="mailto:fiestamg@murena.io">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="social-card-icon" style="background:#0066cc;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="social-card-text">
+              <span class="social-card-name">Official Mail</span>
+              <span class="social-card-sub">fiestamg@murena.io</span>
+            </div>
+          </div>
+          <span class="tag-aero">CONTACT</span>
+        </a>
       </div>
-      <div>
-        <div class="social-name">kytrakton</div>
-        <div class="social-handle">github.com/kytrakton</div>
-      </div>
-    </div>
-    <span class="tag-pill">OWNER &bull; DEV</span>
-  </a>
 
-  <!-- debarkak -->
-  <a class="social-link-card" href="https://github.com/debarkak" target="_blank" rel="noopener">
-    <div class="social-info">
-      <div class="social-icon-box" style="background: #333333;">
-        <svg class="i" style="width:20px; height:20px;" aria-hidden="true"><use href="assets/img/icons.svg#b-github"/></svg>
+      <!-- Category 3: Development & Open Source -->
+      <div class="aero-section-header">
+        <h2>03 &middot; Development &amp; Open Source</h2>
+        <span class="section-meta">COMMUNITY REPOSITORIES</span>
       </div>
-      <div>
-        <div class="social-name">debarkak</div>
-        <div class="social-handle">github.com/debarkak</div>
-      </div>
-    </div>
-    <span class="tag-pill">DEVELOPER</span>
-  </a>
 
-  <!-- cbladeOfficial -->
-  <a class="social-link-card" href="https://github.com/cbladeOfficial" target="_blank" rel="noopener">
-    <div class="social-info">
-      <div class="social-icon-box" style="background: #333333;">
-        <svg class="i" style="width:20px; height:20px;" aria-hidden="true"><use href="assets/img/icons.svg#b-github"/></svg>
+      <div class="social-cards-grid">
+        <!-- Main GitHub -->
+        <a class="social-card-item" href="https://github.com/open-fiestasmp" target="_blank" rel="noopener">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="social-card-icon" style="background:#24292e;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </div>
+            <div class="social-card-text">
+              <span class="social-card-name">open-fiestasmp</span>
+              <span class="social-card-sub">github.com/open-fiestasmp</span>
+            </div>
+          </div>
+          <span class="tag-aero">ORGANIZATION</span>
+        </a>
+
+        <!-- Website Repo -->
+        <a class="social-card-item" href="https://github.com/open-fiestasmp/open-fiestasmp.github.io" target="_blank" rel="noopener">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="social-card-icon" style="background:#0366d6;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <div class="social-card-text">
+              <span class="social-card-name">Website Source</span>
+              <span class="social-card-sub">open-fiestasmp.github.io</span>
+            </div>
+          </div>
+          <span class="tag-aero">HTML / CSS</span>
+        </a>
       </div>
-      <div>
-        <div class="social-name">cbladeOfficial</div>
-        <div class="social-handle">github.com/cbladeOfficial</div>
+
+      <!-- ── GOOGLE CALENDAR EMBEDDER ───────────────────────────────── -->
+      <div id="calendar" class="cal-frame" style="background:#f4f9fd; border:1px solid #bdd7ed; border-radius:3px; padding:18px 20px; margin-top:24px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #cce1f2; padding-bottom:8px; margin-bottom:12px;">
+          <div>
+            <h3 style="margin:0; font-size:16px; color:#003366;">Live Stream Schedule</h3>
+            <span style="font-size:11px; color:#557799;">POWERED BY GOOGLE CALENDAR</span>
+          </div>
+          <button type="button" class="btn-aero-primary" data-cal="https://calendar.google.com/calendar/embed?src=fiestamg%40murena.io&amp;ctz=UTC">
+            Load Live Calendar
+          </button>
+        </div>
+        <p style="font-size:12px; color:#444444; margin:0; line-height:1.5;">
+          Exact start times, guest streamers, and any skipped Saturday schedules are posted automatically to our Google Calendar and cross-posted to the <code>#announcements</code> channel on Discord.
+        </p>
       </div>
-    </div>
-    <span class="tag-pill">DEVELOPER</span>
-  </a>
-</div>
 
     </main>
 
-    <!-- ── DIAGNOSTIC FOOTER ─────────────────────────────────── -->
-    <footer class="console-footer">
-      <div class="footer-diagnostic-bar">
-        <span>FS-GATEWAY-PRO // OFFICIAL FIESTA SMP GATEWAY</span>
-        <span>FIRMWARE: v2.6.3-SMP · PUBLIC INTERFACE</span>
-        <span>HOST: fiesta.debarkak.xyz</span>
+    <!-- ── 6. CORPORATE 2009 FOOTER ─────────────────────────────────── -->
+    <footer class="aero-footer">
+      <div class="footer-nav-links">
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms of Service &amp; Rules</a>
+        <a href="news.html">News &amp; Updates</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="socials.html">Socials</a>
+        <a href="support.html">Contact &amp; Support</a>
+        <a href="https://fiesta.debarkak.xyz/login" target="_blank" rel="noopener">[ Staff Portal ]</a>
       </div>
 
-      <div class="footer-top-grid">
-        <div class="footer-col">
-          <div style="display:flex; align-items:center; gap:8px; margin-bottom: 8px;">
-            <img src="assets/img/server-icon.webp" alt="Fiesta SMP" width="28" height="28" style="border-radius:2px;">
-            <span style="font-family: var(--font-display); font-weight:800; color:#fff; font-size:14px;">FIESTA <b>SMP</b></span>
-          </div>
-          <p style="margin:0 0 10px 0; font-size:11.5px; line-height:1.45; color: #aaa;">
-            A long-haul survival server for Java &amp; Bedrock. Barter-only, raid-friendly, streamed live. Est. 2021.
-          </p>
-          <div style="display:flex; gap:10px; margin-top:8px;">
-            <a href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener" title="Discord" style="color:#ffffff;">
-              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-discord"/></svg>
-            </a>
-            <a href="https://twitch.tv/fiestasmp" target="_blank" rel="noopener" title="Twitch" style="color:#ffffff;">
-              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-twitch"/></svg>
-            </a>
-            <a href="https://kick.com/fiestasmp" target="_blank" rel="noopener" title="Kick" style="color:#ffffff;">
-              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-kick"/></svg>
-            </a>
-            <a href="https://youtube.com/@fiestamc-yt" target="_blank" rel="noopener" title="YouTube" style="color:#ffffff;">
-              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-youtube"/></svg>
-            </a>
-            <a href="https://github.com/open-fiestasmp" target="_blank" rel="noopener" title="GitHub" style="color:#ffffff;">
-              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-github"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="terms.html">Terms &amp; Rules</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="socials.html">Socials</a></li>
-            <li><a href="support.html">Support</a></li>
-            <li><a href="index.html#join">Play Now</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Watch</h4>
-          <ul>
-            <li><a href="https://twitch.tv/fiestasmp" target="_blank" rel="noopener">Twitch</a></li>
-            <li><a href="https://kick.com/fiestasmp" target="_blank" rel="noopener">Kick</a></li>
-            <li><a href="https://youtube.com/@fiestamc-yt" target="_blank" rel="noopener">YouTube</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contact &amp; Help</h4>
-          <ul>
-            <li><a href="mailto:fiestamg@murena.io">fiestamg@murena.io</a></li>
-            <li><a href="support.html">Ban Appeal Form</a></li>
-            <li><a href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener">Discord Ticket</a></li>
-            <li><a href="https://fiesta.debarkak.xyz/login">[ Admin Portal ]</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom-copy">
-        <div>&copy; 2026 Fiesta Media Group &middot; &copy; 2021&ndash;2026 debarkak</div>
-        <div style="font-size: 10px; opacity: 0.75; margin-top: 3px;">
+      <div class="footer-copy-text">
+        &copy; 2026 Fiesta Media Group &middot; &copy; 2021&ndash;2026 debarkak. All rights reserved.<br>
+        <span style="font-size:10px; color:#7799bb;">
           Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.
-        </div>
+        </span>
       </div>
     </footer>
+
   </div>
 
-  
 </body>
 </html>
