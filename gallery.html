@@ -2,190 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fiesta SMP — Gallery</title>
-  <meta name="description" content="Fiesta SMP — Survival with the safety off. Pure physical barter, raids enabled, long-haul seasons, crossplay for Java & Bedrock.">
-  <meta name="theme-color" content="#006622">
-
-  <!-- Icons -->
   <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/icon-192.png">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Fiesta SMP">
-  <meta property="og:title" content="Fiesta SMP — Server Gallery &amp; Postcards">
-  <meta property="og:description" content="Screenshots from Fiesta SMP: builds, sunsets and the aftermath of a few raids.">
+  <meta property="og:title" content="Fiesta SMP — Gallery">
   <meta property="og:image" content="assets/img/og.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Web Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600;700&amp;family=Unbounded:wght@600;700;800;900&amp;display=swap">
-
-  <!-- Green Console Theme Stylesheet -->
+  <meta property="og:description" content="Fiesta SMP Gateway Console — Survival with the safety off. Pure physical barter, raids enabled, long-haul seasons.">
   <link rel="stylesheet" href="assets/css/console-site.css">
-
-  <script>
-    (function(d,n){
-      var c=d.documentElement;
-      c.className+=' js';
-      var m=n.deviceMemory, h=n.hardwareConcurrency, s=n.connection&&n.connection.saveData;
-      if((m&&m<=2)||(h&&h<=2)||s) c.className+=' lite';
-    })(document,navigator);
-  </script>
-
-  <!-- Client-side Interactivity -->
   <script src="assets/js/site.js" defer></script>
   
 </head>
-<body data-base="assets/">
+<body>
 
   <div class="console-frame">
-    <!-- ── CONSOLE TOP HEADER ─────────────────────────────────── -->
+    <!-- ── TOP HEADER (TP-Link Router Console Bar) ───────────── -->
     <header class="header-bar">
       <a class="brand-container" href="index.html" title="Fiesta SMP Gateway Console">
-        <img class="brand-logo-img" src="assets/img/server-icon.webp" alt="Fiesta SMP Icon" width="44" height="44">
+        <div class="brand-logo-icon">
+          <svg viewBox="0 0 36 28" width="36" height="28" aria-hidden="true">
+            <path d="M4 14 C4 8 9 4 15 4 L20 4 C24 4 28 8 28 12 L22 12 C22 10 19 8 16 8 L14 8 C11 8 8 11 8 14 C8 17 11 20 14 20 L16 20 C19 20 22 18 22 16 L28 16 C28 20 24 24 20 24 L15 24 C9 24 4 20 4 14 Z" fill="#ffffff" opacity="0.95"/>
+            <path d="M32 14 C32 20 27 24 21 24 L16 24 C12 24 8 20 8 16 L14 16 C14 18 17 20 20 20 L22 20 C25 20 28 17 28 14 C28 11 25 8 22 8 L20 8 C17 8 14 10 14 12 L8 12 C8 8 12 4 16 4 L21 4 C27 4 32 8 32 14 Z" fill="#bdf4c9" opacity="0.85"/>
+          </svg>
+        </div>
         <div class="brand-text">
-          <span class="brand-name">FIESTA <b>SMP</b></span>
-          <span class="brand-sub">Survival · Est. 2021 · Barter or die!</span>
+          <span class="brand-logo">FIESTA-LINK</span>
+          <span class="brand-sub">The Reliable Choice &middot; Survival Est. 2021 &middot; Barter or Die</span>
         </div>
       </a>
 
-      <div class="header-meta">
-        <div class="header-model">GATEWAY FS-GATEWAY-PRO · PORT 25565 / 19132</div>
-        <div class="header-quick-links">
-          <button type="button" class="btn-satin" data-copy="fiesta.debarkak.xyz" title="Click to copy server IP address">
-            <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-copy"/></svg>
-            <span data-copy-label>fiesta.debarkak.xyz</span>
+      <div class="model-info-block">
+        <div class="model-title">Model No. FS-GATEWAY-PRO (SMP Edition)</div>
+        <div class="model-meta-row">
+          <span>Gateway: <span class="badge-status online">[ Online ]</span></span>
+          <button type="button" class="btn-classic" data-copy="fiesta.debarkak.xyz" style="height:20px; font-size:10px;">
+            <span data-copy-label>[ Copy IP ]</span>
           </button>
-          <a class="btn-classic btn-discord" href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener" title="Join official Discord">
-            <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-discord"/></svg>
-            <span>Discord</span>
-          </a>
-          <a class="btn-classic" href="https://fiesta.debarkak.xyz/login" title="Staff &amp; Admin Management Portal">
-            <span>[ Admin Portal ]</span>
-          </a>
+          <a class="btn-classic" href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener" style="height:20px; font-size:10px;">[ Discord ]</a>
+          <a class="btn-classic" href="https://fiesta.debarkak.xyz/login" style="height:20px; font-size:10px;">[ Admin Portal ]</a>
         </div>
       </div>
     </header>
 
-    <!-- ── ROUTER NAVIGATION BAR ─────────────────────────────── -->
-    <nav class="nav-bar" aria-label="Console Navigation">
-      <ul class="nav-tabs">
-        <li>
-          <a href="index.html" class="">
-            <span class="tab-idx">01</span>
-            <span>Home</span>
-          </a>
-        </li>
-        <li>
-          <a href="terms.html" class="">
-            <span class="tab-idx">02</span>
-            <span>Terms &amp; Rules</span>
-          </a>
-        </li>
-        <li>
-          <a href="gallery.html" class="active">
-            <span class="tab-idx">03</span>
-            <span>Gallery</span>
-          </a>
-        </li>
-        <li>
-          <a href="socials.html" class="">
-            <span class="tab-idx">04</span>
-            <span>Socials</span>
-          </a>
-        </li>
-        <li>
-          <a href="support.html" class="">
-            <span class="tab-idx">05</span>
-            <span>Support</span>
-          </a>
-        </li>
-      </ul>
-
-      <div class="nav-actions">
-        <a class="btn-satin" href="index.html#join" style="padding: 4px 10px; font-size: 10.5px;">
-          <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-gamepad"/></svg>
-          <span>Play Now</span>
-        </a>
-      </div>
-    </nav>
-
-    <!-- ── TELEMETRY & STATUS STRIP ───────────────────────────── -->
+    <!-- ── SUB-BAR: TELEMETRY ─────────────────────────────────── -->
     <div class="telemetry-strip" data-status-root>
       <div class="telemetry-left">
-        <span class="led-indicator "></span>
-        <span class="telemetry-status-text">
-          
-            STATUS: ONLINE
-          
-        </span>
-        <span class="telemetry-specs">
-          [ JAVA: 25565 · BEDROCK: 19132 · 1.8 → 26.3+ · PURE BARTER ]
-        </span>
+        <span class="led-indicator"></span>
+        <span>STATUS: ONLINE</span>
+        <span>|</span>
+        <span>JAVA: 25565</span>
+        <span>|</span>
+        <span>BEDROCK: 19132</span>
+        <span>|</span>
+        <span>CROSSPLAY: 1.8 &rarr; 26.3+</span>
+        <span>|</span>
+        <span>PURE PHYSICAL BARTER</span>
       </div>
       <div class="telemetry-ticker">
-        [SYS] Trust no one · Trade anyway · Join the stream · Bring gifts · Guard your coords · Party hats mandatory · Est. 2021
+        [SYS] Trust no one &middot; Trade anyway &middot; Join the stream &middot; Bring gifts &middot; Guard your coords &middot; Est. 2021
       </div>
     </div>
 
-    <!-- ── WORKSPACE AREA ────────────────────────────────────── -->
-    <main class="workspace-area">
-      
-<div class="section-bar">
-  <div class="section-bar-title">
-    <span class="sec-tag">MEDIA</span>
-    <span>Postcards from the Server</span>
-  </div>
-  <span style="font-size: 10px; opacity: 0.9;">COMMUNITY SCREENSHOT ARCHIVE</span>
+    <!-- ── 3-COLUMN CONSOLE BODY ─────────────────────────────── -->
+    <div class="main-body">
+      <!-- 1. Left Nav Tree -->
+      <nav class="left-nav" aria-label="Router Navigation">
+        <div class="nav-group"><div class="nav-parent">Status</div><div class="nav-sub-list"><a class="nav-sub-item" href="index.html">- Overview</a><a class="nav-sub-item" href="index.html#status">- Live Telemetry</a><a class="nav-sub-item" href="index.html#join">- Quick Setup</a><a class="nav-sub-item" href="index.html#live">- Live Broadcasts</a></div></div><div class="nav-group"><div class="nav-parent">Security & Rules</div><div class="nav-sub-list"><a class="nav-sub-item" href="terms.html">- House Rules</a><a class="nav-sub-item" href="terms.html#combat">- Combat & Raiding</a><a class="nav-sub-item" href="terms.html#economy">- Economy & Barter</a><a class="nav-sub-item" href="terms.html#seasons">- Seasons & Resets</a><a class="nav-sub-item" href="terms.html#discord">- Discord & Chat Code</a></div></div><div class="nav-group"><div class="nav-parent">Media & Gallery</div><div class="nav-sub-list"><a class="nav-sub-item active" href="gallery.html">- Server Postcards</a><a class="nav-sub-item" href="gallery.html#submit">- Submit Screenshot</a></div></div><div class="nav-group"><div class="nav-parent">Comms & Socials</div><div class="nav-sub-list"><a class="nav-sub-item" href="socials.html">- Live Streaming</a><a class="nav-sub-item" href="socials.html#comms">- Discord & Feeds</a><a class="nav-sub-item" href="socials.html#dev">- Dev Repositories</a></div></div><div class="nav-group"><div class="nav-parent">Support Desk</div><div class="nav-sub-list"><a class="nav-sub-item" href="support.html">- Help & Appeals</a><a class="nav-sub-item" href="support.html#appeal">- Ban Appeal Form</a><a class="nav-sub-item" href="support.html#report">- Player Reports</a></div></div><div class="nav-group"><div class="nav-parent">System Access</div><div class="nav-sub-list"><a class="nav-sub-item" href="https://fiesta.debarkak.xyz/login">- Staff Portal</a></div></div>
+      </nav>
+
+      <!-- 2. Center Workspace -->
+      <main class="center-workspace">
+        
+<div class="section-title-bar">
+  <span>Media Archive &middot; Server Postcards</span>
+  <span style="font-size:10px; font-weight:normal;">[ SCREENSHOT REPOSITORY ]</span>
 </div>
 
-<h1 class="hero-heading" style="font-size:24px; margin:8px 0 4px 0;">Postcards from the server.</h1>
-<p style="margin: 0 0 16px; font-size: 13px; color: var(--text-sub); line-height: 1.5;">
-  Builds, sunsets and the aftermath of a few raids &mdash; captured by the people who were there.
+<p style="margin:0 0 10px 0; color:var(--text-sub);">
+  Postcards from the server. Builds, sunsets and the aftermath of a few raids &mdash; captured by the people who were there.
 </p>
 
-<!-- ── POSTCARD GALLERY GRID ─────────────────────────────────── -->
 <div class="gallery-grid">
   <!-- Postcard #01 -->
   <figure class="shot-card">
     <div class="shot-img-wrap">
-      <a href="assets/img/og.jpg" data-lb data-caption="Postcard #01 — Fiesta SMP Spawn &amp; Archipelago">
-        <img src="assets/img/og.jpg" alt="Fiesta SMP Postcard #01" width="1280" height="720" loading="lazy" onerror="this.closest('.shot-card').classList.add('is-missing');">
+      <a href="assets/img/og.jpg" data-lb data-caption="Postcard #01 — Spawn Archipelago &amp; Frontier">
+        <img src="assets/img/og.jpg" alt="Postcard #01" loading="lazy">
       </a>
     </div>
-    <figcaption class="shot-meta">
-      <span>Postcard #01 &middot; Archipelago</span>
-      <span style="font-family:var(--font-mono); color:#888;">[ VIEW ]</span>
+    <figcaption>
+      <span>POSTCARD_ID: #01 &middot; Spawn Archipelago</span>
+      <span style="color:#666;">[ VIEW ]</span>
     </figcaption>
   </figure>
 
   <!-- Postcard #02 -->
   <figure class="shot-card">
     <div class="shot-img-wrap">
-      <a href="assets/img/banner.png" data-lb data-caption="Postcard #02 — Gateway Operations">
-        <img src="assets/img/banner.png" alt="Fiesta SMP Postcard #02" width="1280" height="720" loading="lazy" onerror="this.closest('.shot-card').classList.add('is-missing');">
+      <a href="assets/img/banner.png" data-lb data-caption="Postcard #02 — Gateway Operations &amp; Console">
+        <img src="assets/img/banner.png" alt="Postcard #02" loading="lazy">
       </a>
     </div>
-    <figcaption class="shot-meta">
-      <span>Postcard #02 &middot; Gateway Console</span>
-      <span style="font-family:var(--font-mono); color:#888;">[ VIEW ]</span>
+    <figcaption>
+      <span>POSTCARD_ID: #02 &middot; Gateway Operations</span>
+      <span style="color:#666;">[ VIEW ]</span>
     </figcaption>
   </figure>
 
   <!-- Postcard #03 -->
   <figure class="shot-card">
     <div class="shot-img-wrap">
-      <a href="assets/gallery/3.jpg" data-lb data-caption="Postcard #03 — Raid Remains">
-        <img src="assets/gallery/3.jpg" alt="Fiesta SMP Postcard #03" width="1280" height="720" loading="lazy" onerror="this.closest('.shot-card').classList.add('is-missing');">
+      <a href="assets/gallery/3.jpg" data-lb data-caption="Postcard #03 — Raid Remains &amp; Aftermath">
+        <img src="assets/gallery/3.jpg" alt="Postcard #03" loading="lazy">
       </a>
     </div>
-    <figcaption class="shot-meta">
-      <span>Postcard #03 &middot; Raid Aftermath</span>
-      <span style="font-family:var(--font-mono); color:#888;">[ ARCHIVE ]</span>
+    <figcaption>
+      <span>POSTCARD_ID: #03 &middot; Raid Aftermath</span>
+      <span style="color:#666;">[ VIEW ]</span>
     </figcaption>
   </figure>
 
@@ -193,126 +126,76 @@
   <figure class="shot-card">
     <div class="shot-img-wrap">
       <a href="assets/gallery/4.jpg" data-lb data-caption="Postcard #04 — Wilderness Frontier">
-        <img src="assets/gallery/4.jpg" alt="Fiesta SMP Postcard #04" width="1280" height="720" loading="lazy" onerror="this.closest('.shot-card').classList.add('is-missing');">
+        <img src="assets/gallery/4.jpg" alt="Postcard #04" loading="lazy">
       </a>
     </div>
-    <figcaption class="shot-meta">
-      <span>Postcard #04 &middot; Frontier Base</span>
-      <span style="font-family:var(--font-mono); color:#888;">[ ARCHIVE ]</span>
+    <figcaption>
+      <span>POSTCARD_ID: #04 &middot; Frontier Wilderness</span>
+      <span style="color:#666;">[ VIEW ]</span>
     </figcaption>
   </figure>
 </div>
 
-<!-- ── SUBMIT APPEAL BANNER ─────────────────────────────────── -->
-<div class="cta-panel" style="margin-top: 14px;">
-  <div>
-    <h3 class="cta-title" style="font-size: 16px;">Got a screenshot worth framing?</h3>
-    <p class="cta-sub">Open a ticket on our Discord with your shot and coordinates &mdash; we’ll hang it here.</p>
-  </div>
-  <div>
-    <a class="btn-classic btn-discord" href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener">
-      <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-discord"/></svg>
-      <span>Submit on Discord</span>
-    </a>
-  </div>
+<!-- Screenshot Submission -->
+<div class="section-sub-header" id="submit">
+  Screenshot Framing Submission
 </div>
 
-<!-- ── FULLSCREEN LIGHTBOX DIALOG ────────────────────────────── -->
+<table class="form-layout-table">
+  <tbody>
+    <tr>
+      <td class="label-col">Got a screenshot worth framing?</td>
+      <td class="val-col">
+        Open a ticket on our Discord with your shot and we’ll hang it here.
+      </td>
+    </tr>
+    <tr>
+      <td class="label-col">Submission Channel:</td>
+      <td class="val-col">
+        <a class="btn-satin" href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener">[ Submit on Discord ]</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Lightbox Dialog -->
 <dialog class="lb" id="lb" aria-label="Screenshot viewer">
   <figure>
     <img alt="" src="">
     <figcaption></figcaption>
   </figure>
-  <button class="lb-btn lb-close" type="button" aria-label="Close viewer">
-    <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-close"/></svg>
-  </button>
-  <button class="lb-btn lb-prev" type="button" aria-label="Previous screenshot">
-    <svg class="i i--px" aria-hidden="true" style="transform: rotate(180deg);"><use href="assets/img/icons.svg#p-arrow"/></svg>
-  </button>
-  <button class="lb-btn lb-next" type="button" aria-label="Next screenshot">
-    <svg class="i i--px" aria-hidden="true"><use href="assets/img/icons.svg#p-arrow"/></svg>
-  </button>
+  <button class="lb-btn lb-close" type="button" aria-label="Close">[ CLOSE X ]</button>
+  <button class="lb-btn lb-prev" type="button" aria-label="Previous">[ &lt; PREV ]</button>
+  <button class="lb-btn lb-next" type="button" aria-label="Next">[ NEXT &gt; ]</button>
 </dialog>
 
-    </main>
+      </main>
 
-    <!-- ── DIAGNOSTIC FOOTER ─────────────────────────────────── -->
+      <!-- 3. Right Help Column -->
+      <aside class="right-help" aria-label="Router Help Panel">
+        
+<div class="help-header">GALLERY INSTRUCTIONS</div>
+<div class="help-sub">Viewing Postcards:</div>
+<p class="help-p">
+  Click any screenshot thumbnail to open the high-resolution lightbox view. Use Arrow Keys or the on-screen controls to navigate.
+</p>
+
+<div class="help-sub">Submitting Shots:</div>
+<p class="help-p">
+  Community members may submit in-game captures via Discord support tickets. Preferred resolution is 1920x1080 or higher with UI hidden (F1).
+</p>
+
+      </aside>
+    </div>
+
+    <!-- ── ROUTER FOOTER ──────────────────────────────────────── -->
     <footer class="console-footer">
-      <div class="footer-diagnostic-bar">
-        <span>FS-GATEWAY-PRO // OFFICIAL FIESTA SMP GATEWAY</span>
-        <span>FIRMWARE: v2.6.3-SMP · PUBLIC INTERFACE</span>
-        <span>HOST: fiesta.debarkak.xyz</span>
-      </div>
-
-      <div class="footer-top-grid">
-        <div class="footer-col">
-          <div style="display:flex; align-items:center; gap:8px; margin-bottom: 8px;">
-            <img src="assets/img/server-icon.webp" alt="Fiesta SMP" width="28" height="28" style="border-radius:2px;">
-            <span style="font-family: var(--font-display); font-weight:800; color:#fff; font-size:14px;">FIESTA <b>SMP</b></span>
-          </div>
-          <p style="margin:0 0 10px 0; font-size:11.5px; line-height:1.45; color: #aaa;">
-            A long-haul survival server for Java &amp; Bedrock. Barter-only, raid-friendly, streamed live. Est. 2021.
-          </p>
-          <div style="display:flex; gap:10px; margin-top:8px;">
-            <a href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener" title="Discord" style="color:#ffffff;">
-              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-discord"/></svg>
-            </a>
-            <a href="https://twitch.tv/fiestasmp" target="_blank" rel="noopener" title="Twitch" style="color:#ffffff;">
-              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-twitch"/></svg>
-            </a>
-            <a href="https://kick.com/fiestasmp" target="_blank" rel="noopener" title="Kick" style="color:#ffffff;">
-              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-kick"/></svg>
-            </a>
-            <a href="https://youtube.com/@fiestamc-yt" target="_blank" rel="noopener" title="YouTube" style="color:#ffffff;">
-              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-youtube"/></svg>
-            </a>
-            <a href="https://github.com/open-fiestasmp" target="_blank" rel="noopener" title="GitHub" style="color:#ffffff;">
-              <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#b-github"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="terms.html">Terms &amp; Rules</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="socials.html">Socials</a></li>
-            <li><a href="support.html">Support</a></li>
-            <li><a href="index.html#join">Play Now</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Watch</h4>
-          <ul>
-            <li><a href="https://twitch.tv/fiestasmp" target="_blank" rel="noopener">Twitch</a></li>
-            <li><a href="https://kick.com/fiestasmp" target="_blank" rel="noopener">Kick</a></li>
-            <li><a href="https://youtube.com/@fiestamc-yt" target="_blank" rel="noopener">YouTube</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contact &amp; Help</h4>
-          <ul>
-            <li><a href="mailto:fiestamg@murena.io">fiestamg@murena.io</a></li>
-            <li><a href="support.html">Ban Appeal Form</a></li>
-            <li><a href="https://discord.gg/marqvC9UrP" target="_blank" rel="noopener">Discord Ticket</a></li>
-            <li><a href="https://fiesta.debarkak.xyz/login">[ Admin Portal ]</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom-copy">
-        <div>&copy; 2026 Fiesta Media Group &middot; &copy; 2021&ndash;2026 debarkak</div>
-        <div style="font-size: 10px; opacity: 0.75; margin-top: 3px;">
-          Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.
-        </div>
+      <div>Fiesta SMP Technologies Co., Ltd. &middot; Model: FS-GATEWAY-PRO &middot; Firmware: v2.6.3-SMP &middot; Host: fiesta.debarkak.xyz</div>
+      <div style="margin-top:2px; opacity:0.85;">
+        &copy; 2026 Fiesta Media Group &middot; &copy; 2021&ndash;2026 debarkak. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.
       </div>
     </footer>
   </div>
 
-  
 </body>
 </html>
