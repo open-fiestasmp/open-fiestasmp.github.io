@@ -6,7 +6,7 @@ Styled with the **Classic Green Console Theme** (`FS-GATEWAY-PRO` / TP-Link Rout
 
 ## 🌐 Live Pages
 
-- **[Home](https://open-fiestasmp.github.io/)** (`index.html`) — Server introduction, interactive WebGL 3D voxel island radar, IP connection widget, gameplay features, live server status telemetry, and stream schedule.
+- **[Home](https://open-fiestasmp.github.io/)** (`index.html`) — Server introduction, real-time Gateway Telemetry & Hardware Diagnostics Monitor, IP connection widget, gameplay features, live server status telemetry, and stream schedule.
 - **[Terms & Rules](https://open-fiestasmp.github.io/terms.html)** (`terms.html`) — Security policies, allowed mechanics vs. prohibited exploits matrix, and the complete 10-rule Discord & Chat code.
 - **[Gallery](https://open-fiestasmp.github.io/gallery.html)** (`gallery.html`) — Postcards from the server with an interactive full-screen lightbox viewer.
 - **[Socials](https://open-fiestasmp.github.io/socials.html)** (`socials.html`) — Community streaming links (Twitch, Kick, YouTube), comms (Discord, X, Email), and developer profiles.
@@ -33,8 +33,7 @@ Styled with the **Classic Green Console Theme** (`FS-GATEWAY-PRO` / TP-Link Rout
     ├── css/
     │   └── console-site.css    # Classic Green Console stylesheet
     ├── js/
-    │   ├── site.js             # Interactivity, copy IP, live status, lightbox
-    │   └── island.js           # WebGL 3D floating voxel island
+    │   └── site.js             # Interactivity, copy IP, live status, lightbox
     ├── img/
     │   ├── favicon-32.png      # 32x32 Favicon
     │   ├── icon-192.png        # 192x192 Touch Icon
