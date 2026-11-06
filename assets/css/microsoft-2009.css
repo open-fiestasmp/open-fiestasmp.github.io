@@ -1070,6 +1070,280 @@ img {
 }
 
 /* --------------------------------------------------------------------------
+   Home Page News Section (2009 Microsoft PressPass / Windows 7 Era Styling)
+   -------------------------------------------------------------------------- */
+.ms-home-news-section {
+  padding: 0 20px 32px 20px;
+  background-color: #ffffff;
+}
+.ms-home-news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #0072c6;
+  position: relative;
+}
+.ms-home-news-header::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 90px;
+  height: 2px;
+  background-color: #ffba00;
+}
+.ms-home-news-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.ms-home-news-icon {
+  width: 20px;
+  height: 20px;
+  fill: #005a9e;
+  flex-shrink: 0;
+}
+.ms-home-news-title {
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #005a9e;
+  margin: 0;
+  line-height: 1.2;
+}
+.ms-home-news-subtitle {
+  font-size: 11.5px;
+  color: #666666;
+  font-weight: normal;
+  display: inline-block;
+  margin-left: 4px;
+}
+.ms-home-news-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ms-home-news-pill {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1e5a84;
+  background: #edf5fa;
+  border: 1px solid #bddae8;
+  border-radius: 10px;
+  padding: 2px 9px;
+}
+.ms-home-news-all-link {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0066cc;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.ms-home-news-all-link:hover {
+  color: #004b97;
+  text-decoration: underline;
+}
+
+/* Home News 3-Column Grid */
+.ms-home-news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.ms-home-news-card {
+  background: #ffffff;
+  border: 1px solid #d1e2ee;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.ms-home-news-card:hover {
+  transform: translateY(-2px);
+  border-color: #5fa6d5;
+  box-shadow: 0 4px 12px rgba(0, 70, 120, 0.12);
+}
+.ms-home-news-card-thumb-wrap {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1b6da7 0%, #288fca 100%);
+  border-bottom: 1px solid #d5e5f0;
+}
+.ms-home-news-card-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.ms-home-news-card:hover .ms-home-news-card-thumb {
+  transform: scale(1.03);
+}
+.ms-home-news-card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 70, 120, 0.85);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(4px);
+}
+.ms-home-news-card-body {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.ms-home-news-meta-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #777777;
+  margin-bottom: 6px;
+}
+.ms-home-news-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #005a9e;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.ms-home-news-card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+.ms-home-news-card-title a:hover {
+  color: #004b97;
+  text-decoration: underline;
+}
+.ms-home-news-card-desc {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #444444;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+/* Home News Chevron Sub-links */
+.ms-home-news-chevrons {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
+  border-top: 1px solid #edf4f9;
+  padding-top: 8px;
+}
+.ms-home-news-chevrons li {
+  margin-bottom: 5px;
+  font-size: 11.5px;
+}
+.ms-home-news-chevrons a {
+  color: #0066cc;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.ms-home-news-chevrons a:hover {
+  color: #004b97;
+  text-decoration: underline;
+}
+
+/* Home News Footer */
+.ms-home-news-footer {
+  border-top: 1px solid #edf4f9;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ms-home-news-author {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ms-home-news-author-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  image-rendering: pixelated;
+  border: 1px solid #c0d8e8;
+}
+.ms-home-news-author-name {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #444444;
+}
+.ms-home-news-read-link {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #0066cc;
+  text-decoration: none;
+}
+.ms-home-news-read-link:hover {
+  text-decoration: underline;
+}
+
+/* Server Quick Wire / Live Bulletins Bar */
+.ms-home-news-wire {
+  margin-top: 18px;
+  background: linear-gradient(to right, #f2f7fb 0%, #ffffff 100%);
+  border: 1px solid #d0e4f2;
+  border-radius: 4px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+}
+.ms-wire-label {
+  font-weight: 700;
+  color: #1e5a84;
+  text-transform: uppercase;
+  font-size: 10.5px;
+  background: #e0eff8;
+  padding: 2px 7px;
+  border-radius: 3px;
+  border: 1px solid #bddae8;
+  letter-spacing: 0.4px;
+}
+.ms-wire-items {
+  color: #444444;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.ms-wire-item a {
+  color: #0066cc;
+  font-weight: 600;
+}
+.ms-wire-item a:hover {
+  color: #004b97;
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
    Master Microsoft 2009 Corporate Footer
    -------------------------------------------------------------------------- */
 .ms-footer {
@@ -1212,6 +1486,9 @@ img {
   .ms-news-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .ms-home-news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .ms-directory-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1265,6 +1542,17 @@ img {
   }
   .ms-news-grid {
     grid-template-columns: 1fr;
+  }
+  .ms-home-news-grid {
+    grid-template-columns: 1fr;
+  }
+  .ms-home-news-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ms-home-news-wire {
+    flex-direction: column;
+    align-items: flex-start;
   }
   .ms-footer-cols {
     grid-template-columns: 1fr;
