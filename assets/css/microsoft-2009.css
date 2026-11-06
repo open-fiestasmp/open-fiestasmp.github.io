@@ -1353,41 +1353,9 @@ img {
 .ms-footer {
   background: linear-gradient(to bottom, #f1f5f8 0%, #e0ebf2 100%);
   border-top: 1px solid #c2d8e6;
-  padding: 18px 20px 14px 20px;
+  padding: 12px 20px;
 }
-.ms-footer-cols {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 14px;
-}
-.ms-footer-col h4 {
-  font-size: 12px;
-  font-weight: 700;
-  color: #1e5a84;
-  margin-bottom: 8px;
-  padding-bottom: 3px;
-  border-bottom: 1px solid #c8dfef;
-}
-.ms-footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.ms-footer-links li {
-  margin-bottom: 5px;
-  font-size: 11.5px;
-}
-.ms-footer-links a {
-  color: #0066cc;
-}
-.ms-footer-links a:hover {
-  color: #004b97;
-}
-
 .ms-footer-bottom {
-  border-top: 1px solid #c6dfe9;
-  padding-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1398,6 +1366,8 @@ img {
 }
 .ms-footer-legal-links {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 14px;
 }
 .ms-footer-legal-links a {
@@ -1484,10 +1454,6 @@ img {
   .ms-portal-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .ms-footer-cols {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
   .ms-news-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1568,9 +1534,10 @@ img {
     flex-direction: column;
     align-items: flex-start;
   }
-  .ms-footer-cols {
-    grid-template-columns: 1fr;
-    gap: 14px;
+  .ms-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
   .ms-header-badges .ms-status-indicator,
   .ms-header-badges .ms-pill-badge {
