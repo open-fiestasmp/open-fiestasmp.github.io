@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="/server-icon.webp" type="image/webp">
-  <title>Season 2 Official Announcement &amp; Nether Overhaul - FiestaSMP Newsroom</title>
-  <meta name="description" content="FiestaSMP Season 2 is officially underway! Discover what is new, including our community Nether highway, trade rebalance, and crossplay enhancements.">
+  <title>Season 2 Launch &amp; Server Guide - FiestaSMP Newsroom</title>
+  <meta name="description" content="FiestaSMP Season 2 is live! Everything you need to know about Paper 1.21.x crossplay, AuthMe registration, TPA rules, bed respawns, and the barter economy.">
   <link rel="stylesheet" href="/assets/css/microsoft-2009.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
     <div class="ms-top-left">
       <a href="/index.html" class="ms-globe-link">
         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2h1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-        United States / Global
+        FiestaSMP Network
       </a>
       <span class="ms-server-status-top">
         <span class="ms-status-dot-mini"></span>
@@ -41,11 +41,11 @@
       <img src="/server-icon.webp" alt="FiestaSMP Logo" class="ms-logo-img">
       <div>
         <span class="ms-brand-title">Fiesta<em>SMP</em></span>
-        <span class="ms-brand-subtitle">Official Newsroom &amp; PressPass</span>
+        <span class="ms-brand-subtitle">Official Newsroom &amp; Release Notes</span>
       </div>
     </a>
     <div class="ms-header-badges">
-      <span class="ms-pill-badge">Hugo Markdown Feed</span>
+      <span class="ms-pill-badge">Server Newsroom</span>
       <button class="ms-mobile-toggle" aria-label="Toggle Navigation">
         <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
       </button>
@@ -66,7 +66,7 @@
 
   
   <div class="ms-page-header">
-    <h1>Season 2 Official Announcement &amp; Nether Overhaul</h1>
+    <h1>Season 2 Launch &amp; Server Guide</h1>
     <p>Official server changelogs, season updates, and community notices</p>
   </div>
 
@@ -92,14 +92,17 @@
       
     </div>
 
-    <h1 class="post-header-title">Season 2 Official Announcement &amp; Nether Overhaul</h1>
+    <h1 class="post-header-title">Season 2 Launch &amp; Server Guide</h1>
 
     <div class="post-header-meta">
       <div class="post-author-badge">
-        <img src="/assets/img/avatars/debarkak.png" alt="debarkak" class="post-author-avatar-lg" loading="lazy">
+        <img src="/assets/img/avatars/kytrakton.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="kytrakton" class="post-author-avatar-lg" loading="lazy">
         <div class="post-author-details">
-          <span class="post-author-name-lg">debarkak</span>
-          <span class="post-author-role">FiestaSMP Core Team</span>
+          <span class="post-author-name-lg">kytrakton</span>
+          <span class="post-author-role">
+            Server Owner
+            
+          </span>
         </div>
       </div>
       <div class="post-meta-divider"></div>
@@ -109,40 +112,59 @@
     </div>
 
     <div class="post-content ms-kb-content">
-      <p>Welcome to <strong>FiestaSMP Season 2</strong>! Over the past few weeks, our core team and community contributors have worked tirelessly to prepare an expanded and refined survival multiplayer experience.</p>
-<h2 id="what-is-new-in-season-2">What is New in Season 2?</h2>
-<p>Here is an overview of the major features and systems introduced for this season:</p>
-<h3 id="1-the-great-nether-highway">1. The Great Nether Highway</h3>
-<p>To facilitate trade and travel across long distances, we have constructed the primary Nether Highway hub at coordinates <code>(0, 70, 0)</code> in the Nether dimension:</p>
+      <p>Welcome to <strong>FiestaSMP Season 2</strong>! Our team has prepared a streamlined, competitive survival multiplayer world running on high-performance Paper/Folia infrastructure.</p>
+<p>Whether you are a returning veteran or exploring our world for the first time, here is the complete guide to Season 2.</p>
+<h2 id="how-to-connect">How to Connect</h2>
+<p>FiestaSMP natively supports both Java Edition and Bedrock Edition players, with multi-version client compatibility:</p>
 <ul>
-<li>Packed ice boat express routes connecting all four cardinal directions.</li>
-<li>Designated community portals linking Spawn Archipelago directly to distant player outposts.</li>
-<li>Protected corridor guidelines to prevent portal conflicts and unauthorized obstructions.</li>
+<li><strong>Java Edition Address:</strong> <code>fiesta.debarkak.xyz:25565</code> (Supports 1.8 to 1.21.x / 26.x via ViaVersion)</li>
+<li><strong>Bedrock Edition Address:</strong> <code>fiesta.debarkak.xyz:19132</code> (Port <code>19132</code> via Geyser-Spigot)</li>
 </ul>
-<h3 id="2-economy--merchant-trade-rebalance">2. Economy &amp; Merchant Trade Rebalance</h3>
-<p>We gathered extensive feedback throughout Season 1 regarding currency flow and trading balance. Key updates include:</p>
+<h3 id="account-authentication--skins">Account Authentication &amp; Skins</h3>
+<p>Our server welcomes both premium and offline-mode clients using <strong>AuthMe</strong>:</p>
 <ul>
-<li>Reduced diamond inflation by introducing server trade sinks (rare cosmetic blocks, custom titles).</li>
-<li>Structured villager trade adjustments to preserve survival progression.</li>
-<li>Secure community trading stalls at Spawn Harbor.</li>
+<li>First-time joining: Run <code>/register &lt;password&gt; &lt;confirmPassword&gt;</code> in chat.</li>
+<li>Subsequent logins: Run <code>/login &lt;password&gt;</code>.</li>
+<li>Character Skins: Handled automatically via <strong>SkinsRestorer</strong> (<code>/skin &lt;name&gt;</code>).</li>
 </ul>
-<h3 id="3-crossplay--connection-stability">3. Crossplay &amp; Connection Stability</h3>
-<p>Our underlying Folia server architecture has been upgraded to improve tick stability and Bedrock parity:</p>
+<h2 id="core-gameplay-survival-with-the-safety-off">Core Gameplay: Survival with the Safety Off</h2>
+<p>FiestaSMP is built on unfiltered survival mechanics:</p>
 <ul>
-<li><strong>Java Edition Address:</strong> <code>fiesta.debarkak.xyz:25565</code></li>
-<li><strong>Bedrock Edition Address:</strong> <code>fiesta.debarkak.xyz:19132</code></li>
+<li><strong>Wilderness Raiding &amp; PvP:</strong> Outside the protected Spawn Archipelago, PvP, territory skirmishes, and raiding unprotected chests are fully allowed.</li>
+<li><strong>Fair Play Enforcement:</strong> Cheating, flight hacks, X-ray texture packs, and automated botting are strictly forbidden. All block placements, container withdrawals, and entity damage are logged around the clock by <strong>CoreProtect 24.0</strong> and filtered by <strong>UltimateAntiBot</strong>.</li>
+<li><strong>Server Conduct:</strong> Always review <code>/rules</code> in-game before venturing out.</li>
 </ul>
-<blockquote>
-<p><strong>Server Reminder:</strong> PvP, griefing of unprotected structures, and competitive raiding are permitted according to our rules. Check <a href="/terms.html"><code>/terms.html</code></a> for full conduct guidelines.</p>
-</blockquote>
-<p>See you all in-game!</p>
-<p><em>— debarkak (FiestaSMP Owner)</em></p>
+<h2 id="key-mechanics--systems">Key Mechanics &amp; Systems</h2>
+<h3 id="1-teleportation-safety--tpa">1. Teleportation Safety &amp; TPA</h3>
+<ul>
+<li>Sending a teleport request is done with <code>/tpa &lt;player&gt;</code>.</li>
+<li><strong>Mandatory Confirmation:</strong> Teleports do <strong>not</strong> happen automatically. The recipient must explicitly accept using <code>/tpaccept</code>.</li>
+<li><strong>Invulnerability Grace Period:</strong> Teleported players receive a 4-second invulnerability window upon arrival to prevent instant trap ambushes.</li>
+</ul>
+<h3 id="2-bed-respawns--home-anchors">2. Bed Respawns &amp; Home Anchors</h3>
+<p>The earlier bug where bed respawns reverted to the center world spawn has been fully resolved. Sleeping in any valid bed in the Overworld will properly set your individual respawn coordinates.</p>
+<h3 id="3-fiestateams--clan-warfare">3. FiestaTeams &amp; Clan Warfare</h3>
+<p>Band together with friends or establish rival factions using our custom <strong>FiestaTeams</strong> plugin:</p>
+<ul>
+<li><code>/team create &lt;name&gt;</code> to establish your squad.</li>
+<li><code>/team invite &lt;player&gt;</code> to recruit trusted allies.</li>
+<li>Plan defenses, coordinate outpost raids, and conquer the wilderness together.</li>
+</ul>
+<h3 id="4-barter-economy">4. Barter Economy</h3>
+<p>There are no artificial infinite coin shops. The economy is 100% player-driven through physical bartering:</p>
+<ul>
+<li>Trade directly using <code>/trade &lt;player&gt;</code> via <strong>InTrade</strong>.</li>
+<li>Establish automated merchant stalls using <strong>ChestShop</strong>.</li>
+<li>List rare artifacts on the player-run auction board with <strong>EzAuction</strong>.</li>
+</ul>
+<p>See you all on the server!</p>
+<p><em>— kytrakton (FiestaSMP Owner)</em></p>
 
     </div>
 
     <div class="post-footer-box">
       <div class="post-actions-row">
-        <button type="button" class="post-share-btn" id="share-post-btn" data-url="https://open-fiestasmp.github.io/news/season-2-official-announcement-nether-overhaul/">
+        <button type="button" class="post-share-btn" id="share-post-btn" data-url="https://open-fiestasmp.github.io/news/season-2-launch-server-guide/">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           Share this article
         </button>
@@ -150,18 +172,20 @@
       </div>
 
       <div class="post-author-card">
-        <img src="/assets/img/avatars/debarkak.png" alt="debarkak" class="post-author-avatar-lg" style="width: 44px; height: 44px;">
+        <img src="/assets/img/avatars/kytrakton.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="kytrakton" class="post-author-avatar-lg" style="width: 44px; height: 44px;">
         <div class="post-author-bio" style="font-size: 12.5px; line-height: 1.5; color: #333333;">
-          <strong style="color: #005a9e;">debarkak</strong> &bull; FiestaSMP Lead &amp; Developer<br>
+          <strong style="color: #005a9e;">kytrakton</strong> &bull; 
+          FiestaSMP Owner
+          <br>
           For queries or official announcements, join our <a href="https://discord.gg/marqvC9UrP" target="_blank" style="color: #0066cc; font-weight: 600;">Discord Server</a> or email <a href="mailto:fiestamg@murena.io" style="color: #0066cc; font-weight: 600;">fiestamg@murena.io</a>.
         </div>
       </div>
 
       <div class="post-nav-links">
         
-        <a href="/news/patch-notes-2.1-economy-balancing-custom-enchants/" class="post-nav-item">
+        <a href="/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/" class="post-nav-item">
           <div class="post-nav-label">&larr; Previous</div>
-          <div class="post-nav-title">Patch Notes 2.1: Economy Balancing &amp; Custom Enchants</div>
+          <div class="post-nav-title">Patch Notes 2.1: TPA Confirmation, Economy &amp; System Tuning</div>
         </a>
         
 
@@ -222,14 +246,14 @@
       <div>
         <a href="/index.html" class="ms-globe-link" style="color: #444444; font-size: 11px;">
           <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2h1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-          Worldwide (English)
+          FiestaSMP Community
         </a>
       </div>
       <div class="ms-footer-legal-links">
         <a href="/terms.html">Terms of Use</a>
         <a href="/contactsupport.html">Support</a>
         <a href="mailto:fiestamg@murena.io">Contact Us</a>
-        <span>&copy; 2026 Fiesta Media Group &bull; &copy; 2021-2026 debarkak. All rights reserved.</span>
+        <span>&copy; 2021-2026 FiestaSMP Team &bull; All rights reserved.</span>
       </div>
     </div>
   </footer>

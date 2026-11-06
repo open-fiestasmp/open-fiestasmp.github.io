@@ -3,27 +3,29 @@ title: "Spawn Archipelago & Harbor Grand Opening"
 date: 2026-10-18T16:30:00+05:30
 draft: false
 author: "debarkak"
-summary: "Celebration of our new Spawn Archipelago builds, harbor facilities, and the community gallery screenshot submission event."
+summary: "Celebration of the new protected Spawn Archipelago docks, communal starter supplies, and the community gallery screenshot showcase."
 tags: ["Community", "Events", "Gallery"]
 ---
 
-The FiestaSMP development and building crew is proud to present the official opening of the **Spawn Archipelago Harbor**!
+The FiestaSMP staff and community building team are excited to present the official opening of the **Spawn Archipelago Harbor**!
 
-## Spawn Infrastructure Highlights
+## Spawn Infrastructure & Features
 
-Over the last two weeks, debarkak and community volunteers designed a functional, lore-friendly island spawn that welcomes every new player:
+Constructed with help from multiple community volunteers and builders, the Spawn Archipelago serves as a neutral, safe starting zone before players venture out into the untamed wilderness:
 
-1. **The Grand Harbor:** Docking slipways, trading lighthouse, and arrival quays.
-2. **Community Starter Hall:** Free food reserves, enchanting station, and local map boards.
-3. **Portal Nexus:** Direct routing into the Nether highway system and community mineheads.
+1. **The Harbor & Arrival Quays:** Safe docking slipways for player boats, well-lit piers, and navigation lighthouses.
+2. **Community Starter Hall:** Communal crop plots, public crafting tables, and rule boards outlining server etiquette (`/rules`).
+3. **Nether Portal Nexus:** Direct connection to the upper Nether transport corridors for long-range wilderness traversal.
 
-## Community Screenshot Submissions
+## Community Screenshot Showcase
 
-Have you captured a beautiful viewpoint or epic fortress build on the server? We are currently accepting submissions for our official [Gallery](/gallery.html)!
+We have officially launched the [FiestaSMP Gallery](/gallery.html) featuring in-game photography taken by server players and staff!
 
-### How to Submit:
-- Take an uncropped, high-resolution screenshot in vanilla or using approved shader packs.
-- Fill out the [Gallery Form](/contactsupport.html) or post in our Discord media channel.
-- Accepted entries will be featured directly on the website with your character skin avatar and name.
+### How to Get Featured:
+- Capture an uncropped, high-resolution screenshot of your outpost, base build, or scenic landscape.
+- Submit your capture through our [Support & Submissions Form](/contactsupport.html) or post in our Discord media channel.
+- Featured captures will appear on the website alongside your player character skin avatar and date.
 
-Thanks to everyone who joined our opening festival!
+Special thanks to all community members and builders who helped terraform and construct the harbor!
+
+*— debarkak (FiestaSMP Lead Developer)*

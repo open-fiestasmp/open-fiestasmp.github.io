@@ -9,25 +9,25 @@
     <lastBuildDate>Fri, 06 Nov 2026 15:00:00 +0530</lastBuildDate>
     <atom:link href="https://open-fiestasmp.github.io/news/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Season 2 Official Announcement &amp; Nether Overhaul</title>
-      <link>https://open-fiestasmp.github.io/news/season-2-official-announcement-nether-overhaul/</link>
+      <title>Season 2 Launch &amp; Server Guide</title>
+      <link>https://open-fiestasmp.github.io/news/season-2-launch-server-guide/</link>
       <pubDate>Fri, 06 Nov 2026 15:00:00 +0530</pubDate>
-      <guid>https://open-fiestasmp.github.io/news/season-2-official-announcement-nether-overhaul/</guid>
-      <description>FiestaSMP Season 2 is officially underway! Discover what is new, including our community Nether highway, trade rebalance, and crossplay enhancements.</description>
+      <guid>https://open-fiestasmp.github.io/news/season-2-launch-server-guide/</guid>
+      <description>FiestaSMP Season 2 is live! Everything you need to know about Paper 1.21.x crossplay, AuthMe registration, TPA rules, bed respawns, and the barter economy.</description>
     </item>
     <item>
-      <title>Patch Notes 2.1: Economy Balancing &amp; Custom Enchants</title>
-      <link>https://open-fiestasmp.github.io/news/patch-notes-2.1-economy-balancing-custom-enchants/</link>
-      <pubDate>Wed, 28 Oct 2026 19:00:00 +0530</pubDate>
-      <guid>https://open-fiestasmp.github.io/news/patch-notes-2.1-economy-balancing-custom-enchants/</guid>
-      <description>Comprehensive balance adjustments to merchant trading, villager mechanics, combat timer safety, and Folia server optimizations.</description>
+      <title>Patch Notes 2.1: TPA Confirmation, Economy &amp; System Tuning</title>
+      <link>https://open-fiestasmp.github.io/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/</link>
+      <pubDate>Thu, 05 Nov 2026 19:00:00 +0530</pubDate>
+      <guid>https://open-fiestasmp.github.io/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/</guid>
+      <description>Changelog for Patch 2.1 addressing mandatory /tpaccept confirmation, 4-second teleport safety, ChestShop balances, and Paper 20.0 TPS stability.</description>
     </item>
     <item>
       <title>Spawn Archipelago &amp; Harbor Grand Opening</title>
       <link>https://open-fiestasmp.github.io/news/spawn-archipelago-harbor-grand-opening/</link>
       <pubDate>Sun, 18 Oct 2026 16:30:00 +0530</pubDate>
       <guid>https://open-fiestasmp.github.io/news/spawn-archipelago-harbor-grand-opening/</guid>
-      <description>Celebration of our new Spawn Archipelago builds, harbor facilities, and the community gallery screenshot submission event.</description>
+      <description>Celebration of the new protected Spawn Archipelago docks, communal starter supplies, and the community gallery screenshot showcase.</description>
     </item>
   </channel>
 </rss>

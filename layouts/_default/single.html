@@ -22,10 +22,15 @@
 
     <div class="post-header-meta">
       <div class="post-author-badge">
-        <img src="/assets/img/avatars/debarkak.png" alt="{{ .Params.author }}" class="post-author-avatar-lg" loading="lazy">
+        <img src="/assets/img/avatars/{{ .Params.author }}.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="{{ .Params.author }}" class="post-author-avatar-lg" loading="lazy">
         <div class="post-author-details">
           <span class="post-author-name-lg">{{ .Params.author }}</span>
-          <span class="post-author-role">FiestaSMP Core Team</span>
+          <span class="post-author-role">
+            {{ if eq .Params.author "kytrakton" }}Server Owner
+            {{ else if eq .Params.author "cbladeOfficial" }}Developer
+            {{ else if eq .Params.author "debarkak" }}Lead Developer
+            {{ else }}FiestaSMP Core Team{{ end }}
+          </span>
         </div>
       </div>
       <div class="post-meta-divider"></div>
@@ -48,9 +53,13 @@
       </div>
 
       <div class="post-author-card">
-        <img src="/assets/img/avatars/debarkak.png" alt="{{ .Params.author }}" class="post-author-avatar-lg" style="width: 44px; height: 44px;">
+        <img src="/assets/img/avatars/{{ .Params.author }}.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="{{ .Params.author }}" class="post-author-avatar-lg" style="width: 44px; height: 44px;">
         <div class="post-author-bio" style="font-size: 12.5px; line-height: 1.5; color: #333333;">
-          <strong style="color: #005a9e;">{{ .Params.author }}</strong> &bull; FiestaSMP Lead &amp; Developer<br>
+          <strong style="color: #005a9e;">{{ .Params.author }}</strong> &bull; 
+          {{ if eq .Params.author "kytrakton" }}FiestaSMP Owner
+          {{ else if eq .Params.author "cbladeOfficial" }}FiestaSMP Developer
+          {{ else if eq .Params.author "debarkak" }}FiestaSMP Lead Developer
+          {{ else }}FiestaSMP Core Team{{ end }}<br>
           For queries or official announcements, join our <a href="https://discord.gg/marqvC9UrP" target="_blank" style="color: #0066cc; font-weight: 600;">Discord Server</a> or email <a href="mailto:fiestamg@murena.io" style="color: #0066cc; font-weight: 600;">fiestamg@murena.io</a>.
         </div>
       </div>

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="/server-icon.webp" type="image/webp">
-  <title>Patch Notes 2.1: Economy Balancing &amp; Custom Enchants - FiestaSMP Newsroom</title>
-  <meta name="description" content="Comprehensive balance adjustments to merchant trading, villager mechanics, combat timer safety, and Folia server optimizations.">
+  <title>Patch Notes 2.1: TPA Confirmation, Economy &amp; System Tuning - FiestaSMP Newsroom</title>
+  <meta name="description" content="Changelog for Patch 2.1 addressing mandatory /tpaccept confirmation, 4-second teleport safety, ChestShop balances, and Paper 20.0 TPS stability.">
   <link rel="stylesheet" href="/assets/css/microsoft-2009.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
     <div class="ms-top-left">
       <a href="/index.html" class="ms-globe-link">
         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2h1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-        United States / Global
+        FiestaSMP Network
       </a>
       <span class="ms-server-status-top">
         <span class="ms-status-dot-mini"></span>
@@ -41,11 +41,11 @@
       <img src="/server-icon.webp" alt="FiestaSMP Logo" class="ms-logo-img">
       <div>
         <span class="ms-brand-title">Fiesta<em>SMP</em></span>
-        <span class="ms-brand-subtitle">Official Newsroom &amp; PressPass</span>
+        <span class="ms-brand-subtitle">Official Newsroom &amp; Release Notes</span>
       </div>
     </a>
     <div class="ms-header-badges">
-      <span class="ms-pill-badge">Hugo Markdown Feed</span>
+      <span class="ms-pill-badge">Server Newsroom</span>
       <button class="ms-mobile-toggle" aria-label="Toggle Navigation">
         <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
       </button>
@@ -66,7 +66,7 @@
 
   
   <div class="ms-page-header">
-    <h1>Patch Notes 2.1: Economy Balancing &amp; Custom Enchants</h1>
+    <h1>Patch Notes 2.1: TPA Confirmation, Economy &amp; System Tuning</h1>
     <p>Official server changelogs, season updates, and community notices</p>
   </div>
 
@@ -92,48 +92,74 @@
       
     </div>
 
-    <h1 class="post-header-title">Patch Notes 2.1: Economy Balancing &amp; Custom Enchants</h1>
+    <h1 class="post-header-title">Patch Notes 2.1: TPA Confirmation, Economy &amp; System Tuning</h1>
 
     <div class="post-header-meta">
       <div class="post-author-badge">
-        <img src="/assets/img/avatars/debarkak.png" alt="debarkak" class="post-author-avatar-lg" loading="lazy">
+        <img src="/assets/img/avatars/cbladeOfficial.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="cbladeOfficial" class="post-author-avatar-lg" loading="lazy">
         <div class="post-author-details">
-          <span class="post-author-name-lg">debarkak</span>
-          <span class="post-author-role">FiestaSMP Core Team</span>
+          <span class="post-author-name-lg">cbladeOfficial</span>
+          <span class="post-author-role">
+            Developer
+            
+          </span>
         </div>
       </div>
       <div class="post-meta-divider"></div>
-      <span class="post-publish-date">October 28, 2026</span>
+      <span class="post-publish-date">November 5, 2026</span>
       <div class="post-meta-divider"></div>
-      <span class="post-reading-time">1 min read</span>
+      <span class="post-reading-time">2 min read</span>
     </div>
 
     <div class="post-content ms-kb-content">
-      <p>Welcome to the <strong>Patch 2.1</strong> release notes for FiestaSMP. This update focuses on economy stability, combat logging safeguards, and server responsiveness.</p>
-<h2 id="balance--gameplay-changes">Balance &amp; Gameplay Changes</h2>
-<h3 id="combat-logging--safety">Combat Logging &amp; Safety</h3>
+      <p>Welcome to the <strong>Patch 2.1</strong> release notes for FiestaSMP. This update addresses important community feedback regarding teleport safety, player trade mechanics, and back-end server responsiveness.</p>
+<h2 id="gameplay--mechanics-adjustments">Gameplay &amp; Mechanics Adjustments</h2>
+<h3 id="1-mandatory-tpaccept-confirmation">1. Mandatory /tpaccept Confirmation</h3>
+<p>In response to community reports where players experienced unauthorized incoming teleports:</p>
 <ul>
-<li><strong>Combat Tag Duration:</strong> Increased active combat timer from 15 seconds to 25 seconds upon engaging in player-versus-player combat.</li>
-<li><strong>Disconnect Penalty:</strong> Disconnecting while in active combat will result in an automatic death trigger and item drop to prevent unfair combat escapes.</li>
-<li><strong>Ender Pearl Cooldown:</strong> Adjusted ender pearl usage cooldown to 12 seconds during active engagements.</li>
+<li>Direct teleportation via <code>/tpa</code> no longer auto-executes under any conditions.</li>
+<li>The target player must explicitly type <code>/tpaccept</code> (or <code>/tpdeny</code>) within the 60-second request window.</li>
+<li>Teleport delays and cooldowns have been adjusted to prevent combat evasion.</li>
 </ul>
-<h3 id="economy--loot-tables">Economy &amp; Loot Tables</h3>
+<h3 id="2-teleport-arrival-invulnerability">2. Teleport Arrival Invulnerability</h3>
 <ul>
-<li><strong>Ancient Debris:</strong> Netherite mining yield rate slightly normalized in outer Nether chunks.</li>
-<li><strong>Fishing Loot:</strong> Corrected enchanted book drop probabilities for early-game rod setups.</li>
-<li><strong>Bounty System:</strong> Added community bounty boards where players can place diamond bounties on notorious outlaws.</li>
+<li>Configured a dedicated <strong>4-second invulnerability timer</strong> immediately following any successful teleport command.</li>
+<li>If you accept a teleport or arrive at a designated outpost, you cannot take immediate damage, giving you time to render chunks and assess surroundings.</li>
 </ul>
-<h2 id="technical-optimizations">Technical Optimizations</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Build: Folia 1.21.x-Custom
-</span></span><span style="display:flex;"><span>Tick Performance: 20.0 TPS sustained across all 4 thread regions
-</span></span><span style="display:flex;"><span>Chunk Loading: Async multi-threaded chunk pipeline enabled
-</span></span></code></pre></div><p>If you encounter any unexpected bugs or anomalies, please file a ticket via our <a href="https://discord.gg/marqvC9UrP">Discord server</a> or submit through the <a href="/contactsupport.html">Contact &amp; Support</a> page.</p>
+<h3 id="3-bed-respawn-coordinate-fix">3. Bed Respawn Coordinate Fix</h3>
+<ul>
+<li>Corrected coordinate persistence in world metadata where beds in certain snowy and mountain biomes failed to save the respawn tag.</li>
+<li>Players will now reliably respawn at their home bed location upon death rather than defaulting back to center spawn.</li>
+</ul>
+<h2 id="economy--commerce-updates">Economy &amp; Commerce Updates</h2>
+<h3 id="1-safe-in-person-bartering">1. Safe In-Person Bartering</h3>
+<ul>
+<li>Enhanced the <code>/trade &lt;player&gt;</code> interface (powered by <strong>InTrade</strong>) with dual-confirmation locking to prevent trade scamming.</li>
+<li>Physical diamonds, ancient debris, and enchanted gear can now be safely exchanged between Java and Bedrock players simultaneously.</li>
+</ul>
+<h3 id="2-chestshop--auction-house-enhancements">2. ChestShop &amp; Auction House Enhancements</h3>
+<ul>
+<li>Adjusted <strong>ChestShop</strong> price formatting to improve readability on mobile Bedrock devices.</li>
+<li>Refined listing expiration timers on <strong>EzAuction</strong> to maintain an active market turnover.</li>
+</ul>
+<h2 id="server-performance--architecture">Server Performance &amp; Architecture</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Server Core: Paper 1.21.x / Folia Multi-threaded Pipeline
+</span></span><span style="display:flex;"><span>Network Stack: ViaVersion + ViaBackwards + Geyser 19132
+</span></span><span style="display:flex;"><span>Chunk Generator: Chunky Async Pre-generator
+</span></span><span style="display:flex;"><span>Logging Engine: CoreProtect 24.0 (Block, Container, and Kill Logs)
+</span></span><span style="display:flex;"><span>Average Tick Rate: Sustained 20.0 TPS
+</span></span></code></pre></div><ul>
+<li>Cleaned up unneeded inventory menu popups on join. When new players arrive, clean vanilla system messages are displayed alongside a prompt to review <code>/rules</code>.</li>
+<li>Verified Discord bot bridge synchronization and real-time console status reporting.</li>
+</ul>
+<p>If you encounter any anomalies, please report them via our <code>#bug-reports</code> channel on <a href="https://discord.gg/marqvC9UrP">Discord</a>.</p>
+<p><em>— cbladeOfficial (FiestaSMP Developer)</em></p>
 
     </div>
 
     <div class="post-footer-box">
       <div class="post-actions-row">
-        <button type="button" class="post-share-btn" id="share-post-btn" data-url="https://open-fiestasmp.github.io/news/patch-notes-2.1-economy-balancing-custom-enchants/">
+        <button type="button" class="post-share-btn" id="share-post-btn" data-url="https://open-fiestasmp.github.io/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           Share this article
         </button>
@@ -141,9 +167,11 @@
       </div>
 
       <div class="post-author-card">
-        <img src="/assets/img/avatars/debarkak.png" alt="debarkak" class="post-author-avatar-lg" style="width: 44px; height: 44px;">
+        <img src="/assets/img/avatars/cbladeOfficial.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="cbladeOfficial" class="post-author-avatar-lg" style="width: 44px; height: 44px;">
         <div class="post-author-bio" style="font-size: 12.5px; line-height: 1.5; color: #333333;">
-          <strong style="color: #005a9e;">debarkak</strong> &bull; FiestaSMP Lead &amp; Developer<br>
+          <strong style="color: #005a9e;">cbladeOfficial</strong> &bull; 
+          FiestaSMP Developer
+          <br>
           For queries or official announcements, join our <a href="https://discord.gg/marqvC9UrP" target="_blank" style="color: #0066cc; font-weight: 600;">Discord Server</a> or email <a href="mailto:fiestamg@murena.io" style="color: #0066cc; font-weight: 600;">fiestamg@murena.io</a>.
         </div>
       </div>
@@ -157,9 +185,9 @@
         
 
         
-        <a href="/news/season-2-official-announcement-nether-overhaul/" class="post-nav-item" style="text-align: right;">
+        <a href="/news/season-2-launch-server-guide/" class="post-nav-item" style="text-align: right;">
           <div class="post-nav-label">Next &rarr;</div>
-          <div class="post-nav-title">Season 2 Official Announcement &amp; Nether Overhaul</div>
+          <div class="post-nav-title">Season 2 Launch &amp; Server Guide</div>
         </a>
         
       </div>
@@ -216,14 +244,14 @@
       <div>
         <a href="/index.html" class="ms-globe-link" style="color: #444444; font-size: 11px;">
           <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2h1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-          Worldwide (English)
+          FiestaSMP Community
         </a>
       </div>
       <div class="ms-footer-legal-links">
         <a href="/terms.html">Terms of Use</a>
         <a href="/contactsupport.html">Support</a>
         <a href="mailto:fiestamg@murena.io">Contact Us</a>
-        <span>&copy; 2026 Fiesta Media Group &bull; &copy; 2021-2026 debarkak. All rights reserved.</span>
+        <span>&copy; 2021-2026 FiestaSMP Team &bull; All rights reserved.</span>
       </div>
     </div>
   </footer>

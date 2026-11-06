@@ -6,14 +6,14 @@
     <description>Recent content in Updates on FiestaSMP - News &amp; Updates</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 28 Oct 2026 19:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 19:00:00 +0530</lastBuildDate>
     <atom:link href="https://open-fiestasmp.github.io/news/tags/updates/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Patch Notes 2.1: Economy Balancing &amp; Custom Enchants</title>
-      <link>https://open-fiestasmp.github.io/news/patch-notes-2.1-economy-balancing-custom-enchants/</link>
-      <pubDate>Wed, 28 Oct 2026 19:00:00 +0530</pubDate>
-      <guid>https://open-fiestasmp.github.io/news/patch-notes-2.1-economy-balancing-custom-enchants/</guid>
-      <description>Comprehensive balance adjustments to merchant trading, villager mechanics, combat timer safety, and Folia server optimizations.</description>
+      <title>Patch Notes 2.1: TPA Confirmation, Economy &amp; System Tuning</title>
+      <link>https://open-fiestasmp.github.io/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/</link>
+      <pubDate>Thu, 05 Nov 2026 19:00:00 +0530</pubDate>
+      <guid>https://open-fiestasmp.github.io/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/</guid>
+      <description>Changelog for Patch 2.1 addressing mandatory /tpaccept confirmation, 4-second teleport safety, ChestShop balances, and Paper 20.0 TPS stability.</description>
     </item>
   </channel>
 </rss>
