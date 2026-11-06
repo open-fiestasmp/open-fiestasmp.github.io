@@ -3,6 +3,7 @@ title: "Patch Notes 2.1: TPA Confirmation, Economy & System Tuning"
 date: 2026-11-05T19:00:00+05:30
 draft: false
 author: "cbladeOfficial"
+coauthor: "debarkak"
 summary: "Changelog for Patch 2.1 addressing mandatory /tpaccept confirmation, 4-second teleport safety, ChestShop balances, and Paper 20.0 TPS stability."
 tags: ["Patch Notes", "Updates", "Economy"]
 ---
@@ -48,6 +49,6 @@ Average Tick Rate: Sustained 20.0 TPS
 - Cleaned up unneeded inventory menu popups on join. When new players arrive, clean vanilla system messages are displayed alongside a prompt to review `/rules`.
 - Verified Discord bot bridge synchronization and real-time console status reporting.
 
-If you encounter any anomalies, please report them via our `#bug-reports` channel on [Discord](https://discord.gg/marqvC9UrP).
+If you encounter any anomalies, please report them via our `#bug-reports` channel on [Discord](https://discord.gg/6wS2dpyX57).
 
-*— cbladeOfficial (FiestaSMP Developer)*
+*&mdash; cbladeOfficial &amp; debarkak (FiestaSMP Engineering Team)*

@@ -2,7 +2,7 @@
 title: "Spawn Archipelago & Harbor Grand Opening"
 date: 2026-10-18T16:30:00+05:30
 draft: false
-author: "debarkak"
+author: "cbladeOfficial"
 summary: "Celebration of the new protected Spawn Archipelago docks, communal starter supplies, and the community gallery screenshot showcase."
 tags: ["Community", "Events", "Gallery"]
 ---
@@ -28,4 +28,4 @@ We have officially launched the [FiestaSMP Gallery](/gallery.html) featuring in-
 
 Special thanks to all community members and builders who helped terraform and construct the harbor!
 
-*— debarkak (FiestaSMP Lead Developer)*
+*&mdash; cbladeOfficial (FiestaSMP Developer)*

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="/server-icon.webp" type="image/webp">
+  <title>Account Protection &amp; Network Optimization Guide - FiestaSMP Newsroom</title>
+  <meta name="description" content="An in-depth developer overview of AuthMe password hashing, session persistence, SkinsRestorer, and Bedrock connection routing.">
+  <link rel="stylesheet" href="/assets/css/microsoft-2009.css">
+</head>
+<body>
+
+<div class="ms-page-container">
+
+  
+  <div class="ms-top-strip">
+    <div class="ms-top-left">
+      <a href="/index.html" class="ms-globe-link">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2h1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        FiestaSMP Network
+      </a>
+      <span class="ms-server-status-top">
+        <span class="ms-status-dot-mini"></span>
+        Newsroom &bull; Official Announcements
+      </span>
+    </div>
+    <div class="ms-top-right">
+      <form class="ms-search-form" onsubmit="event.preventDefault(); window.location.href='/news/?q=' + encodeURIComponent(this.querySelector('input').value);">
+        <input type="text" class="ms-search-input" placeholder="Search news" aria-label="Search news">
+        <button type="submit" class="ms-search-btn" title="Search">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  
+  <header class="ms-header-brand">
+    <a href="/index.html" class="ms-brand-link">
+      <img src="/server-icon.webp" alt="FiestaSMP Logo" class="ms-logo-img">
+      <div>
+        <span class="ms-brand-title">Fiesta<em>SMP</em></span>
+        <span class="ms-brand-subtitle">Official Newsroom &amp; Release Notes</span>
+      </div>
+    </a>
+    <div class="ms-header-badges">
+      <span class="ms-pill-badge">Server Newsroom</span>
+      <button class="ms-mobile-toggle" aria-label="Toggle Navigation">
+        <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  
+  <nav class="ms-navbar">
+    <ul class="ms-nav-list">
+      <li class="ms-nav-item"><a href="/index.html" class="ms-nav-link">Home</a></li>
+      <li class="ms-nav-item active"><a href="/news/" class="ms-nav-link active">News &amp; Updates</a></li>
+      <li class="ms-nav-item"><a href="/terms.html" class="ms-nav-link">Terms &amp; Rules</a></li>
+      <li class="ms-nav-item"><a href="/gallery.html" class="ms-nav-link">Gallery</a></li>
+      <li class="ms-nav-item"><a href="/socials.html" class="ms-nav-link">Socials</a></li>
+      <li class="ms-nav-item"><a href="/contactsupport.html" class="ms-nav-link">Support &amp; Forms</a></li>
+    </ul>
+  </nav>
+
+  
+  <div class="ms-page-header">
+    <h1>Account Protection &amp; Network Optimization Guide</h1>
+    <p>Official server changelogs, season updates, and community notices</p>
+  </div>
+
+  
+  <main class="ms-page-body">
+    
+<div class="post-detail-wrap">
+  <div style="margin-bottom: 16px;">
+    <a href="/news/" class="post-back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      Back to all news
+    </a>
+  </div>
+
+  <article>
+    <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;">
+      
+      <a href="/news/tags/server/" class="ms-tag-pill-btn" style="text-decoration: none; padding: 3px 10px; font-size: 11px;">Server</a>
+      
+      <a href="/news/tags/security/" class="ms-tag-pill-btn" style="text-decoration: none; padding: 3px 10px; font-size: 11px;">Security</a>
+      
+      <a href="/news/tags/updates/" class="ms-tag-pill-btn" style="text-decoration: none; padding: 3px 10px; font-size: 11px;">Updates</a>
+      
+    </div>
+
+    <h1 class="post-header-title">Account Protection &amp; Network Optimization Guide</h1>
+
+    <div class="post-header-meta">
+      <div class="post-author-badge">
+        <img src="/assets/img/avatars/cbladeOfficial.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="cbladeOfficial" class="post-author-avatar-lg" loading="lazy">
+        <div class="post-author-details">
+          <span class="post-author-name-lg">cbladeOfficial</span>
+          <span class="post-author-role">
+            Developer
+            
+          </span>
+        </div>
+      </div>
+      
+      <div class="post-meta-divider"></div>
+      <span class="post-publish-date">October 25, 2026</span>
+      <div class="post-meta-divider"></div>
+      <span class="post-reading-time">2 min read</span>
+    </div>
+
+    <div class="post-content ms-kb-content">
+      <p>Maintaining an open and accessible Minecraft multiplayer environment requires robust security and authentication tooling behind the scenes. This guide covers how account security, session persistence, and network routing operate on FiestaSMP.</p>
+<h2 id="account-authentication-architecture">Account Authentication Architecture</h2>
+<p>Because FiestaSMP supports both standard and offline-mode clients, player authentication is handled through an isolated <strong>AuthMe Reloaded</strong> pipeline:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Incoming Connection -&gt; UltimateAntiBot Filter -&gt; AuthMe Handshake
+</span></span><span style="display:flex;"><span>  ├─ Registered User: /login &lt;password&gt; (PBKDF2 SHA-256 Hashing)
+</span></span><span style="display:flex;"><span>  └─ New Player: /register &lt;password&gt; &lt;confirmPassword&gt;
+</span></span></code></pre></div><h3 id="key-security-guidelines">Key Security Guidelines:</h3>
+<ul>
+<li><strong>Strong Passwords:</strong> Avoid using simple passwords or combinations you use on public servers.</li>
+<li><strong>Session Auto-Reconnection:</strong> If your client experiences a brief network hiccup or disconnection, a 60-second session grace window allows instant reconnection without re-entering your credentials.</li>
+<li><strong>Password Updates:</strong> You can change your existing password at any time in-game using <code>/changepassword &lt;oldPassword&gt; &lt;newPassword&gt;</code>.</li>
+</ul>
+<h2 id="cross-version-skins--restorer">Cross-Version Skins &amp; Restorer</h2>
+<p>Offline clients traditionally display default Steve or Alex skins. To provide full cosmetic customization for every player on our server:</p>
+<ol>
+<li><strong>SkinsRestorer</strong> is synchronized with Mojang skin caches.</li>
+<li>Run <code>/skin &lt;username&gt;</code> to apply any publicly indexed skin to your character.</li>
+<li>Custom URL skins are supported via <code>/skin &lt;directImageUrl&gt;</code> for unique outfits.</li>
+<li>Changes take effect across both Java and Bedrock clients instantaneously.</li>
+</ol>
+<h2 id="bedrock-network-routing-port-19132">Bedrock Network Routing (Port 19132)</h2>
+<p>Bedrock edition clients connect over the UDP protocol on port <code>19132</code> via <strong>Geyser-Spigot</strong> and <strong>Floodgate</strong>:</p>
+<ul>
+<li>Java inventory translation handles Bedrock UI controls seamlessly.</li>
+<li>Form menus and barter interfaces are tailored for touchscreens and mobile controllers.</li>
+<li>Packet compression has been tuned to ensure consistent ping times under heavy load.</li>
+</ul>
+<p>For technical assistance or lost password recovery, reach out through our official ticket system or email us at <code>fiestamg@murena.io</code>.</p>
+<p><em>— cbladeOfficial (FiestaSMP Developer)</em></p>
+
+    </div>
+
+    <div class="post-footer-box">
+      <div class="post-actions-row">
+        <button type="button" class="post-share-btn" id="share-post-btn" data-url="https://open-fiestasmp.github.io/news/account-protection-network-optimization-guide/">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          Share this article
+        </button>
+        <span style="font-size: 12px; color: #777777;">Published in: Server, Security, Updates</span>
+      </div>
+
+      <div class="post-author-card">
+        <div style="display: flex; gap: 8px; align-items: center; flex-shrink: 0;">
+          <img src="/assets/img/avatars/cbladeOfficial.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="cbladeOfficial" class="post-author-avatar-lg" style="width: 44px; height: 44px;">
+          
+        </div>
+        <div class="post-author-bio" style="font-size: 12.5px; line-height: 1.5; color: #333333;">
+          <strong style="color: #005a9e;">cbladeOfficial</strong> &bull; 
+          FiestaSMP Developer
+          <br>
+          For queries or official announcements, join our <a href="https://discord.gg/6wS2dpyX57" target="_blank" style="color: #0066cc; font-weight: 600;">Discord Server</a> or email <a href="mailto:fiestamg@murena.io" style="color: #0066cc; font-weight: 600;">fiestamg@murena.io</a>.
+        </div>
+      </div>
+
+      <div class="post-nav-links">
+        
+        <a href="/news/spawn-archipelago-harbor-grand-opening/" class="post-nav-item">
+          <div class="post-nav-label">&larr; Previous</div>
+          <div class="post-nav-title">Spawn Archipelago &amp; Harbor Grand Opening</div>
+        </a>
+        
+
+        
+        <a href="/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/" class="post-nav-item" style="text-align: right;">
+          <div class="post-nav-label">Next &rarr;</div>
+          <div class="post-nav-title">Patch Notes 2.1: TPA Confirmation, Economy &amp; System Tuning</div>
+        </a>
+        
+      </div>
+    </div>
+  </article>
+</div>
+
+  </main>
+
+  
+  <footer class="ms-footer">
+    <div class="ms-footer-cols">
+      <div class="ms-footer-col">
+        <h4>Server Connect</h4>
+        <ul class="ms-footer-links">
+          <li><a href="javascript:void(0)" class="copyable-ip" data-ip="fiesta.debarkak.xyz:25565">Java IP: fiesta.debarkak.xyz:25565</a></li>
+          <li><a href="javascript:void(0)" class="copyable-ip" data-ip="fiesta.debarkak.xyz:19132">Bedrock IP: fiesta.debarkak.xyz:19132</a></li>
+          <li><a href="/terms.html">Folia 1.21.x Architecture</a></li>
+          <li><a href="/terms.html">Offline Clients Supported</a></li>
+        </ul>
+      </div>
+      <div class="ms-footer-col">
+        <h4>Community &amp; Media</h4>
+        <ul class="ms-footer-links">
+          <li><a href="https://discord.gg/6wS2dpyX57" target="_blank">Discord Community</a></li>
+          <li><a href="https://www.twitch.tv/fiestasmp" target="_blank">Twitch Stream</a></li>
+          <li><a href="https://kick.com/fiestasmp" target="_blank">Kick Stream</a></li>
+          <li><a href="https://www.youtube.com/@fiestamc-yt" target="_blank">YouTube Channel</a></li>
+          <li><a href="https://x.com/fiestamg" target="_blank">X (Twitter) Updates</a></li>
+        </ul>
+      </div>
+      <div class="ms-footer-col">
+        <h4>Resources &amp; Support</h4>
+        <ul class="ms-footer-links">
+          <li><a href="/news/">News &amp; Patch Notes</a></li>
+          <li><a href="/terms.html">Terms of Service &amp; Rules</a></li>
+          <li><a href="/gallery.html">World Screenshot Gallery</a></li>
+          <li><a href="/contactsupport.html">Ban Appeal &amp; Player Reports</a></li>
+          <li><a href="mailto:fiestamg@murena.io">fiestamg@murena.io</a></li>
+        </ul>
+      </div>
+      <div class="ms-footer-col">
+        <h4>Development Team</h4>
+        <ul class="ms-footer-links">
+          <li><a href="https://github.com/open-fiestasmp" target="_blank">GitHub: open-fiestasmp</a></li>
+          <li><a href="https://github.com/kytrakton" target="_blank">Owner: kytrakton</a></li>
+          <li><a href="https://github.com/debarkak" target="_blank">Lead Developer: debarkak</a></li>
+          <li><a href="https://github.com/cbladeOfficial" target="_blank">Developer: cbladeOfficial</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ms-footer-bottom">
+      <div>
+        <a href="/index.html" class="ms-globe-link" style="color: #444444; font-size: 11px;">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2h1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          FiestaSMP Community
+        </a>
+      </div>
+      <div class="ms-footer-legal-links">
+        <a href="/terms.html">Terms of Use</a>
+        <a href="/contactsupport.html">Support</a>
+        <a href="mailto:fiestamg@murena.io">Contact Us</a>
+        <span>&copy; 2021-2026 FiestaSMP Team &bull; All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="/assets/js/mobile-nav.js"></script>
+
+<script>
+  (function() {
+    var shareBtn = document.getElementById("share-post-btn");
+    if (shareBtn) {
+      shareBtn.addEventListener("click", function() {
+        var url = window.location.href;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(function() {
+            var toast = document.querySelector(".fiesta-toast");
+            if (!toast) {
+              toast = document.createElement("div");
+              toast.className = "fiesta-toast";
+              document.body.appendChild(toast);
+            }
+            toast.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:8px;display:inline-block;"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Article link copied to clipboard!</span>';
+            toast.classList.add("show");
+            setTimeout(function() { toast.classList.remove("show"); }, 2800);
+          });
+        }
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

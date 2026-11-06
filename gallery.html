@@ -170,7 +170,7 @@
       <div class="ms-footer-col">
         <h4>Community &amp; Media</h4>
         <ul class="ms-footer-links">
-          <li><a href="https://discord.gg/marqvC9UrP" target="_blank">Discord Community</a></li>
+          <li><a href="https://discord.gg/6wS2dpyX57" target="_blank">Discord Community</a></li>
           <li><a href="https://www.twitch.tv/fiestasmp" target="_blank">Twitch Stream</a></li>
           <li><a href="https://kick.com/fiestasmp" target="_blank">Kick Stream</a></li>
           <li><a href="https://www.youtube.com/@fiestamc-yt" target="_blank">YouTube Channel</a></li>
@@ -220,7 +220,7 @@
 <div id="gallery-lightbox" class="gallery-lightbox" aria-hidden="true" role="dialog" aria-label="Screenshot Viewer">
   <div class="lightbox-window">
     <div class="lightbox-titlebar">
-      <span>FiestaSMP Gallery — Screenshot Viewer</span>
+      <span>FiestaSMP Gallery &mdash; Screenshot Viewer</span>
       <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close Viewer">&times;</button>
     </div>
     <div class="lightbox-img-wrap">
@@ -233,16 +233,16 @@
       </button>
     </div>
     <div class="lightbox-meta-bar">
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <img id="lightbox-avatar" src="" alt="" style="width: 28px; height: 28px; border-radius: 4px; image-rendering: pixelated; border: 1px solid #c0d8e8;">
-        <div>
-          <div id="lightbox-caption" style="font-size: 14px; font-weight: 700; color: #005a9e;"></div>
-          <div style="font-size: 11.5px; color: #666666;">
+      <div style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+        <img id="lightbox-avatar" src="" alt="" style="width: 28px; height: 28px; border-radius: 4px; image-rendering: pixelated; border: 1px solid #c0d8e8; flex-shrink: 0;">
+        <div style="min-width: 0;">
+          <div id="lightbox-caption" style="font-size: 14px; font-weight: 700; color: #005a9e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></div>
+          <div class="lightbox-meta-sub" style="font-size: 11.5px; color: #666666; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
             Captured by <strong id="lightbox-player" style="color: #333333;"></strong> &bull; <span id="lightbox-date"></span>
           </div>
         </div>
       </div>
-      <div style="font-size: 12px; font-weight: 600; color: #666666;">
+      <div style="font-size: 12px; font-weight: 600; color: #666666; flex-shrink: 0;">
         <span id="lightbox-index">1</span> / <span id="lightbox-total">4</span>
       </div>
     </div>

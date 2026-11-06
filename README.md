@@ -51,7 +51,7 @@ Pushing your changes to GitHub triggers the automated GitHub Action (`.github/wo
 - **Bedrock Edition IP**: `fiesta.debarkak.xyz:19132`
 - **Supported Versions**: Minecraft 1.8 - 26.3+ (Offline clients supported)
 - **Official Contact**: `fiestamg@murena.io`
-- **Discord**: [discord.gg/marqvC9UrP](https://discord.gg/marqvC9UrP)
+- **Discord**: [discord.gg/6wS2dpyX57](https://discord.gg/6wS2dpyX57)
 
 ## Repository Structure
 

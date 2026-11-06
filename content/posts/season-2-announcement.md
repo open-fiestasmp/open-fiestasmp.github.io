@@ -2,7 +2,8 @@
 title: "Season 2 Launch & Server Guide"
 date: 2026-11-06T15:00:00+05:30
 draft: false
-author: "kytrakton"
+author: "cbladeOfficial"
+coauthor: "debarkak"
 summary: "FiestaSMP Season 2 is live! Everything you need to know about Paper 1.21.x crossplay, AuthMe registration, TPA rules, bed respawns, and the barter economy."
 tags: ["Announcements", "Season 2", "Server"]
 ---
@@ -55,4 +56,4 @@ There are no artificial infinite coin shops. The economy is 100% player-driven t
 
 See you all on the server!
 
-*— kytrakton (FiestaSMP Owner)*
+*&mdash; cbladeOfficial &amp; debarkak (FiestaSMP Core Team)*

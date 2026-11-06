@@ -25,9 +25,15 @@
     </div>
     <div style="border-top: 1px solid #edf4f9; padding-top: 10px; display: flex; justify-content: space-between; align-items: center;">
       {{ $author := .Params.author | default "debarkak" }}
+      {{ $coauthor := .Params.coauthor }}
       <div style="display: flex; align-items: center; gap: 6px;">
-        <img src="/assets/img/avatars/{{ $author }}.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="{{ $author }}" style="width: 20px; height: 20px; border-radius: 3px; image-rendering: pixelated; border: 1px solid #c0d8e8;">
-        <span style="font-size: 11.5px; font-weight: 600; color: #444444;">{{ $author }}</span>
+        <div style="display: flex; align-items: center;">
+          <img src="/assets/img/avatars/{{ $author }}.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="{{ $author }}" style="width: 20px; height: 20px; border-radius: 3px; image-rendering: pixelated; border: 1px solid #c0d8e8;">
+          {{ if $coauthor }}
+          <img src="/assets/img/avatars/{{ $coauthor }}.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="{{ $coauthor }}" style="width: 20px; height: 20px; border-radius: 3px; image-rendering: pixelated; border: 1px solid #c0d8e8; margin-left: -6px;">
+          {{ end }}
+        </div>
+        <span style="font-size: 11.5px; font-weight: 600; color: #444444;">{{ $author }}{{ if $coauthor }} &amp; {{ $coauthor }}{{ end }}</span>
       </div>
       <a href="{{ .RelPermalink }}" style="font-size: 12px; font-weight: 700; color: #0066cc;">
         Read article &rsaquo;
