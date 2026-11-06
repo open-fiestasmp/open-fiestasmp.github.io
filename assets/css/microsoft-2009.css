@@ -15,8 +15,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 13px;
-  background-color: #d8e3eb;
-  background-image: linear-gradient(to bottom, #f3f7fa 0%, #e2ebf2 350px, #d5e1ea 100%);
+  background-color: #dceef7;
+  background-image: linear-gradient(to bottom, #f0f7fb 0%, #ddeef7 400px, #cde4f1 100%);
   background-attachment: fixed;
   color: #2b2b2b;
   font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;
@@ -48,13 +48,13 @@ img {
    Master Page Wrapper (Microsoft 2009 1080px Portal Container)
    -------------------------------------------------------------------------- */
 .ms-page-container {
-  max-width: 1080px;
+  max-width: 960px;
   margin: 0 auto;
   background-color: #ffffff;
-  box-shadow: 0 0 18px rgba(27, 85, 130, 0.22);
-  border-left: 1px solid #b8d4e7;
-  border-right: 1px solid #b8d4e7;
-  border-bottom: 1px solid #b8d4e7;
+  box-shadow: 0 0 16px rgba(18, 65, 100, 0.25);
+  border-left: 1px solid #b2d2e6;
+  border-right: 1px solid #b2d2e6;
+  border-bottom: 1px solid #b2d2e6;
   overflow: hidden;
 }
 
@@ -286,7 +286,7 @@ img {
    Windows 7 Aero Hero Showcase (The 2009 Signature Banner)
    -------------------------------------------------------------------------- */
 .ms-hero-showcase {
-  background: linear-gradient(135deg, #15456b 0%, #1b5b88 40%, #20677a 75%, #1e5c54 100%);
+  background: linear-gradient(125deg, #0e4c75 0%, #175d8d 32%, #2a7a72 58%, #4a8d38 82%, #599b3b 100%);
   position: relative;
   color: #ffffff;
   overflow: hidden;
@@ -1351,9 +1351,9 @@ img {
    Master Microsoft 2009 Corporate Footer
    -------------------------------------------------------------------------- */
 .ms-footer {
-  background: linear-gradient(to bottom, #f1f5f8 0%, #e0ebf2 100%);
-  border-top: 1px solid #c2d8e6;
-  padding: 10px 20px;
+  background: linear-gradient(to bottom, #7dbfe7 0%, #4192c7 45%, #2778ae 50%, #155584 100%);
+  border-top: 1px solid #9ad0ef;
+  padding: 12px 20px;
 }
 .ms-footer-bottom {
   display: flex;
@@ -1362,23 +1362,24 @@ img {
   flex-wrap: wrap;
   gap: 12px;
   font-size: 11px;
-  color: #555555;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 30, 60, 0.6);
 }
 .ms-footer-brand {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-weight: 600;
-  color: #444444;
-  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 11.5px;
 }
 .ms-footer-icon {
   width: 14px;
   height: 14px;
-  fill: #666666;
+  fill: #ffffff;
 }
 .ms-footer-copy {
-  color: #666666;
+  color: #e4f2fb;
   font-size: 11px;
 }
 
