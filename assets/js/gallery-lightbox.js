@@ -50,6 +50,9 @@ document.addEventListener("DOMContentLoaded", function() {
     if (lbAvatar) {
       lbAvatar.src = item.avatar;
       lbAvatar.alt = item.player + " avatar";
+      lbAvatar.onerror = function() {
+        this.src = "https://minotar.net/helm/" + encodeURIComponent(item.player) + "/64";
+      };
     }
     if (lbPlayer) lbPlayer.textContent = item.player;
     if (lbDate) lbDate.textContent = item.date;
