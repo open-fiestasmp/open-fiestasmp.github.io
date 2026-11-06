@@ -1353,7 +1353,7 @@ img {
 .ms-footer {
   background: linear-gradient(to bottom, #f1f5f8 0%, #e0ebf2 100%);
   border-top: 1px solid #c2d8e6;
-  padding: 12px 20px;
+  padding: 10px 20px;
 }
 .ms-footer-bottom {
   display: flex;
@@ -1364,17 +1364,22 @@ img {
   font-size: 11px;
   color: #555555;
 }
-.ms-footer-legal-links {
-  display: flex;
+.ms-footer-brand {
+  display: inline-flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
+  gap: 6px;
+  font-weight: 600;
+  color: #444444;
+  font-size: 11px;
 }
-.ms-footer-legal-links a {
-  color: #555555;
+.ms-footer-icon {
+  width: 14px;
+  height: 14px;
+  fill: #666666;
 }
-.ms-footer-legal-links a:hover {
-  color: #0066cc;
+.ms-footer-copy {
+  color: #666666;
+  font-size: 11px;
 }
 
 /* --------------------------------------------------------------------------
@@ -1534,10 +1539,20 @@ img {
     flex-direction: column;
     align-items: flex-start;
   }
+  .ms-footer {
+    padding: 10px 14px;
+  }
   .ms-footer-bottom {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+  }
+  /* Eliminate mobile link flooding and bloated chevron lists on small screens */
+  .ms-chevron-list,
+  .ms-home-news-chevrons,
+  .ms-wire-items {
+    display: none !important;
   }
   .ms-header-badges .ms-status-indicator,
   .ms-header-badges .ms-pill-badge {
