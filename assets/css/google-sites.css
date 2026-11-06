@@ -431,3 +431,37 @@
   border-radius: 12px;
   flex-shrink: 0;
 }
+
+/* ==========================================================================
+   Mobile Navigation Drawer & Hamburger Enhancements
+   ========================================================================== */
+#s9iPrd,
+.DXsoRd {
+  cursor: pointer !important;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+  z-index: 95 !important;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#yuynLe.JzO0Vc {
+  -webkit-overflow-scrolling: touch;
+}
+
+#yuynLe.JzO0Vc.jsnVQ {
+  left: 0 !important;
+}
+
+.TxnWlb {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.TxnWlb.XPSexb {
+  opacity: 0.6 !important;
+  width: 100% !important;
+  z-index: 60 !important;
+  display: block !important;
+}
+
