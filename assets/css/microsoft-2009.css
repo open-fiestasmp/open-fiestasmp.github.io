@@ -15,8 +15,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 13px;
-  background-color: #dceaf4;
-  background-image: linear-gradient(to bottom, #edf5fa 0%, #d8ebf7 350px, #cbe3f3 100%);
+  background-color: #d8e3eb;
+  background-image: linear-gradient(to bottom, #f3f7fa 0%, #e2ebf2 350px, #d5e1ea 100%);
   background-attachment: fixed;
   color: #2b2b2b;
   font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;
@@ -62,8 +62,8 @@ img {
    Top Utility Strip (Language / Worldwide / Search)
    -------------------------------------------------------------------------- */
 .ms-top-strip {
-  background: linear-gradient(to bottom, #f2f8fc 0%, #e0eff6 100%);
-  border-bottom: 1px solid #c7e0f0;
+  background: linear-gradient(to bottom, #f5f8fa 0%, #e6edf2 100%);
+  border-bottom: 1px solid #d0dde6;
   padding: 5px 16px;
   display: flex;
   justify-content: space-between;
@@ -139,18 +139,18 @@ img {
 .ms-search-btn {
   height: 22px;
   padding: 0 9px;
-  background: linear-gradient(to bottom, #74c748 0%, #52ab27 50%, #44951e 51%, #57ad2a 100%);
-  border: 1px solid #3c821a;
+  background: linear-gradient(to bottom, #599d2f 0%, #458322 50%, #3a711b 51%, #458221 100%);
+  border: 1px solid #326415;
   border-radius: 0 3px 3px 0;
   color: #ffffff;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);
 }
 .ms-search-btn:hover {
-  background: linear-gradient(to bottom, #86d75b 0%, #60bb33 50%, #4da722 51%, #63be32 100%);
+  background: linear-gradient(to bottom, #65ab34 0%, #4c9126 50%, #3f7d1d 51%, #4c9025 100%);
 }
 .ms-search-btn svg {
   width: 11px;
@@ -210,17 +210,17 @@ img {
   font-weight: 600;
   padding: 3px 10px;
   border-radius: 12px;
-  background: linear-gradient(to bottom, #ffffff 0%, #edf5fa 100%);
-  border: 1px solid #b6d4e8;
-  color: #1e5a84;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  background: linear-gradient(to bottom, #ffffff 0%, #eff4f8 100%);
+  border: 1px solid #bfd3e1;
+  color: #1e567c;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }
 
 /* Mobile Hamburger Toggle */
 .ms-mobile-toggle {
   display: none;
-  background: linear-gradient(to bottom, #f9fbfd 0%, #e2eef7 100%);
-  border: 1px solid #a6c6dd;
+  background: linear-gradient(to bottom, #ffffff 0%, #eaf1f7 100%);
+  border: 1px solid #b2c9d9;
   border-radius: 3px;
   padding: 6px 10px;
   cursor: pointer;
@@ -237,10 +237,10 @@ img {
    Iconic 2009 Aero Navigation Bar
    -------------------------------------------------------------------------- */
 .ms-navbar {
-  background: linear-gradient(to bottom, #7acdeb 0%, #46a7d6 50%, #2f8ec5 51%, #45a4d4 100%);
-  border-top: 1px solid #bfe7f6;
-  border-bottom: 1px solid #1a6494;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+  background: linear-gradient(to bottom, #397ea5 0%, #29688e 50%, #1e5677 51%, #2c6c92 100%);
+  border-top: 1px solid #689cbd;
+  border-bottom: 1px solid #144463;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
   position: relative;
   z-index: 50;
 }
@@ -264,8 +264,8 @@ img {
   font-weight: 700;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   text-decoration: none !important;
-  border-left: 1px solid rgba(255, 255, 255, 0.35);
-  border-right: 1px solid rgba(0, 0, 0, 0.14);
+  border-left: 1px solid rgba(255, 255, 255, 0.28);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
   transition: background 0.15s ease;
   white-space: nowrap;
 }
@@ -273,24 +273,24 @@ img {
   border-left: none;
 }
 .ms-nav-link:hover {
-  background: linear-gradient(to bottom, #94daf2 0%, #62b9df 50%, #3e9dd0 51%, #5eb2de 100%);
+  background: linear-gradient(to bottom, #498fb7 0%, #35769d 50%, #266387 51%, #35759b 100%);
 }
 .ms-nav-item.active .ms-nav-link,
 .ms-nav-link.active {
-  background: linear-gradient(to bottom, #1d699b 0%, #2982bb 50%, #1e6fa3 51%, #247bb2 100%);
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.35);
-  border-bottom: 2px solid #ffba00;
+  background: linear-gradient(to bottom, #174866 0%, #1f587d 50%, #174867 51%, #1d5376 100%);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid #e5a700;
 }
 
 /* --------------------------------------------------------------------------
    Windows 7 Aero Hero Showcase (The 2009 Signature Banner)
    -------------------------------------------------------------------------- */
 .ms-hero-showcase {
-  background: linear-gradient(135deg, #1b6da7 0%, #288fca 35%, #42a64c 82%, #51b544 100%);
+  background: linear-gradient(135deg, #15456b 0%, #1b5b88 40%, #20677a 75%, #1e5c54 100%);
   position: relative;
   color: #ffffff;
   overflow: hidden;
-  border-bottom: 1px solid #1a6494;
+  border-bottom: 1px solid #103854;
 }
 .ms-hero-glass-overlay {
   position: absolute;
@@ -298,7 +298,7 @@ img {
   left: 0;
   right: 0;
   height: 48%;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.04) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.02) 100%);
   pointer-events: none;
 }
 .ms-hero-inner {
@@ -338,10 +338,10 @@ img {
   padding-left: 22px;
 }
 .ms-hero-tab-item.active {
-  background: linear-gradient(to right, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.08) 100%);
+  background: linear-gradient(to right, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0.05) 100%);
   color: #ffffff;
   font-weight: 700;
-  border-left: 3px solid #ffba00;
+  border-left: 3px solid #e5a700;
 }
 .ms-hero-tab-item svg {
   width: 10px;
@@ -363,7 +363,7 @@ img {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #ffde6b;
+  color: #f0ca65;
   text-shadow: 0 1px 2px rgba(0,0,0,0.5);
   margin-bottom: 6px;
 }
@@ -398,27 +398,27 @@ img {
   align-items: center;
   gap: 8px;
   padding: 9px 18px;
-  background: linear-gradient(to bottom, #ffffff 0%, #e1eef8 45%, #b6ddf4 50%, #d4eaf7 100%);
-  border: 1px solid #5fa6d5;
+  background: linear-gradient(to bottom, #ffffff 0%, #eef5fa 45%, #d5e6f3 50%, #e2eff8 100%);
+  border: 1px solid #7eaecf;
   border-radius: 3px;
   color: #0e446d !important;
   font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
   font-size: 13px;
   font-weight: 700;
   text-decoration: none !important;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.9);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.9);
   cursor: pointer;
   transition: all 0.15s ease;
 }
 .ms-btn-aero-primary:hover {
-  background: linear-gradient(to bottom, #ffffff 0%, #fff1d2 45%, #fed780 50%, #ffebb8 100%);
-  border-color: #d89f25;
+  background: linear-gradient(to bottom, #ffffff 0%, #fcf4e8 45%, #fae2b6 50%, #fae9cb 100%);
+  border-color: #cda34b;
   color: #5d3f00 !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.9);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.9);
 }
 .ms-btn-aero-primary:active {
-  background: linear-gradient(to bottom, #b3d9f2 0%, #a4d0ee 50%, #c4e4f7 100%);
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+  background: linear-gradient(to bottom, #c2ddf0 0%, #b3d2ea 50%, #cee4f4 100%);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.25);
 }
 
 .ms-btn-aero-secondary {
@@ -525,7 +525,7 @@ img {
 }
 
 .ms-portal-card-header {
-  background: linear-gradient(to bottom, #f9fbfd 0%, #eaf3f9 100%);
+  background: linear-gradient(to bottom, #f8fafc 0%, #ebf2f7 100%);
   border-bottom: 1px solid #dce9f2;
   padding: 10px 14px;
   font-size: 14px;
@@ -643,15 +643,15 @@ img {
   background-color: #ffffff;
 }
 .ms-aero-window-full {
-  background: linear-gradient(to bottom, #f3f8fc 0%, #ffffff 100%);
-  border: 1px solid #a8cde5;
+  background: linear-gradient(to bottom, #f6f9fc 0%, #ffffff 100%);
+  border: 1px solid #b5d1e4;
   border-radius: 6px;
-  box-shadow: 0 4px 14px rgba(0, 70, 120, 0.12);
+  box-shadow: 0 4px 14px rgba(0, 70, 120, 0.10);
   overflow: hidden;
 }
 .ms-window-titlebar {
-  background: linear-gradient(to bottom, #7acdeb 0%, #46a7d6 50%, #2f8ec5 51%, #45a4d4 100%);
-  border-bottom: 1px solid #1a6494;
+  background: linear-gradient(to bottom, #397ea5 0%, #29688e 50%, #1e5677 51%, #2c6c92 100%);
+  border-bottom: 1px solid #144463;
   padding: 8px 14px;
   display: flex;
   justify-content: space-between;
@@ -690,8 +690,8 @@ img {
   font-weight: bold;
 }
 .ms-win-ctrl.close:hover {
-  background: linear-gradient(to bottom, #f36c60 0%, #d32f2f 100%);
-  border-color: #b71c1c;
+  background: linear-gradient(to bottom, #e75443 0%, #ca2e1e 50%, #b21b0e 51%, #c7291a 100%);
+  border-color: #8c1005;
 }
 
 .ms-calendar-content {
@@ -717,10 +717,10 @@ img {
    Inner Page Styles (Terms, Gallery, Socials, Support, News)
    -------------------------------------------------------------------------- */
 .ms-page-header {
-  background: linear-gradient(135deg, #247bb2 0%, #1a5a84 100%);
+  background: linear-gradient(135deg, #1d5c86 0%, #154569 100%);
   color: #ffffff;
   padding: 24px 28px;
-  border-bottom: 2px solid #ffba00;
+  border-bottom: 2px solid #e5a700;
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 .ms-page-header h1 {
@@ -923,7 +923,7 @@ img {
   overflow: hidden;
 }
 .ms-dir-header {
-  background: linear-gradient(to bottom, #f2f8fc 0%, #e2eef7 100%);
+  background: linear-gradient(to bottom, #f5f8fa 0%, #e5eef4 100%);
   border-bottom: 1px solid #cce0ee;
   padding: 10px 14px;
   font-size: 14px;
@@ -1015,7 +1015,7 @@ img {
   gap: 6px;
 }
 .ms-tag-pill-btn {
-  background: linear-gradient(to bottom, #ffffff 0%, #edf5fa 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #edf4f8 100%);
   border: 1px solid #a9cde4;
   border-radius: 12px;
   padding: 3px 12px;
@@ -1029,7 +1029,7 @@ img {
   background: #e2f0fa;
 }
 .ms-tag-pill-btn.active {
-  background: linear-gradient(to bottom, #0072c6 0%, #005a9e 100%);
+  background: linear-gradient(to bottom, #1d6a9a 0%, #134e73 100%);
   border-color: #004b97;
   color: #ffffff;
 }
@@ -1098,7 +1098,7 @@ img {
   left: 0;
   width: 90px;
   height: 2px;
-  background-color: #ffba00;
+  background-color: #e5a700;
 }
 .ms-home-news-title-wrap {
   display: flex;
@@ -1182,7 +1182,7 @@ img {
   width: 100%;
   height: 140px;
   overflow: hidden;
-  background: linear-gradient(135deg, #1b6da7 0%, #288fca 100%);
+  background: linear-gradient(135deg, #1b567d 0%, #236892 100%);
   border-bottom: 1px solid #d5e5f0;
 }
 .ms-home-news-card-thumb {
@@ -1351,8 +1351,8 @@ img {
    Master Microsoft 2009 Corporate Footer
    -------------------------------------------------------------------------- */
 .ms-footer {
-  background: linear-gradient(to bottom, #edf4f9 0%, #dbeaf4 100%);
-  border-top: 1px solid #b7d6ea;
+  background: linear-gradient(to bottom, #f1f5f8 0%, #e0ebf2 100%);
+  border-top: 1px solid #c2d8e6;
   padding: 24px 20px 20px 20px;
 }
 .ms-footer-cols {
@@ -1446,8 +1446,8 @@ img {
   right: 24px;
   width: 38px;
   height: 38px;
-  background: linear-gradient(to bottom, #ffffff 0%, #e1eef8 45%, #b6ddf4 50%, #d4eaf7 100%);
-  border: 1px solid #5fa6d5;
+  background: linear-gradient(to bottom, #ffffff 0%, #eef5fa 45%, #d5e6f3 50%, #e2eff8 100%);
+  border: 1px solid #7eaecf;
   border-radius: 3px;
   box-shadow: 0 2px 8px rgba(0, 60, 100, 0.25);
   color: #005a9e;
@@ -1467,8 +1467,8 @@ img {
   transform: translateY(0);
 }
 .back-to-top:hover {
-  background: linear-gradient(to bottom, #ffffff 0%, #fff1d2 45%, #fed780 50%, #ffebb8 100%);
-  border-color: #d89f25;
+  background: linear-gradient(to bottom, #ffffff 0%, #fcf4e8 45%, #fae2b6 50%, #fae9cb 100%);
+  border-color: #cda34b;
   color: #5d3f00;
 }
 .back-to-top svg {
@@ -1622,7 +1622,7 @@ img {
 }
 .lightbox-titlebar {
   flex-shrink: 0;
-  background: linear-gradient(to bottom, #7acdeb 0%, #46a7d6 50%, #2f8ec5 51%, #45a4d4 100%);
+  background: linear-gradient(to bottom, #397ea5 0%, #29688e 50%, #1e5677 51%, #2c6c92 100%);
   padding: 8px 14px;
   display: flex;
   justify-content: space-between;
@@ -1631,7 +1631,7 @@ img {
   font-weight: 700;
   font-size: 13px;
   text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-  border-bottom: 1px solid #1a6494;
+  border-bottom: 1px solid #144463;
   user-select: none;
 }
 .lightbox-close-btn {
@@ -1652,8 +1652,8 @@ img {
 }
 .lightbox-close-btn:hover,
 .lightbox-close-btn:active {
-  background: linear-gradient(to bottom, #f36c60 0%, #d32f2f 100%);
-  border-color: #b71c1c;
+  background: linear-gradient(to bottom, #e75443 0%, #ca2e1e 50%, #b21b0e 51%, #c7291a 100%);
+  border-color: #8c1005;
 }
 .lightbox-img-wrap {
   flex: 1 1 auto;
@@ -1927,8 +1927,8 @@ img {
   margin-bottom: 18px;
 }
 .post-share-btn {
-  background: linear-gradient(to bottom, #ffffff 0%, #edf5fa 45%, #d0e6f5 50%, #e2f0fb 100%);
-  border: 1px solid #70aed7;
+  background: linear-gradient(to bottom, #ffffff 0%, #eef5fa 45%, #d5e6f3 50%, #e2eff8 100%);
+  border: 1px solid #7eaecf;
   border-radius: 3px;
   padding: 6px 14px;
   font-size: 12px;
@@ -1941,8 +1941,8 @@ img {
   transition: all 0.2s ease;
 }
 .post-share-btn:hover {
-  background: linear-gradient(to bottom, #ffffff 0%, #fff1d2 45%, #fed780 50%, #ffebb8 100%);
-  border-color: #d89f25;
+  background: linear-gradient(to bottom, #ffffff 0%, #fcf4e8 45%, #fae2b6 50%, #fae9cb 100%);
+  border-color: #cda34b;
   color: #5d3f00;
 }
 .post-author-card {
