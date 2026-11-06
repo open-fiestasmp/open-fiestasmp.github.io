@@ -500,7 +500,7 @@ img {
    Three-Column Portal Section (Streamlined Microsoft 2009 Layout)
    -------------------------------------------------------------------------- */
 .ms-portal-section {
-  padding: 28px 20px 32px 20px;
+  padding: 24px 20px 18px 20px;
   background-color: #ffffff;
 }
 .ms-portal-grid {
@@ -1077,7 +1077,7 @@ img {
    Home Page News Section (2009 Microsoft PressPass / Windows 7 Era Styling)
    -------------------------------------------------------------------------- */
 .ms-home-news-section {
-  padding: 0 20px 32px 20px;
+  padding: 10px 20px 32px 20px;
   background-color: #ffffff;
 }
 .ms-home-news-header {
