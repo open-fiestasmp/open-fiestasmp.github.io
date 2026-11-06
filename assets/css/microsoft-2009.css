@@ -303,12 +303,14 @@ img {
 }
 .ms-hero-inner {
   display: flex;
-  min-height: 310px;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 290px;
   position: relative;
   z-index: 2;
 }
 
-/* Left Hero Sidebar Tabs (Classic 2009 Style) */
+/* Left Hero Sidebar Tabs (Classic 2009 Style - optional) */
 .ms-hero-tabs {
   width: 210px;
   background: rgba(18, 64, 98, 0.45);
@@ -350,8 +352,8 @@ img {
 
 /* Center Hero Content */
 .ms-hero-content {
-  flex: 1;
-  padding: 30px 36px 30px 36px;
+  flex: 1 1 58%;
+  padding: 34px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -449,8 +451,10 @@ img {
 
 /* Right Hero Thumbnail Frame (Windows 7 Window Aesthetic) */
 .ms-hero-visual {
-  width: 280px;
-  padding: 24px 24px 24px 0;
+  flex: 0 0 340px;
+  width: 340px;
+  max-width: 42%;
+  padding: 24px 36px 24px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -493,7 +497,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   Four-Column Portal Section (Signature Microsoft 2009 Layout)
+   Three-Column Portal Section (Streamlined Microsoft 2009 Layout)
    -------------------------------------------------------------------------- */
 .ms-portal-section {
   padding: 28px 20px 32px 20px;
@@ -501,8 +505,8 @@ img {
 }
 .ms-portal-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 .ms-portal-card {
   border: 1px solid #d5e5f0;

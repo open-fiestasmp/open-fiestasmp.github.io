@@ -83,7 +83,7 @@ open-fiestasmp.github.io/
 │   ├── js/
 │   │   └── mobile-nav.js       # Mobile navigation & copy utility
 │   └── img/
-│       ├── avatars/            # Player avatars (debarkak.png)
+│       ├── avatars/            # Player avatars (debarkak, cbladeOfficial, kytrakton, ShadowViper4746)
 │       └── server_image.png    # Authentic home server feature image
 └── README.md                   # Repository documentation
 ```
