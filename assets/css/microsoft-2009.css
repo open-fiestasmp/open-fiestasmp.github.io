@@ -1353,20 +1353,20 @@ img {
 .ms-footer {
   background: linear-gradient(to bottom, #f1f5f8 0%, #e0ebf2 100%);
   border-top: 1px solid #c2d8e6;
-  padding: 24px 20px 20px 20px;
+  padding: 18px 20px 14px 20px;
 }
 .ms-footer-cols {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-bottom: 22px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 14px;
 }
 .ms-footer-col h4 {
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 700;
   color: #1e5a84;
-  margin-bottom: 10px;
-  padding-bottom: 4px;
+  margin-bottom: 8px;
+  padding-bottom: 3px;
   border-bottom: 1px solid #c8dfef;
 }
 .ms-footer-links {
@@ -1375,7 +1375,7 @@ img {
   margin: 0;
 }
 .ms-footer-links li {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   font-size: 11.5px;
 }
 .ms-footer-links a {
@@ -1387,7 +1387,7 @@ img {
 
 .ms-footer-bottom {
   border-top: 1px solid #c6dfe9;
-  padding-top: 14px;
+  padding-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1485,7 +1485,8 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
   .ms-footer-cols {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
   .ms-news-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1569,6 +1570,7 @@ img {
   }
   .ms-footer-cols {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
   .ms-header-badges .ms-status-indicator,
   .ms-header-badges .ms-pill-badge {
