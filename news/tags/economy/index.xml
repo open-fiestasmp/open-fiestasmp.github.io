@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Economy on FiestaSMP - News &amp; Updates</title>
+    <link>https://open-fiestasmp.github.io/news/tags/economy/</link>
+    <description>Recent content in Economy on FiestaSMP - News &amp; Updates</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 28 Oct 2026 19:00:00 +0530</lastBuildDate>
+    <atom:link href="https://open-fiestasmp.github.io/news/tags/economy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Patch Notes 2.1: Economy Balancing &amp; Custom Enchants</title>
+      <link>https://open-fiestasmp.github.io/news/patch-notes-2.1-economy-balancing-custom-enchants/</link>
+      <pubDate>Wed, 28 Oct 2026 19:00:00 +0530</pubDate>
+      <guid>https://open-fiestasmp.github.io/news/patch-notes-2.1-economy-balancing-custom-enchants/</guid>
+      <description>Comprehensive balance adjustments to merchant trading, villager mechanics, combat timer safety, and Folia server optimizations.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,106 @@
+{{ define "page_title" }}News &amp; Updates - FiestaSMP{{ end }}
+{{ define "title" }}News &amp; Updates - FiestaSMP{{ end }}
+{{ define "heading" }}News &amp; Updates{{ end }}
+
+{{ define "main" }}
+<div class="news-section-wrap">
+  <div class="news-header-meta">
+    <div class="news-tag-filters" id="tag-filters">
+      <button type="button" class="news-filter-btn active" data-tag="all">All Updates</button>
+      <button type="button" class="news-filter-btn" data-tag="announcements">Announcements</button>
+      <button type="button" class="news-filter-btn" data-tag="season-2">Season 2</button>
+      <button type="button" class="news-filter-btn" data-tag="patch-notes">Patch Notes</button>
+      <button type="button" class="news-filter-btn" data-tag="community">Community</button>
+    </div>
+    <div class="news-search-box">
+      <svg class="news-search-icon" viewBox="0 0 24 24" focusable="false"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+      <input type="text" class="news-search-input" id="news-search" placeholder="Search news and updates..." aria-label="Search news and updates">
+    </div>
+  </div>
+
+  <div class="news-grid" id="news-grid">
+    {{ range (where .Site.RegularPages "Section" "posts") }}
+    <article class="news-card" data-tags="{{ delimit .Params.tags " " | lower }}" data-title="{{ .Title | lower }}" data-summary="{{ .Params.summary | lower }}">
+      <div>
+        <div class="news-card-tags">
+          {{ range .Params.tags }}
+          <span class="news-card-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+        <h2 class="news-card-title">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h2>
+        <p class="news-card-summary">{{ .Params.summary }}</p>
+      </div>
+      <div class="news-card-footer">
+        <div class="news-author-meta">
+          <img src="/assets/img/avatars/debarkak.png" alt="{{ .Params.author }}" class="news-author-avatar" loading="lazy">
+          <div>
+            <div class="news-author-name">{{ .Params.author }}</div>
+            <div class="news-date-text">{{ .Date.Format "January 2, 2006" }}</div>
+          </div>
+        </div>
+        <a href="{{ .RelPermalink }}" class="news-read-btn">
+          Read article
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42 5.43 5.43H5v2.44z"/></svg>
+        </a>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+
+  <div id="no-results" style="display: none; text-align: center; padding: 48px 20px; color: #757575;">
+    <p style="font-size: 16px; font-weight: 500;">No updates found matching your search.</p>
+  </div>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+  (function() {
+    var searchInput = document.getElementById("news-search");
+    var filterBtns = document.querySelectorAll(".news-filter-btn");
+    var cards = document.querySelectorAll(".news-card");
+    var noResults = document.getElementById("no-results");
+    var currentTag = "all";
+
+    function filterPosts() {
+      var query = searchInput ? searchInput.value.toLowerCase().trim() : "";
+      var visibleCount = 0;
+
+      cards.forEach(function(card) {
+        var tags = card.getAttribute("data-tags") || "";
+        var title = card.getAttribute("data-title") || "";
+        var summary = card.getAttribute("data-summary") || "";
+
+        var matchesTag = (currentTag === "all") || tags.indexOf(currentTag) !== -1;
+        var matchesQuery = !query || title.indexOf(query) !== -1 || summary.indexOf(query) !== -1 || tags.indexOf(query) !== -1;
+
+        if (matchesTag && matchesQuery) {
+          card.style.display = "flex";
+          visibleCount++;
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      if (noResults) {
+        noResults.style.display = visibleCount === 0 ? "block" : "none";
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener("input", filterPosts);
+    }
+
+    filterBtns.forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        filterBtns.forEach(function(b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        currentTag = btn.getAttribute("data-tag");
+        filterPosts();
+      });
+    });
+  })();
+</script>
+{{ end }}
