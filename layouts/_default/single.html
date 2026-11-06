@@ -1,18 +1,20 @@
-{{ define "page_title" }}{{ .Title }} - FiestaSMP{{ end }}
-{{ define "title" }}{{ .Title }} - FiestaSMP{{ end }}
-{{ define "heading" }}Server News{{ end }}
+{{ define "page_title" }}{{ .Title }} - FiestaSMP Newsroom{{ end }}
+{{ define "title" }}{{ .Title }} - FiestaSMP Newsroom{{ end }}
+{{ define "heading" }}{{ .Title }}{{ end }}
 
 {{ define "main" }}
 <div class="post-detail-wrap">
-  <a href="/news/" class="post-back-link">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-    Back to all news
-  </a>
+  <div style="margin-bottom: 16px;">
+    <a href="/news/" class="post-back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      Back to all news
+    </a>
+  </div>
 
   <article>
-    <div class="news-card-tags" style="margin-bottom: 12px;">
+    <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;">
       {{ range .Params.tags }}
-      <span class="news-card-tag">{{ . }}</span>
+      <a href="/news/tags/{{ . | urlize }}/" class="ms-tag-pill-btn" style="text-decoration: none; padding: 3px 10px; font-size: 11px;">{{ . }}</a>
       {{ end }}
     </div>
 
@@ -32,7 +34,7 @@
       <span class="post-reading-time">{{ .ReadingTime }} min read</span>
     </div>
 
-    <div class="post-content">
+    <div class="post-content ms-kb-content">
       {{ .Content }}
     </div>
 
@@ -42,14 +44,14 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
           Share this article
         </button>
-        <span style="font-size: 12px; color: #777777;">Categories: {{ delimit .Params.tags ", " }}</span>
+        <span style="font-size: 12px; color: #777777;">Published in: {{ delimit .Params.tags ", " }}</span>
       </div>
 
       <div class="post-author-card">
         <img src="/assets/img/avatars/debarkak.png" alt="{{ .Params.author }}" class="post-author-avatar-lg" style="width: 44px; height: 44px;">
-        <div class="post-author-bio">
-          <strong>{{ .Params.author }}</strong> &bull; FiestaSMP Lead &amp; Developer<br>
-          For queries or official announcements, join the <a href="https://discord.gg/marqvC9UrP" target="_blank" style="color: #1e6c93; font-weight: 600;">Discord Server</a> or email <a href="mailto:fiestamg@murena.io" style="color: #1e6c93; font-weight: 600;">fiestamg@murena.io</a>.
+        <div class="post-author-bio" style="font-size: 12.5px; line-height: 1.5; color: #333333;">
+          <strong style="color: #005a9e;">{{ .Params.author }}</strong> &bull; FiestaSMP Lead &amp; Developer<br>
+          For queries or official announcements, join our <a href="https://discord.gg/marqvC9UrP" target="_blank" style="color: #0066cc; font-weight: 600;">Discord Server</a> or email <a href="mailto:fiestamg@murena.io" style="color: #0066cc; font-weight: 600;">fiestamg@murena.io</a>.
         </div>
       </div>
 

@@ -3,6 +3,27 @@
  */
 (function() {
   function initMobileNav() {
+    // 2009 Microsoft Aero Mobile Navigation Toggle
+    var msToggle = document.querySelector(".ms-mobile-toggle");
+    var msNavbar = document.querySelector(".ms-navbar");
+    if (msToggle && msNavbar) {
+      msToggle.addEventListener("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        msNavbar.classList.toggle("open");
+      });
+      document.addEventListener("click", function(e) {
+        if (!msNavbar.contains(e.target) && !msToggle.contains(e.target)) {
+          msNavbar.classList.remove("open");
+        }
+      });
+      msNavbar.querySelectorAll("a").forEach(function(link) {
+        link.addEventListener("click", function() {
+          msNavbar.classList.remove("open");
+        });
+      });
+    }
+
     var hamburgerBtn = document.getElementById("s9iPrd") || document.querySelector(".DXsoRd") || document.querySelector('[aria-controls="yuynLe"]');
     var drawer = document.getElementById("yuynLe");
     var backdrop = document.querySelector(".TxnWlb") || document.querySelector(".BuY5Fd");

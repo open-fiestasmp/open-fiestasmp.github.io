@@ -1,45 +1,38 @@
-{{ define "page_title" }}{{ .Title }} - News - FiestaSMP{{ end }}
-{{ define "title" }}{{ .Title }} - News - FiestaSMP{{ end }}
-{{ define "heading" }}Tag: {{ .Title }}{{ end }}
+{{ define "page_title" }}Posts tagged "{{ .Title }}" - FiestaSMP Newsroom{{ end }}
+{{ define "title" }}Posts tagged "{{ .Title }}" - FiestaSMP Newsroom{{ end }}
+{{ define "heading" }}Tagged: {{ .Title }}{{ end }}
 
 {{ define "main" }}
-<div class="news-section-wrap">
-  <div style="margin-bottom: 24px;">
-    <a href="/news/" class="post-back-link">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-      Back to all news
-    </a>
-  </div>
+<div style="margin-bottom: 20px;">
+  <a href="/news/" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: #0066cc; text-decoration: none;">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+    &larr; Back to all news
+  </a>
+</div>
 
-  <div class="news-grid">
-    {{ range .Pages }}
-    <article class="news-card">
-      <div>
-        <div class="news-card-tags">
-          {{ range .Params.tags }}
-          <span class="news-card-tag">{{ . }}</span>
-          {{ end }}
-        </div>
-        <h2 class="news-card-title">
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h2>
-        <p class="news-card-summary">{{ .Params.summary }}</p>
+<div class="ms-news-grid">
+  {{ range .Pages }}
+  <article class="ms-news-card">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+        <span style="font-size: 11px; font-weight: 700; color: #1e5a84; text-transform: uppercase;">{{ if .Params.tags }}{{ index .Params.tags 0 }}{{ end }}</span>
+        <span style="font-size: 11px; color: #777777;">{{ .Date.Format "Jan 2, 2006" }}</span>
       </div>
-      <div class="news-card-footer">
-        <div class="news-author-meta">
-          <img src="/assets/img/avatars/debarkak.png" alt="{{ .Params.author }}" class="news-author-avatar" loading="lazy">
-          <div>
-            <div class="news-author-name">{{ .Params.author }}</div>
-            <div class="news-date-text">{{ .Date.Format "January 2, 2006" }}</div>
-          </div>
-        </div>
-        <a href="{{ .RelPermalink }}" class="news-read-btn">
-          Read article
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42 5.43 5.43H5v2.44z"/></svg>
-        </a>
+      <h2 class="ms-news-card-title">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h2>
+      <p class="ms-news-card-summary">{{ .Params.summary }}</p>
+    </div>
+    <div style="border-top: 1px solid #edf4f9; padding-top: 10px; display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 6px;">
+        <img src="/assets/img/avatars/debarkak.png" alt="{{ .Params.author }}" style="width: 20px; height: 20px; border-radius: 3px; image-rendering: pixelated; border: 1px solid #c0d8e8;">
+        <span style="font-size: 11.5px; font-weight: 600; color: #444444;">{{ .Params.author }}</span>
       </div>
-    </article>
-    {{ end }}
-  </div>
+      <a href="{{ .RelPermalink }}" style="font-size: 12px; font-weight: 700; color: #0066cc;">
+        Read article &rsaquo;
+      </a>
+    </div>
+  </article>
+  {{ end }}
 </div>
 {{ end }}
