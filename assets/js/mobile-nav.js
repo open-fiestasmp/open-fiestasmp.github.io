@@ -116,6 +116,7 @@
     }
 
     // Click-to-copy for server IP addresses
+    var toastTimeout = null;
     function showToast(msg) {
       var toast = document.querySelector(".fiesta-toast");
       if (!toast) {
@@ -123,9 +124,10 @@
         toast.className = "fiesta-toast";
         document.body.appendChild(toast);
       }
-      toast.textContent = msg;
+      toast.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:8px;display:inline-block;"><polyline points="20 6 9 17 4 12"></polyline></svg><span>' + msg + '</span>';
       toast.classList.add("show");
-      setTimeout(function() {
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(function() {
         toast.classList.remove("show");
       }, 2800);
     }
@@ -136,6 +138,8 @@
         var ip = el.getAttribute("data-ip") || el.textContent.trim();
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(ip).then(function() {
+            showToast("Copied " + ip + " to clipboard!");
+          }).catch(function() {
             showToast("Copied " + ip + " to clipboard!");
           });
         } else {
@@ -149,6 +153,28 @@
         }
       });
     });
+
+    // Back to Top Button
+    var btt = document.querySelector(".back-to-top");
+    if (!btt) {
+      btt = document.createElement("button");
+      btt.className = "back-to-top";
+      btt.setAttribute("type", "button");
+      btt.setAttribute("aria-label", "Back to top");
+      btt.setAttribute("title", "Back to top");
+      btt.innerHTML = '<svg viewBox="0 0 24 24" focusable="false"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>';
+      document.body.appendChild(btt);
+    }
+    btt.addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    window.addEventListener("scroll", function() {
+      if (window.scrollY > 280) {
+        btt.classList.add("visible");
+      } else {
+        btt.classList.remove("visible");
+      }
+    }, { passive: true });
   }
 
   if (document.readyState === "loading") {
