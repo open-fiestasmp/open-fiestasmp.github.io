@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="server-icon.webp" type="image/webp">
-  <title>FiestaSMP — Terms of Service &amp; Rules (KB2026-01)</title>
+  <title>FiestaSMP: Terms of Service &amp; Server Rules (KB2026-01)</title>
   <meta name="description" content="Official server rules, allowed mechanics, barter economy charter, season lifecycle rules, and community conduct for FiestaSMP.">
   <link rel="stylesheet" href="assets/css/microsoft-2009.css">
 </head>
@@ -67,7 +67,7 @@
   <!-- Page Title Banner -->
   <div class="ms-page-header">
     <h1>Terms of Service &amp; Server Conduct Charter</h1>
-    <p>Last Revised: November 2026 &bull; Published by the FiestaSMP Administration</p>
+    <p>Revised November 2026 &bull; FiestaSMP Technical Documentation</p>
   </div>
 
   <!-- Page Body (TechNet KB Layout) -->
@@ -79,11 +79,11 @@
         <div class="ms-kb-nav-box">
           <div class="ms-kb-nav-title">In This Article</div>
           <ul class="ms-kb-nav-links">
-            <li><a href="#gameplay"><span class="ms-chevron-arrow">&rsaquo;</span> 1. Gameplay &amp; Combat</a></li>
-            <li><a href="#economy"><span class="ms-chevron-arrow">&rsaquo;</span> 2. Economy &amp; Barter</a></li>
-            <li><a href="#seasons"><span class="ms-chevron-arrow">&rsaquo;</span> 3. Seasons &amp; Resets</a></li>
-            <li><a href="#conduct"><span class="ms-chevron-arrow">&rsaquo;</span> 4. Community Conduct</a></li>
-            <li><a href="#admin"><span class="ms-chevron-arrow">&rsaquo;</span> 5. Administration &amp; Disclaimer</a></li>
+            <li><a href="#gameplay"><span class="ms-chevron-arrow">&rsaquo;</span> 1. Combat &amp; Base Raiding</a></li>
+            <li><a href="#economy"><span class="ms-chevron-arrow">&rsaquo;</span> 2. Physical Item Barter</a></li>
+            <li><a href="#seasons"><span class="ms-chevron-arrow">&rsaquo;</span> 3. Season Durations &amp; Resets</a></li>
+            <li><a href="#conduct"><span class="ms-chevron-arrow">&rsaquo;</span> 4. Chat Conduct &amp; Bans</a></li>
+            <li><a href="#admin"><span class="ms-chevron-arrow">&rsaquo;</span> 5. Administration &amp; Notice</a></li>
           </ul>
 
           <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid #dce9f2;">
@@ -99,60 +99,60 @@
 
       <!-- Main Documentation Article -->
       <article class="ms-kb-content">
-        <p>By connecting to FiestaSMP (<code>fiesta.debarkak.xyz:25565</code> or Bedrock port <code>19132</code>) or participating in our official media channels, you explicitly acknowledge and agree to abide by the following terms, gameplay policies, and code of conduct.</p>
+        <p>Connecting to FiestaSMP (<code>fiesta.debarkak.xyz:25565</code> or Bedrock port <code>19132</code>) constitutes acceptance of these operating terms &amp; anti-cheat policies.</p>
 
         <div class="ms-callout-info">
-          <strong>Important Architecture Notice:</strong> FiestaSMP is designed around high-stakes survival. Players are expected to protect their own coordinates, secure their valuable chests, and maintain awareness of their surroundings in dangerous dimensions.
+          <strong>Perimeter Notice:</strong> Spawn island (150-block radius from 0,0) is protected by region flags. All terrain outside this perimeter is unmoderated wilderness. Keep your coordinates private &amp; lock your containers.
         </div>
 
         <section id="gameplay">
-          <h2>1. Gameplay &amp; Combat Policy</h2>
-          <p>FiestaSMP is built on unfiltered survival mechanics. The following rules dictate player interaction:</p>
+          <h2>1. Combat &amp; Base Raiding</h2>
+          <p>The server enforces vanilla survival mechanics with minimal moderation interventions:</p>
           <ul>
-            <li><strong>Permitted Mechanics:</strong> Raiding, griefing unprotected structures, theft from unlocked chests, and open-world PvP combat are permitted unless specified otherwise in designated spawn safe zones.</li>
-            <li><strong>Combat Logging:</strong> Logging out or disconnecting while tagged in active combat carries an automatic death penalty and inventory drop.</li>
-            <li><strong>Strictly Prohibited Exploits:</strong>
+            <li><strong>Allowed Actions:</strong> Raiding, griefing unprotected builds, looting containers, &amp; open-world PvP combat are permitted in all dimensions outside the spawn perimeter.</li>
+            <li><strong>Combat Disconnects:</strong> Disconnecting while combat-tagged triggers an immediate player death &amp; drops full inventory.</li>
+            <li><strong>Prohibited Modifications:</strong>
               <ul>
-                <li>Use of hacked clients, automated cheat suites, X-ray texture packs, or speed hacks.</li>
-                <li>Intentional server crashing via lag machines, oversized chunk loaders, or entity spam.</li>
-                <li>Item duplication glitches of any kind. Any duped items will be wiped without compensation.</li>
+                <li>Modified clients (Meteor, Aristois, Wurst), automated Baritone routines, &amp; X-ray texture packs.</li>
+                <li>Lag machines, redstone clock overloads designed to drop tick rates below 18.0 TPS, or entity cramming over 24 entities per block.</li>
+                <li>Duplication exploits. Duplicated items are purged via CoreProtect database queries without restoration.</li>
               </ul>
             </li>
           </ul>
         </section>
 
         <section id="economy">
-          <h2>2. Physical Barter Economy &amp; Trading Charter</h2>
-          <p>FiestaSMP does not employ artificial virtual currency, scoreboard money, or pay-to-win server stores.</p>
+          <h2>2. Physical Item Barter &amp; Trade Rules</h2>
+          <p>We don't run virtual economy plugins, scoreboard coins, or real-money stores.</p>
           <ul>
-            <li><strong>Physical Barter Only:</strong> All trade exchanges must happen using in-game physical items (e.g. diamonds, ancient debris, enchanted books, golden apples).</li>
-            <li><strong>Trade Trust:</strong> Scamming or theft during non-spawn wilderness trades is considered a survival risk. Secure trading stalls are provided at Spawn Harbor for verified safe transactions.</li>
-            <li><strong>No Real-World Trading (RWT):</strong> Selling server items, coordinates, or services for real-world currency or external compensation is strictly prohibited and results in a permanent ban.</li>
+            <li><strong>Physical Barter:</strong> Trading uses physical items in chests or direct player trades via InTrade. Diamonds &amp; ancient debris serve as standard units of exchange.</li>
+            <li><strong>Wilderness Trade Risk:</strong> Theft during wilderness trades is treated as standard survival risk. Use the enclosed trading stalls at Spawn Harbor for protected exchanges.</li>
+            <li><strong>Real-Money Transactions (RMT):</strong> Selling in-game items, base coordinates, or services for fiat currency or cryptocurrency results in an immediate permanent ban.</li>
           </ul>
         </section>
 
         <section id="seasons">
-          <h2>3. Seasons &amp; World Lifecycle</h2>
-          <p>FiestaSMP operates on multi-year persistent worlds to give players sufficient time to build megastructures, expansive rail networks, and thriving community hubs.</p>
+          <h2>3. Season Durations &amp; World Resets</h2>
+          <p>Worlds remain active for multi-year periods to support large-scale redstone networks &amp; base builds.</p>
           <div class="ms-callout-warning">
-            <strong>World Resets:</strong> Major season resets occur only with community consensus or when major Minecraft version updates require fresh terrain generation. Players will always receive at least 30 days advance notice before any planned world archival.
+            <strong>Reset Policy:</strong> World resets occur only when major Minecraft version updates introduce breaking terrain generation changes, or upon clan consensus. We give 30 days notice before world archival, and release world download tarballs on GitHub.
           </div>
         </section>
 
         <section id="conduct">
-          <h2>4. Community Conduct &amp; Harassment Policy</h2>
-          <p>While PvP and raiding are permitted, toxicity outside of gameplay mechanics will not be tolerated:</p>
+          <h2>4. Chat Conduct &amp; Account Bans</h2>
+          <p>Combat &amp; raiding are part of the game; personal abuse outside game mechanics is not:</p>
           <ul>
-            <li><strong>Hate Speech:</strong> Racism, discrimination, severe harassment, dox threats, or hate speech in public chat or Discord will result in an immediate hardware and IP ban.</li>
-            <li><strong>Staff Discretion:</strong> Staff members reserve the right to mute or remove disruptive individuals to preserve a safe community atmosphere.</li>
-            <li><strong>Patience Requirement:</strong> When submitting ban appeals or inquiries, allow up to 48 hours for review. Spamming staff will result in an appeal rejection.</li>
+            <li><strong>Prohibited Conduct:</strong> Dox threats, IP distribution, hate speech, and spamming automated chat bots result in permanent IP &amp; hardware ID bans.</li>
+            <li><strong>Moderation Logs:</strong> Chat messages &amp; command executions are logged for 90 days.</li>
+            <li><strong>Ban Appeals:</strong> Submit appeals through the ticket system on Discord. Staff review tickets within 48 hours. Repeated pings or spamming moderators closes the appeal permanently.</li>
           </ul>
         </section>
 
         <section id="admin">
-          <h2>5. Administration &amp; Disclaimer</h2>
-          <p>FiestaSMP is an independent community server operated by the FiestaSMP Team. We are not affiliated with, endorsed by, or associated with Mojang Studios, Microsoft Corporation, or any other commercial entities.</p>
-          <p>For administrative questions or appeal inquiries, email <a href="mailto:fiestamg@murena.io">fiestamg@murena.io</a> or join our <a href="https://discord.gg/6wS2dpyX57" target="_blank">Discord server</a>.</p>
+          <h2>5. Server Administration &amp; Legal Notice</h2>
+          <p>FiestaSMP is an independent multiplayer server. We are not affiliated with, endorsed by, or partnered with Mojang AB or Microsoft Corporation.</p>
+          <p>For administrative notices, email <a href="mailto:fiestamg@murena.io">fiestamg@murena.io</a> or join our <a href="https://discord.gg/6wS2dpyX57" target="_blank">Discord server</a>.</p>
         </section>
       </article>
 
@@ -167,7 +167,7 @@
         <ul class="ms-footer-links">
           <li><a href="javascript:void(0)" class="copyable-ip" data-ip="fiesta.debarkak.xyz:25565">Java IP: fiesta.debarkak.xyz:25565</a></li>
           <li><a href="javascript:void(0)" class="copyable-ip" data-ip="fiesta.debarkak.xyz:19132">Bedrock IP: fiesta.debarkak.xyz:19132</a></li>
-          <li><a href="terms.html">Folia 1.21.x Architecture</a></li>
+          <li><a href="terms.html">Paper 1.21.x Architecture</a></li>
           <li><a href="terms.html">Offline Clients Supported</a></li>
         </ul>
       </div>

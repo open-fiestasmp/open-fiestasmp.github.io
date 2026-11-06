@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="/server-icon.webp" type="image/webp">
-  <title>Season 2 Launch &amp; Server Guide - FiestaSMP Newsroom</title>
-  <meta name="description" content="FiestaSMP Season 2 is live! Everything you need to know about Paper 1.21.x crossplay, AuthMe registration, TPA rules, bed respawns, and the barter economy.">
+  <title>Season 2 Setup &amp; Connection Specifications - FiestaSMP Newsroom</title>
+  <meta name="description" content="Technical setup for Season 2: Paper 1.21.x networking, AuthMe SHA-256 account registration, 4-second TPA warmups, bed respawn mechanics, and physical chest barter.">
   <link rel="stylesheet" href="/assets/css/microsoft-2009.css">
 </head>
 <body>
@@ -66,7 +66,7 @@
 
   
   <div class="ms-page-header">
-    <h1>Season 2 Launch &amp; Server Guide</h1>
+    <h1>Season 2 Setup &amp; Connection Specifications</h1>
     <p>Official server changelogs, season updates, and community notices</p>
   </div>
 
@@ -92,7 +92,7 @@
       
     </div>
 
-    <h1 class="post-header-title">Season 2 Launch &amp; Server Guide</h1>
+    <h1 class="post-header-title">Season 2 Setup &amp; Connection Specifications</h1>
 
     <div class="post-header-meta">
       <div class="post-author-badge">
@@ -121,53 +121,51 @@
     </div>
 
     <div class="post-content ms-kb-content">
-      <p>Welcome to <strong>FiestaSMP Season 2</strong>! Our team has prepared a streamlined, competitive survival multiplayer world running on high-performance Paper/Folia infrastructure.</p>
-<p>Whether you are a returning veteran or exploring our world for the first time, here is the complete guide to Season 2.</p>
-<h2 id="how-to-connect">How to Connect</h2>
-<p>FiestaSMP natively supports both Java Edition and Bedrock Edition players, with multi-version client compatibility:</p>
+      <p>FiestaSMP Season 2 runs on Paper 1.21.x with Geyser crossplay. The server operates at a fixed 20.0 TPS with no virtual currency plugins, no scoreboard balances, and unmoderated PvP outside the spawn perimeter.</p>
+<h2 id="connection-addresses">Connection Addresses</h2>
+<p>The server accepts connections from both Java &amp; Bedrock clients:</p>
 <ul>
-<li><strong>Java Edition Address:</strong> <code>fiesta.debarkak.xyz:25565</code> (Supports 1.8 to 1.21.x / 26.x via ViaVersion)</li>
-<li><strong>Bedrock Edition Address:</strong> <code>fiesta.debarkak.xyz:19132</code> (Port <code>19132</code> via Geyser-Spigot)</li>
+<li><strong>Java Edition:</strong> <code>fiesta.debarkak.xyz:25565</code> (ViaVersion handles protocols 1.8 through 1.21.x)</li>
+<li><strong>Bedrock Edition:</strong> <code>fiesta.debarkak.xyz:19132</code> (Geyser-Spigot bridge on UDP port 19132)</li>
 </ul>
-<h3 id="account-authentication--skins">Account Authentication &amp; Skins</h3>
-<p>Our server welcomes both premium and offline-mode clients using <strong>AuthMe</strong>:</p>
+<h3 id="authentication--player-skins">Authentication &amp; Player Skins</h3>
+<p>Player accounts use AuthMe with PBKDF2 SHA-256 password hashing:</p>
 <ul>
-<li>First-time joining: Run <code>/register &lt;password&gt; &lt;confirmPassword&gt;</code> in chat.</li>
-<li>Subsequent logins: Run <code>/login &lt;password&gt;</code>.</li>
-<li>Character Skins: Handled automatically via <strong>SkinsRestorer</strong> (<code>/skin &lt;name&gt;</code>).</li>
+<li>First connection: run <code>/register &lt;password&gt; &lt;confirmPassword&gt;</code> in chat.</li>
+<li>Returning connections: run <code>/login &lt;password&gt;</code>.</li>
+<li>Skin textures: SkinsRestorer manages player skins across offline and online clients with <code>/skin &lt;username&gt;</code>.</li>
 </ul>
-<h2 id="core-gameplay-survival-with-the-safety-off">Core Gameplay: Survival with the Safety Off</h2>
-<p>FiestaSMP is built on unfiltered survival mechanics:</p>
+<h2 id="gameplay-rules--anti-cheat">Gameplay Rules &amp; Anti-Cheat</h2>
+<p>Player interaction rules are split between the protected spawn island and the wilderness:</p>
 <ul>
-<li><strong>Wilderness Raiding &amp; PvP:</strong> Outside the protected Spawn Archipelago, PvP, territory skirmishes, and raiding unprotected chests are fully allowed.</li>
-<li><strong>Fair Play Enforcement:</strong> Cheating, flight hacks, X-ray texture packs, and automated botting are strictly forbidden. All block placements, container withdrawals, and entity damage are logged around the clock by <strong>CoreProtect 24.0</strong> and filtered by <strong>UltimateAntiBot</strong>.</li>
-<li><strong>Server Conduct:</strong> Always review <code>/rules</code> in-game before venturing out.</li>
+<li><strong>Wilderness Raiding:</strong> Beyond the 150-block spawn perimeter, base raiding, chest theft, and PvP combat are allowed. We don&rsquo;t restore stolen inventory items or repair griefed bases.</li>
+<li><strong>Cheat Detection:</strong> Packet-level movement hacks, fly mods, Baritone automation, and X-ray packs are blocked by packet analysis. CoreProtect 24.0 logs block changes and chest transactions to an SQLite backend.</li>
+<li><strong>In-Game Rules:</strong> Run <code>/rules</code> to view current server flags.</li>
 </ul>
-<h2 id="key-mechanics--systems">Key Mechanics &amp; Systems</h2>
-<h3 id="1-teleportation-safety--tpa">1. Teleportation Safety &amp; TPA</h3>
+<h2 id="server-mechanics">Server Mechanics</h2>
+<h3 id="1-teleport-requests--combat-timing">1. Teleport Requests &amp; Combat Timing</h3>
 <ul>
-<li>Sending a teleport request is done with <code>/tpa &lt;player&gt;</code>.</li>
-<li><strong>Mandatory Confirmation:</strong> Teleports do <strong>not</strong> happen automatically. The recipient must explicitly accept using <code>/tpaccept</code>.</li>
-<li><strong>Invulnerability Grace Period:</strong> Teleported players receive a 4-second invulnerability window upon arrival to prevent instant trap ambushes.</li>
+<li>Teleport requests use <code>/tpa &lt;player&gt;</code>.</li>
+<li>Teleports require explicit acceptance. The recipient must type <code>/tpaccept</code> within 60 seconds.</li>
+<li>Arrival grants a 4-second invulnerability timer to prevent instant fall or suffocating traps. Moving cancels the teleport during the warmup window.</li>
 </ul>
-<h3 id="2-bed-respawns--home-anchors">2. Bed Respawns &amp; Home Anchors</h3>
-<p>The earlier bug where bed respawns reverted to the center world spawn has been fully resolved. Sleeping in any valid bed in the Overworld will properly set your individual respawn coordinates.</p>
-<h3 id="3-fiestateams--clan-warfare">3. FiestaTeams &amp; Clan Warfare</h3>
-<p>Band together with friends or establish rival factions using our custom <strong>FiestaTeams</strong> plugin:</p>
+<h3 id="2-bed-respawns--spawn-anchors">2. Bed Respawns &amp; Spawn Anchors</h3>
+<p>Bed respawn anchors function normally in Overworld dimensions. Right-clicking an unobstructed bed sets player coordinates; dying without an active anchor returns the player to the Spawn Archipelago docks.</p>
+<h3 id="3-clan-management">3. Clan Management</h3>
+<p>Team creation uses the FiestaTeams plugin:</p>
 <ul>
-<li><code>/team create &lt;name&gt;</code> to establish your squad.</li>
-<li><code>/team invite &lt;player&gt;</code> to recruit trusted allies.</li>
-<li>Plan defenses, coordinate outpost raids, and conquer the wilderness together.</li>
+<li>Run <code>/team create &lt;name&gt;</code> to register a clan tag.</li>
+<li>Run <code>/team invite &lt;player&gt;</code> to add members.</li>
+<li>Clan members share friendly-fire toggles &amp; land coordinate bookmarks.</li>
 </ul>
-<h3 id="4-barter-economy">4. Barter Economy</h3>
-<p>There are no artificial infinite coin shops. The economy is 100% player-driven through physical bartering:</p>
+<h3 id="4-physical-item-barter">4. Physical Item Barter</h3>
+<p>The server doesn&rsquo;t use virtual money. Players trade with physical items:</p>
 <ul>
-<li>Trade directly using <code>/trade &lt;player&gt;</code> via <strong>InTrade</strong>.</li>
-<li>Establish automated merchant stalls using <strong>ChestShop</strong>.</li>
-<li>List rare artifacts on the player-run auction board with <strong>EzAuction</strong>.</li>
+<li>Direct player-to-player trade: run <code>/trade &lt;player&gt;</code> through InTrade.</li>
+<li>Merchant shops: ChestShop allows selling items from locked wooden containers using diamonds or gold as currency.</li>
+<li>Public listings: EzAuction handles timed item bidding boards.</li>
 </ul>
-<p>See you all on the server!</p>
-<p><em>— cbladeOfficial &amp; debarkak (FiestaSMP Core Team)</em></p>
+<p><em>cbladeOfficial &amp; debarkak, FiestaSMP Engineering</em></p>
 
     </div>
 
@@ -199,7 +197,7 @@
         
         <a href="/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/" class="post-nav-item">
           <div class="post-nav-label">&larr; Previous</div>
-          <div class="post-nav-title">Patch Notes 2.1: TPA Confirmation, Economy &amp; System Tuning</div>
+          <div class="post-nav-title">Patch 2.1: Teleport Confirmation &amp; Economy Updates</div>
         </a>
         
 

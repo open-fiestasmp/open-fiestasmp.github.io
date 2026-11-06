@@ -1,46 +1,45 @@
 ---
-title: "Account Protection & Network Optimization Guide"
+title: "Account Security & Network Routing Architecture"
 date: 2026-10-25T14:00:00+05:30
 draft: false
+slug: "account-protection-network-optimization-guide"
 author: "cbladeOfficial"
-summary: "An in-depth developer overview of AuthMe password hashing, session persistence, SkinsRestorer, and Bedrock connection routing."
+summary: "Technical documentation of AuthMe PBKDF2 password hashing, 60-second session reconnects, SkinsRestorer texture fetching, and UDP port 19132 Geyser translation."
 tags: ["Server", "Security", "Updates"]
 ---
 
-Maintaining an open and accessible Minecraft multiplayer environment requires robust security and authentication tooling behind the scenes. This guide covers how account security, session persistence, and network routing operate on FiestaSMP.
+FiestaSMP runs on a dual-login pipeline to allow both standard Mojang accounts and offline launcher profiles without account collisions.
 
-## Account Authentication Architecture
+## Authentication Pipeline
 
-Because FiestaSMP supports both standard and offline-mode clients, player authentication is handled through an isolated **AuthMe Reloaded** pipeline:
+Inbound connections pass through an anti-bot handshake filter before reaching the AuthMe database:
 
 ```text
-Incoming Connection -> UltimateAntiBot Filter -> AuthMe Handshake
-  ├─ Registered User: /login <password> (PBKDF2 SHA-256 Hashing)
-  └─ New Player: /register <password> <confirmPassword>
+Inbound TCP/UDP -> AntiBot Verification -> AuthMe Handshake
+  ├─ Registered Account: /login <password> (PBKDF2 SHA-256)
+  └─ Unregistered Account: /register <password> <confirmPassword>
 ```
 
-### Key Security Guidelines:
-- **Strong Passwords:** Avoid using simple passwords or combinations you use on public servers.
-- **Session Auto-Reconnection:** If your client experiences a brief network hiccup or disconnection, a 60-second session grace window allows instant reconnection without re-entering your credentials.
-- **Password Updates:** You can change your existing password at any time in-game using `/changepassword <oldPassword> <newPassword>`.
+### Authentication Parameters
+- **Password Storage:** Passwords are salted and hashed using PBKDF2 with SHA-256. Plaintext credentials are never written to disk or console logs.
+- **Reconnection Window:** Disconnections trigger a 60-second session hold. If your client reconnects within that window from the same IP address, you re-enter the world without typing your password again.
+- **Password Changes:** Run `/changepassword <oldPassword> <newPassword>` to update stored credentials.
 
-## Cross-Version Skins & Restorer
+## Skin Extraction & SkinsRestorer
 
-Offline clients traditionally display default Steve or Alex skins. To provide full cosmetic customization for every player on our server:
+Offline launcher accounts default to Steve or Alex models because they don't query Mojang's session server. SkinsRestorer bridges this by pulling skin textures from public skin databases:
 
-1. **SkinsRestorer** is synchronized with Mojang skin caches.
-2. Run `/skin <username>` to apply any publicly indexed skin to your character.
-3. Custom URL skins are supported via `/skin <directImageUrl>` for unique outfits.
-4. Changes take effect across both Java and Bedrock clients instantaneously.
+1. Type `/skin <username>` to fetch and apply any registered Mojang or Ely.by skin texture.
+2. Custom image files apply via `/skin <directPngUrl>`.
+3. Avatar heads in our web gallery are extracted from these cached 64x64 PNG texture files.
 
-## Bedrock Network Routing (Port 19132)
+## Bedrock Routing on UDP Port 19132
 
-Bedrock edition clients connect over the UDP protocol on port `19132` via **Geyser-Spigot** and **Floodgate**:
+Bedrock players connect on UDP port `19132` via Geyser-Spigot & Floodgate:
+- Packet translation converts Bedrock touch gestures into standard Java interaction events.
+- Form windows replace chat commands for ChestShop purchases and team management.
+- Network MTU is set to 1400 bytes to avoid packet fragmentation on mobile carrier networks.
 
-- Java inventory translation handles Bedrock UI controls seamlessly.
-- Form menus and barter interfaces are tailored for touchscreens and mobile controllers.
-- Packet compression has been tuned to ensure consistent ping times under heavy load.
+Report locked accounts or lost passwords through our Discord support ticket system or email `fiestamg@murena.io`.
 
-For technical assistance or lost password recovery, reach out through our official ticket system or email us at `fiestamg@murena.io`.
-
-*&mdash; cbladeOfficial (FiestaSMP Developer)*
+*cbladeOfficial, FiestaSMP Developer*

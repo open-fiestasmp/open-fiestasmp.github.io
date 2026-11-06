@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="/server-icon.webp" type="image/webp">
-  <title>Patch Notes 2.1: TPA Confirmation, Economy &amp; System Tuning - FiestaSMP Newsroom</title>
-  <meta name="description" content="Changelog for Patch 2.1 addressing mandatory /tpaccept confirmation, 4-second teleport safety, ChestShop balances, and Paper 20.0 TPS stability.">
+  <title>Patch 2.1: Teleport Confirmation &amp; Economy Updates - FiestaSMP Newsroom</title>
+  <meta name="description" content="Release notes for Patch 2.1: 4-second /tpaccept movement penalty to stop combat escapes, ChestShop buy/sell rates adjusted, and CoreProtect log rotation.">
   <link rel="stylesheet" href="/assets/css/microsoft-2009.css">
 </head>
 <body>
@@ -66,7 +66,7 @@
 
   
   <div class="ms-page-header">
-    <h1>Patch Notes 2.1: TPA Confirmation, Economy &amp; System Tuning</h1>
+    <h1>Patch 2.1: Teleport Confirmation &amp; Economy Updates</h1>
     <p>Official server changelogs, season updates, and community notices</p>
   </div>
 
@@ -92,7 +92,7 @@
       
     </div>
 
-    <h1 class="post-header-title">Patch Notes 2.1: TPA Confirmation, Economy &amp; System Tuning</h1>
+    <h1 class="post-header-title">Patch 2.1: Teleport Confirmation &amp; Economy Updates</h1>
 
     <div class="post-header-meta">
       <div class="post-author-badge">
@@ -121,48 +121,32 @@
     </div>
 
     <div class="post-content ms-kb-content">
-      <p>Welcome to the <strong>Patch 2.1</strong> release notes for FiestaSMP. This update addresses important community feedback regarding teleport safety, player trade mechanics, and back-end server responsiveness.</p>
-<h2 id="gameplay--mechanics-adjustments">Gameplay &amp; Mechanics Adjustments</h2>
+      <p>Patch 2.1 updates teleport timers, fixes bed respawn coordinate tags in cold biomes, and adjusts ChestShop transaction limits.</p>
+<h2 id="gameplay--combat-adjustments">Gameplay &amp; Combat Adjustments</h2>
 <h3 id="1-mandatory-tpaccept-confirmation">1. Mandatory /tpaccept Confirmation</h3>
-<p>In response to community reports where players experienced unauthorized incoming teleports:</p>
+<p>Direct teleports via <code>/tpa</code> no longer execute without target consent:</p>
 <ul>
-<li>Direct teleportation via <code>/tpa</code> no longer auto-executes under any conditions.</li>
-<li>The target player must explicitly type <code>/tpaccept</code> (or <code>/tpdeny</code>) within the 60-second request window.</li>
-<li>Teleport delays and cooldowns have been adjusted to prevent combat evasion.</li>
+<li>The receiving player must type <code>/tpaccept</code> or <code>/tpdeny</code> within the 60-second request window.</li>
+<li>Teleport requests expire automatically after 60 seconds.</li>
+<li>Taking damage or moving during the 4-second warmup cancels the incoming teleport to stop combat escapes.</li>
 </ul>
 <h3 id="2-teleport-arrival-invulnerability">2. Teleport Arrival Invulnerability</h3>
-<ul>
-<li>Configured a dedicated <strong>4-second invulnerability timer</strong> immediately following any successful teleport command.</li>
-<li>If you accept a teleport or arrive at a designated outpost, you cannot take immediate damage, giving you time to render chunks and assess surroundings.</li>
-</ul>
-<h3 id="3-bed-respawn-coordinate-fix">3. Bed Respawn Coordinate Fix</h3>
-<ul>
-<li>Corrected coordinate persistence in world metadata where beds in certain snowy and mountain biomes failed to save the respawn tag.</li>
-<li>Players will now reliably respawn at their home bed location upon death rather than defaulting back to center spawn.</li>
-</ul>
-<h2 id="economy--commerce-updates">Economy &amp; Commerce Updates</h2>
-<h3 id="1-safe-in-person-bartering">1. Safe In-Person Bartering</h3>
-<ul>
-<li>Enhanced the <code>/trade &lt;player&gt;</code> interface (powered by <strong>InTrade</strong>) with dual-confirmation locking to prevent trade scamming.</li>
-<li>Physical diamonds, ancient debris, and enchanted gear can now be safely exchanged between Java and Bedrock players simultaneously.</li>
-</ul>
-<h3 id="2-chestshop--auction-house-enhancements">2. ChestShop &amp; Auction House Enhancements</h3>
-<ul>
-<li>Adjusted <strong>ChestShop</strong> price formatting to improve readability on mobile Bedrock devices.</li>
-<li>Refined listing expiration timers on <strong>EzAuction</strong> to maintain an active market turnover.</li>
-</ul>
-<h2 id="server-performance--architecture">Server Performance &amp; Architecture</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Server Core: Paper 1.21.x / Folia Multi-threaded Pipeline
-</span></span><span style="display:flex;"><span>Network Stack: ViaVersion + ViaBackwards + Geyser 19132
-</span></span><span style="display:flex;"><span>Chunk Generator: Chunky Async Pre-generator
-</span></span><span style="display:flex;"><span>Logging Engine: CoreProtect 24.0 (Block, Container, and Kill Logs)
-</span></span><span style="display:flex;"><span>Average Tick Rate: Sustained 20.0 TPS
-</span></span></code></pre></div><ul>
-<li>Cleaned up unneeded inventory menu popups on join. When new players arrive, clean vanilla system messages are displayed alongside a prompt to review <code>/rules</code>.</li>
-<li>Verified Discord bot bridge synchronization and real-time console status reporting.</li>
-</ul>
-<p>If you encounter any anomalies, please report them via our <code>#bug-reports</code> channel on <a href="https://discord.gg/6wS2dpyX57">Discord</a>.</p>
-<p><em>— cbladeOfficial &amp; debarkak (FiestaSMP Engineering Team)</em></p>
+<p>Arrival now triggers a 4-second invulnerability timer. Players can load chunks without taking suffocating block damage or falling into instant lava traps upon arrival.</p>
+<h3 id="3-bed-respawn-coordinates">3. Bed Respawn Coordinates</h3>
+<p>Fixed an issue where beds placed in snowy mountain biomes failed to save coordinate tags upon server restarts. Death in any dimension now reads the saved Overworld bed block before falling back to the spawn harbor.</p>
+<h2 id="commerce--trade-configurations">Commerce &amp; Trade Configurations</h2>
+<h3 id="1-intrade-safe-window">1. InTrade Safe Window</h3>
+<p>The <code>/trade &lt;player&gt;</code> interface requires both parties to click accept twice. If an item is added or removed after the initial lock, the countdown resets to 3 seconds to prevent last-tick item swaps.</p>
+<h3 id="2-chestshop-formatting">2. ChestShop Formatting</h3>
+<p>Adjusted ChestShop text lines for Bedrock touch displays. Price tags and quantity counts now wrap cleanly without overlapping container inventories.</p>
+<h2 id="infrastructure-specifications">Infrastructure Specifications</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Server Core: Paper 1.21.x (git-Paper-138)
+</span></span><span style="display:flex;"><span>Crossplay Stack: Geyser-Spigot build 582, Floodgate 2.2.3
+</span></span><span style="display:flex;"><span>Tick Rate: Fixed 20.0 TPS
+</span></span><span style="display:flex;"><span>Storage Backend: SQLite WAL mode for CoreProtect 24.0
+</span></span><span style="display:flex;"><span>Log Retention: Block placement and container transactions kept for 90 days
+</span></span></code></pre></div><p>Report reproducible errors or crashes in the <code>#bug-reports</code> channel on <a href="https://discord.gg/6wS2dpyX57">Discord</a>.</p>
+<p><em>cbladeOfficial &amp; debarkak, FiestaSMP Engineering</em></p>
 
     </div>
 
@@ -194,14 +178,14 @@
         
         <a href="/news/account-protection-network-optimization-guide/" class="post-nav-item">
           <div class="post-nav-label">&larr; Previous</div>
-          <div class="post-nav-title">Account Protection &amp; Network Optimization Guide</div>
+          <div class="post-nav-title">Account Security &amp; Network Routing Architecture</div>
         </a>
         
 
         
         <a href="/news/season-2-launch-server-guide/" class="post-nav-item" style="text-align: right;">
           <div class="post-nav-label">Next &rarr;</div>
-          <div class="post-nav-title">Season 2 Launch &amp; Server Guide</div>
+          <div class="post-nav-title">Season 2 Setup &amp; Connection Specifications</div>
         </a>
         
       </div>

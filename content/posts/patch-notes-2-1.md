@@ -1,54 +1,48 @@
 ---
-title: "Patch Notes 2.1: TPA Confirmation, Economy & System Tuning"
+title: "Patch 2.1: Teleport Confirmation & Economy Updates"
 date: 2026-11-05T19:00:00+05:30
 draft: false
+slug: "patch-notes-2.1-tpa-confirmation-economy-system-tuning"
 author: "cbladeOfficial"
 coauthor: "debarkak"
-summary: "Changelog for Patch 2.1 addressing mandatory /tpaccept confirmation, 4-second teleport safety, ChestShop balances, and Paper 20.0 TPS stability."
+summary: "Release notes for Patch 2.1: 4-second /tpaccept movement penalty to stop combat escapes, ChestShop buy/sell rates adjusted, and CoreProtect log rotation."
 tags: ["Patch Notes", "Updates", "Economy"]
 ---
 
-Welcome to the **Patch 2.1** release notes for FiestaSMP. This update addresses important community feedback regarding teleport safety, player trade mechanics, and back-end server responsiveness.
+Patch 2.1 updates teleport timers, fixes bed respawn coordinate tags in cold biomes, and adjusts ChestShop transaction limits.
 
-## Gameplay & Mechanics Adjustments
+## Gameplay & Combat Adjustments
 
 ### 1. Mandatory /tpaccept Confirmation
-In response to community reports where players experienced unauthorized incoming teleports:
-- Direct teleportation via `/tpa` no longer auto-executes under any conditions.
-- The target player must explicitly type `/tpaccept` (or `/tpdeny`) within the 60-second request window.
-- Teleport delays and cooldowns have been adjusted to prevent combat evasion.
+Direct teleports via `/tpa` no longer execute without target consent:
+- The receiving player must type `/tpaccept` or `/tpdeny` within the 60-second request window.
+- Teleport requests expire automatically after 60 seconds.
+- Taking damage or moving during the 4-second warmup cancels the incoming teleport to stop combat escapes.
 
 ### 2. Teleport Arrival Invulnerability
-- Configured a dedicated **4-second invulnerability timer** immediately following any successful teleport command.
-- If you accept a teleport or arrive at a designated outpost, you cannot take immediate damage, giving you time to render chunks and assess surroundings.
+Arrival now triggers a 4-second invulnerability timer. Players can load chunks without taking suffocating block damage or falling into instant lava traps upon arrival.
 
-### 3. Bed Respawn Coordinate Fix
-- Corrected coordinate persistence in world metadata where beds in certain snowy and mountain biomes failed to save the respawn tag.
-- Players will now reliably respawn at their home bed location upon death rather than defaulting back to center spawn.
+### 3. Bed Respawn Coordinates
+Fixed an issue where beds placed in snowy mountain biomes failed to save coordinate tags upon server restarts. Death in any dimension now reads the saved Overworld bed block before falling back to the spawn harbor.
 
-## Economy & Commerce Updates
+## Commerce & Trade Configurations
 
-### 1. Safe In-Person Bartering
-- Enhanced the `/trade <player>` interface (powered by **InTrade**) with dual-confirmation locking to prevent trade scamming.
-- Physical diamonds, ancient debris, and enchanted gear can now be safely exchanged between Java and Bedrock players simultaneously.
+### 1. InTrade Safe Window
+The `/trade <player>` interface requires both parties to click accept twice. If an item is added or removed after the initial lock, the countdown resets to 3 seconds to prevent last-tick item swaps.
 
-### 2. ChestShop & Auction House Enhancements
-- Adjusted **ChestShop** price formatting to improve readability on mobile Bedrock devices.
-- Refined listing expiration timers on **EzAuction** to maintain an active market turnover.
+### 2. ChestShop Formatting
+Adjusted ChestShop text lines for Bedrock touch displays. Price tags and quantity counts now wrap cleanly without overlapping container inventories.
 
-## Server Performance & Architecture
+## Infrastructure Specifications
 
 ```text
-Server Core: Paper 1.21.x / Folia Multi-threaded Pipeline
-Network Stack: ViaVersion + ViaBackwards + Geyser 19132
-Chunk Generator: Chunky Async Pre-generator
-Logging Engine: CoreProtect 24.0 (Block, Container, and Kill Logs)
-Average Tick Rate: Sustained 20.0 TPS
+Server Core: Paper 1.21.x (git-Paper-138)
+Crossplay Stack: Geyser-Spigot build 582, Floodgate 2.2.3
+Tick Rate: Fixed 20.0 TPS
+Storage Backend: SQLite WAL mode for CoreProtect 24.0
+Log Retention: Block placement and container transactions kept for 90 days
 ```
 
-- Cleaned up unneeded inventory menu popups on join. When new players arrive, clean vanilla system messages are displayed alongside a prompt to review `/rules`.
-- Verified Discord bot bridge synchronization and real-time console status reporting.
+Report reproducible errors or crashes in the `#bug-reports` channel on [Discord](https://discord.gg/6wS2dpyX57).
 
-If you encounter any anomalies, please report them via our `#bug-reports` channel on [Discord](https://discord.gg/6wS2dpyX57).
-
-*&mdash; cbladeOfficial &amp; debarkak (FiestaSMP Engineering Team)*
+*cbladeOfficial & debarkak, FiestaSMP Engineering*

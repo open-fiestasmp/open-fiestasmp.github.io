@@ -1,17 +1,17 @@
 # Fiesta SMP Official Website
 
-Official website for **Fiesta SMP** — a long-haul survival Minecraft server with pure physical barter, raiding, clan warfare, long-term seasons, and full crossplay for Java Edition and Bedrock Edition.
+Official website for **Fiesta SMP**: survival Minecraft server with physical barter, raiding, clan warfare, long seasons, and crossplay on Java and Bedrock.
 
-Direct 1:1 pixel-perfect clone of the official Google Sites prototype (`https://sites.google.com/view/fiestatesttemplate/home`), reproducing the authentic typography, responsive navigation drawer, layout grids, calendar embed, gallery, contact/support workflows, and Hugo-powered Markdown news & blog.
+Documentation and player web portal featuring 2009 Microsoft Aero styling, calendar agenda, player-attributed gallery, support ticket forms, and Hugo Markdown news system.
 
 ## Pages
 
-- **[Home](https://open-fiestasmp.github.io/)** (`index.html` / `home.html`) — Banner title `FiestaSMP`, 2-column server specs with live status pill, screenshot, live Google Calendar agenda stream schedule, and footer contacts.
-- **[News & Updates](https://open-fiestasmp.github.io/news/)** (`news/index.html` / `news.html`) — Hugo-powered news & announcements feed with tag filters, live search, and full Markdown article pages.
-- **[Terms](https://open-fiestasmp.github.io/terms.html)** (`terms.html`) — Official server terms, allowed mechanics, prohibited exploits, barter economy charter, season lifecycle rules, and community conduct.
-- **[Gallery](https://open-fiestasmp.github.io/gallery.html)** (`gallery.html`) — Google Sites authentic 3-column + 1-column image grid displaying community world captures with debarkak's extracted player skin avatar.
-- **[Socials](https://open-fiestasmp.github.io/socials.html)** (`socials.html`) — Live streaming platforms (Twitch, Kick, YouTube), communications channels (Mail, Discord, X), and core development contributors.
-- **[Contact / Support](https://open-fiestasmp.github.io/contactsupport.html)** (`contactsupport.html` / `support.html`) — Official communication mail notice, Google forms for Ban Appeals, Player Reports, Gallery Submissions, and Discord ticketing.
+- **[Home](https://open-fiestasmp.github.io/)** (`index.html` / `home.html`): Server connection specs, live status pill, screenshot, broadcast calendar, and footer links.
+- **[News & Updates](https://open-fiestasmp.github.io/news/)** (`news/index.html` / `news.html`): Hugo-powered bulletins feed with tag filters, search, and Markdown article pages.
+- **[Terms](https://open-fiestasmp.github.io/terms.html)** (`terms.html`): Server rules, allowed mechanics, anti-cheat limits, barter economy charter, and community conduct.
+- **[Gallery](https://open-fiestasmp.github.io/gallery.html)** (`gallery.html`): In-game screenshot gallery with player skin avatar attribution.
+- **[Socials](https://open-fiestasmp.github.io/socials.html)** (`socials.html`): Streaming platforms (Twitch, Kick, YouTube), communication channels (Mail, Discord, X), and GitHub repositories.
+- **[Contact / Support](https://open-fiestasmp.github.io/contactsupport.html)** (`contactsupport.html` / `support.html`): Direct mail notices, forms for ban appeals, player reports, and gallery submissions.
 
 ## Creating & Publishing News Posts with Markdown (Hugo)
 

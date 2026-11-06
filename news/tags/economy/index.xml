@@ -9,11 +9,11 @@
     <lastBuildDate>Thu, 05 Nov 2026 19:00:00 +0530</lastBuildDate>
     <atom:link href="https://open-fiestasmp.github.io/news/tags/economy/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Patch Notes 2.1: TPA Confirmation, Economy &amp; System Tuning</title>
+      <title>Patch 2.1: Teleport Confirmation &amp; Economy Updates</title>
       <link>https://open-fiestasmp.github.io/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/</link>
       <pubDate>Thu, 05 Nov 2026 19:00:00 +0530</pubDate>
       <guid>https://open-fiestasmp.github.io/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/</guid>
-      <description>Changelog for Patch 2.1 addressing mandatory /tpaccept confirmation, 4-second teleport safety, ChestShop balances, and Paper 20.0 TPS stability.</description>
+      <description>Release notes for Patch 2.1: 4-second /tpaccept movement penalty to stop combat escapes, ChestShop buy/sell rates adjusted, and CoreProtect log rotation.</description>
     </item>
   </channel>
 </rss>

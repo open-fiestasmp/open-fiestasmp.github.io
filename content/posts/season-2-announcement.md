@@ -1,59 +1,57 @@
 ---
-title: "Season 2 Launch & Server Guide"
+title: "Season 2 Setup & Connection Specifications"
 date: 2026-11-06T15:00:00+05:30
 draft: false
+slug: "season-2-launch-server-guide"
 author: "cbladeOfficial"
 coauthor: "debarkak"
-summary: "FiestaSMP Season 2 is live! Everything you need to know about Paper 1.21.x crossplay, AuthMe registration, TPA rules, bed respawns, and the barter economy."
+summary: "Technical setup for Season 2: Paper 1.21.x networking, AuthMe SHA-256 account registration, 4-second TPA warmups, bed respawn mechanics, and physical chest barter."
 tags: ["Announcements", "Season 2", "Server"]
 ---
 
-Welcome to **FiestaSMP Season 2**! Our team has prepared a streamlined, competitive survival multiplayer world running on high-performance Paper/Folia infrastructure.
+FiestaSMP Season 2 runs on Paper 1.21.x with Geyser crossplay. The server operates at a fixed 20.0 TPS with no virtual currency plugins, no scoreboard balances, and unmoderated PvP outside the spawn perimeter.
 
-Whether you are a returning veteran or exploring our world for the first time, here is the complete guide to Season 2.
+## Connection Addresses
 
-## How to Connect
+The server accepts connections from both Java & Bedrock clients:
 
-FiestaSMP natively supports both Java Edition and Bedrock Edition players, with multi-version client compatibility:
+- **Java Edition:** `fiesta.debarkak.xyz:25565` (ViaVersion handles protocols 1.8 through 1.21.x)
+- **Bedrock Edition:** `fiesta.debarkak.xyz:19132` (Geyser-Spigot bridge on UDP port 19132)
 
-- **Java Edition Address:** `fiesta.debarkak.xyz:25565` (Supports 1.8 to 1.21.x / 26.x via ViaVersion)
-- **Bedrock Edition Address:** `fiesta.debarkak.xyz:19132` (Port `19132` via Geyser-Spigot)
+### Authentication & Player Skins
 
-### Account Authentication & Skins
-Our server welcomes both premium and offline-mode clients using **AuthMe**:
-- First-time joining: Run `/register <password> <confirmPassword>` in chat.
-- Subsequent logins: Run `/login <password>`.
-- Character Skins: Handled automatically via **SkinsRestorer** (`/skin <name>`).
+Player accounts use AuthMe with PBKDF2 SHA-256 password hashing:
+- First connection: run `/register <password> <confirmPassword>` in chat.
+- Returning connections: run `/login <password>`.
+- Skin textures: SkinsRestorer manages player skins across offline and online clients with `/skin <username>`.
 
-## Core Gameplay: Survival with the Safety Off
+## Gameplay Rules & Anti-Cheat
 
-FiestaSMP is built on unfiltered survival mechanics:
-- **Wilderness Raiding & PvP:** Outside the protected Spawn Archipelago, PvP, territory skirmishes, and raiding unprotected chests are fully allowed.
-- **Fair Play Enforcement:** Cheating, flight hacks, X-ray texture packs, and automated botting are strictly forbidden. All block placements, container withdrawals, and entity damage are logged around the clock by **CoreProtect 24.0** and filtered by **UltimateAntiBot**.
-- **Server Conduct:** Always review `/rules` in-game before venturing out.
+Player interaction rules are split between the protected spawn island and the wilderness:
+- **Wilderness Raiding:** Beyond the 150-block spawn perimeter, base raiding, chest theft, and PvP combat are allowed. We don't restore stolen inventory items or repair griefed bases.
+- **Cheat Detection:** Packet-level movement hacks, fly mods, Baritone automation, and X-ray packs are blocked by packet analysis. CoreProtect 24.0 logs block changes and chest transactions to an SQLite backend.
+- **In-Game Rules:** Run `/rules` to view current server flags.
 
-## Key Mechanics & Systems
+## Server Mechanics
 
-### 1. Teleportation Safety & TPA
-- Sending a teleport request is done with `/tpa <player>`.
-- **Mandatory Confirmation:** Teleports do **not** happen automatically. The recipient must explicitly accept using `/tpaccept`.
-- **Invulnerability Grace Period:** Teleported players receive a 4-second invulnerability window upon arrival to prevent instant trap ambushes.
+### 1. Teleport Requests & Combat Timing
+- Teleport requests use `/tpa <player>`.
+- Teleports require explicit acceptance. The recipient must type `/tpaccept` within 60 seconds.
+- Arrival grants a 4-second invulnerability timer to prevent instant fall or suffocating traps. Moving cancels the teleport during the warmup window.
 
-### 2. Bed Respawns & Home Anchors
-The earlier bug where bed respawns reverted to the center world spawn has been fully resolved. Sleeping in any valid bed in the Overworld will properly set your individual respawn coordinates.
+### 2. Bed Respawns & Spawn Anchors
+Bed respawn anchors function normally in Overworld dimensions. Right-clicking an unobstructed bed sets player coordinates; dying without an active anchor returns the player to the Spawn Archipelago docks.
 
-### 3. FiestaTeams & Clan Warfare
-Band together with friends or establish rival factions using our custom **FiestaTeams** plugin:
-- `/team create <name>` to establish your squad.
-- `/team invite <player>` to recruit trusted allies.
-- Plan defenses, coordinate outpost raids, and conquer the wilderness together.
+### 3. Clan Management
+Team creation uses the FiestaTeams plugin:
+- Run `/team create <name>` to register a clan tag.
+- Run `/team invite <player>` to add members.
+- Clan members share friendly-fire toggles & land coordinate bookmarks.
 
-### 4. Barter Economy
-There are no artificial infinite coin shops. The economy is 100% player-driven through physical bartering:
-- Trade directly using `/trade <player>` via **InTrade**.
-- Establish automated merchant stalls using **ChestShop**.
-- List rare artifacts on the player-run auction board with **EzAuction**.
+### 4. Physical Item Barter
+The server doesn't use virtual money. Players trade with physical items:
+- Direct player-to-player trade: run `/trade <player>` through InTrade.
+- Merchant shops: ChestShop allows selling items from locked wooden containers using diamonds or gold as currency.
+- Public listings: EzAuction handles timed item bidding boards.
 
-See you all on the server!
-
-*&mdash; cbladeOfficial &amp; debarkak (FiestaSMP Core Team)*
+*cbladeOfficial & debarkak, FiestaSMP Engineering*

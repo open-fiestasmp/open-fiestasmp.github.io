@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="/server-icon.webp" type="image/webp">
-  <title>Account Protection &amp; Network Optimization Guide - FiestaSMP Newsroom</title>
-  <meta name="description" content="An in-depth developer overview of AuthMe password hashing, session persistence, SkinsRestorer, and Bedrock connection routing.">
+  <title>Account Security &amp; Network Routing Architecture - FiestaSMP Newsroom</title>
+  <meta name="description" content="Technical documentation of AuthMe PBKDF2 password hashing, 60-second session reconnects, SkinsRestorer texture fetching, and UDP port 19132 Geyser translation.">
   <link rel="stylesheet" href="/assets/css/microsoft-2009.css">
 </head>
 <body>
@@ -66,7 +66,7 @@
 
   
   <div class="ms-page-header">
-    <h1>Account Protection &amp; Network Optimization Guide</h1>
+    <h1>Account Security &amp; Network Routing Architecture</h1>
     <p>Official server changelogs, season updates, and community notices</p>
   </div>
 
@@ -92,7 +92,7 @@
       
     </div>
 
-    <h1 class="post-header-title">Account Protection &amp; Network Optimization Guide</h1>
+    <h1 class="post-header-title">Account Security &amp; Network Routing Architecture</h1>
 
     <div class="post-header-meta">
       <div class="post-author-badge">
@@ -113,35 +113,34 @@
     </div>
 
     <div class="post-content ms-kb-content">
-      <p>Maintaining an open and accessible Minecraft multiplayer environment requires robust security and authentication tooling behind the scenes. This guide covers how account security, session persistence, and network routing operate on FiestaSMP.</p>
-<h2 id="account-authentication-architecture">Account Authentication Architecture</h2>
-<p>Because FiestaSMP supports both standard and offline-mode clients, player authentication is handled through an isolated <strong>AuthMe Reloaded</strong> pipeline:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Incoming Connection -&gt; UltimateAntiBot Filter -&gt; AuthMe Handshake
-</span></span><span style="display:flex;"><span>  ├─ Registered User: /login &lt;password&gt; (PBKDF2 SHA-256 Hashing)
-</span></span><span style="display:flex;"><span>  └─ New Player: /register &lt;password&gt; &lt;confirmPassword&gt;
-</span></span></code></pre></div><h3 id="key-security-guidelines">Key Security Guidelines:</h3>
+      <p>FiestaSMP runs on a dual-login pipeline to allow both standard Mojang accounts and offline launcher profiles without account collisions.</p>
+<h2 id="authentication-pipeline">Authentication Pipeline</h2>
+<p>Inbound connections pass through an anti-bot handshake filter before reaching the AuthMe database:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Inbound TCP/UDP -&gt; AntiBot Verification -&gt; AuthMe Handshake
+</span></span><span style="display:flex;"><span>  ├─ Registered Account: /login &lt;password&gt; (PBKDF2 SHA-256)
+</span></span><span style="display:flex;"><span>  └─ Unregistered Account: /register &lt;password&gt; &lt;confirmPassword&gt;
+</span></span></code></pre></div><h3 id="authentication-parameters">Authentication Parameters</h3>
 <ul>
-<li><strong>Strong Passwords:</strong> Avoid using simple passwords or combinations you use on public servers.</li>
-<li><strong>Session Auto-Reconnection:</strong> If your client experiences a brief network hiccup or disconnection, a 60-second session grace window allows instant reconnection without re-entering your credentials.</li>
-<li><strong>Password Updates:</strong> You can change your existing password at any time in-game using <code>/changepassword &lt;oldPassword&gt; &lt;newPassword&gt;</code>.</li>
+<li><strong>Password Storage:</strong> Passwords are salted and hashed using PBKDF2 with SHA-256. Plaintext credentials are never written to disk or console logs.</li>
+<li><strong>Reconnection Window:</strong> Disconnections trigger a 60-second session hold. If your client reconnects within that window from the same IP address, you re-enter the world without typing your password again.</li>
+<li><strong>Password Changes:</strong> Run <code>/changepassword &lt;oldPassword&gt; &lt;newPassword&gt;</code> to update stored credentials.</li>
 </ul>
-<h2 id="cross-version-skins--restorer">Cross-Version Skins &amp; Restorer</h2>
-<p>Offline clients traditionally display default Steve or Alex skins. To provide full cosmetic customization for every player on our server:</p>
+<h2 id="skin-extraction--skinsrestorer">Skin Extraction &amp; SkinsRestorer</h2>
+<p>Offline launcher accounts default to Steve or Alex models because they don&rsquo;t query Mojang&rsquo;s session server. SkinsRestorer bridges this by pulling skin textures from public skin databases:</p>
 <ol>
-<li><strong>SkinsRestorer</strong> is synchronized with Mojang skin caches.</li>
-<li>Run <code>/skin &lt;username&gt;</code> to apply any publicly indexed skin to your character.</li>
-<li>Custom URL skins are supported via <code>/skin &lt;directImageUrl&gt;</code> for unique outfits.</li>
-<li>Changes take effect across both Java and Bedrock clients instantaneously.</li>
+<li>Type <code>/skin &lt;username&gt;</code> to fetch and apply any registered Mojang or Ely.by skin texture.</li>
+<li>Custom image files apply via <code>/skin &lt;directPngUrl&gt;</code>.</li>
+<li>Avatar heads in our web gallery are extracted from these cached 64x64 PNG texture files.</li>
 </ol>
-<h2 id="bedrock-network-routing-port-19132">Bedrock Network Routing (Port 19132)</h2>
-<p>Bedrock edition clients connect over the UDP protocol on port <code>19132</code> via <strong>Geyser-Spigot</strong> and <strong>Floodgate</strong>:</p>
+<h2 id="bedrock-routing-on-udp-port-19132">Bedrock Routing on UDP Port 19132</h2>
+<p>Bedrock players connect on UDP port <code>19132</code> via Geyser-Spigot &amp; Floodgate:</p>
 <ul>
-<li>Java inventory translation handles Bedrock UI controls seamlessly.</li>
-<li>Form menus and barter interfaces are tailored for touchscreens and mobile controllers.</li>
-<li>Packet compression has been tuned to ensure consistent ping times under heavy load.</li>
+<li>Packet translation converts Bedrock touch gestures into standard Java interaction events.</li>
+<li>Form windows replace chat commands for ChestShop purchases and team management.</li>
+<li>Network MTU is set to 1400 bytes to avoid packet fragmentation on mobile carrier networks.</li>
 </ul>
-<p>For technical assistance or lost password recovery, reach out through our official ticket system or email us at <code>fiestamg@murena.io</code>.</p>
-<p><em>— cbladeOfficial (FiestaSMP Developer)</em></p>
+<p>Report locked accounts or lost passwords through our Discord support ticket system or email <code>fiestamg@murena.io</code>.</p>
+<p><em>cbladeOfficial, FiestaSMP Developer</em></p>
 
     </div>
 
@@ -171,14 +170,14 @@
         
         <a href="/news/spawn-archipelago-harbor-grand-opening/" class="post-nav-item">
           <div class="post-nav-label">&larr; Previous</div>
-          <div class="post-nav-title">Spawn Archipelago &amp; Harbor Grand Opening</div>
+          <div class="post-nav-title">Spawn Archipelago Docks &amp; Public Infrastructure</div>
         </a>
         
 
         
         <a href="/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/" class="post-nav-item" style="text-align: right;">
           <div class="post-nav-label">Next &rarr;</div>
-          <div class="post-nav-title">Patch Notes 2.1: TPA Confirmation, Economy &amp; System Tuning</div>
+          <div class="post-nav-title">Patch 2.1: Teleport Confirmation &amp; Economy Updates</div>
         </a>
         
       </div>

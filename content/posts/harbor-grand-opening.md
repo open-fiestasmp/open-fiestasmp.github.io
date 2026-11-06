@@ -1,31 +1,30 @@
 ---
-title: "Spawn Archipelago & Harbor Grand Opening"
+title: "Spawn Archipelago Docks & Public Infrastructure"
 date: 2026-10-18T16:30:00+05:30
 draft: false
+slug: "spawn-archipelago-harbor-grand-opening"
 author: "cbladeOfficial"
-summary: "Celebration of the new protected Spawn Archipelago docks, communal starter supplies, and the community gallery screenshot showcase."
+summary: "Completed construction of the 150-block spawn harbor, public starter farms, water transport slipways, and community screenshot submission guidelines."
 tags: ["Community", "Events", "Gallery"]
 ---
 
-The FiestaSMP staff and community building team are excited to present the official opening of the **Spawn Archipelago Harbor**!
+Construction on the 150-block spawn harbor perimeter is finished. The spawn island serves as a protected hub where combat and griefing are disabled by region flags.
 
-## Spawn Infrastructure & Features
+## Spawn Infrastructure
 
-Constructed with help from multiple community volunteers and builders, the Spawn Archipelago serves as a neutral, safe starting zone before players venture out into the untamed wilderness:
+The harbor contains three public facilities:
 
-1. **The Harbor & Arrival Quays:** Safe docking slipways for player boats, well-lit piers, and navigation lighthouses.
-2. **Community Starter Hall:** Communal crop plots, public crafting tables, and rule boards outlining server etiquette (`/rules`).
-3. **Nether Portal Nexus:** Direct connection to the upper Nether transport corridors for long-range wilderness traversal.
+1. **Boat Slipways:** Lighted wooden docks with water channels for boat launching. Boats are placed freely without claim restrictions.
+2. **Starter Crop Plots:** Public wheat, potato, and carrot farms for arriving players. Replanting rules are posted at coordinates `X: 12, Z: -48`.
+3. **Nether Portal Corridor:** Direct stairway leading to the Y=120 upper Nether transport hub, linking spawn to outer exploration zones.
 
-## Community Screenshot Showcase
+## In-Game Screenshot Submissions
 
-We have officially launched the [FiestaSMP Gallery](/gallery.html) featuring in-game photography taken by server players and staff!
+The [FiestaSMP Gallery](/gallery.html) displays in-game captures taken by active players. We extract player skin heads directly from the server database using nearest-neighbor scaling.
 
-### How to Get Featured:
-- Capture an uncropped, high-resolution screenshot of your outpost, base build, or scenic landscape.
-- Submit your capture through our [Support & Submissions Form](/contactsupport.html) or post in our Discord media channel.
-- Featured captures will appear on the website alongside your player character skin avatar and date.
+### Submission Guidelines
+- Screenshots must be uncompressed PNG files at native resolution (1080p minimum).
+- Turn off HUD elements with F1 before taking the capture.
+- Submit captures through our [Support & Submissions Form](/contactsupport.html) or post them in the Discord media channel with your in-game username and coordinates.
 
-Special thanks to all community members and builders who helped terraform and construct the harbor!
-
-*&mdash; cbladeOfficial (FiestaSMP Developer)*
+*cbladeOfficial, FiestaSMP Developer*

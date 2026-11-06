@@ -9,18 +9,18 @@
     <lastBuildDate>Fri, 06 Nov 2026 15:00:00 +0530</lastBuildDate>
     <atom:link href="https://open-fiestasmp.github.io/news/tags/server/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Season 2 Launch &amp; Server Guide</title>
+      <title>Season 2 Setup &amp; Connection Specifications</title>
       <link>https://open-fiestasmp.github.io/news/season-2-launch-server-guide/</link>
       <pubDate>Fri, 06 Nov 2026 15:00:00 +0530</pubDate>
       <guid>https://open-fiestasmp.github.io/news/season-2-launch-server-guide/</guid>
-      <description>FiestaSMP Season 2 is live! Everything you need to know about Paper 1.21.x crossplay, AuthMe registration, TPA rules, bed respawns, and the barter economy.</description>
+      <description>Technical setup for Season 2: Paper 1.21.x networking, AuthMe SHA-256 account registration, 4-second TPA warmups, bed respawn mechanics, and physical chest barter.</description>
     </item>
     <item>
-      <title>Account Protection &amp; Network Optimization Guide</title>
+      <title>Account Security &amp; Network Routing Architecture</title>
       <link>https://open-fiestasmp.github.io/news/account-protection-network-optimization-guide/</link>
       <pubDate>Sun, 25 Oct 2026 14:00:00 +0530</pubDate>
       <guid>https://open-fiestasmp.github.io/news/account-protection-network-optimization-guide/</guid>
-      <description>An in-depth developer overview of AuthMe password hashing, session persistence, SkinsRestorer, and Bedrock connection routing.</description>
+      <description>Technical documentation of AuthMe PBKDF2 password hashing, 60-second session reconnects, SkinsRestorer texture fetching, and UDP port 19132 Geyser translation.</description>
     </item>
   </channel>
 </rss>
