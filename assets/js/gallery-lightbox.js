@@ -28,8 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
       src: card.getAttribute("data-img"),
       player: card.getAttribute("data-player") || "FiestaSMP Player",
       avatar: card.getAttribute("data-avatar") || "assets/img/avatars/debarkak.png",
-      date: card.getAttribute("data-date") || "",
-      caption: card.getAttribute("data-caption") || "Screenshot"
+      date: card.getAttribute("data-date") || ""
     });
 
     card.addEventListener("click", function(e) {
@@ -57,18 +56,18 @@ document.addEventListener("DOMContentLoaded", function() {
     var item = items[currentIndex];
     if (lbImg) {
       lbImg.src = item.src;
-      lbImg.alt = item.caption + " by " + item.player;
+      lbImg.alt = "Screenshot by " + item.player;
     }
     if (lbAvatar) {
       lbAvatar.src = item.avatar;
-      lbAvatar.alt = item.player + " avatar";
+      lbAvatar.alt = item.player;
       lbAvatar.onerror = function() {
         this.src = "assets/img/avatars/debarkak.png";
       };
     }
     if (lbPlayer) lbPlayer.textContent = item.player;
     if (lbDate) lbDate.textContent = item.date;
-    if (lbCaption) lbCaption.textContent = item.caption;
+    if (lbCaption) lbCaption.textContent = "";
     if (lbIndex) lbIndex.textContent = currentIndex + 1;
   }
 

@@ -6,14 +6,15 @@
 /* --------------------------------------------------------------------------
    Global Reset & Foundations
    -------------------------------------------------------------------------- */
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  animation: none !important;
+  transition: none !important;
 }
 
 html {
-  scroll-behavior: smooth;
   font-size: 13px;
   background-color: #dceef7;
   background-image: linear-gradient(to bottom, #f0f7fb 0%, #ddeef7 400px, #cde4f1 100%);
@@ -101,14 +102,8 @@ img {
   height: 7px;
   border-radius: 50%;
   background-color: #2e7d32;
-  box-shadow: 0 0 4px #4caf50;
+  box-shadow: 0 0 2px #4caf50;
   display: inline-block;
-  animation: msPulse 2s infinite;
-}
-@keyframes msPulse {
-  0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
-  70% { box-shadow: 0 0 0 5px rgba(76, 175, 80, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
 }
 
 .ms-top-right {
@@ -266,7 +261,6 @@ img {
   text-decoration: none !important;
   border-left: 1px solid rgba(255, 255, 255, 0.28);
   border-right: 1px solid rgba(0, 0, 0, 0.2);
-  transition: background 0.15s ease;
   white-space: nowrap;
 }
 .ms-nav-item:first-child .ms-nav-link {
@@ -330,12 +324,10 @@ img {
   align-items: center;
   justify-content: space-between;
   text-decoration: none !important;
-  transition: all 0.15s ease;
 }
 .ms-hero-tab-item:hover {
   background: rgba(255, 255, 255, 0.12);
   color: #ffffff;
-  padding-left: 22px;
 }
 .ms-hero-tab-item.active {
   background: linear-gradient(to right, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0.05) 100%);
@@ -408,7 +400,6 @@ img {
   text-decoration: none !important;
   box-shadow: 0 1px 3px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.9);
   cursor: pointer;
-  transition: all 0.15s ease;
 }
 .ms-btn-aero-primary:hover {
   background: linear-gradient(to bottom, #ffffff 0%, #fcf4e8 45%, #fae2b6 50%, #fae9cb 100%);
@@ -436,7 +427,6 @@ img {
   text-decoration: none !important;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.25);
   cursor: pointer;
-  transition: all 0.15s ease;
 }
 .ms-btn-aero-secondary:hover {
   background: rgba(255, 255, 255, 0.22);
@@ -515,12 +505,10 @@ img {
   display: flex;
   flex-direction: column;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
   overflow: hidden;
 }
 .ms-portal-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 70, 120, 0.12);
+  box-shadow: 0 2px 6px rgba(0, 70, 120, 0.12);
   border-color: #7abfe5;
 }
 
@@ -848,15 +836,13 @@ img {
   background: #ffffff;
   border: 1px solid #cbdde9;
   border-radius: 4px;
-  padding: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   cursor: pointer;
-  transition: all 0.2s ease;
 }
 .ms-photo-card:hover {
-  transform: translateY(-2px);
   border-color: #5fa6d5;
-  box-shadow: 0 6px 14px rgba(0, 70, 120, 0.16);
+  box-shadow: 0 2px 8px rgba(0, 70, 120, 0.16);
 }
 .ms-photo-img-wrap {
   overflow: hidden;
@@ -867,12 +853,8 @@ img {
 .ms-photo-img-wrap img {
   display: block;
   width: 100%;
-  height: 220px;
+  height: 240px;
   object-fit: cover;
-  transition: transform 0.3s ease;
-}
-.ms-photo-card:hover .ms-photo-img-wrap img {
-  transform: scale(1.03);
 }
 .ms-photo-meta {
   padding: 10px 4px 4px 4px;
@@ -1023,7 +1005,6 @@ img {
   font-weight: 600;
   color: #0066cc;
   cursor: pointer;
-  transition: all 0.15s ease;
 }
 .ms-tag-pill-btn:hover {
   background: #e2f0fa;
@@ -1048,12 +1029,10 @@ img {
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 .ms-news-card:hover {
-  transform: translateY(-2px);
   border-color: #5fa6d5;
-  box-shadow: 0 4px 12px rgba(0, 70, 120, 0.12);
+  box-shadow: 0 2px 8px rgba(0, 70, 120, 0.12);
 }
 .ms-news-card-title {
   font-size: 16px;
@@ -1170,12 +1149,10 @@ img {
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 .ms-home-news-card:hover {
-  transform: translateY(-2px);
   border-color: #5fa6d5;
-  box-shadow: 0 4px 12px rgba(0, 70, 120, 0.12);
+  box-shadow: 0 2px 8px rgba(0, 70, 120, 0.12);
 }
 .ms-home-news-card-thumb-wrap {
   position: relative;
@@ -1189,10 +1166,6 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
-}
-.ms-home-news-card:hover .ms-home-news-card-thumb {
-  transform: scale(1.03);
 }
 .ms-home-news-card-badge {
   position: absolute;
@@ -1400,16 +1373,12 @@ img {
   font-weight: 600;
   box-shadow: 0 4px 16px rgba(0, 60, 110, 0.25);
   z-index: 9999;
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
   pointer-events: none;
-  display: flex;
+  display: none;
   align-items: center;
 }
 .fiesta-toast.show {
-  opacity: 1;
-  transform: translateY(0);
+  display: flex;
 }
 .copyable-ip {
   cursor: pointer;
@@ -1427,20 +1396,14 @@ img {
   border-radius: 3px;
   box-shadow: 0 2px 8px rgba(0, 60, 100, 0.25);
   color: #005a9e;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 90;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.2s ease;
 }
 .back-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  display: flex;
 }
 .back-to-top:hover {
   background: linear-gradient(to bottom, #ffffff 0%, #fcf4e8 45%, #fae2b6 50%, #fae9cb 100%);
@@ -1599,11 +1562,6 @@ img {
   border-radius: 6px;
   box-shadow: 0 16px 48px rgba(0, 40, 80, 0.5);
   overflow: hidden;
-  animation: msAeroPop 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-@keyframes msAeroPop {
-  0% { transform: scale(0.96); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
 }
 .lightbox-titlebar {
   flex-shrink: 0;
@@ -1673,7 +1631,6 @@ img {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.2s ease;
   z-index: 2;
 }
 .lightbox-nav-btn:hover,
@@ -1923,7 +1880,6 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  transition: all 0.2s ease;
 }
 .post-share-btn:hover {
   background: linear-gradient(to bottom, #ffffff 0%, #fcf4e8 45%, #fae2b6 50%, #fae9cb 100%);
@@ -1952,13 +1908,11 @@ img {
   border-radius: 4px;
   text-decoration: none !important;
   display: block;
-  transition: all 0.2s ease;
 }
 .post-nav-item:hover {
   background: #f7fbfe;
   border-color: #70aed7;
-  transform: translateY(-2px);
-  box-shadow: 0 3px 8px rgba(0, 60, 100, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 60, 100, 0.1);
 }
 .post-nav-label {
   font-size: 11px;

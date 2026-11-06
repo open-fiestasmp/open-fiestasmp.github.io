@@ -187,7 +187,7 @@
       document.body.appendChild(btt);
     }
     btt.addEventListener("click", function() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo(0, 0);
     });
     window.addEventListener("scroll", function() {
       if (window.scrollY > 280) {
