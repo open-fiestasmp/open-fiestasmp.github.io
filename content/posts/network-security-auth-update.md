@@ -29,6 +29,6 @@ If your skin appears as a default Steve or Alex, you can load your custom skin a
 
 ## Connecting from Bedrock
 
-Bedrock players (phones, consoles, and Windows 10/11) connect to `fiesta.debarkak.xyz` on port `19132`. Touch menus are fully supported for shops, trading, and clan controls.
+Bedrock players (phones, consoles, and Windows 10/11) connect directly to `fiesta.debarkak.xyz`. Touch menus are fully supported for shops, trading, and clan controls.
 
 If you ever forget your password or get locked out of your username, open a ticket on our [Discord](https://discord.gg/6wS2dpyX57) or email `fiestamg@murena.io`.

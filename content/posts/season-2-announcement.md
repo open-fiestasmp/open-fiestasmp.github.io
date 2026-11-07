@@ -12,10 +12,9 @@ FiestaSMP Season 2 is now open to all players. The world is fresh, crossplay is 
 
 ## How to Join
 
-Both Java and Bedrock players can join using the addresses below:
+Both Java and Bedrock players can join using the address below:
 
-- **Java Edition:** `fiesta.debarkak.xyz:25565`
-- **Bedrock Edition:** `fiesta.debarkak.xyz:19132`
+- **Server Address:** `fiesta.debarkak.xyz`
 
 Any type of accounts are welcome.
 
