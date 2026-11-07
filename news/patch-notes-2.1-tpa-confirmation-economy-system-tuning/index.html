@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="/server-icon.webp" type="image/webp">
   <title>Patch 2.1: Teleport Confirmation &amp; Economy Updates - FiestaSMP News</title>
-  <meta name="description" content="Patch 2.1 brings teleport warmup timers to prevent combat escapes, safe trade confirmation, and mobile touch improvements.">
+  <meta name="description" content="Teleport warmup timers to stop combat escapes, safe two-step trade confirmation, and mobile touch fixes.">
   <link rel="stylesheet" href="/assets/css/microsoft-2009.css?v=20261108a">
 </head>
 <body>
@@ -70,24 +70,24 @@
     </div>
 
     <div class="post-content ms-kb-content">
-      <p>Patch 2.1 is now deployed across the server. This update focuses on combat fairness, trade security, and minor bug fixes.</p>
-<h2 id="combat--teleport-changes">Combat &amp; Teleport Changes</h2>
+      <p>Patch 2.1 is now live on the server! This update fixes teleport combat abuses, makes player-to-player trading safer, and cleans up chest shops on mobile.</p>
+<h2 id="combat--teleports">Combat &amp; Teleports</h2>
 <ul>
-<li><strong>Teleport Confirmation:</strong> <code>/tpa</code> requests now require the receiving player to confirm with <code>/tpaccept</code> within 60 seconds.</li>
-<li><strong>Warmup &amp; Combat Cancels:</strong> Moving or taking damage during the 4-second teleport warmup immediately cancels the request, preventing combat escapes.</li>
-<li><strong>Arrival Protection:</strong> Players receive a brief 4-second invulnerability window upon arrival so chunks can load safely without instant damage traps.</li>
+<li><strong>Accept Required:</strong> <code>/tpa</code> requests need to be accepted with <code>/tpaccept</code> within 60 seconds.</li>
+<li><strong>Combat Cancels:</strong> Moving or getting hit during the 4-second warmup will cancel your teleport so people can&rsquo;t warp away in the middle of a fight.</li>
+<li><strong>Spawn-in Grace:</strong> You get 4 seconds of invulnerability when arriving so your chunks can load before mobs or traps can hit you.</li>
 </ul>
-<h2 id="trade--economy-fixes">Trade &amp; Economy Fixes</h2>
+<h2 id="trading--shops">Trading &amp; Shops</h2>
 <ul>
-<li><strong>Safe Trading:</strong> The <code>/trade &lt;player&gt;</code> window now requires a two-step confirmation from both players. If any item is swapped or removed, the timer resets to 3 seconds.</li>
-<li><strong>Mobile Touch Display:</strong> ChestShop text and item quantities have been formatted to fit cleanly on mobile touch screens without overlapping chest inventories.</li>
+<li><strong>Two-Step Trading:</strong> The <code>/trade &lt;player&gt;</code> window now requires both players to lock in and confirm. If someone swaps an item last second, the countdown resets by 3 seconds.</li>
+<li><strong>Mobile Touch Fixes:</strong> ChestShop text and item amounts now fit properly on mobile phone screens so buttons don&rsquo;t overlap your inventory.</li>
 </ul>
 <h2 id="bug-fixes">Bug Fixes</h2>
 <ul>
-<li>Fixed an issue where beds placed in cold mountain biomes occasionally failed to save respawn points after restarts.</li>
-<li>General server stability improvements during peak player hours.</li>
+<li>Fixed a bug where beds placed on cold mountain peaks sometimes lost their respawn points after a server restart.</li>
+<li>Minor performance tweaks during busy hours.</li>
 </ul>
-<p>Found a bug? Let us know in <code>#bug-reports</code> on our <a href="https://discord.gg/6wS2dpyX57">Discord</a>.</p>
+<p>Spotted a bug? Drop a report in <code>#bug-reports</code> on our <a href="https://discord.gg/6wS2dpyX57">Discord</a>.</p>
 
     </div>
 
@@ -121,7 +121,7 @@
         <span>FiestaSMP</span>
       </div>
       <div class="ms-footer-copy">
-        <span>&copy; 2021-2026 FiestaSMP Team &bull; All rights reserved.</span>
+        <span>&copy; 2019 - 2026 debarkak &bull; 2026+ FiestaSMP Team</span>
       </div>
     </div>
   </footer>

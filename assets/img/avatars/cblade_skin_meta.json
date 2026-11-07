@@ -1,7 +1,6 @@
 {
-  "player": "cbladeOfficial",
-  "source": "ely.by_offline_skin_cache",
-  "texture_url": "http://ely.by/storage/skins/c14ded8a673ac14c79fe8ad76a2401ba.png",
-  "variant": "slim",
-  "model": "slim"
+  "player": "CBlade",
+  "uuid": "d31e1659f4424e0191e25e4806541058",
+  "source": "mojang_official_session",
+  "texture_url": "http://textures.minecraft.net/texture/96afd9c56a0c03e3baa5ef74f6492da552cb1c4b1cadd69516417171fef8b2a2"
 }

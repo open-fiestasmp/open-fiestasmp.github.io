@@ -4,23 +4,22 @@ date: 2026-10-18T16:30:00+05:30
 draft: false
 slug: "spawn-archipelago-harbor-grand-opening"
 author: "cbladeOfficial"
-summary: "The spawn harbor is open with starter farms and boat docks. Plus, guidelines on how to get your screenshots featured in the gallery."
+summary: "The spawn docks are built with starter crops and boat slipways. Plus, how to submit screenshots for the gallery."
 ---
 
-Construction on the spawn harbor is officially complete. The spawn island is a protected safe zone designed to help new and returning players get equipped before venturing into the wild.
+We finished setting up the spawn harbor docks to help everyone get moving when they first log in. Just a quick reminder: there's no spawn protection radius on FiestaSMP, so get your gear together and claim your land once you pick a spot.
 
-## Harbor Amenities
+## Spawn Docks
 
-- **Boat Slipways:** Wooden docks with open water channels. Feel free to craft and place boats here to sail out into the world.
-- **Starter Crops:** Public wheat, carrot, and potato fields are ready for harvesting. Please remember to replant what you take so other players can eat too.
-- **Nether Access:** A safe stairway leads directly into the upper Nether hub for quick long-distance travel.
+- **Boat Slipways:** Wooden docks where you can place boats and sail out across the ocean.
+- **Starter Crops:** Public wheat, carrot, and potato patches for quick food. Replant whatever you harvest so the next person doesn't starve.
+- **Nether Access:** Public stairway going up to the Nether portal to make traveling long distances easier.
 
 ## Submit Your Screenshots to the Gallery
 
-Our [Gallery](/gallery.html) highlights builds, adventures, and memorable moments from players across the server.
+We show off community builds, bases, and fun moments in our [Gallery](/gallery.html).
 
-If you want your base or clan event featured:
-
-1. Press `F1` in-game to hide your HUD and chat.
-2. Take a clear, high-resolution screenshot (PNG preferred).
-3. Send it to us via the `#media` channel on [Discord](https://discord.gg/6wS2dpyX57) or through our [Support Form](/contactsupport.html). Include your username so we can credit you.
+Want your base or clan build shown on the site?
+1. Press `F1` in-game to turn off your HUD and chat.
+2. Take a clean screenshot.
+3. Drop it in `#media` on [Discord](https://discord.gg/6wS2dpyX57) or send it through our [Support Form](/contactsupport.html) with your in-game name.

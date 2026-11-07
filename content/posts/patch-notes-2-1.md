@@ -5,25 +5,25 @@ draft: false
 slug: "patch-notes-2.1-tpa-confirmation-economy-system-tuning"
 author: "cbladeOfficial"
 coauthor: "debarkak"
-summary: "Patch 2.1 brings teleport warmup timers to prevent combat escapes, safe trade confirmation, and mobile touch improvements."
+summary: "Teleport warmup timers to stop combat escapes, safe two-step trade confirmation, and mobile touch fixes."
 ---
 
-Patch 2.1 is now deployed across the server. This update focuses on combat fairness, trade security, and minor bug fixes.
+Patch 2.1 is now live on the server! This update fixes teleport combat abuses, makes player-to-player trading safer, and cleans up chest shops on mobile.
 
-## Combat & Teleport Changes
+## Combat & Teleports
 
-- **Teleport Confirmation:** `/tpa` requests now require the receiving player to confirm with `/tpaccept` within 60 seconds.
-- **Warmup & Combat Cancels:** Moving or taking damage during the 4-second teleport warmup immediately cancels the request, preventing combat escapes.
-- **Arrival Protection:** Players receive a brief 4-second invulnerability window upon arrival so chunks can load safely without instant damage traps.
+- **Accept Required:** `/tpa` requests need to be accepted with `/tpaccept` within 60 seconds.
+- **Combat Cancels:** Moving or getting hit during the 4-second warmup will cancel your teleport so people can't warp away in the middle of a fight.
+- **Spawn-in Grace:** You get 4 seconds of invulnerability when arriving so your chunks can load before mobs or traps can hit you.
 
-## Trade & Economy Fixes
+## Trading & Shops
 
-- **Safe Trading:** The `/trade <player>` window now requires a two-step confirmation from both players. If any item is swapped or removed, the timer resets to 3 seconds.
-- **Mobile Touch Display:** ChestShop text and item quantities have been formatted to fit cleanly on mobile touch screens without overlapping chest inventories.
+- **Two-Step Trading:** The `/trade <player>` window now requires both players to lock in and confirm. If someone swaps an item last second, the countdown resets by 3 seconds.
+- **Mobile Touch Fixes:** ChestShop text and item amounts now fit properly on mobile phone screens so buttons don't overlap your inventory.
 
 ## Bug Fixes
 
-- Fixed an issue where beds placed in cold mountain biomes occasionally failed to save respawn points after restarts.
-- General server stability improvements during peak player hours.
+- Fixed a bug where beds placed on cold mountain peaks sometimes lost their respawn points after a server restart.
+- Minor performance tweaks during busy hours.
 
-Found a bug? Let us know in `#bug-reports` on our [Discord](https://discord.gg/6wS2dpyX57).
+Spotted a bug? Drop a report in `#bug-reports` on our [Discord](https://discord.gg/6wS2dpyX57).
