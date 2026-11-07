@@ -6,29 +6,36 @@
 /* --------------------------------------------------------------------------
    Global Reset & Foundations
    -------------------------------------------------------------------------- */
-*, *::before, *::after {
+*, *::before, *::after,
+*:hover, *::before:hover, *::after:hover,
+*:focus, *:focus-within, *:active {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   animation: none !important;
   transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
 }
 
 html {
   font-size: 13px;
-  background-color: #dceef7;
-  background-image: linear-gradient(to bottom, #f0f7fb 0%, #ddeef7 400px, #cde4f1 100%);
-  background-attachment: fixed;
+  background-color: #ffffff;
   color: #2b2b2b;
   font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;
   line-height: 1.45;
   -webkit-text-size-adjust: 100%;
+  width: 100%;
+  min-height: 100vh;
 }
 
 body {
   margin: 0;
-  padding: 0 0 40px 0;
+  padding: 0;
+  width: 100%;
   min-height: 100vh;
+  background-color: #ffffff;
 }
 
 a {
@@ -46,118 +53,32 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   Master Page Wrapper (Microsoft 2009 1080px Portal Container)
+   Master Page Wrapper (Full Display Space on Desktop and Mobile)
    -------------------------------------------------------------------------- */
 .ms-page-container {
-  max-width: 960px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
   background-color: #ffffff;
-  box-shadow: 0 0 16px rgba(18, 65, 100, 0.25);
-  border-left: 1px solid #b2d2e6;
-  border-right: 1px solid #b2d2e6;
-  border-bottom: 1px solid #b2d2e6;
-  overflow: hidden;
+  box-shadow: none;
+  border: none;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* --------------------------------------------------------------------------
-   Top Utility Strip (Language / Worldwide / Search)
+   Top Utility Strip (Hidden)
    -------------------------------------------------------------------------- */
 .ms-top-strip {
-  background: linear-gradient(to bottom, #f5f8fa 0%, #e6edf2 100%);
-  border-bottom: 1px solid #d0dde6;
-  padding: 5px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 11px;
-  color: #555555;
-  min-height: 30px;
-}
-.ms-top-left {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.ms-globe-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  color: #0066cc;
-  font-weight: 500;
-}
-.ms-globe-link svg {
-  width: 13px;
-  height: 13px;
-  fill: #0066cc;
-}
-.ms-server-status-top {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 600;
-  color: #1e6c93;
-}
-.ms-status-dot-mini {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: #2e7d32;
-  box-shadow: 0 0 2px #4caf50;
-  display: inline-block;
-}
-
-.ms-top-right {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.ms-search-form {
-  display: flex;
-  align-items: center;
-}
-.ms-search-input {
-  width: 175px;
-  height: 22px;
-  padding: 2px 8px;
-  border: 1px solid #9bbcd4;
-  border-right: none;
-  border-radius: 3px 0 0 3px;
-  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
-  font-size: 11px;
-  outline: none;
-  background: #ffffff;
-}
-.ms-search-input:focus {
-  border-color: #0072c6;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-}
-.ms-search-btn {
-  height: 22px;
-  padding: 0 9px;
-  background: linear-gradient(to bottom, #599d2f 0%, #458322 50%, #3a711b 51%, #458221 100%);
-  border: 1px solid #326415;
-  border-radius: 0 3px 3px 0;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);
-}
-.ms-search-btn:hover {
-  background: linear-gradient(to bottom, #65ab34 0%, #4c9126 50%, #3f7d1d 51%, #4c9025 100%);
-}
-.ms-search-btn svg {
-  width: 11px;
-  height: 11px;
-  fill: #ffffff;
+  display: none !important;
 }
 
 /* --------------------------------------------------------------------------
    Logo & Brand Header
    -------------------------------------------------------------------------- */
 .ms-header-brand {
-  padding: 14px 20px 12px 20px;
+  padding: 14px 28px 12px 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -243,7 +164,7 @@ img {
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 }
 .ms-nav-item {
   position: relative;
@@ -405,7 +326,7 @@ img {
   background: linear-gradient(to bottom, #ffffff 0%, #fcf4e8 45%, #fae2b6 50%, #fae9cb 100%);
   border-color: #cda34b;
   color: #5d3f00 !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.9);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.9);
 }
 .ms-btn-aero-primary:active {
   background: linear-gradient(to bottom, #c2ddf0 0%, #b3d2ea 50%, #cee4f4 100%);
@@ -490,7 +411,7 @@ img {
    Three-Column Portal Section (Streamlined Microsoft 2009 Layout)
    -------------------------------------------------------------------------- */
 .ms-portal-section {
-  padding: 24px 20px 18px 20px;
+  padding: 24px 28px 18px 28px;
   background-color: #ffffff;
 }
 .ms-portal-grid {
@@ -508,7 +429,6 @@ img {
   overflow: hidden;
 }
 .ms-portal-card:hover {
-  box-shadow: 0 2px 6px rgba(0, 70, 120, 0.12);
   border-color: #7abfe5;
 }
 
@@ -627,7 +547,7 @@ img {
    Google Calendar Stream Section (Aero Desktop Window Aesthetic)
    -------------------------------------------------------------------------- */
 .ms-calendar-section {
-  padding: 6px 20px 24px 20px;
+  padding: 6px 28px 24px 28px;
   background-color: #ffffff;
 }
 .ms-aero-window-full {
@@ -723,8 +643,9 @@ img {
 }
 
 .ms-page-body {
-  padding: 28px 24px 48px 24px;
+  padding: 24px 28px 48px 28px;
   background-color: #ffffff;
+  flex: 1 0 auto;
 }
 
 /* --------------------------------------------------------------------------
@@ -829,7 +750,7 @@ img {
    -------------------------------------------------------------------------- */
 .ms-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 .ms-photo-card {
@@ -842,7 +763,6 @@ img {
 }
 .ms-photo-card:hover {
   border-color: #5fa6d5;
-  box-shadow: 0 2px 8px rgba(0, 70, 120, 0.16);
 }
 .ms-photo-img-wrap {
   overflow: hidden;
@@ -1032,7 +952,6 @@ img {
 }
 .ms-news-card:hover {
   border-color: #5fa6d5;
-  box-shadow: 0 2px 8px rgba(0, 70, 120, 0.12);
 }
 .ms-news-card-title {
   font-size: 16px;
@@ -1056,7 +975,7 @@ img {
    Home Page News Section (2009 Microsoft PressPass / Windows 7 Era Styling)
    -------------------------------------------------------------------------- */
 .ms-home-news-section {
-  padding: 10px 20px 32px 20px;
+  padding: 10px 28px 32px 28px;
   background-color: #ffffff;
 }
 .ms-home-news-header {
@@ -1152,7 +1071,6 @@ img {
 }
 .ms-home-news-card:hover {
   border-color: #5fa6d5;
-  box-shadow: 0 2px 8px rgba(0, 70, 120, 0.12);
 }
 .ms-home-news-card-thumb-wrap {
   position: relative;
@@ -1326,7 +1244,9 @@ img {
 .ms-footer {
   background: linear-gradient(to bottom, #7dbfe7 0%, #4192c7 45%, #2778ae 50%, #155584 100%);
   border-top: 1px solid #9ad0ef;
-  padding: 12px 20px;
+  padding: 14px 28px;
+  margin-top: auto;
+  width: 100%;
 }
 .ms-footer-bottom {
   display: flex;
@@ -1444,14 +1364,15 @@ img {
 }
 
 @media screen and (max-width: 680px) {
-  .ms-top-strip {
-    padding: 4px 10px;
+  .ms-header-brand {
+    padding: 10px 14px 8px 14px;
   }
-  .ms-server-status-top {
-    display: none;
-  }
-  .ms-search-input {
-    width: 130px;
+  .ms-portal-section,
+  .ms-home-news-section,
+  .ms-page-body,
+  .ms-calendar-section {
+    padding-left: 12px;
+    padding-right: 12px;
   }
   .ms-mobile-toggle {
     display: flex;
@@ -1912,7 +1833,6 @@ img {
 .post-nav-item:hover {
   background: #f7fbfe;
   border-color: #70aed7;
-  box-shadow: 0 2px 6px rgba(0, 60, 100, 0.1);
 }
 .post-nav-label {
   font-size: 11px;
