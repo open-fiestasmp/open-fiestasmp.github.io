@@ -47,7 +47,8 @@ Pushing your changes to GitHub triggers the automated GitHub Action (`.github/wo
 
 ## Server Connection
 
-- **Server Address**: `fiesta.debarkak.xyz` (Java & Bedrock)
+- **Java IP**: `fiesta.debarkak.xyz`
+- **Bedrock IP**: `fiesta.debarkak.xyz`
 - **Platform**: Java & Bedrock Crossplay
 - **Official Contact**: `fiestamg@murena.io`
 - **Discord**: [discord.gg/6wS2dpyX57](https://discord.gg/6wS2dpyX57)
