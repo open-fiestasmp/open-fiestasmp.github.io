@@ -6,7 +6,6 @@ slug: "patch-notes-2.1-tpa-confirmation-economy-system-tuning"
 author: "cbladeOfficial"
 coauthor: "debarkak"
 summary: "Patch 2.1 brings teleport warmup timers to prevent combat escapes, safe trade confirmation, and mobile touch improvements."
-tags: ["Patch Notes", "Updates"]
 ---
 
 Patch 2.1 is now deployed across the server. This update focuses on combat fairness, trade security, and minor bug fixes.

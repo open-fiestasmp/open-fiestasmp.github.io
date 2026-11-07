@@ -1,43 +1,21 @@
-{{ define "page_title" }}Posts tagged "{{ .Title }}" - FiestaSMP Newsroom{{ end }}
-{{ define "title" }}Posts tagged "{{ .Title }}" - FiestaSMP Newsroom{{ end }}
-{{ define "heading" }}Tagged: {{ .Title }}{{ end }}
+{{ define "page_title" }}News &amp; Updates - FiestaSMP{{ end }}
+{{ define "title" }}News &amp; Updates - FiestaSMP{{ end }}
+{{ define "heading" }}News &amp; Updates{{ end }}
 
 {{ define "main" }}
-<div style="margin-bottom: 20px;">
-  <a href="/news/" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: #0066cc; text-decoration: none;">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-    &larr; Back to all news
-  </a>
-</div>
-
 <div class="ms-news-grid">
   {{ range .Pages }}
   <article class="ms-news-card">
     <div>
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-        <span style="font-size: 11px; font-weight: 700; color: #1e5a84; text-transform: uppercase;">{{ if .Params.tags }}{{ index .Params.tags 0 }}{{ end }}</span>
-        <span style="font-size: 11px; color: #777777;">{{ .Date.Format "Jan 2, 2006" }}</span>
-      </div>
+      <div class="ms-news-card-date">{{ .Date.Format "January 2, 2006" }}</div>
       <h2 class="ms-news-card-title">
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       </h2>
       <p class="ms-news-card-summary">{{ .Params.summary }}</p>
     </div>
-    <div style="border-top: 1px solid #edf4f9; padding-top: 10px; display: flex; justify-content: space-between; align-items: center;">
-      {{ $author := .Params.author | default "debarkak" }}
-      {{ $coauthor := .Params.coauthor }}
-      <div style="display: flex; align-items: center; gap: 6px;">
-        <div style="display: flex; align-items: center;">
-          <img src="/assets/img/avatars/{{ $author }}.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="{{ $author }}" style="width: 20px; height: 20px; border-radius: 3px; image-rendering: pixelated; border: 1px solid #c0d8e8;">
-          {{ if $coauthor }}
-          <img src="/assets/img/avatars/{{ $coauthor }}.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="{{ $coauthor }}" style="width: 20px; height: 20px; border-radius: 3px; image-rendering: pixelated; border: 1px solid #c0d8e8; margin-left: -6px;">
-          {{ end }}
-        </div>
-        <span style="font-size: 11.5px; font-weight: 600; color: #444444;">{{ $author }}{{ if $coauthor }} &amp; {{ $coauthor }}{{ end }}</span>
-      </div>
-      <a href="{{ .RelPermalink }}" style="font-size: 12px; font-weight: 700; color: #0066cc;">
-        Read article &rsaquo;
-      </a>
+    <div class="ms-news-card-footer">
+      <span class="ms-news-card-author">By {{ .Params.author }}{{ if .Params.coauthor }} &amp; {{ .Params.coauthor }}{{ end }}</span>
+      <a href="{{ .RelPermalink }}" class="ms-news-card-link">Read &rsaquo;</a>
     </div>
   </article>
   {{ end }}

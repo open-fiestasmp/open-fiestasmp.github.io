@@ -5,7 +5,6 @@ draft: false
 slug: "spawn-archipelago-harbor-grand-opening"
 author: "cbladeOfficial"
 summary: "The spawn harbor is open with starter farms and boat docks. Plus, guidelines on how to get your screenshots featured in the gallery."
-tags: ["Community", "Gallery"]
 ---
 
 Construction on the spawn harbor is officially complete. The spawn island is a protected safe zone designed to help new and returning players get equipped before venturing into the wild.

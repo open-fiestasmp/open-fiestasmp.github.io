@@ -5,7 +5,6 @@ draft: false
 slug: "account-protection-network-optimization-guide"
 author: "cbladeOfficial"
 summary: "A quick guide on how to register your account, manage passwords, and set custom skins on FiestaSMP."
-tags: ["Guides", "Security"]
 ---
 
 FiestaSMP welcomes players from both Java and Bedrock editions. Here is a quick guide on setting up your account and getting your skin displayed in-game.

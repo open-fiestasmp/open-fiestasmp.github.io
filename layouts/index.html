@@ -3,112 +3,21 @@
 {{ define "heading" }}News &amp; Updates{{ end }}
 
 {{ define "main" }}
-<div class="ms-news-toolbar">
-  <div class="ms-news-tag-pills" id="tag-filters">
-    <button type="button" class="ms-tag-pill-btn active" data-tag="all">All Posts</button>
-    <button type="button" class="ms-tag-pill-btn" data-tag="announcements">Announcements</button>
-    <button type="button" class="ms-tag-pill-btn" data-tag="patch-notes">Patch Notes</button>
-    <button type="button" class="ms-tag-pill-btn" data-tag="guides">Guides</button>
-    <button type="button" class="ms-tag-pill-btn" data-tag="community">Community</button>
-  </div>
-  <div class="ms-search-box">
-    <input type="text" class="ms-search-input" id="news-search" placeholder="Search posts..." style="width: 220px;" aria-label="Filter articles">
-  </div>
-</div>
-
-<div class="ms-news-grid" id="news-grid">
+<div class="ms-news-grid">
   {{ range (where .Site.RegularPages "Section" "posts") }}
-  <article class="ms-news-card" data-tags="{{ delimit .Params.tags " " | lower }}" data-title="{{ .Title | lower }}" data-summary="{{ .Params.summary | lower }}">
+  <article class="ms-news-card">
     <div>
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-        <span style="font-size: 11px; font-weight: 700; color: #1e5a84; text-transform: uppercase;">{{ index .Params.tags 0 }}</span>
-        <span style="font-size: 11px; color: #777777;">{{ .Date.Format "Jan 2, 2006" }}</span>
-      </div>
+      <div class="ms-news-card-date">{{ .Date.Format "January 2, 2006" }}</div>
       <h2 class="ms-news-card-title">
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       </h2>
       <p class="ms-news-card-summary">{{ .Params.summary }}</p>
     </div>
-    <div style="border-top: 1px solid #edf4f9; padding-top: 10px; display: flex; justify-content: space-between; align-items: center;">
-      <div style="display: flex; align-items: center; gap: 6px;">
-        <div style="display: flex; align-items: center;">
-          <img src="/assets/img/avatars/{{ .Params.author }}.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="{{ .Params.author }}" style="width: 20px; height: 20px; border-radius: 3px; image-rendering: pixelated; border: 1px solid #c0d8e8;">
-          {{ if .Params.coauthor }}
-          <img src="/assets/img/avatars/{{ .Params.coauthor }}.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="{{ .Params.coauthor }}" style="width: 20px; height: 20px; border-radius: 3px; image-rendering: pixelated; border: 1px solid #c0d8e8; margin-left: -6px;">
-          {{ end }}
-        </div>
-        <span style="font-size: 11.5px; font-weight: 600; color: #444444;">{{ .Params.author }}{{ if .Params.coauthor }} &amp; {{ .Params.coauthor }}{{ end }}</span>
-      </div>
-      <a href="{{ .RelPermalink }}" style="font-size: 12px; font-weight: 700; color: #0066cc;">
-        Read article &rsaquo;
-      </a>
+    <div class="ms-news-card-footer">
+      <span class="ms-news-card-author">By {{ .Params.author }}{{ if .Params.coauthor }} &amp; {{ .Params.coauthor }}{{ end }}</span>
+      <a href="{{ .RelPermalink }}" class="ms-news-card-link">Read &rsaquo;</a>
     </div>
   </article>
   {{ end }}
 </div>
-
-<div id="no-results" style="display: none; text-align: center; padding: 36px 20px; color: #757575;">
-  <p style="font-size: 14px; font-weight: 600;">No articles match your search criteria.</p>
-</div>
-{{ end }}
-
-{{ define "scripts" }}
-<script>
-  (function() {
-    var searchInput = document.getElementById("news-search");
-    var filterBtns = document.querySelectorAll(".ms-tag-pill-btn");
-    var cards = document.querySelectorAll(".ms-news-card");
-    var noResults = document.getElementById("no-results");
-    var currentTag = "all";
-
-    // Auto-fill query if present in URL
-    var params = new URLSearchParams(window.location.search);
-    var q = params.get("q");
-    if (q && searchInput) {
-      searchInput.value = q;
-    }
-
-    function filterPosts() {
-      var query = searchInput ? searchInput.value.toLowerCase().trim() : "";
-      var visibleCount = 0;
-
-      cards.forEach(function(card) {
-        var tags = card.getAttribute("data-tags") || "";
-        var title = card.getAttribute("data-title") || "";
-        var summary = card.getAttribute("data-summary") || "";
-
-        var matchesTag = (currentTag === "all") || tags.indexOf(currentTag) !== -1;
-        var matchesQuery = !query || title.indexOf(query) !== -1 || summary.indexOf(query) !== -1 || tags.indexOf(query) !== -1;
-
-        if (matchesTag && matchesQuery) {
-          card.style.display = "flex";
-          visibleCount++;
-        } else {
-          card.style.display = "none";
-        }
-      });
-
-      if (noResults) {
-        noResults.style.display = visibleCount === 0 ? "block" : "none";
-      }
-    }
-
-    if (searchInput) {
-      searchInput.addEventListener("input", filterPosts);
-    }
-
-    filterBtns.forEach(function(btn) {
-      btn.addEventListener("click", function() {
-        filterBtns.forEach(function(b) { b.classList.remove("active"); });
-        btn.classList.add("active");
-        currentTag = btn.getAttribute("data-tag");
-        filterPosts();
-      });
-    });
-
-    if (q) {
-      filterPosts();
-    }
-  })();
-</script>
 {{ end }}

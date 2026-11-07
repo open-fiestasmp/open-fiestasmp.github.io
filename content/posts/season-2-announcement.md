@@ -6,7 +6,6 @@ slug: "season-2-launch-server-guide"
 author: "cbladeOfficial"
 coauthor: "debarkak"
 summary: "Season 2 is officially live with crossplay support, physical chest trading, and survival mechanics. Here is how to join and get started."
-tags: ["Announcements", "Season 2"]
 ---
 
 FiestaSMP Season 2 is now open to all players. The world is fresh, crossplay is active, and the survival mechanics are set. Here is what you need to know to get started.

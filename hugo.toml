@@ -2,6 +2,7 @@ baseURL = 'https://open-fiestasmp.github.io/news/'
 title = 'FiestaSMP - News & Updates'
 languageCode = 'en-US'
 publishDir = 'news'
+disableKinds = ["taxonomy", "term"]
 
 [permalinks]
   posts = '/:slug/'
