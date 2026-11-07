@@ -389,7 +389,7 @@ img {
   text-shadow: 0 1px 1px rgba(0,0,0,0.4);
 }
 
-/* Right Hero Thumbnail Frame (Windows 7 Window Aesthetic) */
+/* Right Hero Image Showcase */
 .ms-hero-visual {
   flex: 0 0 340px;
   width: 340px;
@@ -399,41 +399,12 @@ img {
   align-items: center;
   justify-content: center;
 }
-.ms-aero-window-frame {
-  background: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  border-radius: 6px;
-  padding: 6px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.8);
-  backdrop-filter: blur(4px);
-  width: 100%;
-}
-.ms-aero-titlebar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3px 6px 5px 6px;
-  font-size: 11px;
-  font-weight: 600;
-  color: #ffffff;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
-}
-.ms-aero-buttons {
-  display: flex;
-  gap: 3px;
-}
-.ms-aero-btn-box {
-  width: 13px;
-  height: 11px;
-  background: rgba(255, 255, 255, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 2px;
-}
-.ms-aero-img {
+.ms-hero-img {
   display: block;
   width: 100%;
-  border-radius: 3px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 /* --------------------------------------------------------------------------
