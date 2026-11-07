@@ -8,9 +8,9 @@
   <meta http-equiv="Expires" content="0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="/server-icon.webp" type="image/webp">
-  <title>Patch 2.1: Teleport Confirmation &amp; Economy Updates - FiestaSMP Newsroom</title>
-  <meta name="description" content="Release notes for Patch 2.1: 4-second /tpaccept movement penalty to stop combat escapes, ChestShop buy/sell rates adjusted, and CoreProtect log rotation.">
-  <link rel="stylesheet" href="/assets/css/microsoft-2009.css?v=20261107d">
+  <title>Patch 2.1: Teleport Confirmation &amp; Economy Updates - FiestaSMP News</title>
+  <meta name="description" content="Patch 2.1 brings teleport warmup timers to prevent combat escapes, safe trade confirmation, and mobile touch improvements.">
+  <link rel="stylesheet" href="/assets/css/microsoft-2009.css?v=20261107e">
 </head>
 <body>
 
@@ -47,7 +47,7 @@
 
   
   <div class="ms-page-header">
-    <h1>Patch 2.1: Teleport Confirmation &amp; Economy Updates</h1>
+    <h1>News &amp; Updates</h1>
     <p>Server changelogs, build announcements, and updates</p>
   </div>
 
@@ -57,116 +57,53 @@
 <div class="post-detail-wrap">
   <div style="margin-bottom: 16px;">
     <a href="/news/" class="post-back-link">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-      Back to all news
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      &larr; Back to all news
     </a>
   </div>
 
-  <article>
-    <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;">
-      
-      <a href="/news/tags/patch-notes/" class="ms-tag-pill-btn" style="text-decoration: none; padding: 3px 10px; font-size: 11px;">Patch Notes</a>
-      
-      <a href="/news/tags/updates/" class="ms-tag-pill-btn" style="text-decoration: none; padding: 3px 10px; font-size: 11px;">Updates</a>
-      
-      <a href="/news/tags/economy/" class="ms-tag-pill-btn" style="text-decoration: none; padding: 3px 10px; font-size: 11px;">Economy</a>
-      
-    </div>
-
+  <article class="post-article">
     <h1 class="post-header-title">Patch 2.1: Teleport Confirmation &amp; Economy Updates</h1>
 
     <div class="post-header-meta">
-      <div class="post-author-badge">
-        <img src="/assets/img/avatars/cbladeOfficial.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="cbladeOfficial" class="post-author-avatar-lg" loading="lazy">
-        <div class="post-author-details">
-          <span class="post-author-name-lg">cbladeOfficial</span>
-          <span class="post-author-role">
-            Developer
-            
-          </span>
-        </div>
-      </div>
-      
-      <div class="post-author-badge">
-        <img src="/assets/img/avatars/debarkak.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="debarkak" class="post-author-avatar-lg" loading="lazy">
-        <div class="post-author-details">
-          <span class="post-author-name-lg">debarkak</span>
-          <span class="post-author-role">Co-Author &bull; Lead Developer</span>
-        </div>
-      </div>
-      
-      <div class="post-meta-divider"></div>
-      <span class="post-publish-date">November 5, 2026</span>
-      <div class="post-meta-divider"></div>
-      <span class="post-reading-time">2 min read</span>
+      <span>Posted on November 5, 2026 by <strong>cbladeOfficial &amp; debarkak</strong></span>
     </div>
 
     <div class="post-content ms-kb-content">
-      <p>Patch 2.1 updates teleport timers, fixes bed respawn coordinate tags in cold biomes, and adjusts ChestShop transaction limits.</p>
-<h2 id="gameplay--combat-adjustments">Gameplay &amp; Combat Adjustments</h2>
-<h3 id="1-mandatory-tpaccept-confirmation">1. Mandatory /tpaccept Confirmation</h3>
-<p>Direct teleports via <code>/tpa</code> no longer execute without target consent:</p>
+      <p>Patch 2.1 is now deployed across the server. This update focuses on combat fairness, trade security, and minor bug fixes.</p>
+<h2 id="combat--teleport-changes">Combat &amp; Teleport Changes</h2>
 <ul>
-<li>The receiving player must type <code>/tpaccept</code> or <code>/tpdeny</code> within the 60-second request window.</li>
-<li>Teleport requests expire automatically after 60 seconds.</li>
-<li>Taking damage or moving during the 4-second warmup cancels the incoming teleport to stop combat escapes.</li>
+<li><strong>Teleport Confirmation:</strong> <code>/tpa</code> requests now require the receiving player to confirm with <code>/tpaccept</code> within 60 seconds.</li>
+<li><strong>Warmup &amp; Combat Cancels:</strong> Moving or taking damage during the 4-second teleport warmup immediately cancels the request, preventing combat escapes.</li>
+<li><strong>Arrival Protection:</strong> Players receive a brief 4-second invulnerability window upon arrival so chunks can load safely without instant damage traps.</li>
 </ul>
-<h3 id="2-teleport-arrival-invulnerability">2. Teleport Arrival Invulnerability</h3>
-<p>Arrival now triggers a 4-second invulnerability timer. Players can load chunks without taking suffocating block damage or falling into instant lava traps upon arrival.</p>
-<h3 id="3-bed-respawn-coordinates">3. Bed Respawn Coordinates</h3>
-<p>Fixed an issue where beds placed in snowy mountain biomes failed to save coordinate tags upon server restarts. Death in any dimension now reads the saved Overworld bed block before falling back to the spawn harbor.</p>
-<h2 id="commerce--trade-configurations">Commerce &amp; Trade Configurations</h2>
-<h3 id="1-intrade-safe-window">1. InTrade Safe Window</h3>
-<p>The <code>/trade &lt;player&gt;</code> interface requires both parties to click accept twice. If an item is added or removed after the initial lock, the countdown resets to 3 seconds to prevent last-tick item swaps.</p>
-<h3 id="2-chestshop-formatting">2. ChestShop Formatting</h3>
-<p>Adjusted ChestShop text lines for Bedrock touch displays. Price tags and quantity counts now wrap cleanly without overlapping container inventories.</p>
-<h2 id="infrastructure-specifications">Infrastructure Specifications</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Server Core: Dedicated High-Performance Stack
-</span></span><span style="display:flex;"><span>Crossplay Stack: Geyser-Spigot build 582, Floodgate 2.2.3
-</span></span><span style="display:flex;"><span>Tick Rate: Fixed 20.0 TPS
-</span></span><span style="display:flex;"><span>Storage Backend: SQLite WAL mode for CoreProtect 24.0
-</span></span><span style="display:flex;"><span>Log Retention: Block placement and container transactions kept for 90 days
-</span></span></code></pre></div><p>Report reproducible errors or crashes in the <code>#bug-reports</code> channel on <a href="https://discord.gg/6wS2dpyX57">Discord</a>.</p>
-<p><em>cbladeOfficial &amp; debarkak, FiestaSMP Engineering</em></p>
+<h2 id="trade--economy-fixes">Trade &amp; Economy Fixes</h2>
+<ul>
+<li><strong>Safe Trading:</strong> The <code>/trade &lt;player&gt;</code> window now requires a two-step confirmation from both players. If any item is swapped or removed, the timer resets to 3 seconds.</li>
+<li><strong>Mobile Touch Display:</strong> ChestShop text and item quantities have been formatted to fit cleanly on mobile touch screens without overlapping chest inventories.</li>
+</ul>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li>Fixed an issue where beds placed in cold mountain biomes occasionally failed to save respawn points after restarts.</li>
+<li>General server stability improvements during peak player hours.</li>
+</ul>
+<p>Found a bug? Let us know in <code>#bug-reports</code> on our <a href="https://discord.gg/6wS2dpyX57">Discord</a>.</p>
 
     </div>
 
     <div class="post-footer-box">
-      <div class="post-actions-row">
-        <button type="button" class="post-share-btn" id="share-post-btn" data-url="https://open-fiestasmp.github.io/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-          Share this article
-        </button>
-        <span style="font-size: 12px; color: #777777;">Published in: Patch Notes, Updates, Economy</span>
-      </div>
-
-      <div class="post-author-card">
-        <div style="display: flex; gap: 8px; align-items: center; flex-shrink: 0;">
-          <img src="/assets/img/avatars/cbladeOfficial.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="cbladeOfficial" class="post-author-avatar-lg" style="width: 44px; height: 44px;">
-          
-          <img src="/assets/img/avatars/debarkak.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="debarkak" class="post-author-avatar-lg" style="width: 44px; height: 44px;">
-          
-        </div>
-        <div class="post-author-bio" style="font-size: 12.5px; line-height: 1.5; color: #333333;">
-          <strong style="color: #005a9e;">cbladeOfficial</strong> &amp; <strong style="color: #005a9e;">debarkak</strong> (Co-Author) &bull; 
-          FiestaSMP Developer
-          <br>
-          For queries or official announcements, join our <a href="https://discord.gg/6wS2dpyX57" target="_blank" style="color: #0066cc; font-weight: 600;">Discord Server</a> or email <a href="mailto:fiestamg@murena.io" style="color: #0066cc; font-weight: 600;">fiestamg@murena.io</a>.
-        </div>
-      </div>
-
       <div class="post-nav-links">
         
         <a href="/news/account-protection-network-optimization-guide/" class="post-nav-item">
           <div class="post-nav-label">&larr; Previous</div>
-          <div class="post-nav-title">Account Security &amp; Network Routing Architecture</div>
+          <div>Account Registration &amp; Skin Guide</div>
         </a>
         
 
         
         <a href="/news/season-2-launch-server-guide/" class="post-nav-item" style="text-align: right;">
           <div class="post-nav-label">Next &rarr;</div>
-          <div class="post-nav-title">Season 2 Setup &amp; Connection Specifications</div>
+          <div>FiestaSMP Season 2 is Live</div>
         </a>
         
       </div>
@@ -192,30 +129,6 @@
 </div>
 
 <script src="/assets/js/mobile-nav.js?v=20261107b"></script>
-
-<script>
-  (function() {
-    var shareBtn = document.getElementById("share-post-btn");
-    if (shareBtn) {
-      shareBtn.addEventListener("click", function() {
-        var url = window.location.href;
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(url).then(function() {
-            var toast = document.querySelector(".fiesta-toast");
-            if (!toast) {
-              toast = document.createElement("div");
-              toast.className = "fiesta-toast";
-              document.body.appendChild(toast);
-            }
-            toast.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:8px;display:inline-block;"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Article link copied to clipboard!</span>';
-            toast.classList.add("show");
-            setTimeout(function() { toast.classList.remove("show"); }, 2800);
-          });
-        }
-      });
-    }
-  })();
-</script>
 
 </body>
 </html>

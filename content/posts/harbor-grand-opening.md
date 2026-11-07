@@ -1,30 +1,27 @@
 ---
-title: "Spawn Archipelago Docks & Public Infrastructure"
+title: "Spawn Docks & Screenshot Submissions"
 date: 2026-10-18T16:30:00+05:30
 draft: false
 slug: "spawn-archipelago-harbor-grand-opening"
 author: "cbladeOfficial"
-summary: "Completed construction of the 150-block spawn harbor, public starter farms, water transport slipways, and community screenshot submission guidelines."
-tags: ["Community", "Events", "Gallery"]
+summary: "The spawn harbor is open with starter farms and boat docks. Plus, guidelines on how to get your screenshots featured in the gallery."
+tags: ["Community", "Gallery"]
 ---
 
-Construction on the 150-block spawn harbor perimeter is finished. The spawn island serves as a protected hub where combat and griefing are disabled by region flags.
+Construction on the spawn harbor is officially complete. The spawn island is a protected safe zone designed to help new and returning players get equipped before venturing into the wild.
 
-## Spawn Infrastructure
+## Harbor Amenities
 
-The harbor contains three public facilities:
+- **Boat Slipways:** Wooden docks with open water channels. Feel free to craft and place boats here to sail out into the world.
+- **Starter Crops:** Public wheat, carrot, and potato fields are ready for harvesting. Please remember to replant what you take so other players can eat too.
+- **Nether Access:** A safe stairway leads directly into the upper Nether hub for quick long-distance travel.
 
-1. **Boat Slipways:** Lighted wooden docks with water channels for boat launching. Boats are placed freely without claim restrictions.
-2. **Starter Crop Plots:** Public wheat, potato, and carrot farms for arriving players. Replanting rules are posted at coordinates `X: 12, Z: -48`.
-3. **Nether Portal Corridor:** Direct stairway leading to the Y=120 upper Nether transport hub, linking spawn to outer exploration zones.
+## Submit Your Screenshots to the Gallery
 
-## In-Game Screenshot Submissions
+Our [Gallery](/gallery.html) highlights builds, adventures, and memorable moments from players across the server.
 
-The [FiestaSMP Gallery](/gallery.html) displays in-game captures taken by active players. We extract player skin heads directly from the server database using nearest-neighbor scaling.
+If you want your base or clan event featured:
 
-### Submission Guidelines
-- Screenshots must be uncompressed PNG files at native resolution (1080p minimum).
-- Turn off HUD elements with F1 before taking the capture.
-- Submit captures through our [Support & Submissions Form](/contactsupport.html) or post them in the Discord media channel with your in-game username and coordinates.
-
-*cbladeOfficial, FiestaSMP Developer*
+1. Press `F1` in-game to hide your HUD and chat.
+2. Take a clear, high-resolution screenshot (PNG preferred).
+3. Send it to us via the `#media` channel on [Discord](https://discord.gg/6wS2dpyX57) or through our [Support Form](/contactsupport.html). Include your username so we can credit you.

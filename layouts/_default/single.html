@@ -1,51 +1,22 @@
-{{ define "page_title" }}{{ .Title }} - FiestaSMP Newsroom{{ end }}
-{{ define "title" }}{{ .Title }} - FiestaSMP Newsroom{{ end }}
-{{ define "heading" }}{{ .Title }}{{ end }}
+{{ define "page_title" }}{{ .Title }} - FiestaSMP News{{ end }}
+{{ define "title" }}{{ .Title }} - FiestaSMP News{{ end }}
+{{ define "heading" }}News &amp; Updates{{ end }}
+{{ define "subheading" }}Server announcements, patch notes, and updates{{ end }}
 
 {{ define "main" }}
 <div class="post-detail-wrap">
   <div style="margin-bottom: 16px;">
     <a href="/news/" class="post-back-link">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-      Back to all news
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      &larr; Back to all news
     </a>
   </div>
 
-  <article>
-    <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;">
-      {{ range .Params.tags }}
-      <a href="/news/tags/{{ . | urlize }}/" class="ms-tag-pill-btn" style="text-decoration: none; padding: 3px 10px; font-size: 11px;">{{ . }}</a>
-      {{ end }}
-    </div>
-
+  <article class="post-article">
     <h1 class="post-header-title">{{ .Title }}</h1>
 
     <div class="post-header-meta">
-      <div class="post-author-badge">
-        <img src="/assets/img/avatars/{{ .Params.author }}.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="{{ .Params.author }}" class="post-author-avatar-lg" loading="lazy">
-        <div class="post-author-details">
-          <span class="post-author-name-lg">{{ .Params.author }}</span>
-          <span class="post-author-role">
-            {{ if eq .Params.author "kytrakton" }}Server Owner
-            {{ else if eq .Params.author "cbladeOfficial" }}Developer
-            {{ else if eq .Params.author "debarkak" }}Lead Developer
-            {{ else }}FiestaSMP Core Team{{ end }}
-          </span>
-        </div>
-      </div>
-      {{ if .Params.coauthor }}
-      <div class="post-author-badge">
-        <img src="/assets/img/avatars/{{ .Params.coauthor }}.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="{{ .Params.coauthor }}" class="post-author-avatar-lg" loading="lazy">
-        <div class="post-author-details">
-          <span class="post-author-name-lg">{{ .Params.coauthor }}</span>
-          <span class="post-author-role">Co-Author &bull; {{ if eq .Params.coauthor "debarkak" }}Lead Developer{{ else }}Developer{{ end }}</span>
-        </div>
-      </div>
-      {{ end }}
-      <div class="post-meta-divider"></div>
-      <span class="post-publish-date">{{ .Date.Format "January 2, 2006" }}</span>
-      <div class="post-meta-divider"></div>
-      <span class="post-reading-time">{{ .ReadingTime }} min read</span>
+      <span>Posted on {{ .Date.Format "January 2, 2006" }} by <strong>{{ .Params.author }}{{ if .Params.coauthor }} &amp; {{ .Params.coauthor }}{{ end }}</strong></span>
     </div>
 
     <div class="post-content ms-kb-content">
@@ -53,36 +24,11 @@
     </div>
 
     <div class="post-footer-box">
-      <div class="post-actions-row">
-        <button type="button" class="post-share-btn" id="share-post-btn" data-url="{{ .Permalink }}">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-          Share this article
-        </button>
-        <span style="font-size: 12px; color: #777777;">Published in: {{ delimit .Params.tags ", " }}</span>
-      </div>
-
-      <div class="post-author-card">
-        <div style="display: flex; gap: 8px; align-items: center; flex-shrink: 0;">
-          <img src="/assets/img/avatars/{{ .Params.author }}.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="{{ .Params.author }}" class="post-author-avatar-lg" style="width: 44px; height: 44px;">
-          {{ if .Params.coauthor }}
-          <img src="/assets/img/avatars/{{ .Params.coauthor }}.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="{{ .Params.coauthor }}" class="post-author-avatar-lg" style="width: 44px; height: 44px;">
-          {{ end }}
-        </div>
-        <div class="post-author-bio" style="font-size: 12.5px; line-height: 1.5; color: #333333;">
-          <strong style="color: #005a9e;">{{ .Params.author }}</strong>{{ if .Params.coauthor }} &amp; <strong style="color: #005a9e;">{{ .Params.coauthor }}</strong> (Co-Author){{ end }} &bull; 
-          {{ if eq .Params.author "kytrakton" }}FiestaSMP Owner
-          {{ else if eq .Params.author "cbladeOfficial" }}FiestaSMP Developer
-          {{ else if eq .Params.author "debarkak" }}FiestaSMP Lead Developer
-          {{ else }}FiestaSMP Core Team{{ end }}<br>
-          For queries or official announcements, join our <a href="https://discord.gg/6wS2dpyX57" target="_blank" style="color: #0066cc; font-weight: 600;">Discord Server</a> or email <a href="mailto:fiestamg@murena.io" style="color: #0066cc; font-weight: 600;">fiestamg@murena.io</a>.
-        </div>
-      </div>
-
       <div class="post-nav-links">
         {{ with .PrevInSection }}
         <a href="{{ .RelPermalink }}" class="post-nav-item">
           <div class="post-nav-label">&larr; Previous</div>
-          <div class="post-nav-title">{{ .Title }}</div>
+          <div>{{ .Title }}</div>
         </a>
         {{ else }}
         <div></div>
@@ -91,7 +37,7 @@
         {{ with .NextInSection }}
         <a href="{{ .RelPermalink }}" class="post-nav-item" style="text-align: right;">
           <div class="post-nav-label">Next &rarr;</div>
-          <div class="post-nav-title">{{ .Title }}</div>
+          <div>{{ .Title }}</div>
         </a>
         {{ else }}
         <div></div>
@@ -100,30 +46,4 @@
     </div>
   </article>
 </div>
-{{ end }}
-
-{{ define "scripts" }}
-<script>
-  (function() {
-    var shareBtn = document.getElementById("share-post-btn");
-    if (shareBtn) {
-      shareBtn.addEventListener("click", function() {
-        var url = window.location.href;
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(url).then(function() {
-            var toast = document.querySelector(".fiesta-toast");
-            if (!toast) {
-              toast = document.createElement("div");
-              toast.className = "fiesta-toast";
-              document.body.appendChild(toast);
-            }
-            toast.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:8px;display:inline-block;"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Article link copied to clipboard!</span>';
-            toast.classList.add("show");
-            setTimeout(function() { toast.classList.remove("show"); }, 2800);
-          });
-        }
-      });
-    }
-  })();
-</script>
 {{ end }}

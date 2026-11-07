@@ -8,9 +8,9 @@
   <meta http-equiv="Expires" content="0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="/server-icon.webp" type="image/webp">
-  <title>Account Security &amp; Network Routing Architecture - FiestaSMP Newsroom</title>
-  <meta name="description" content="Technical documentation of AuthMe PBKDF2 password hashing, 60-second session reconnects, SkinsRestorer texture fetching, and UDP port 19132 Geyser translation.">
-  <link rel="stylesheet" href="/assets/css/microsoft-2009.css?v=20261107d">
+  <title>Account Registration &amp; Skin Guide - FiestaSMP News</title>
+  <meta name="description" content="A quick guide on how to register your account, manage passwords, and set custom skins on FiestaSMP.">
+  <link rel="stylesheet" href="/assets/css/microsoft-2009.css?v=20261107e">
 </head>
 <body>
 
@@ -47,7 +47,7 @@
 
   
   <div class="ms-page-header">
-    <h1>Account Security &amp; Network Routing Architecture</h1>
+    <h1>News &amp; Updates</h1>
     <p>Server changelogs, build announcements, and updates</p>
   </div>
 
@@ -57,108 +57,54 @@
 <div class="post-detail-wrap">
   <div style="margin-bottom: 16px;">
     <a href="/news/" class="post-back-link">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-      Back to all news
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      &larr; Back to all news
     </a>
   </div>
 
-  <article>
-    <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;">
-      
-      <a href="/news/tags/server/" class="ms-tag-pill-btn" style="text-decoration: none; padding: 3px 10px; font-size: 11px;">Server</a>
-      
-      <a href="/news/tags/security/" class="ms-tag-pill-btn" style="text-decoration: none; padding: 3px 10px; font-size: 11px;">Security</a>
-      
-      <a href="/news/tags/updates/" class="ms-tag-pill-btn" style="text-decoration: none; padding: 3px 10px; font-size: 11px;">Updates</a>
-      
-    </div>
-
-    <h1 class="post-header-title">Account Security &amp; Network Routing Architecture</h1>
+  <article class="post-article">
+    <h1 class="post-header-title">Account Registration &amp; Skin Guide</h1>
 
     <div class="post-header-meta">
-      <div class="post-author-badge">
-        <img src="/assets/img/avatars/cbladeOfficial.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="cbladeOfficial" class="post-author-avatar-lg" loading="lazy">
-        <div class="post-author-details">
-          <span class="post-author-name-lg">cbladeOfficial</span>
-          <span class="post-author-role">
-            Developer
-            
-          </span>
-        </div>
-      </div>
-      
-      <div class="post-meta-divider"></div>
-      <span class="post-publish-date">October 25, 2026</span>
-      <div class="post-meta-divider"></div>
-      <span class="post-reading-time">2 min read</span>
+      <span>Posted on October 25, 2026 by <strong>cbladeOfficial</strong></span>
     </div>
 
     <div class="post-content ms-kb-content">
-      <p>FiestaSMP runs on a dual-login pipeline to allow both standard Mojang accounts and offline launcher profiles without account collisions.</p>
-<h2 id="authentication-pipeline">Authentication Pipeline</h2>
-<p>Inbound connections pass through an anti-bot handshake filter before reaching the AuthMe database:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Inbound TCP/UDP -&gt; AntiBot Verification -&gt; AuthMe Handshake
-</span></span><span style="display:flex;"><span>  ├─ Registered Account: /login &lt;password&gt; (PBKDF2 SHA-256)
-</span></span><span style="display:flex;"><span>  └─ Unregistered Account: /register &lt;password&gt; &lt;confirmPassword&gt;
-</span></span></code></pre></div><h3 id="authentication-parameters">Authentication Parameters</h3>
-<ul>
-<li><strong>Password Storage:</strong> Passwords are salted and hashed using PBKDF2 with SHA-256. Plaintext credentials are never written to disk or console logs.</li>
-<li><strong>Reconnection Window:</strong> Disconnections trigger a 60-second session hold. If your client reconnects within that window from the same IP address, you re-enter the world without typing your password again.</li>
-<li><strong>Password Changes:</strong> Run <code>/changepassword &lt;oldPassword&gt; &lt;newPassword&gt;</code> to update stored credentials.</li>
-</ul>
-<h2 id="skin-extraction--skinsrestorer">Skin Extraction &amp; SkinsRestorer</h2>
-<p>Offline launcher accounts default to Steve or Alex models because they don&rsquo;t query Mojang&rsquo;s session server. SkinsRestorer bridges this by pulling skin textures from public skin databases:</p>
+      <p>FiestaSMP welcomes players from both Java and Bedrock editions. Here is a quick guide on setting up your account and getting your skin displayed in-game.</p>
+<h2 id="registering-your-account">Registering Your Account</h2>
+<p>When you log into FiestaSMP for the first time, you will be prompted to register a password:</p>
 <ol>
-<li>Type <code>/skin &lt;username&gt;</code> to fetch and apply any registered Mojang or Ely.by skin texture.</li>
-<li>Custom image files apply via <code>/skin &lt;directPngUrl&gt;</code>.</li>
-<li>Avatar heads in our web gallery are extracted from these cached 64x64 PNG texture files.</li>
+<li>Type <code>/register &lt;password&gt; &lt;confirmPassword&gt;</code> in the chat.</li>
+<li>Remember this password. On all future visits, type <code>/login &lt;password&gt;</code> to unlock your character.</li>
+<li>If you ever want to update your password, use <code>/changepassword &lt;oldPassword&gt; &lt;newPassword&gt;</code>.</li>
 </ol>
-<h2 id="bedrock-routing-on-udp-port-19132">Bedrock Routing on UDP Port 19132</h2>
-<p>Bedrock players connect on UDP port <code>19132</code> via Geyser-Spigot &amp; Floodgate:</p>
+<p>If you accidentally disconnect, you have a short reconnection grace period where you will not be asked to re-type your password.</p>
+<h2 id="setting-your-skin">Setting Your Skin</h2>
+<p>If your skin appears as a default Steve or Alex, you can load your custom skin at any time:</p>
 <ul>
-<li>Packet translation converts Bedrock touch gestures into standard Java interaction events.</li>
-<li>Form windows replace chat commands for ChestShop purchases and team management.</li>
-<li>Network MTU is set to 1400 bytes to avoid packet fragmentation on mobile carrier networks.</li>
+<li>Type <code>/skin &lt;username&gt;</code> to copy the skin of any player.</li>
+<li>Type <code>/skin &lt;directPngUrl&gt;</code> to apply a skin directly from a web image URL.</li>
+<li>Once applied, your custom avatar will also show up in the web gallery and community rosters.</li>
 </ul>
-<p>Report locked accounts or lost passwords through our Discord support ticket system or email <code>fiestamg@murena.io</code>.</p>
-<p><em>cbladeOfficial, FiestaSMP Developer</em></p>
+<h2 id="connecting-from-bedrock">Connecting from Bedrock</h2>
+<p>Bedrock players (phones, consoles, and Windows 10/11) connect to <code>fiesta.debarkak.xyz</code> on port <code>19132</code>. Touch menus are fully supported for shops, trading, and clan controls.</p>
+<p>If you ever forget your password or get locked out of your username, open a ticket on our <a href="https://discord.gg/6wS2dpyX57">Discord</a> or email <code>fiestamg@murena.io</code>.</p>
 
     </div>
 
     <div class="post-footer-box">
-      <div class="post-actions-row">
-        <button type="button" class="post-share-btn" id="share-post-btn" data-url="https://open-fiestasmp.github.io/news/account-protection-network-optimization-guide/">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-          Share this article
-        </button>
-        <span style="font-size: 12px; color: #777777;">Published in: Server, Security, Updates</span>
-      </div>
-
-      <div class="post-author-card">
-        <div style="display: flex; gap: 8px; align-items: center; flex-shrink: 0;">
-          <img src="/assets/img/avatars/cbladeOfficial.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="cbladeOfficial" class="post-author-avatar-lg" style="width: 44px; height: 44px;">
-          
-        </div>
-        <div class="post-author-bio" style="font-size: 12.5px; line-height: 1.5; color: #333333;">
-          <strong style="color: #005a9e;">cbladeOfficial</strong> &bull; 
-          FiestaSMP Developer
-          <br>
-          For queries or official announcements, join our <a href="https://discord.gg/6wS2dpyX57" target="_blank" style="color: #0066cc; font-weight: 600;">Discord Server</a> or email <a href="mailto:fiestamg@murena.io" style="color: #0066cc; font-weight: 600;">fiestamg@murena.io</a>.
-        </div>
-      </div>
-
       <div class="post-nav-links">
         
         <a href="/news/spawn-archipelago-harbor-grand-opening/" class="post-nav-item">
           <div class="post-nav-label">&larr; Previous</div>
-          <div class="post-nav-title">Spawn Archipelago Docks &amp; Public Infrastructure</div>
+          <div>Spawn Docks &amp; Screenshot Submissions</div>
         </a>
         
 
         
         <a href="/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/" class="post-nav-item" style="text-align: right;">
           <div class="post-nav-label">Next &rarr;</div>
-          <div class="post-nav-title">Patch 2.1: Teleport Confirmation &amp; Economy Updates</div>
+          <div>Patch 2.1: Teleport Confirmation &amp; Economy Updates</div>
         </a>
         
       </div>
@@ -184,30 +130,6 @@
 </div>
 
 <script src="/assets/js/mobile-nav.js?v=20261107b"></script>
-
-<script>
-  (function() {
-    var shareBtn = document.getElementById("share-post-btn");
-    if (shareBtn) {
-      shareBtn.addEventListener("click", function() {
-        var url = window.location.href;
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(url).then(function() {
-            var toast = document.querySelector(".fiesta-toast");
-            if (!toast) {
-              toast = document.createElement("div");
-              toast.className = "fiesta-toast";
-              document.body.appendChild(toast);
-            }
-            toast.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:8px;display:inline-block;"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Article link copied to clipboard!</span>';
-            toast.classList.add("show");
-            setTimeout(function() { toast.classList.remove("show"); }, 2800);
-          });
-        }
-      });
-    }
-  })();
-</script>
 
 </body>
 </html>

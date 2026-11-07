@@ -8,9 +8,9 @@
   <meta http-equiv="Expires" content="0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="/server-icon.webp" type="image/webp">
-  <title>Season 2 Setup &amp; Connection Specifications - FiestaSMP Newsroom</title>
-  <meta name="description" content="Technical setup for Season 2: Dedicated networking, AuthMe SHA-256 account registration, 4-second TPA warmups, bed respawn mechanics, and physical chest barter.">
-  <link rel="stylesheet" href="/assets/css/microsoft-2009.css?v=20261107d">
+  <title>FiestaSMP Season 2 is Live - FiestaSMP News</title>
+  <meta name="description" content="Season 2 is officially live with crossplay support, physical chest trading, and survival mechanics. Here is how to join and get started.">
+  <link rel="stylesheet" href="/assets/css/microsoft-2009.css?v=20261107e">
 </head>
 <body>
 
@@ -47,7 +47,7 @@
 
   
   <div class="ms-page-header">
-    <h1>Season 2 Setup &amp; Connection Specifications</h1>
+    <h1>News &amp; Updates</h1>
     <p>Server changelogs, build announcements, and updates</p>
   </div>
 
@@ -57,128 +57,50 @@
 <div class="post-detail-wrap">
   <div style="margin-bottom: 16px;">
     <a href="/news/" class="post-back-link">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-      Back to all news
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      &larr; Back to all news
     </a>
   </div>
 
-  <article>
-    <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;">
-      
-      <a href="/news/tags/announcements/" class="ms-tag-pill-btn" style="text-decoration: none; padding: 3px 10px; font-size: 11px;">Announcements</a>
-      
-      <a href="/news/tags/season-2/" class="ms-tag-pill-btn" style="text-decoration: none; padding: 3px 10px; font-size: 11px;">Season 2</a>
-      
-      <a href="/news/tags/server/" class="ms-tag-pill-btn" style="text-decoration: none; padding: 3px 10px; font-size: 11px;">Server</a>
-      
-    </div>
-
-    <h1 class="post-header-title">Season 2 Setup &amp; Connection Specifications</h1>
+  <article class="post-article">
+    <h1 class="post-header-title">FiestaSMP Season 2 is Live</h1>
 
     <div class="post-header-meta">
-      <div class="post-author-badge">
-        <img src="/assets/img/avatars/cbladeOfficial.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="cbladeOfficial" class="post-author-avatar-lg" loading="lazy">
-        <div class="post-author-details">
-          <span class="post-author-name-lg">cbladeOfficial</span>
-          <span class="post-author-role">
-            Developer
-            
-          </span>
-        </div>
-      </div>
-      
-      <div class="post-author-badge">
-        <img src="/assets/img/avatars/debarkak.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="debarkak" class="post-author-avatar-lg" loading="lazy">
-        <div class="post-author-details">
-          <span class="post-author-name-lg">debarkak</span>
-          <span class="post-author-role">Co-Author &bull; Lead Developer</span>
-        </div>
-      </div>
-      
-      <div class="post-meta-divider"></div>
-      <span class="post-publish-date">November 6, 2026</span>
-      <div class="post-meta-divider"></div>
-      <span class="post-reading-time">2 min read</span>
+      <span>Posted on November 6, 2026 by <strong>cbladeOfficial &amp; debarkak</strong></span>
     </div>
 
     <div class="post-content ms-kb-content">
-      <p>FiestaSMP Season 2 runs with Geyser crossplay. The server operates at a fixed 20.0 TPS with no virtual currency plugins, no scoreboard balances, and unmoderated PvP outside the spawn perimeter.</p>
-<h2 id="connection-addresses">Connection Addresses</h2>
-<p>The server accepts connections from both Java &amp; Bedrock clients:</p>
+      <p>FiestaSMP Season 2 is now open to all players. The world is fresh, crossplay is active, and the survival mechanics are set. Here is what you need to know to get started.</p>
+<h2 id="how-to-join">How to Join</h2>
+<p>Both Java and Bedrock players can join using the addresses below:</p>
 <ul>
 <li><strong>Java Edition:</strong> <code>fiesta.debarkak.xyz:25565</code></li>
-<li><strong>Bedrock Edition:</strong> <code>fiesta.debarkak.xyz:19132</code> (Geyser-Spigot bridge on UDP port 19132)</li>
+<li><strong>Bedrock Edition:</strong> <code>fiesta.debarkak.xyz:19132</code></li>
 </ul>
-<h3 id="authentication--player-skins">Authentication &amp; Player Skins</h3>
-<p>Player accounts use AuthMe with PBKDF2 SHA-256 password hashing:</p>
+<p>Any type of accounts are welcome.</p>
+<h2 id="getting-started">Getting Started</h2>
+<ol>
+<li><strong>Register your account:</strong> When you join for the first time, type <code>/register &lt;password&gt; &lt;confirmPassword&gt;</code> in chat. On future logins, simply use <code>/login &lt;password&gt;</code>.</li>
+<li><strong>Set your skin:</strong> Use <code>/skin &lt;username&gt;</code> if you want to load a custom skin.</li>
+<li><strong>Leave the spawn island:</strong> The spawn area is a safe hub. Once you travel past the 150-block perimeter, you are in open wilderness.</li>
+</ol>
+<h2 id="server-features">Server Features</h2>
 <ul>
-<li>First connection: run <code>/register &lt;password&gt; &lt;confirmPassword&gt;</code> in chat.</li>
-<li>Returning connections: run <code>/login &lt;password&gt;</code>.</li>
-<li>Skin textures: SkinsRestorer manages player skins across offline and online clients with <code>/skin &lt;username&gt;</code>.</li>
+<li><strong>Wilderness Survival:</strong> Outside of spawn, PvP and raiding are enabled. Protect your bases by building smart and keeping your coordinates safe.</li>
+<li><strong>Fair Teleports:</strong> When using <code>/tpa &lt;player&gt;</code>, the other player must type <code>/tpaccept</code> to confirm. Moving or taking damage during the short warmup cancels the teleport.</li>
+<li><strong>Physical Barter Economy:</strong> There is no virtual currency or artificial money plugins. Trade directly with other players using <code>/trade &lt;player&gt;</code> or set up diamond/gold chest shops with ChestShop.</li>
+<li><strong>Clans:</strong> Team up with friends using <code>/team create &lt;name&gt;</code> and <code>/team invite &lt;player&gt;</code>.</li>
 </ul>
-<h2 id="gameplay-rules--anti-cheat">Gameplay Rules &amp; Anti-Cheat</h2>
-<p>Player interaction rules are split between the protected spawn island and the wilderness:</p>
-<ul>
-<li><strong>Wilderness Raiding:</strong> Beyond the 150-block spawn perimeter, base raiding, chest theft, and PvP combat are allowed. We don&rsquo;t restore stolen inventory items or repair griefed bases.</li>
-<li><strong>Cheat Detection:</strong> Packet-level movement hacks, fly mods, Baritone automation, and X-ray packs are blocked by packet analysis. CoreProtect 24.0 logs block changes and chest transactions to an SQLite backend.</li>
-<li><strong>In-Game Rules:</strong> Run <code>/rules</code> to view current server flags.</li>
-</ul>
-<h2 id="server-mechanics">Server Mechanics</h2>
-<h3 id="1-teleport-requests--combat-timing">1. Teleport Requests &amp; Combat Timing</h3>
-<ul>
-<li>Teleport requests use <code>/tpa &lt;player&gt;</code>.</li>
-<li>Teleports require explicit acceptance. The recipient must type <code>/tpaccept</code> within 60 seconds.</li>
-<li>Arrival grants a 4-second invulnerability timer to prevent instant fall or suffocating traps. Moving cancels the teleport during the warmup window.</li>
-</ul>
-<h3 id="2-bed-respawns--spawn-anchors">2. Bed Respawns &amp; Spawn Anchors</h3>
-<p>Bed respawn anchors function normally in Overworld dimensions. Right-clicking an unobstructed bed sets player coordinates; dying without an active anchor returns the player to the Spawn Archipelago docks.</p>
-<h3 id="3-clan-management">3. Clan Management</h3>
-<p>Team creation uses the FiestaTeams plugin:</p>
-<ul>
-<li>Run <code>/team create &lt;name&gt;</code> to register a clan tag.</li>
-<li>Run <code>/team invite &lt;player&gt;</code> to add members.</li>
-<li>Clan members share friendly-fire toggles &amp; land coordinate bookmarks.</li>
-</ul>
-<h3 id="4-physical-item-barter">4. Physical Item Barter</h3>
-<p>The server doesn&rsquo;t use virtual money. Players trade with physical items:</p>
-<ul>
-<li>Direct player-to-player trade: run <code>/trade &lt;player&gt;</code> through InTrade.</li>
-<li>Merchant shops: ChestShop allows selling items from locked wooden containers using diamonds or gold as currency.</li>
-<li>Public listings: EzAuction handles timed item bidding boards.</li>
-</ul>
-<p><em>cbladeOfficial &amp; debarkak, FiestaSMP Engineering</em></p>
+<p>Have fun, explore the new world, and build something great. If you need assistance or want to chat with the community, join our <a href="https://discord.gg/6wS2dpyX57">Discord server</a>.</p>
 
     </div>
 
     <div class="post-footer-box">
-      <div class="post-actions-row">
-        <button type="button" class="post-share-btn" id="share-post-btn" data-url="https://open-fiestasmp.github.io/news/season-2-launch-server-guide/">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-          Share this article
-        </button>
-        <span style="font-size: 12px; color: #777777;">Published in: Announcements, Season 2, Server</span>
-      </div>
-
-      <div class="post-author-card">
-        <div style="display: flex; gap: 8px; align-items: center; flex-shrink: 0;">
-          <img src="/assets/img/avatars/cbladeOfficial.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="cbladeOfficial" class="post-author-avatar-lg" style="width: 44px; height: 44px;">
-          
-          <img src="/assets/img/avatars/debarkak.png" onerror="this.src='/assets/img/avatars/debarkak.png'" alt="debarkak" class="post-author-avatar-lg" style="width: 44px; height: 44px;">
-          
-        </div>
-        <div class="post-author-bio" style="font-size: 12.5px; line-height: 1.5; color: #333333;">
-          <strong style="color: #005a9e;">cbladeOfficial</strong> &amp; <strong style="color: #005a9e;">debarkak</strong> (Co-Author) &bull; 
-          FiestaSMP Developer
-          <br>
-          For queries or official announcements, join our <a href="https://discord.gg/6wS2dpyX57" target="_blank" style="color: #0066cc; font-weight: 600;">Discord Server</a> or email <a href="mailto:fiestamg@murena.io" style="color: #0066cc; font-weight: 600;">fiestamg@murena.io</a>.
-        </div>
-      </div>
-
       <div class="post-nav-links">
         
         <a href="/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/" class="post-nav-item">
           <div class="post-nav-label">&larr; Previous</div>
-          <div class="post-nav-title">Patch 2.1: Teleport Confirmation &amp; Economy Updates</div>
+          <div>Patch 2.1: Teleport Confirmation &amp; Economy Updates</div>
         </a>
         
 
@@ -208,30 +130,6 @@
 </div>
 
 <script src="/assets/js/mobile-nav.js?v=20261107b"></script>
-
-<script>
-  (function() {
-    var shareBtn = document.getElementById("share-post-btn");
-    if (shareBtn) {
-      shareBtn.addEventListener("click", function() {
-        var url = window.location.href;
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(url).then(function() {
-            var toast = document.querySelector(".fiesta-toast");
-            if (!toast) {
-              toast = document.createElement("div");
-              toast.className = "fiesta-toast";
-              document.body.appendChild(toast);
-            }
-            toast.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:8px;display:inline-block;"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Article link copied to clipboard!</span>';
-            toast.classList.add("show");
-            setTimeout(function() { toast.classList.remove("show"); }, 2800);
-          });
-        }
-      });
-    }
-  })();
-</script>
 
 </body>
 </html>

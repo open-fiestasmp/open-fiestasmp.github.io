@@ -13,7 +13,7 @@
       <link>https://open-fiestasmp.github.io/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/</link>
       <pubDate>Thu, 05 Nov 2026 19:00:00 +0530</pubDate>
       <guid>https://open-fiestasmp.github.io/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/</guid>
-      <description>Release notes for Patch 2.1: 4-second /tpaccept movement penalty to stop combat escapes, ChestShop buy/sell rates adjusted, and CoreProtect log rotation.</description>
+      <description>Patch 2.1 brings teleport warmup timers to prevent combat escapes, safe trade confirmation, and mobile touch improvements.</description>
     </item>
   </channel>
 </rss>

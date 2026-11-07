@@ -1,45 +1,35 @@
 ---
-title: "Account Security & Network Routing Architecture"
+title: "Account Registration & Skin Guide"
 date: 2026-10-25T14:00:00+05:30
 draft: false
 slug: "account-protection-network-optimization-guide"
 author: "cbladeOfficial"
-summary: "Technical documentation of AuthMe PBKDF2 password hashing, 60-second session reconnects, SkinsRestorer texture fetching, and UDP port 19132 Geyser translation."
-tags: ["Server", "Security", "Updates"]
+summary: "A quick guide on how to register your account, manage passwords, and set custom skins on FiestaSMP."
+tags: ["Guides", "Security"]
 ---
 
-FiestaSMP runs on a dual-login pipeline to allow both standard Mojang accounts and offline launcher profiles without account collisions.
+FiestaSMP welcomes players from both Java and Bedrock editions. Here is a quick guide on setting up your account and getting your skin displayed in-game.
 
-## Authentication Pipeline
+## Registering Your Account
 
-Inbound connections pass through an anti-bot handshake filter before reaching the AuthMe database:
+When you log into FiestaSMP for the first time, you will be prompted to register a password:
 
-```text
-Inbound TCP/UDP -> AntiBot Verification -> AuthMe Handshake
-  ├─ Registered Account: /login <password> (PBKDF2 SHA-256)
-  └─ Unregistered Account: /register <password> <confirmPassword>
-```
+1. Type `/register <password> <confirmPassword>` in the chat.
+2. Remember this password. On all future visits, type `/login <password>` to unlock your character.
+3. If you ever want to update your password, use `/changepassword <oldPassword> <newPassword>`.
 
-### Authentication Parameters
-- **Password Storage:** Passwords are salted and hashed using PBKDF2 with SHA-256. Plaintext credentials are never written to disk or console logs.
-- **Reconnection Window:** Disconnections trigger a 60-second session hold. If your client reconnects within that window from the same IP address, you re-enter the world without typing your password again.
-- **Password Changes:** Run `/changepassword <oldPassword> <newPassword>` to update stored credentials.
+If you accidentally disconnect, you have a short reconnection grace period where you will not be asked to re-type your password.
 
-## Skin Extraction & SkinsRestorer
+## Setting Your Skin
 
-Offline launcher accounts default to Steve or Alex models because they don't query Mojang's session server. SkinsRestorer bridges this by pulling skin textures from public skin databases:
+If your skin appears as a default Steve or Alex, you can load your custom skin at any time:
 
-1. Type `/skin <username>` to fetch and apply any registered Mojang or Ely.by skin texture.
-2. Custom image files apply via `/skin <directPngUrl>`.
-3. Avatar heads in our web gallery are extracted from these cached 64x64 PNG texture files.
+- Type `/skin <username>` to copy the skin of any player.
+- Type `/skin <directPngUrl>` to apply a skin directly from a web image URL.
+- Once applied, your custom avatar will also show up in the web gallery and community rosters.
 
-## Bedrock Routing on UDP Port 19132
+## Connecting from Bedrock
 
-Bedrock players connect on UDP port `19132` via Geyser-Spigot & Floodgate:
-- Packet translation converts Bedrock touch gestures into standard Java interaction events.
-- Form windows replace chat commands for ChestShop purchases and team management.
-- Network MTU is set to 1400 bytes to avoid packet fragmentation on mobile carrier networks.
+Bedrock players (phones, consoles, and Windows 10/11) connect to `fiesta.debarkak.xyz` on port `19132`. Touch menus are fully supported for shops, trading, and clan controls.
 
-Report locked accounts or lost passwords through our Discord support ticket system or email `fiestamg@murena.io`.
-
-*cbladeOfficial, FiestaSMP Developer*
+If you ever forget your password or get locked out of your username, open a ticket on our [Discord](https://discord.gg/6wS2dpyX57) or email `fiestamg@murena.io`.
