@@ -36,7 +36,7 @@ Adjusted ChestShop text lines for Bedrock touch displays. Price tags and quantit
 ## Infrastructure Specifications
 
 ```text
-Server Core: Paper 1.21.x (git-Paper-138)
+Server Core: Dedicated High-Performance Stack
 Crossplay Stack: Geyser-Spigot build 582, Floodgate 2.2.3
 Tick Rate: Fixed 20.0 TPS
 Storage Backend: SQLite WAL mode for CoreProtect 24.0

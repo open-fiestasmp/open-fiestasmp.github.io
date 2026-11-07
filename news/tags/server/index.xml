@@ -13,7 +13,7 @@
       <link>https://open-fiestasmp.github.io/news/season-2-launch-server-guide/</link>
       <pubDate>Fri, 06 Nov 2026 15:00:00 +0530</pubDate>
       <guid>https://open-fiestasmp.github.io/news/season-2-launch-server-guide/</guid>
-      <description>Technical setup for Season 2: Paper 1.21.x networking, AuthMe SHA-256 account registration, 4-second TPA warmups, bed respawn mechanics, and physical chest barter.</description>
+      <description>Technical setup for Season 2: Dedicated networking, AuthMe SHA-256 account registration, 4-second TPA warmups, bed respawn mechanics, and physical chest barter.</description>
     </item>
     <item>
       <title>Account Security &amp; Network Routing Architecture</title>

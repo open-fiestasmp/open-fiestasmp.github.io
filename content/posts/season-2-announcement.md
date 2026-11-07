@@ -5,17 +5,17 @@ draft: false
 slug: "season-2-launch-server-guide"
 author: "cbladeOfficial"
 coauthor: "debarkak"
-summary: "Technical setup for Season 2: Paper 1.21.x networking, AuthMe SHA-256 account registration, 4-second TPA warmups, bed respawn mechanics, and physical chest barter."
+summary: "Technical setup for Season 2: Dedicated networking, AuthMe SHA-256 account registration, 4-second TPA warmups, bed respawn mechanics, and physical chest barter."
 tags: ["Announcements", "Season 2", "Server"]
 ---
 
-FiestaSMP Season 2 runs on Paper 1.21.x with Geyser crossplay. The server operates at a fixed 20.0 TPS with no virtual currency plugins, no scoreboard balances, and unmoderated PvP outside the spawn perimeter.
+FiestaSMP Season 2 runs with Geyser crossplay. The server operates at a fixed 20.0 TPS with no virtual currency plugins, no scoreboard balances, and unmoderated PvP outside the spawn perimeter.
 
 ## Connection Addresses
 
 The server accepts connections from both Java & Bedrock clients:
 
-- **Java Edition:** `fiesta.debarkak.xyz:25565` (ViaVersion handles protocols 1.8 through 1.21.x)
+- **Java Edition:** `fiesta.debarkak.xyz:25565`
 - **Bedrock Edition:** `fiesta.debarkak.xyz:19132` (Geyser-Spigot bridge on UDP port 19132)
 
 ### Authentication & Player Skins
