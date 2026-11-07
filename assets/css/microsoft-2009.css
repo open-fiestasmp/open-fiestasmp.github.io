@@ -179,7 +179,7 @@ img {
   width: 100%;
   display: flex;
   list-style: none;
-  padding: 0 4px;
+  padding: 0 20px;
 }
 .ms-nav-item {
   position: relative;
@@ -197,6 +197,7 @@ img {
   text-decoration: none !important;
   border-left: 1px solid rgba(255, 255, 255, 0.28);
   border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid transparent;
   white-space: nowrap;
 }
 .ms-nav-item:first-child .ms-nav-link {
@@ -329,8 +330,11 @@ img {
 .ms-btn-aero-primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 9px 18px;
+  height: 38px;
+  box-sizing: border-box;
   background: linear-gradient(to bottom, #ffffff 0%, #eef5fa 45%, #d5e6f3 50%, #e2eff8 100%);
   border: 1px solid #7eaecf;
   border-radius: 3px;
@@ -338,6 +342,7 @@ img {
   font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
   font-size: 13px;
   font-weight: 700;
+  line-height: 1.2;
   text-decoration: none !important;
   box-shadow: 0 1px 3px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.9);
   cursor: pointer;
@@ -356,15 +361,19 @@ img {
 .ms-btn-aero-secondary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 9px 16px;
+  padding: 9px 18px;
+  height: 38px;
+  box-sizing: border-box;
   background: rgba(14, 55, 87, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 3px;
   color: #ffffff !important;
   font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 1.2;
   text-decoration: none !important;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.25);
   cursor: pointer;
@@ -431,7 +440,7 @@ img {
    Three-Column Portal Section (Streamlined Microsoft 2009 Layout)
    -------------------------------------------------------------------------- */
 .ms-portal-section {
-  padding: 24px 20px 18px 20px;
+  padding: 24px 0 18px 0;
   background-color: #ffffff;
   width: 100%;
 }
@@ -439,6 +448,8 @@ img {
   max-width: 1120px;
   margin: 0 auto;
   width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -571,14 +582,15 @@ img {
    Google Calendar Stream Section (Aero Desktop Window Aesthetic)
    -------------------------------------------------------------------------- */
 .ms-calendar-section {
-  padding: 6px 20px 24px 20px;
+  padding: 6px 0 24px 0;
   background-color: #ffffff;
   width: 100%;
 }
 .ms-aero-window-full {
-  max-width: 1120px;
+  max-width: 1080px;
   margin: 0 auto;
-  width: 100%;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
   background: linear-gradient(to bottom, #f6f9fc 0%, #ffffff 100%);
   border: 1px solid #b5d1e4;
   border-radius: 6px;
@@ -655,7 +667,7 @@ img {
 .ms-page-header {
   background: linear-gradient(135deg, #1d5c86 0%, #154569 100%);
   color: #ffffff;
-  padding: 24px 20px;
+  padding: 24px 0;
   border-bottom: 2px solid #e5a700;
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   width: 100%;
@@ -666,6 +678,9 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 .ms-page-header h1 {
   font-size: 26px;
@@ -679,7 +694,7 @@ img {
 }
 
 .ms-page-body {
-  padding: 24px 20px 48px 20px;
+  padding: 24px 0 48px 0;
   background-color: #ffffff;
   flex: 1 0 auto;
   width: 100%;
@@ -688,6 +703,9 @@ img {
   max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 
 /* --------------------------------------------------------------------------
@@ -774,6 +792,7 @@ img {
   margin: 18px 0;
   border-radius: 0 4px 4px 0;
   font-size: 13px;
+  box-sizing: border-box;
 }
 .ms-callout-warning {
   background: #fffdf5;
@@ -785,14 +804,47 @@ img {
   margin: 18px 0;
   border-radius: 0 4px 4px 0;
   font-size: 13px;
+  box-sizing: border-box;
+}
+.ms-page-body > .ms-callout-info,
+.ms-page-body > .ms-callout-warning {
+  max-width: 1080px;
+  width: calc(100% - 40px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* --------------------------------------------------------------------------
    Gallery Page (Windows Photo Gallery 2009 Style)
    -------------------------------------------------------------------------- */
+.ms-gallery-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dce8f2;
+}
+.ms-gallery-toolbar-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e5a84;
+}
+.ms-gallery-toolbar-sub {
+  font-size: 12px;
+  color: #777777;
+  margin-left: 8px;
+}
+.ms-gallery-toolbar-btn {
+  font-size: 12px;
+  padding: 6px 14px;
+  height: auto;
+}
 .ms-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 .ms-photo-card {
@@ -905,7 +957,10 @@ img {
   border: 1px solid #fedc96;
   border-radius: 4px;
   padding: 14px 18px;
-  margin-bottom: 24px;
+  margin: 0 auto 24px auto;
+  max-width: 1080px;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
   font-size: 13px;
   color: #6d4c00;
 }
@@ -945,7 +1000,7 @@ img {
    -------------------------------------------------------------------------- */
 .ms-news-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 .ms-news-card {
@@ -1012,7 +1067,7 @@ img {
    Home Page News Section (2009 Microsoft PressPass / Windows 7 Era Styling)
    -------------------------------------------------------------------------- */
 .ms-home-news-section {
-  padding: 10px 20px 32px 20px;
+  padding: 10px 0 32px 0;
   background-color: #ffffff;
   width: 100%;
 }
@@ -1020,12 +1075,13 @@ img {
   max-width: 1120px;
   margin: 0 auto 18px auto;
   width: 100%;
+  padding: 0 20px 8px 20px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  padding-bottom: 8px;
   border-bottom: 2px solid #0072c6;
   position: relative;
 }
@@ -1033,7 +1089,7 @@ img {
   content: "";
   position: absolute;
   bottom: -2px;
-  left: 0;
+  left: 20px;
   width: 90px;
   height: 2px;
   background-color: #e5a700;
@@ -1084,6 +1140,8 @@ img {
   max-width: 1120px;
   margin: 0 auto;
   width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -1169,9 +1227,10 @@ img {
 
 /* Server Quick Wire / Live Bulletins Bar */
 .ms-home-news-wire {
-  max-width: 1120px;
+  max-width: 1080px;
   margin: 18px auto 0 auto;
-  width: 100%;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
   background: #f4f8fb;
   border: 1px solid #d0e4f2;
   border-radius: 4px;
@@ -1190,8 +1249,6 @@ img {
   font-size: 10.5px;
   background: #e0eff8;
   padding: 2px 7px;
-  border-radius: 3px;
-}
   border-radius: 3px;
   border: 1px solid #bddae8;
   letter-spacing: 0.4px;
@@ -1218,7 +1275,7 @@ img {
 .ms-footer {
   background: linear-gradient(to bottom, #7dbfe7 0%, #4192c7 45%, #2778ae 50%, #155584 100%);
   border-top: 1px solid #9ad0ef;
-  padding: 14px 20px;
+  padding: 14px 0;
   margin-top: auto;
   width: 100%;
 }
@@ -1226,6 +1283,8 @@ img {
   max-width: 1120px;
   margin: 0 auto;
   width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1259,7 +1318,8 @@ img {
 .fiesta-toast {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  left: 50%;
+  transform: translateX(-50%);
   background: linear-gradient(to bottom, #ffffff 0%, #f3f8fd 100%);
   border: 1px solid #68a9d6;
   border-radius: 4px;
@@ -1335,6 +1395,9 @@ img {
   .ms-kb-sidebar {
     width: 100%;
   }
+  .ms-kb-nav-box {
+    position: static;
+  }
   .ms-hero-visual {
     display: none;
   }
@@ -1349,20 +1412,74 @@ img {
   .ms-header-brand {
     padding: 10px 14px 8px 14px;
   }
-  .ms-portal-section,
-  .ms-home-news-section,
-  .ms-page-body,
+  .ms-nav-list {
+    display: none;
+    flex-direction: column;
+    padding: 0;
+  }
+  .ms-hero-inner {
+    flex-direction: column;
+    padding: 0 14px;
+    min-height: auto;
+  }
+  .ms-portal-section {
+    padding: 18px 0 14px 0;
+  }
+  .ms-portal-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 14px;
+  }
   .ms-calendar-section {
+    padding: 4px 0 18px 0;
+  }
+  .ms-aero-window-full {
+    width: calc(100% - 28px);
+    max-width: 100%;
+  }
+  .ms-home-news-section {
+    padding: 10px 0 24px 0;
+  }
+  .ms-home-news-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 12px;
+    padding: 0 14px 8px 14px;
+  }
+  .ms-home-news-header::after {
+    left: 14px;
+  }
+  .ms-home-news-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 14px;
+  }
+  .ms-home-news-wire {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-top: 14px;
+    width: calc(100% - 28px);
+    max-width: 100%;
+  }
+  .ms-page-header {
+    padding: 18px 0;
+  }
+  .ms-page-header h1,
+  .ms-page-header p {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .ms-page-body {
+    padding: 18px 0 36px 0;
+  }
+  .ms-page-body > * {
     padding-left: 14px;
     padding-right: 14px;
   }
   .ms-mobile-toggle {
     display: flex;
-  }
-  .ms-nav-list {
-    display: none;
-    flex-direction: column;
-    padding: 0;
   }
   .ms-navbar.open .ms-nav-list {
     display: flex;
@@ -1372,11 +1489,6 @@ img {
     border-right: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0 16px;
-  }
-  .ms-hero-inner {
-    flex-direction: column;
-    padding: 0 14px;
-    min-height: auto;
   }
   .ms-hero-tabs {
     width: 100%;
@@ -1426,10 +1538,6 @@ img {
     line-height: 1.4;
     text-align: center;
   }
-  .ms-portal-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
   .ms-gallery-grid {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -1442,37 +1550,30 @@ img {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+  .ms-support-banner,
+  .ms-page-body > .ms-callout-info,
+  .ms-page-body > .ms-callout-warning {
+    width: calc(100% - 28px);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .ms-news-grid {
     grid-template-columns: 1fr;
     gap: 16px;
-  }
-  .ms-home-news-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .ms-home-news-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-    margin-bottom: 12px;
-  }
-  .ms-home-news-wire {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-    margin-top: 14px;
   }
   .ms-calendar-embed-wrap {
     height: 280px;
   }
   .ms-footer {
-    padding: 12px 14px;
+    padding: 12px 0;
   }
   .ms-footer-bottom {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 6px;
+    padding: 0 14px;
   }
   /* Eliminate mobile link flooding on small screens */
   .ms-chevron-list {
@@ -1671,8 +1772,12 @@ img {
    Hugo Markdown Post Detail & Article View (2009 PressPass Aesthetic)
    -------------------------------------------------------------------------- */
 .post-detail-wrap {
-  max-width: 860px;
+  max-width: 1120px;
   margin: 0 auto;
+  width: 100%;
+}
+.post-article {
+  max-width: 840px;
 }
 .post-back-link {
   display: inline-flex;
