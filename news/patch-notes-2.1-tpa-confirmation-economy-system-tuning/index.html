@@ -70,22 +70,23 @@
     </div>
 
     <div class="post-content ms-kb-content">
-      <p>Patch 2.1 is now live on the server! This update fixes teleport combat abuses, makes player-to-player trading safer, and cleans up chest shops on mobile.</p>
+      <p>debarkak and I just pushed Patch 2.1 to the server! This update fixes teleport combat abuses, makes player-to-player trading safer, and cleans up chest shops on mobile.</p>
 <h2 id="combat--teleports">Combat &amp; Teleports</h2>
 <ul>
 <li><strong>Accept Required:</strong> <code>/tpa</code> requests need to be accepted with <code>/tpaccept</code> within 60 seconds.</li>
 <li><strong>Combat Cancels:</strong> Moving or getting hit during the 4-second warmup will cancel your teleport so people can&rsquo;t warp away in the middle of a fight.</li>
-<li><strong>Spawn-in Grace:</strong> You get 4 seconds of invulnerability when arriving so your chunks can load before mobs or traps can hit you.</li>
+<li><strong>Teleport Arrival Grace:</strong> You get 4 seconds of invulnerability right after teleporting so your chunks can load before mobs or traps can hit you.</li>
 </ul>
 <h2 id="trading--shops">Trading &amp; Shops</h2>
 <ul>
 <li><strong>Two-Step Trading:</strong> The <code>/trade &lt;player&gt;</code> window now requires both players to lock in and confirm. If someone swaps an item last second, the countdown resets by 3 seconds.</li>
 <li><strong>Mobile Touch Fixes:</strong> ChestShop text and item amounts now fit properly on mobile phone screens so buttons don&rsquo;t overlap your inventory.</li>
 </ul>
-<h2 id="bug-fixes">Bug Fixes</h2>
+<h2 id="bug-fixes--world-reminders">Bug Fixes &amp; World Reminders</h2>
 <ul>
 <li>Fixed a bug where beds placed on cold mountain peaks sometimes lost their respawn points after a server restart.</li>
-<li>Minor performance tweaks during busy hours.</li>
+<li>Cleaned up background thread ticks during peak hours.</li>
+<li>Reminder: There is no spawn protection radius on FiestaSMP. Always claim your land to stay safe and protect your chests from raiders.</li>
 </ul>
 <p>Spotted a bug? Drop a report in <code>#bug-reports</code> on our <a href="https://discord.gg/6wS2dpyX57">Discord</a>.</p>
 

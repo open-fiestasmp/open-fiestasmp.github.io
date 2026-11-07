@@ -4,10 +4,11 @@ date: 2026-10-18T16:30:00+05:30
 draft: false
 slug: "spawn-archipelago-harbor-grand-opening"
 author: "cbladeOfficial"
+coauthor: "debarkak"
 summary: "The spawn docks are built with starter crops and boat slipways. Plus, how to submit screenshots for the gallery."
 ---
 
-We finished setting up the spawn harbor docks to help everyone get moving when they first log in. Just a quick reminder: there's no spawn protection radius on FiestaSMP, so get your gear together and claim your land once you pick a spot.
+debarkak and I finished setting up the spawn harbor docks to help everyone get moving when they first log in. Just a quick reminder: there is no spawn protection radius on FiestaSMP, so grab some starter food, set sail, and claim your land to stay safe once you pick a spot.
 
 ## Spawn Docks
 
