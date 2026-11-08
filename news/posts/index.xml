@@ -9,33 +9,29 @@
     <managingEditor>debarkak@fiestasmp (FiestaSMP Newsroom)</managingEditor>
     <webMaster>fiestamg@murena.io (FiestaSMP Webmaster)</webMaster>
     <copyright>&#169; 2019 - 2026 debarkak &#8226; 2026+ FiestaSMP Team</copyright>
-    <lastBuildDate>Sun, 18 Oct 2026 16:30:00 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 13:28:00 +0000</lastBuildDate>
     
     <atom:link href="https://open-fiestasmp.github.io/news/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Spawn Docks &amp; Screenshot Submissions</title>
-      <link>https://open-fiestasmp.github.io/news/spawn-archipelago-harbor-grand-opening/</link>
-      <pubDate>Sun, 18 Oct 2026 16:30:00 +0530</pubDate>
-      <dc:creator>cbladeOfficial &amp; debarkak</dc:creator>
-      <guid isPermaLink="true">https://open-fiestasmp.github.io/news/spawn-archipelago-harbor-grand-opening/</guid>
-      <description>The spawn docks are built with starter crops and boat slipways. Plus, how to submit screenshots for the gallery.</description>
-      <content:encoded><![CDATA[<p>debarkak and I finished setting up the spawn harbor docks to help everyone get moving when they first log in. Just a quick reminder: there is no spawn protection radius on FiestaSMP, so grab some starter food, set sail, and claim your land to stay safe once you pick a spot.</p>
-<h2 id="spawn-docks">Spawn Docks</h2>
+      <title>Test article</title>
+      <link>https://open-fiestasmp.github.io/news/test-article/</link>
+      <pubDate>Sun, 08 Nov 2026 13:28:00 +0000</pubDate>
+      <dc:creator>cbladeOfficial</dc:creator>
+      <guid isPermaLink="true">https://open-fiestasmp.github.io/news/test-article/</guid>
+      <description>&lt;p&gt;Write your announcement or update details here&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;update-highlights&#34;&gt;Update Highlights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;First feature:&lt;/strong&gt; Details about the new addition.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Second feature:&lt;/strong&gt; Another important fix or balance change.&lt;/li&gt;
+&lt;/ul&gt;</description>
+      <content:encoded><![CDATA[<p>Write your announcement or update details here&hellip;</p>
+<h2 id="update-highlights">Update Highlights</h2>
 <ul>
-<li><strong>Boat Slipways:</strong> Wooden docks where you can place boats and sail out across the ocean.</li>
-<li><strong>Starter Crops:</strong> Public wheat, carrot, and potato patches for quick food. Replant whatever you harvest so the next person doesn&rsquo;t starve.</li>
-<li><strong>Nether Access:</strong> Public stairway going up to the Nether portal to make traveling long distances easier.</li>
+<li><strong>First feature:</strong> Details about the new addition.</li>
+<li><strong>Second feature:</strong> Another important fix or balance change.</li>
 </ul>
-<h2 id="submit-your-screenshots-to-the-gallery">Submit Your Screenshots to the Gallery</h2>
-<p>We show off community builds, bases, and fun moments in our <a href="/gallery.html">Gallery</a>.</p>
-<p>Want your base or clan build shown on the site?</p>
-<ol>
-<li>Press <code>F1</code> in-game to turn off your HUD and chat.</li>
-<li>Take a clean screenshot.</li>
-<li>Drop it in <code>#media</code> on <a href="https://discord.gg/6wS2dpyX57">Discord</a> or send it through our <a href="/contactsupport.html">Support Form</a> with your in-game name.</li>
-</ol>
 ]]></content:encoded>
     </item>
     

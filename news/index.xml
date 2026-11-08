@@ -9,10 +9,31 @@
     <managingEditor>debarkak@fiestasmp (FiestaSMP Newsroom)</managingEditor>
     <webMaster>fiestamg@murena.io (FiestaSMP Webmaster)</webMaster>
     <copyright>&#169; 2019 - 2026 debarkak &#8226; 2026+ FiestaSMP Team</copyright>
-    
+    <lastBuildDate>Sun, 08 Nov 2026 13:28:00 +0000</lastBuildDate>
     
     <atom:link href="https://open-fiestasmp.github.io/news/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Test article</title>
+      <link>https://open-fiestasmp.github.io/news/test-article/</link>
+      <pubDate>Sun, 08 Nov 2026 13:28:00 +0000</pubDate>
+      <dc:creator>cbladeOfficial</dc:creator>
+      <guid isPermaLink="true">https://open-fiestasmp.github.io/news/test-article/</guid>
+      <description>&lt;p&gt;Write your announcement or update details here&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;update-highlights&#34;&gt;Update Highlights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;First feature:&lt;/strong&gt; Details about the new addition.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Second feature:&lt;/strong&gt; Another important fix or balance change.&lt;/li&gt;
+&lt;/ul&gt;</description>
+      <content:encoded><![CDATA[<p>Write your announcement or update details here&hellip;</p>
+<h2 id="update-highlights">Update Highlights</h2>
+<ul>
+<li><strong>First feature:</strong> Details about the new addition.</li>
+<li><strong>Second feature:</strong> Another important fix or balance change.</li>
+</ul>
+]]></content:encoded>
+    </item>
     
   </channel>
 </rss>
