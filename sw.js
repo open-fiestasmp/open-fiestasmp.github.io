@@ -1,11 +1,11 @@
 // FiestaSMP Service Worker - Ultra-lightweight Offline & Low-Bandwidth Acceleration
-const CACHE_NAME = 'fiestasmp-v20261108c';
+const CACHE_NAME = 'fiestasmp-v20261109';
 const CORE_PRECACHE = [
   '/',
   '/index.html',
   '/server-icon.webp',
-  '/assets/css/microsoft-2009.min.css?v=20261108c',
-  '/assets/js/mobile-nav.min.js?v=20261108c',
+  '/assets/css/fiesta.min.css?v=20261109',
+  '/assets/js/mobile-nav.min.js?v=20261109',
   '/assets/img/server_image_540.webp'
 ];
 

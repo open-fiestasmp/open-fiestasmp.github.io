@@ -9,10 +9,145 @@
     <managingEditor>debarkak@fiestasmp (FiestaSMP Newsroom)</managingEditor>
     <webMaster>fiestamg@murena.io (FiestaSMP Webmaster)</webMaster>
     <copyright>&#169; 2019 - 2026 debarkak &#8226; 2026+ FiestaSMP Team</copyright>
-    
+    <lastBuildDate>Mon, 09 Nov 2026 00:30:00 +0530</lastBuildDate>
     
     <atom:link href="https://open-fiestasmp.github.io/news/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Transitioning to Semi-No-Rules Survival (Effective Nov 10)</title>
+      <link>https://open-fiestasmp.github.io/news/semi-no-rules-survival-update/</link>
+      <pubDate>Mon, 09 Nov 2026 00:30:00 +0530</pubDate>
+      <dc:creator>cbladeOfficial &amp; debarkak</dc:creator>
+      <guid isPermaLink="true">https://open-fiestasmp.github.io/news/semi-no-rules-survival-update/</guid>
+      <description>Starting November 10, 2026, FiestaSMP is shifting to semi-no-rules. Griefing, stealing, raiding, and PvP are allowed. Cheating, doxxing, lag machines, and duping remain strictly banned.</description>
+      <content:encoded><![CDATA[<p>Starting tomorrow, <strong>November 10, 2026</strong>, FiestaSMP is shifting toward a <strong>semi-no-rules</strong> survival server.</p>
+<p>We ran polls in Discord and talked through how we want survival to feel. The server has always had a candid, rough-around-the-edges community, and handling endless claim dispute tickets when people raid each other takes away from what makes vanilla Minecraft fun. So we are opening up the wild:</p>
+<h2 id="what-is-allowed-effective-nov-10">What is Allowed (Effective Nov 10)</h2>
+<ul>
+<li><strong>Griefing &amp; Base Raiding:</strong> Raiding bases, breaking into storage rooms, and taking whatever loot you find is allowed.</li>
+<li><strong>Stealing &amp; Looting:</strong> Unlocked chests, farms, and containers anywhere in the world can be looted.</li>
+<li><strong>Open PvP:</strong> PvP is enabled across the entire map. Watch your back.</li>
+</ul>
+<h3 id="how-to-keep-your-stuff-safe">How to Keep Your Stuff Safe</h3>
+<p>Because claims no longer prevent raiding or roll back griefing, you need to rely on vanilla survival instincts:</p>
+<ol>
+<li><strong>Travel far from spawn:</strong> Don&rsquo;t build within a few hundred blocks of (0, 0) or the spawn docks. Head a few thousand blocks out.</li>
+<li><strong>Hide your base:</strong> Underground vaults, hidden entrances under natural terrain, and off-axis travel keep your base hidden.</li>
+<li><strong>Guard your coordinates:</strong> Do not stream or share your F3 screen with people you do not trust.</li>
+</ol>
+<h2 id="what-is-strictly-banned-zero-tolerance">What is Strictly Banned (Zero Tolerance)</h2>
+<p>Semi-no-rules means freedom inside normal survival gameplay—it does <strong>not</strong> mean anything goes. The following will get you <strong>permanently banned</strong> without a warning:</p>
+<ol>
+<li><strong>Cheats &amp; Hacked Clients:</strong> X-ray texture packs/mods, killaura, fly hacks, speed hacks, freecam, auto-clickers, and botting scripts like Baritone. Play with standard vanilla survival mechanics.</li>
+<li><strong>Doxxing, DDoS &amp; Real-Life Drama:</strong> Any IP grabbing, threats, harassment, or digging into players&rsquo; real-life identities (no calling people&rsquo;s families, schools, or employers). Keep everything strictly in the game.</li>
+<li><strong>Hate Speech &amp; Slurs:</strong> No racial, homophobic, or hateful slurs in public chat or on Discord.</li>
+<li><strong>Lag Machines:</strong> Intentionally building redstone lag machines, entity crammers, or chunk loaders meant to lag or crash the server.</li>
+<li><strong>Duping:</strong> Item duplication glitches and exploits. Duped items are cleared and offenders are banned.</li>
+</ol>
+<h2 id="how-to-join">How to Join</h2>
+<p>Nothing changes about how you connect:</p>
+<ul>
+<li><strong>Server Address:</strong> <code>fiesta.debarkak.xyz</code></li>
+<li><strong>Java Port:</strong> <code>25565</code> (default)</li>
+<li><strong>Bedrock Port:</strong> <code>19132</code> (default)</li>
+<li><strong>Account Types:</strong> Both premium and offline/cracked accounts can join.</li>
+</ul>
+<p>If you have any questions or want to jump into the discussion, hop into our <a href="https://discord.gg/6wS2dpyX57">Discord</a> or read the updated <a href="/terms.html">Terms &amp; Rules</a>.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Season 2 Information &amp; Getting Started</title>
+      <link>https://open-fiestasmp.github.io/news/season-2-launch-server-guide/</link>
+      <pubDate>Fri, 06 Nov 2026 15:00:00 +0530</pubDate>
+      <dc:creator>cbladeOfficial &amp; debarkak</dc:creator>
+      <guid isPermaLink="true">https://open-fiestasmp.github.io/news/season-2-launch-server-guide/</guid>
+      <description>How to connect, register your account password, set your custom skin, and start playing on Season 2.</description>
+      <content:encoded><![CDATA[<p>Season 2 is up and running. debarkak and I set up a fresh map, crossplay works between Java and Bedrock, and any account type can join. Here are the basics if you are new to the server.</p>
+<h2 id="joining-the-server">Joining the Server</h2>
+<p>You can connect on both Java and Bedrock using the same address:</p>
+<ul>
+<li><strong>Server IP:</strong> <code>fiesta.debarkak.xyz</code></li>
+<li><strong>Java Port:</strong> <code>25565</code> (default)</li>
+<li><strong>Bedrock Port:</strong> <code>19132</code> (default)</li>
+</ul>
+<h2 id="registering-your-password">Registering Your Password</h2>
+<p>When you log in for the first time, register a password so nobody else can join with your name:</p>
+<ol>
+<li>Type <code>/register &lt;password&gt; &lt;confirmPassword&gt;</code> in chat.</li>
+<li>When you log in next time, type <code>/login &lt;password&gt;</code>.</li>
+<li>If you ever want to change it later, type <code>/changepassword &lt;oldPassword&gt; &lt;newPassword&gt;</code>.</li>
+</ol>
+<p>If your game crashes or you disconnect for a minute, there is a short grace period so you will not need to re-type your password right away.</p>
+<h2 id="setting-your-skin">Setting Your Skin</h2>
+<p>If your skin shows up as a default Steve or Alex:</p>
+<ul>
+<li>Type <code>/skin &lt;username&gt;</code> to copy the skin of any Java player.</li>
+<li>Type <code>/skin &lt;directPngUrl&gt;</code> to load a skin directly from an image link.</li>
+<li>Once you set it, everyone can see it in-game and on the website gallery.</li>
+</ul>
+<h2 id="survival--bases">Survival &amp; Bases</h2>
+<p>There is no spawn protection radius on FiestaSMP. The entire map is open survival with PvP and base raiding enabled. Grab some food from the public spawn docks, head out thousands of blocks into the wilderness, hide your chests underground, and build your base away from main travel paths.</p>
+<h2 id="reset-policy">Reset Policy</h2>
+<p>Map resets happen whenever we feel like doing a fresh start. We always give a 45-day notice before any reset so you have plenty of time to finish whatever you are building. After a season shuts down, we upload the world map archive so anyone can download it and keep their builds.</p>
+<p>If you have questions or need help, join our <a href="https://discord.gg/6wS2dpyX57">Discord</a> or check out the <a href="/terms.html">Rules</a>.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Patch 2.1 Notes: Combat Teleports and Trade Window</title>
+      <link>https://open-fiestasmp.github.io/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/</link>
+      <pubDate>Thu, 05 Nov 2026 19:00:00 +0530</pubDate>
+      <dc:creator>cbladeOfficial &amp; debarkak</dc:creator>
+      <guid isPermaLink="true">https://open-fiestasmp.github.io/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/</guid>
+      <description>Added warmup and cancel-on-damage to /tpa, a two-step confirm on /trade, and mobile shop UI fixes.</description>
+      <content:encoded><![CDATA[<p>debarkak and I pushed a small update to fix combat warping, clean up trade security, and fix mobile touchscreen shop screens.</p>
+<h2 id="teleport-changes">Teleport Changes</h2>
+<ul>
+<li><strong>Teleport Warmup:</strong> <code>/tpa</code> now has a 4-second warmup. If you move or take damage while waiting to teleport, the warp cancels. This stops people from warping away in the middle of a fight.</li>
+<li><strong>Confirmation Still Required:</strong> The person you are warping to still has to type <code>/tpaccept</code> within 60 seconds.</li>
+<li><strong>Arrival Grace:</strong> When you arrive after a teleport, you get 4 seconds of invulnerability so your chunks can load before mobs can hit you.</li>
+</ul>
+<h2 id="trading-fixes">Trading Fixes</h2>
+<ul>
+<li><strong>Two-Step Trade Lock:</strong> The <code>/trade &lt;player&gt;</code> screen now requires both players to click ready and then confirm. If someone changes or swaps an item at the last second, the countdown resets to give you time to look.</li>
+<li><strong>Mobile ChestShops:</strong> Cleaned up chest shop text and quantity buttons on mobile Bedrock screens so they do not overlap your inventory.</li>
+</ul>
+<h2 id="world-reminders">World Reminders</h2>
+<ul>
+<li>Fixed a bug where beds placed on high mountain biomes sometimes lost their respawn point after a server restart.</li>
+<li>Remember: there is no spawn protection radius on FiestaSMP. Outside of hidden builds, anyone can break blocks and take items. Keep your base hidden.</li>
+</ul>
+<p>If you spot any other bugs, drop a message in <code>#bug-reports</code> on our <a href="https://discord.gg/6wS2dpyX57">Discord</a>.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Spawn Docks &amp; Submitting Screenshots</title>
+      <link>https://open-fiestasmp.github.io/news/spawn-archipelago-harbor-grand-opening/</link>
+      <pubDate>Sun, 18 Oct 2026 16:30:00 +0530</pubDate>
+      <dc:creator>cbladeOfficial &amp; debarkak</dc:creator>
+      <guid isPermaLink="true">https://open-fiestasmp.github.io/news/spawn-archipelago-harbor-grand-opening/</guid>
+      <description>Spawn docks with starter food and boat ramps, plus how to get your base screenshots on the gallery.</description>
+      <content:encoded><![CDATA[<p>debarkak and I finished setting up the spawn harbor area so new players have a decent starting point.</p>
+<h2 id="what-is-at-spawn">What is at Spawn</h2>
+<ul>
+<li><strong>Boat Ramps:</strong> Wooden ramps where you can place boats and sail off into the ocean.</li>
+<li><strong>Starter Crops:</strong> Public wheat, carrot, and potato patches for food. Replant what you take so people after you do not starve.</li>
+<li><strong>Nether Portal:</strong> A stairway up to a public Nether portal to make travel easier.</li>
+</ul>
+<p>Keep in mind that there is no spawn protection radius here. Grab what food you need, get away from spawn, and hide your chests once you pick a spot for your base.</p>
+<h2 id="submitting-screenshots-for-the-gallery">Submitting Screenshots for the Gallery</h2>
+<p>We have a <a href="/gallery.html">Gallery</a> on the website where we show screenshots of player bases, builds, and world locations taken by debarkak and server players.</p>
+<p>If you want your base on the site:</p>
+<ol>
+<li>Press <code>F1</code> in-game to hide your hotbar and chat.</li>
+<li>Take a screenshot.</li>
+<li>Send it in <code>#media</code> on our <a href="https://discord.gg/6wS2dpyX57">Discord</a> or submit it through our <a href="/contactsupport.html">Support Form</a> with your in-game name.</li>
+</ol>
+]]></content:encoded>
+    </item>
     
   </channel>
 </rss>

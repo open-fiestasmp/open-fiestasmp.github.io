@@ -49,22 +49,35 @@
         btn.addEventListener("click", function(e) {
           e.preventDefault();
           var ip = btn.getAttribute("data-ip") || btn.textContent.trim();
+          var port = btn.getAttribute("data-port");
+          var copyVal = ip;
+          var toastMsg = "Copied " + ip + (port ? " (Port: " + port + ")" : "") + " to clipboard!";
+
+          var span = btn.querySelector("span");
+          var origSpanText = span ? span.textContent : null;
+
+          function markCopied() {
+            showToast(toastMsg);
+            if (span) span.textContent = "Copied!";
+            btn.classList.add("copied");
+            setTimeout(function() {
+              if (span && origSpanText) span.textContent = origSpanText;
+              btn.classList.remove("copied");
+            }, 2000);
+          }
+
           if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(ip).then(function() {
-              showToast("Copied " + ip + " to clipboard!");
-            }).catch(function() {
-              showToast("Copied " + ip + " to clipboard!");
-            });
+            navigator.clipboard.writeText(copyVal).then(markCopied).catch(markCopied);
           } else {
             var ta = document.createElement("textarea");
-            ta.value = ip;
+            ta.value = copyVal;
             ta.style.position = "fixed";
             ta.style.opacity = "0";
             document.body.appendChild(ta);
             ta.select();
             document.execCommand("copy");
             document.body.removeChild(ta);
-            showToast("Copied " + ip + " to clipboard!");
+            markCopied();
           }
         });
       })(copyButtons[j]);
