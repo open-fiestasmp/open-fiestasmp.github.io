@@ -154,9 +154,17 @@
         }
       }
 
+      // 4.5s AbortController timeout so 2G/3G connections do not hang sockets
+      var primaryController = (typeof AbortController !== "undefined") ? new AbortController() : null;
+      var primaryTimer = primaryController ? setTimeout(function() { primaryController.abort(); }, 4500) : null;
+
       // Query primary fast status API
-      fetch("https://api.mcstatus.io/v2/status/java/fiesta.debarkak.xyz", { cache: "no-cache" })
+      fetch("https://api.mcstatus.io/v2/status/java/fiesta.debarkak.xyz", {
+        cache: "no-cache",
+        signal: primaryController ? primaryController.signal : undefined
+      })
         .then(function(res) {
+          if (primaryTimer) clearTimeout(primaryTimer);
           if (!res.ok) throw new Error("HTTP " + res.status);
           return res.json();
         })
@@ -165,10 +173,26 @@
           applyStatus(data, latency);
         })
         .catch(function() {
-          // Fallback to secondary status API
+          if (primaryTimer) clearTimeout(primaryTimer);
+          // If on slow connection or save-data, do not retry secondary API to preserve bandwidth
+          var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+          if (conn && (conn.saveData || conn.effectiveType === "2g")) {
+            if (livePing) livePing.textContent = "-- ms";
+            if (livePlayers) livePlayers.textContent = "Online";
+            if (liveMotd) liveMotd.innerHTML = "<span>fiesta &raquo; Certified Fresh</span><br><span>certified 100% organic, grass-fed, free-range Minecraft server</span>";
+            return;
+          }
+
+          // Fallback to secondary status API with 4s timeout
           var fbStart = performance.now();
-          fetch("https://api.mcsrvstat.us/3/fiesta.debarkak.xyz")
+          var fbController = (typeof AbortController !== "undefined") ? new AbortController() : null;
+          var fbTimer = fbController ? setTimeout(function() { fbController.abort(); }, 4000) : null;
+
+          fetch("https://api.mcsrvstat.us/3/fiesta.debarkak.xyz", {
+            signal: fbController ? fbController.signal : undefined
+          })
             .then(function(res) {
+              if (fbTimer) clearTimeout(fbTimer);
               if (!res.ok) throw new Error("HTTP " + res.status);
               return res.json();
             })
@@ -177,11 +201,46 @@
               applyStatus(data, latency);
             })
             .catch(function() {
+              if (fbTimer) clearTimeout(fbTimer);
               if (livePing) livePing.textContent = "-- ms";
               if (livePlayers) livePlayers.textContent = "Online";
               if (liveMotd) liveMotd.innerHTML = "<span>fiesta &raquo; Certified Fresh</span><br><span>certified 100% organic, grass-fed, free-range Minecraft server</span>";
             });
         });
+    }
+
+    // 5. On-Demand Interactive Calendar Loader (Saves 1.5MB+ bandwidth on 2G/3G)
+    var loadCalBtn = document.getElementById("load-calendar-btn");
+    var calContainer = document.getElementById("calendar-embed-container");
+    var calFacade = document.getElementById("calendar-facade");
+    if (loadCalBtn && calContainer) {
+      loadCalBtn.addEventListener("click", function() {
+        var src = loadCalBtn.getAttribute("data-src");
+        if (!src) return;
+        loadCalBtn.disabled = true;
+        loadCalBtn.innerHTML = '<span>Connecting to Google Calendar...</span>';
+        var iframe = document.createElement("iframe");
+        iframe.setAttribute("src", src);
+        iframe.setAttribute("sandbox", "allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-modals allow-storage-access-by-user-activation");
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("aria-label", "Calendar, Fiesta");
+        iframe.setAttribute("allowfullscreen", "");
+        iframe.style.width = "100%";
+        iframe.style.height = "380px";
+        iframe.style.border = "0";
+        iframe.onload = function() {
+          if (calFacade) calFacade.style.display = "none";
+        };
+        calContainer.appendChild(iframe);
+        calContainer.style.display = "block";
+      });
+    }
+
+    // 6. Register Service Worker for instant offline/2G cache acceleration
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker.register("/sw.js").catch(function() {});
+      });
     }
   }
 

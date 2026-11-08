@@ -710,6 +710,70 @@ img {
 .ms-calendar-content {
   padding: 14px;
 }
+.ms-calendar-facade {
+  background: #fdfefe;
+  border: 1px solid #d3e4f0;
+  border-radius: 4px;
+  padding: 16px 20px;
+}
+.ms-calendar-quick-events {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 14px 0 16px 0;
+}
+.ms-calendar-event-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f4f8fb;
+  border: 1px solid #e1ecf4;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+.ms-calendar-event-badge {
+  background: linear-gradient(to bottom, #4a94cf, #276b9f);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+.ms-calendar-event-title {
+  color: #1a3952;
+  font-weight: 600;
+  flex: 1;
+}
+.ms-calendar-event-time {
+  color: #627b8c;
+  font-size: 12px;
+}
+.ms-calendar-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding-top: 6px;
+}
+.ms-load-calendar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.ms-calendar-ext-link {
+  font-size: 12px;
+  color: #0066cc;
+  font-weight: 600;
+  text-decoration: none;
+}
+.ms-calendar-ext-link:hover {
+  text-decoration: underline;
+}
 .ms-calendar-embed-wrap {
   position: relative;
   height: 380px;
@@ -1663,6 +1727,11 @@ img {
   .ms-news-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+  .ms-calendar-event-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
   }
   .ms-calendar-embed-wrap {
     height: 280px;

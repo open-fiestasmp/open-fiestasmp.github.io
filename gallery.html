@@ -10,7 +10,8 @@
   <link rel="icon" href="server-icon.webp" type="image/webp">
   <title>FiestaSMP: World Screenshot Gallery</title>
   <meta name="description" content="Screenshots, player builds, and bases from FiestaSMP Season 2.">
-  <link rel="stylesheet" href="assets/css/microsoft-2009.css?v=20261108a">
+  <link rel="preload" href="assets/css/microsoft-2009.min.css?v=20261108c" as="style">
+  <link rel="stylesheet" href="assets/css/microsoft-2009.min.css?v=20261108c">
   <link rel="alternate" type="application/rss+xml" title="FiestaSMP - News &amp; Updates" href="news/index.xml">
   <link rel="alternate" type="application/rss+xml" title="FiestaSMP - News &amp; Updates (RSS)" href="news/rss.xml">
 </head>
@@ -68,30 +69,42 @@
     <div class="ms-gallery-grid">
 
       <!-- Photo Card 1 -->
-      <article class="ms-photo-card gallery-card" data-index="0" data-img="assets/gallery/gallery_1.jpg" data-player="debarkak" data-avatar="assets/img/avatars/debarkak.png" data-date="October 14, 2026" tabindex="0" role="button" aria-label="Screenshot by debarkak">
+      <article class="ms-photo-card gallery-card" data-index="0" data-img="assets/gallery/gallery_1.webp" data-player="debarkak" data-avatar="assets/img/avatars/debarkak.png" data-date="October 14, 2026" tabindex="0" role="button" aria-label="Screenshot by debarkak">
         <div class="ms-photo-img-wrap">
-          <img src="assets/gallery/thumbs/gallery_1_thumb.jpg" alt="Screenshot by debarkak" width="480" height="361" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="assets/gallery/thumbs/gallery_1_thumb.webp" type="image/webp">
+            <img src="assets/gallery/thumbs/gallery_1_thumb.jpg" alt="Screenshot by debarkak" width="480" height="361" loading="lazy" decoding="async">
+          </picture>
         </div>
       </article>
 
       <!-- Photo Card 2 -->
-      <article class="ms-photo-card gallery-card" data-index="1" data-img="assets/gallery/gallery_2.jpg" data-player="debarkak" data-avatar="assets/img/avatars/debarkak.png" data-date="October 22, 2026" tabindex="0" role="button" aria-label="Screenshot by debarkak">
+      <article class="ms-photo-card gallery-card" data-index="1" data-img="assets/gallery/gallery_2.webp" data-player="debarkak" data-avatar="assets/img/avatars/debarkak.png" data-date="October 22, 2026" tabindex="0" role="button" aria-label="Screenshot by debarkak">
         <div class="ms-photo-img-wrap">
-          <img src="assets/gallery/thumbs/gallery_2_thumb.jpg" alt="Screenshot by debarkak" width="480" height="361" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="assets/gallery/thumbs/gallery_2_thumb.webp" type="image/webp">
+            <img src="assets/gallery/thumbs/gallery_2_thumb.jpg" alt="Screenshot by debarkak" width="480" height="361" loading="lazy" decoding="async">
+          </picture>
         </div>
       </article>
 
       <!-- Photo Card 3 -->
-      <article class="ms-photo-card gallery-card" data-index="2" data-img="assets/gallery/gallery_3.jpg" data-player="debarkak" data-avatar="assets/img/avatars/debarkak.png" data-date="November 2, 2026" tabindex="0" role="button" aria-label="Screenshot by debarkak">
+      <article class="ms-photo-card gallery-card" data-index="2" data-img="assets/gallery/gallery_3.webp" data-player="debarkak" data-avatar="assets/img/avatars/debarkak.png" data-date="November 2, 2026" tabindex="0" role="button" aria-label="Screenshot by debarkak">
         <div class="ms-photo-img-wrap">
-          <img src="assets/gallery/thumbs/gallery_3_thumb.jpg" alt="Screenshot by debarkak" width="480" height="361" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="assets/gallery/thumbs/gallery_3_thumb.webp" type="image/webp">
+            <img src="assets/gallery/thumbs/gallery_3_thumb.jpg" alt="Screenshot by debarkak" width="480" height="361" loading="lazy" decoding="async">
+          </picture>
         </div>
       </article>
 
       <!-- Photo Card 4 -->
-      <article class="ms-photo-card gallery-card" data-index="3" data-img="assets/gallery/gallery_4.jpg" data-player="debarkak" data-avatar="assets/img/avatars/debarkak.png" data-date="November 4, 2026" tabindex="0" role="button" aria-label="Screenshot by debarkak">
+      <article class="ms-photo-card gallery-card" data-index="3" data-img="assets/gallery/gallery_4.webp" data-player="debarkak" data-avatar="assets/img/avatars/debarkak.png" data-date="November 4, 2026" tabindex="0" role="button" aria-label="Screenshot by debarkak">
         <div class="ms-photo-img-wrap">
-          <img src="assets/gallery/thumbs/gallery_4_thumb.jpg" alt="Screenshot by debarkak" width="480" height="260" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="assets/gallery/thumbs/gallery_4_thumb.webp" type="image/webp">
+            <img src="assets/gallery/thumbs/gallery_4_thumb.jpg" alt="Screenshot by debarkak" width="480" height="260" loading="lazy" decoding="async">
+          </picture>
         </div>
       </article>
 
@@ -148,7 +161,7 @@
   </div>
 </div>
 
-<script src="assets/js/mobile-nav.js?v=20261107b"></script>
-<script src="assets/js/gallery-lightbox.js"></script>
+<script src="assets/js/mobile-nav.min.js?v=20261108c" defer></script>
+<script src="assets/js/gallery-lightbox.min.js?v=20261108c" defer></script>
 </body>
 </html>
