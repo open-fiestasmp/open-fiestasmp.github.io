@@ -209,34 +209,7 @@
         });
     }
 
-    // 5. On-Demand Interactive Calendar Loader (Saves 1.5MB+ bandwidth on 2G/3G)
-    var loadCalBtn = document.getElementById("load-calendar-btn");
-    var calContainer = document.getElementById("calendar-embed-container");
-    var calFacade = document.getElementById("calendar-facade");
-    if (loadCalBtn && calContainer) {
-      loadCalBtn.addEventListener("click", function() {
-        var src = loadCalBtn.getAttribute("data-src");
-        if (!src) return;
-        loadCalBtn.disabled = true;
-        loadCalBtn.innerHTML = '<span>Connecting to Google Calendar...</span>';
-        var iframe = document.createElement("iframe");
-        iframe.setAttribute("src", src);
-        iframe.setAttribute("sandbox", "allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-modals allow-storage-access-by-user-activation");
-        iframe.setAttribute("frameborder", "0");
-        iframe.setAttribute("aria-label", "Calendar, Fiesta");
-        iframe.setAttribute("allowfullscreen", "");
-        iframe.style.width = "100%";
-        iframe.style.height = "380px";
-        iframe.style.border = "0";
-        iframe.onload = function() {
-          if (calFacade) calFacade.style.display = "none";
-        };
-        calContainer.appendChild(iframe);
-        calContainer.style.display = "block";
-      });
-    }
-
-    // 6. Register Service Worker for instant offline/2G cache acceleration
+    // 5. Register Service Worker for instant offline/2G cache acceleration
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", function() {
         navigator.serviceWorker.register("/sw.js").catch(function() {});
