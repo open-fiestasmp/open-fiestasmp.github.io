@@ -1,0 +1,10 @@
+{{/* YouTube Responsive Embed Shortcode */}}
+{{ $id := .Get "id" }}
+{{ $title := .Get "title" | default "YouTube Video Player" }}
+{{ $caption := .Get "caption" }}
+<div class="ms-media-embed ms-embed-youtube">
+  <div class="ms-video-responsive">
+    <iframe src="https://www.youtube-nocookie.com/embed/{{ $id }}" title="{{ $title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+  </div>
+  {{ with $caption }}<figcaption class="ms-embed-caption">{{ . }}</figcaption>{{ end }}
+</div>

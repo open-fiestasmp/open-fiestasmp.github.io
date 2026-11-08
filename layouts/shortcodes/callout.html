@@ -1,0 +1,12 @@
+{{/* Callout Alert Box Shortcode */}}
+{{ $type := .Get "type" | default "note" | lower }}
+{{ $title := .Get "title" | default ($type | title) }}
+<div class="ms-callout ms-callout-{{ $type }}">
+  <div class="ms-callout-header">
+    <span class="ms-callout-glyph"></span>
+    <strong class="ms-callout-title">{{ $title }}</strong>
+  </div>
+  <div class="ms-callout-content">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

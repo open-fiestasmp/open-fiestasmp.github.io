@@ -1,0 +1,12 @@
+{{/* Responsive Image Embed Shortcode */}}
+{{ $src := .Get "src" }}
+{{ $caption := .Get "caption" }}
+{{ $alt := .Get "alt" | default $caption | default "Article Image" }}
+{{ $align := .Get "align" | default "center" }}
+{{ $width := .Get "width" }}
+<figure class="ms-media-figure ms-align-{{ $align }}"{{ with $width }} style="max-width: {{ . }};"{{ end }}>
+  <a href="{{ $src }}" target="_blank" rel="noopener" class="ms-media-link" title="Click to view full image">
+    <img src="{{ $src }}" alt="{{ $alt }}" class="ms-media-img" loading="lazy">
+  </a>
+  {{ with $caption }}<figcaption class="ms-embed-caption">{{ . }}</figcaption>{{ end }}
+</figure>

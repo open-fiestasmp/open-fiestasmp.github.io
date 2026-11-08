@@ -3,6 +3,29 @@
 {{ define "heading" }}News &amp; Updates{{ end }}
 
 {{ define "main" }}
+<!-- 2009 Aero RSS Feed Subscription Bar -->
+<div class="ms-rss-subscribe-bar">
+  <div class="ms-rss-badge-wrap">
+    <div class="ms-rss-icon-box" title="Official FiestaSMP RSS Feed">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="6.18" cy="17.82" r="2.18"/>
+        <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+      </svg>
+    </div>
+    <div>
+      <div class="ms-rss-text-title">FiestaSMP Official News &amp; Updates RSS Feed</div>
+      <div class="ms-rss-text-desc">Subscribe in your favorite RSS reader (Feedly, Apple News, Thunderbird, NetNewsWire) for instant server changelogs and announcements.</div>
+    </div>
+  </div>
+  <div class="ms-rss-actions">
+    <a href="/news/index.xml" class="ms-btn-aero-rss" target="_blank" title="Open RSS 2.0 XML Feed">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+      <span>RSS Feed</span>
+    </a>
+    <button class="ms-btn-aero-secondary" onclick="copyRssFeedLink(this)" title="Copy RSS Feed URL to clipboard">Copy Feed URL</button>
+  </div>
+</div>
+
 <div class="ms-news-grid">
   {{ range (where .Site.RegularPages "Section" "posts") }}
   <article class="ms-news-card">
@@ -20,4 +43,21 @@
   </article>
   {{ end }}
 </div>
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+function copyRssFeedLink(btn) {
+  const rssUrl = window.location.origin + '/news/index.xml';
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(rssUrl).then(() => {
+      const orig = btn.innerText;
+      btn.innerText = 'Copied!';
+      setTimeout(() => { btn.innerText = orig; }, 2000);
+    });
+  } else {
+    prompt('Copy this RSS Feed URL:', rssUrl);
+  }
+}
+</script>
 {{ end }}

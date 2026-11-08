@@ -1,40 +1,142 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>FiestaSMP - News &amp; Updates</title>
     <link>https://open-fiestasmp.github.io/news/</link>
-    <description>Recent content on FiestaSMP - News &amp; Updates</description>
-    <generator>Hugo</generator>
+    <description>Official news, update logs, and announcements for FiestaSMP.</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
+    <managingEditor>debarkak@fiestasmp (FiestaSMP Newsroom)</managingEditor>
+    <webMaster>fiestamg@murena.io (FiestaSMP Webmaster)</webMaster>
+    <copyright>&#169; 2019 - 2026 debarkak &#8226; 2026+ FiestaSMP Team</copyright>
     <lastBuildDate>Fri, 06 Nov 2026 15:00:00 +0530</lastBuildDate>
+    
     <atom:link href="https://open-fiestasmp.github.io/news/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>FiestaSMP Season 2 is Live</title>
       <link>https://open-fiestasmp.github.io/news/season-2-launch-server-guide/</link>
       <pubDate>Fri, 06 Nov 2026 15:00:00 +0530</pubDate>
-      <guid>https://open-fiestasmp.github.io/news/season-2-launch-server-guide/</guid>
+      <dc:creator>cbladeOfficial &amp; debarkak</dc:creator>
+      <guid isPermaLink="true">https://open-fiestasmp.github.io/news/season-2-launch-server-guide/</guid>
       <description>Season 2 is officially live! Grab the IP, register your account, and hop in.</description>
+      <content:encoded><![CDATA[<p>Season 2 is officially up and running! debarkak and I have set up a brand new world, crossplay is ready to go, and there is plenty of space for everyone to build and survive.</p>
+<h2 id="joining-the-server">Joining the Server</h2>
+<p>Both Java and Bedrock players can connect directly using:</p>
+<ul>
+<li><strong>Java IP:</strong> <code>fiesta.debarkak.xyz</code></li>
+<li><strong>Bedrock IP:</strong> <code>fiesta.debarkak.xyz</code></li>
+</ul>
+<p>Default ports apply (no port numbers needed). Any type of accounts are welcome.</p>
+<h2 id="getting-started">Getting Started</h2>
+<ol>
+<li><strong>Register:</strong> When you first join, type <code>/register &lt;password&gt; &lt;confirmPassword&gt;</code> in chat to lock your account. On your next logins, just type <code>/login &lt;password&gt;</code>.</li>
+<li><strong>Skin setup:</strong> If your skin looks like a default Steve or Alex, use <code>/skin &lt;username&gt;</code> or <code>/skin &lt;url&gt;</code> to grab your skin.</li>
+<li><strong>No spawn protection:</strong> Heads up, there is no spawn protection radius here. The world is open survival with PvP and griefing enabled right from spawn, so claim your land as soon as you find a spot for your base to stay safe.</li>
+</ol>
+<h2 id="server-features--rules">Server Features &amp; Rules</h2>
+<ul>
+<li><strong>Survival &amp; PvP:</strong> PvP and raiding are turned on. Keep your coordinates private, lock your chests, and make sure to claim your land so nobody messes with your builds.</li>
+<li><strong>Teleporting:</strong> If you send a <code>/tpa &lt;player&gt;</code>, they need to accept it with <code>/tpaccept</code>. Moving or taking hits during the short warmup cancels the teleport so people can&rsquo;t run away mid-fight.</li>
+<li><strong>Trading &amp; Shops:</strong> No fake scoreboard money or virtual economy plugins. We trade with actual items like diamonds and gold. You can trade securely with <code>/trade &lt;player&gt;</code> or set up chest shops.</li>
+<li><strong>Clans:</strong> Team up with friends using <code>/team create &lt;name&gt;</code> and <code>/team invite &lt;player&gt;</code>.</li>
+</ul>
+<h2 id="season--map-resets">Season &amp; Map Resets</h2>
+<p>Map resets happen whenever we feel like doing a fresh start, but we&rsquo;ll always give a 45-day notice before any reset happens. When the server shuts down for a reset, the world map archive will be uploaded so you can download and keep everything you built.</p>
+<p>Jump in, invite your friends, and have fun! If you run into any issues or want to hang out with the community, hop into our <a href="https://discord.gg/6wS2dpyX57">Discord</a>.</p>
+]]></content:encoded>
     </item>
+    
     <item>
       <title>Patch 2.1: Teleport Confirmation &amp; Economy Updates</title>
       <link>https://open-fiestasmp.github.io/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/</link>
       <pubDate>Thu, 05 Nov 2026 19:00:00 +0530</pubDate>
-      <guid>https://open-fiestasmp.github.io/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/</guid>
+      <dc:creator>cbladeOfficial &amp; debarkak</dc:creator>
+      <guid isPermaLink="true">https://open-fiestasmp.github.io/news/patch-notes-2.1-tpa-confirmation-economy-system-tuning/</guid>
       <description>Teleport warmup timers to stop combat escapes, safe two-step trade confirmation, and mobile touch fixes.</description>
+      <content:encoded><![CDATA[<p>debarkak and I just pushed Patch 2.1 to the server! This update fixes teleport combat abuses, makes player-to-player trading safer, and cleans up chest shops on mobile.</p>
+<h2 id="combat--teleports">Combat &amp; Teleports</h2>
+<ul>
+<li><strong>Accept Required:</strong> <code>/tpa</code> requests need to be accepted with <code>/tpaccept</code> within 60 seconds.</li>
+<li><strong>Combat Cancels:</strong> Moving or getting hit during the 4-second warmup will cancel your teleport so people can&rsquo;t warp away in the middle of a fight.</li>
+<li><strong>Teleport Arrival Grace:</strong> You get 4 seconds of invulnerability right after teleporting so your chunks can load before mobs or traps can hit you.</li>
+</ul>
+<h2 id="trading--shops">Trading &amp; Shops</h2>
+<ul>
+<li><strong>Two-Step Trading:</strong> The <code>/trade &lt;player&gt;</code> window now requires both players to lock in and confirm. If someone swaps an item last second, the countdown resets by 3 seconds.</li>
+<li><strong>Mobile Touch Fixes:</strong> ChestShop text and item amounts now fit properly on mobile phone screens so buttons don&rsquo;t overlap your inventory.</li>
+</ul>
+<h2 id="bug-fixes--world-reminders">Bug Fixes &amp; World Reminders</h2>
+<ul>
+<li>Fixed a bug where beds placed on cold mountain peaks sometimes lost their respawn points after a server restart.</li>
+<li>Cleaned up background thread ticks during peak hours.</li>
+<li>Reminder: There is no spawn protection radius on FiestaSMP. Always claim your land to stay safe and protect your chests from raiders.</li>
+</ul>
+<p>Spotted a bug? Drop a report in <code>#bug-reports</code> on our <a href="https://discord.gg/6wS2dpyX57">Discord</a>.</p>
+]]></content:encoded>
     </item>
+    
     <item>
       <title>Account Registration &amp; Skin Guide</title>
       <link>https://open-fiestasmp.github.io/news/account-protection-network-optimization-guide/</link>
       <pubDate>Sun, 25 Oct 2026 14:00:00 +0530</pubDate>
-      <guid>https://open-fiestasmp.github.io/news/account-protection-network-optimization-guide/</guid>
+      <dc:creator>cbladeOfficial &amp; debarkak</dc:creator>
+      <guid isPermaLink="true">https://open-fiestasmp.github.io/news/account-protection-network-optimization-guide/</guid>
       <description>How to register your account password, change it, and load custom skins on Java and Bedrock.</description>
+      <content:encoded><![CDATA[<p>FiestaSMP lets players join from both Java and Bedrock, and any type of accounts are welcome. debarkak and I put together this quick guide on how to register your password and get your skin showing up in-game.</p>
+<h2 id="connecting-to-the-server">Connecting to the Server</h2>
+<p>Both Java and Bedrock players can connect using:</p>
+<ul>
+<li><strong>Server IP:</strong> <code>fiesta.debarkak.xyz</code></li>
+</ul>
+<p>Default ports apply, so you don&rsquo;t need to specify any port numbers.</p>
+<h2 id="registering-your-account">Registering Your Account</h2>
+<p>When you join for the first time, you&rsquo;ll need to set up a password so nobody else can log into your name:</p>
+<ol>
+<li>Type <code>/register &lt;password&gt; &lt;confirmPassword&gt;</code> in chat.</li>
+<li>Next time you join, just type <code>/login &lt;password&gt;</code>.</li>
+<li>If you want to change your password later, type <code>/changepassword &lt;oldPassword&gt; &lt;newPassword&gt;</code>.</li>
+</ol>
+<p>If your game crashes or you briefly disconnect, you&rsquo;ll have a short grace period where you won&rsquo;t need to re-type your password.</p>
+<h2 id="setting-your-skin">Setting Your Skin</h2>
+<p>If your skin is showing as Steve or Alex, you can load your custom skin in seconds:</p>
+<ul>
+<li>Type <code>/skin &lt;username&gt;</code> to grab the skin of any Java player.</li>
+<li>Type <code>/skin &lt;directPngUrl&gt;</code> to load a skin straight from a web URL.</li>
+<li>Once set, your skin shows up for everyone in-game and on the website gallery.</li>
+</ul>
+<h2 id="bedrock-support--staying-safe">Bedrock Support &amp; Staying Safe</h2>
+<p>Bedrock players on phone, console, or Windows can join directly at <code>fiesta.debarkak.xyz</code>. Chest shops and clan commands work with normal touch taps.</p>
+<p>Keep in mind that there is no spawn protection radius on FiestaSMP. As soon as you step off the spawn docks and find a spot for your base, claim your land to stay safe.</p>
+<p>Locked out or forgot your password? Open a ticket on our <a href="https://discord.gg/6wS2dpyX57">Discord</a> or email <code>fiestamg@murena.io</code>.</p>
+]]></content:encoded>
     </item>
+    
     <item>
       <title>Spawn Docks &amp; Screenshot Submissions</title>
       <link>https://open-fiestasmp.github.io/news/spawn-archipelago-harbor-grand-opening/</link>
       <pubDate>Sun, 18 Oct 2026 16:30:00 +0530</pubDate>
-      <guid>https://open-fiestasmp.github.io/news/spawn-archipelago-harbor-grand-opening/</guid>
+      <dc:creator>cbladeOfficial &amp; debarkak</dc:creator>
+      <guid isPermaLink="true">https://open-fiestasmp.github.io/news/spawn-archipelago-harbor-grand-opening/</guid>
       <description>The spawn docks are built with starter crops and boat slipways. Plus, how to submit screenshots for the gallery.</description>
+      <content:encoded><![CDATA[<p>debarkak and I finished setting up the spawn harbor docks to help everyone get moving when they first log in. Just a quick reminder: there is no spawn protection radius on FiestaSMP, so grab some starter food, set sail, and claim your land to stay safe once you pick a spot.</p>
+<h2 id="spawn-docks">Spawn Docks</h2>
+<ul>
+<li><strong>Boat Slipways:</strong> Wooden docks where you can place boats and sail out across the ocean.</li>
+<li><strong>Starter Crops:</strong> Public wheat, carrot, and potato patches for quick food. Replant whatever you harvest so the next person doesn&rsquo;t starve.</li>
+<li><strong>Nether Access:</strong> Public stairway going up to the Nether portal to make traveling long distances easier.</li>
+</ul>
+<h2 id="submit-your-screenshots-to-the-gallery">Submit Your Screenshots to the Gallery</h2>
+<p>We show off community builds, bases, and fun moments in our <a href="/gallery.html">Gallery</a>.</p>
+<p>Want your base or clan build shown on the site?</p>
+<ol>
+<li>Press <code>F1</code> in-game to turn off your HUD and chat.</li>
+<li>Take a clean screenshot.</li>
+<li>Drop it in <code>#media</code> on <a href="https://discord.gg/6wS2dpyX57">Discord</a> or send it through our <a href="/contactsupport.html">Support Form</a> with your in-game name.</li>
+</ol>
+]]></content:encoded>
     </item>
+    
   </channel>
 </rss>

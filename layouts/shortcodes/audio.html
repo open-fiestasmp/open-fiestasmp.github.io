@@ -1,0 +1,12 @@
+{{/* Audio Embed Shortcode */}}
+{{ $src := .Get "src" }}
+{{ $title := .Get "title" | default "Audio Recording" }}
+{{ $caption := .Get "caption" }}
+<div class="ms-media-embed ms-embed-audio">
+  <div class="ms-audio-title">{{ $title }}</div>
+  <audio controls preload="metadata" style="width: 100%;">
+    <source src="{{ $src }}" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  {{ with $caption }}<figcaption class="ms-embed-caption">{{ . }}</figcaption>{{ end }}
+</div>
