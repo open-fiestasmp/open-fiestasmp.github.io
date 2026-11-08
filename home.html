@@ -74,6 +74,29 @@
           </button>
         </div>
 
+        <!-- Live Server Status & MOTD Monitor -->
+        <div class="ms-live-monitor" id="live-server-monitor">
+          <div class="ms-monitor-row-top">
+            <div class="ms-monitor-status">
+              <span class="ms-status-indicator online" id="status-dot"></span>
+              <span class="ms-status-label" id="status-state">Server Online</span>
+            </div>
+            <div class="ms-monitor-metrics">
+              <span class="ms-metric-badge" id="player-count-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                <strong id="live-players">0 / 69</strong> Players
+              </span>
+              <span class="ms-metric-badge ms-ping-badge" id="ping-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2v-5h2v5z"/></svg>
+                <span id="live-ping">... ms</span>
+              </span>
+            </div>
+          </div>
+          <div class="ms-monitor-motd" id="live-motd">
+            <span class="ms-motd-line">Loading server MOTD...</span>
+          </div>
+        </div>
+
         <div class="ms-hero-footer-note">
           Java &amp; Bedrock Crossplay &bull; Free to play &bull; Any type of accounts are welcome
         </div>
@@ -247,7 +270,7 @@
     <div class="ms-home-news-wire">
       <div style="display: flex; align-items: center; gap: 8px;">
         <span class="ms-wire-label">Status</span>
-        <span style="font-size: 11.5px; color: #444444;">Server is online &bull; Java &amp; Bedrock: fiesta.debarkak.xyz &bull; Any type of accounts are welcome</span>
+        <span style="font-size: 11.5px; color: #444444;" id="wire-status-text">Server is online &bull; Java &amp; Bedrock: fiesta.debarkak.xyz &bull; Any type of accounts are welcome</span>
       </div>
       <div>
         <a href="news/" style="font-size: 11.5px; color: #0066cc; font-weight: 600; text-decoration: none;">All news &amp; updates &rsaquo;</a>

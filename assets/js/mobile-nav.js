@@ -1,5 +1,5 @@
 /**
- * FiestaSMP - Lightweight UI Scripts (Mobile Navigation, Copy IP, Back to Top)
+ * FiestaSMP - Lightweight UI Scripts (Mobile Navigation, Copy IP, Back to Top, Live Server Stats)
  * Optimized for low memory and smooth performance on low-end hardware.
  */
 (function() {
@@ -105,6 +105,84 @@
         isTicking = true;
       }
     }, { passive: true });
+
+    // 4. Live Minecraft Server Status, MOTD, Player Count & User Latency (Ping)
+    var liveMonitor = document.getElementById("live-server-monitor");
+    if (liveMonitor) {
+      var statusDot = document.getElementById("status-dot");
+      var statusState = document.getElementById("status-state");
+      var livePlayers = document.getElementById("live-players");
+      var livePing = document.getElementById("live-ping");
+      var liveMotd = document.getElementById("live-motd");
+      var wireStatus = document.getElementById("wire-status-text");
+
+      var tStart = performance.now();
+
+      function applyStatus(data, ms) {
+        if (livePing) {
+          livePing.textContent = ms + " ms";
+        }
+
+        if (data && data.online) {
+          if (statusDot) statusDot.className = "ms-status-indicator online";
+          if (statusState) statusState.textContent = "Server Online";
+
+          var on = (data.players && typeof data.players.online === "number") ? data.players.online : 0;
+          var mx = (data.players && typeof data.players.max === "number") ? data.players.max : 69;
+
+          if (livePlayers) {
+            livePlayers.textContent = on + " / " + mx;
+          }
+
+          if (wireStatus) {
+            wireStatus.innerHTML = "Server is online (" + on + "/" + mx + " players, " + ms + "ms) &bull; Java &amp; Bedrock: fiesta.debarkak.xyz &bull; Any type of accounts are welcome";
+          }
+
+          if (liveMotd) {
+            if (data.motd && data.motd.html) {
+              liveMotd.innerHTML = data.motd.html;
+            } else if (data.motd && data.motd.clean) {
+              var clean = Array.isArray(data.motd.clean) ? data.motd.clean.join("\n") : data.motd.clean;
+              liveMotd.textContent = clean;
+            }
+          }
+        } else {
+          if (statusDot) statusDot.className = "ms-status-indicator offline";
+          if (statusState) statusState.textContent = "Offline";
+          if (livePlayers) livePlayers.textContent = "0 / 69";
+          if (liveMotd) liveMotd.textContent = "Server is currently offline or unreachable.";
+        }
+      }
+
+      // Query primary fast status API
+      fetch("https://api.mcstatus.io/v2/status/java/fiesta.debarkak.xyz", { cache: "no-cache" })
+        .then(function(res) {
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          return res.json();
+        })
+        .then(function(data) {
+          var latency = Math.round(performance.now() - tStart);
+          applyStatus(data, latency);
+        })
+        .catch(function() {
+          // Fallback to secondary status API
+          var fbStart = performance.now();
+          fetch("https://api.mcsrvstat.us/3/fiesta.debarkak.xyz")
+            .then(function(res) {
+              if (!res.ok) throw new Error("HTTP " + res.status);
+              return res.json();
+            })
+            .then(function(data) {
+              var latency = Math.round(performance.now() - fbStart);
+              applyStatus(data, latency);
+            })
+            .catch(function() {
+              if (livePing) livePing.textContent = "-- ms";
+              if (livePlayers) livePlayers.textContent = "Online";
+              if (liveMotd) liveMotd.innerHTML = "<span>fiesta &raquo; Certified Fresh</span><br><span>certified 100% organic, grass-fed, free-range Minecraft server</span>";
+            });
+        });
+    }
   }
 
   if (document.readyState === "loading") {
