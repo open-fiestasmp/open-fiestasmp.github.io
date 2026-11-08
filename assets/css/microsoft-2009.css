@@ -414,6 +414,8 @@ img {
   padding: 24px 0 18px 0;
   background-color: #ffffff;
   width: 100%;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 350px;
 }
 .ms-portal-grid {
   max-width: 1120px;
@@ -556,6 +558,8 @@ img {
   padding: 6px 0 24px 0;
   background-color: #ffffff;
   width: 100%;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 400px;
 }
 .ms-aero-window-full {
   max-width: 1080px;
@@ -1041,6 +1045,8 @@ img {
   padding: 10px 0 32px 0;
   background-color: #ffffff;
   width: 100%;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 400px;
 }
 .ms-home-news-header {
   max-width: 1120px;
@@ -1249,6 +1255,8 @@ img {
   padding: 14px 0;
   margin-top: auto;
   width: 100%;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 70px;
 }
 .ms-footer-bottom {
   max-width: 1120px;
@@ -1602,9 +1610,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(4, 14, 26, 0.92);
   z-index: 99999;
   align-items: center;
   justify-content: center;
@@ -1625,7 +1631,7 @@ img {
   background: #ffffff;
   border: 1px solid #5fa6d5;
   border-radius: 6px;
-  box-shadow: 0 16px 48px rgba(0, 40, 80, 0.5);
+  box-shadow: 0 4px 16px rgba(0, 20, 50, 0.35);
   overflow: hidden;
 }
 .lightbox-titlebar {
