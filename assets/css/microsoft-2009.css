@@ -3,7 +3,7 @@
    Handcrafted for FiestaSMP • High Performance, Low Bandwidth & Accessible
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
 
 :root {
   --bg-page: #151311;
@@ -107,6 +107,14 @@ h1, h2, h3, h4, h5, h6,
   font-family: var(--font-heading);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+strong, b {
+  font-weight: 600;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -189,7 +197,7 @@ button {
 
 .ms-brand-title {
   font-size: 1.35rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.02em;
   color: #faf7f0;
   display: block;
@@ -202,7 +210,7 @@ button {
 
 .ms-brand-subtitle {
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--text-muted);
   display: block;
   letter-spacing: 0.02em;
@@ -219,7 +227,7 @@ button {
   align-items: center;
   padding: 4px 10px;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #fef08a;
@@ -269,7 +277,7 @@ button {
   display: block;
   padding: 8px 14px;
   font-size: 0.88rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-muted);
   text-decoration: none;
   border-radius: 4px;
@@ -296,7 +304,7 @@ button {
 }
 .ms-page-header h1 {
   font-size: 1.75rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #faf7f0;
   margin-bottom: 6px;
   letter-spacing: -0.02em;
@@ -333,7 +341,7 @@ button {
 
 .ms-hero-tagline {
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--gold);
@@ -343,7 +351,7 @@ button {
 
 .ms-hero-title {
   font-size: 2.2rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.03em;
   color: #ffffff;
   margin-bottom: 12px;
@@ -396,7 +404,7 @@ button {
 
 .conn-title {
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--text-main);
@@ -408,7 +416,7 @@ button {
 .conn-port-pill {
   font-size: 0.72rem;
   font-family: var(--font-mono);
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-muted);
   background: var(--bg-inset);
   padding: 2px 6px;
@@ -425,7 +433,7 @@ button {
 .conn-address {
   font-family: var(--font-mono);
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
   word-break: break-all;
   user-select: all;
@@ -446,7 +454,7 @@ button {
   gap: 8px;
   padding: 9px 14px;
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
@@ -574,7 +582,7 @@ button {
   align-items: center;
   gap: 8px;
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-main);
 }
 
@@ -616,7 +624,7 @@ button {
 }
 .ms-metric-badge strong {
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .ms-ping-badge {
@@ -677,7 +685,7 @@ button {
   border: 1px solid var(--gold-border);
   color: #fef08a;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   padding: 3px 8px;
   border-radius: 4px;
@@ -686,7 +694,7 @@ button {
 
 .rules-alert-title {
   font-size: 1.15rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ffffff;
   margin: 0;
 }
@@ -694,7 +702,7 @@ button {
 .rules-alert-date {
   font-size: 0.8rem;
   color: var(--text-muted);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .rules-alert-grid {
@@ -719,7 +727,7 @@ button {
 
 .rules-box-title {
   font-size: 0.85rem;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 8px;
@@ -753,7 +761,7 @@ button {
   position: absolute;
   left: 0;
   color: var(--green);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.8rem;
 }
 .rules-box.banned ul li::before {
@@ -761,7 +769,7 @@ button {
   position: absolute;
   left: 0;
   color: var(--red);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.8rem;
 }
 
@@ -777,7 +785,7 @@ button {
   padding-top: 12px;
 }
 .rules-alert-link {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--gold-hover);
   display: inline-flex;
   align-items: center;
@@ -812,7 +820,7 @@ button {
   background: var(--bg-card-alt);
   padding: 10px 16px;
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--gold);
@@ -836,7 +844,7 @@ button {
 
 .ms-portal-card-title {
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ffffff;
   margin-bottom: 8px;
 }
@@ -873,7 +881,7 @@ button {
 }
 .ms-chevron-arrow {
   color: var(--gold);
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /* Gallery Showcase Strip (Homepage & gallery.html) */
@@ -892,7 +900,7 @@ button {
 
 .section-header-title {
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -907,7 +915,7 @@ button {
 
 .section-header-link {
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--gold);
 }
 
@@ -957,7 +965,7 @@ button {
   border-top: 1px solid var(--border-subtle);
 }
 .photo-card-author {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-main);
   display: flex;
   align-items: center;
@@ -1000,7 +1008,7 @@ button {
 }
 .ms-home-news-title {
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ffffff;
 }
 .ms-home-news-subtitle {
@@ -1009,7 +1017,7 @@ button {
 }
 .ms-home-news-all-link {
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--gold);
 }
 
@@ -1053,7 +1061,7 @@ button {
 
 .ms-home-news-date, .ms-news-card-date {
   font-size: 0.76rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--gold);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -1062,7 +1070,7 @@ button {
 
 .ms-home-news-card-title, .ms-news-card-title {
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.35;
   margin-bottom: 8px;
 }
@@ -1094,7 +1102,7 @@ button {
 }
 
 .ms-home-news-read-link, .ms-news-card-link {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--gold);
 }
 
@@ -1120,7 +1128,7 @@ button {
 
 .calendar-header-title {
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -1161,7 +1169,7 @@ button {
 
 .calendar-external-link {
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--gold);
   text-decoration: none;
   display: inline-flex;
@@ -1195,7 +1203,7 @@ button {
 
 .ms-kb-nav-title {
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--gold);
@@ -1232,7 +1240,7 @@ button {
 
 .ms-kb-content h2 {
   font-size: 1.35rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ffffff;
   margin: 28px 0 12px;
   padding-bottom: 8px;
@@ -1244,7 +1252,7 @@ button {
 
 .ms-kb-content h3 {
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #faf7f0;
   margin: 18px 0 8px;
 }
@@ -1324,7 +1332,7 @@ button {
 
 .ms-support-form-title {
   font-size: 1.1rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ffffff;
   margin-bottom: 8px;
 }
@@ -1353,7 +1361,7 @@ button {
   background: var(--bg-card-alt);
   padding: 12px 16px;
   font-size: 0.85rem;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--gold);
@@ -1378,7 +1386,7 @@ button {
 }
 
 .ms-dir-link-label {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-main);
 }
 .ms-dir-link-val {
@@ -1426,7 +1434,7 @@ button {
 
 .ms-rss-text-title {
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ffffff;
 }
 .ms-rss-text-desc {
@@ -1446,7 +1454,7 @@ button {
   gap: 6px;
   padding: 7px 12px;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: 4px;
   background: var(--bg-card-alt);
   border: 1px solid var(--border-medium);
@@ -1475,7 +1483,7 @@ button {
   align-items: center;
   gap: 6px;
   font-size: 0.86rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--gold);
 }
 .post-article {
@@ -1486,7 +1494,7 @@ button {
 }
 .post-header-title {
   font-size: 1.85rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ffffff;
   margin-bottom: 8px;
   line-height: 1.25;
@@ -1522,7 +1530,7 @@ button {
 .post-nav-label {
   font-size: 0.76rem;
   color: var(--gold);
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -1538,7 +1546,7 @@ button {
   border: 1px solid var(--gold);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
   font-size: 0.88rem;
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1618,7 +1626,7 @@ button {
   align-items: center;
   border-bottom: 1px solid var(--border-subtle);
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
 }
 .lightbox-close-btn {
@@ -1697,7 +1705,7 @@ button {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-muted);
 }
 .ms-footer-icon {
@@ -1742,7 +1750,7 @@ button {
 }
 .ms-gallery-toolbar-title {
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ffffff;
 }
 .ms-gallery-toolbar-sub {
