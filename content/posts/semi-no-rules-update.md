@@ -13,9 +13,12 @@ We ran polls in Discord and talked through how we want survival to feel. The ser
 
 ## What is Allowed (Effective Nov 10)
 
-- **Griefing & Base Raiding:** Raiding bases, breaking into storage rooms, and taking whatever loot you find is allowed.
-- **Stealing & Looting:** Unlocked chests, farms, and containers anywhere in the world can be looted.
-- **Open PvP:** PvP is enabled across the map outside of spawn docks. Watch your back.
+- **Griefing & Base Raiding:** Raiding rival bases, breaching defenses with TNT, and claiming whatever loot you find.
+- **Stealing & Looting:** Finding hidden chests, looting farms, and taking resources anywhere in the wild.
+- **Open-World PvP:** Combat is enabled across the map outside of spawn docks—ambushes, bounties, and team skirmishes.
+- **Free Barter & Diamond Economy:** Unrestricted player-to-player trade with physical diamonds and barter without artificial server taxes.
+- **Alliances & Clan Rivalries:** Teaming up with friends, building secret shared bases, and settling rivalries in-game.
+- **Performance & Visual Mods:** Client-side optimization mods like Sodium, Iris shaders, Lithium, OptiFine, and clean HUDs.
 
 ### How to Keep Your Stuff Safe
 
