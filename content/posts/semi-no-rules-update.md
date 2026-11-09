@@ -30,7 +30,7 @@ Semi-no-rules means freedom inside normal survival gameplay—it does **not** me
 
 1. **Cheats & Hacked Clients:** X-ray texture packs/mods, killaura, fly hacks, speed hacks, freecam, auto-clickers, and botting scripts like Baritone. Play with standard vanilla survival mechanics.
 2. **Doxxing, DDoS & Real-Life Drama:** Any IP grabbing, threats, harassment, or digging into players' real-life identities (no calling people's families, schools, or employers). Keep everything strictly in the game.
-3. **Identity Slurs & Severe Abuse:** Racial or gender-based slurs, including the n-word, bring an immediate permanent ban. Casual swearing out of frustration is allowed (though in-game warnings may remind you it is discouraged), but slurs are zero tolerance.
+3. **Identity Slurs & Hate Speech:** Racial, ethnic, or gender-based slurs and hate speech bring an immediate permanent ban. Casual swearing out of frustration is allowed (though in-game warnings may remind you it is discouraged), but slurs and targeted hate speech are zero tolerance.
 4. **Lag Machines:** Intentionally building redstone lag machines, entity crammers, or chunk loaders meant to lag or crash the server.
 5. **Duping:** Item duplication glitches and exploits. Duped items are cleared and offenders are banned.
 
