@@ -16,7 +16,7 @@ We ran polls in Discord and talked through how we want survival to feel. The ser
 - **Griefing & Base Raiding:** Raiding rival bases, breaching defenses with TNT, and claiming whatever loot you find.
 - **Stealing & Looting:** Finding hidden chests, looting farms, and taking resources anywhere in the wild.
 - **Open-World PvP:** Combat is enabled across the map outside of spawn docks—ambushes, bounties, and team skirmishes.
-- **Free Barter & Diamond Economy:** Unrestricted player-to-player trade with physical diamonds and barter without artificial server taxes.
+- **Server Economy & Free Barter:** Earn balance by selling resources with /sell and /shop, trade player surplus in /auction, send funds with /pay, or trade physical diamonds directly without server taxes.
 - **Alliances & Clan Rivalries:** Teaming up with friends, building secret shared bases, and settling rivalries in-game.
 - **Performance & Visual Mods:** Client-side optimization mods like Sodium, Iris shaders, Lithium, OptiFine, and clean HUDs.
 
@@ -47,4 +47,4 @@ Nothing changes about how you connect:
 
 When you log in, follow the in-game GUI authentication prompt to secure your username against spam bots.
 
-If you have any questions or want to jump into the discussion, hop into our [Discord](https://discord.gg/6wS2dpyX57) or read the updated [Terms & Rules](/terms.html).
+If you have any questions or want to jump into the discussion, hop into our [Discord](https://discord.gg/FKZpXS4QEe) or read the updated [Terms & Rules](/terms.html).
