@@ -40,7 +40,7 @@ Nothing changes about how you connect:
 - **Server Address:** `fiesta.debarkak.xyz`
 - **Java Port:** `25565` (default)
 - **Bedrock Port:** `19132` (default)
-- **Account Types:** Both premium and offline/cracked accounts can join.
+- **Account Types:** Both premium and offline-mode accounts can join.
 
 When you log in, follow the in-game GUI authentication prompt to secure your username against spam bots.
 

@@ -18,11 +18,11 @@ You can join on both Java and Bedrock editions:
 - **Server Address:** `fiesta.debarkak.xyz`
 - **Java Port:** `25565` (default)
 - **Bedrock Port:** `19132` (default)
-- **Accounts:** Both premium and offline/cracked accounts are supported.
+- **Accounts:** Both premium and offline-mode accounts are supported.
 
 ## First Login (In-Game GUI)
 
-When you join the server for the first time, follow the in-game GUI prompt on your screen to secure your account. We use a visual GUI menu instead of chat commands like `/register` or `/login` to keep automated spam bots from flooding the server.
+When you join the server for the first time, follow the in-game GUI prompt on your screen to secure your account. The GUI method helps stop spam bots from affecting the server's player count.
 
 ## Starting Out
 
