@@ -3,6 +3,8 @@
    Handcrafted for FiestaSMP • High Performance, Low Bandwidth & Accessible
    ========================================================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@500;600;700;800&display=swap');
+
 :root {
   --bg-page: #151311;
   --bg-container: #1c1a17;
@@ -40,7 +42,8 @@
   --red-tint: rgba(239, 68, 68, 0.12);
   --red-border: rgba(239, 68, 68, 0.35);
   
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: 'Montserrat', 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
 }
 
@@ -58,8 +61,50 @@ html {
   font-family: var(--font-sans);
   line-height: 1.55;
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   overflow-x: hidden;
   scrollbar-color: var(--border-medium) var(--bg-page);
+}
+
+h1, h2, h3, h4, h5, h6,
+.ms-brand-title,
+.ms-brand-subtitle,
+.ms-pill-badge,
+.ms-nav-link,
+.ms-hero-title,
+.ms-hero-tagline,
+.conn-title,
+.conn-btn,
+.conn-port-pill,
+.rules-alert-title,
+.rules-alert-tag,
+.ms-gallery-toolbar-title,
+.ms-gallery-toolbar-sub,
+.ms-gallery-toolbar-btn,
+.ms-home-news-title,
+.ms-home-news-subtitle,
+.ms-home-news-card-title,
+.ms-home-news-date,
+.ms-home-news-byline,
+.ms-home-news-read-link,
+.ms-news-card-title,
+.ms-news-card-date,
+.ms-news-card-author,
+.ms-news-card-link,
+.ms-rss-text-title,
+.ms-btn-aero-primary,
+.ms-btn-aero-secondary,
+.ms-btn-aero-copy,
+.ms-btn-aero-rss,
+.calendar-header-title,
+.post-header-title,
+.post-header-meta,
+.post-nav-label,
+.photo-card-info,
+.ms-footer-brand {
+  font-family: var(--font-heading);
 }
 
 body {
