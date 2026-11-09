@@ -1,4 +1,4 @@
-baseURL = 'https://open-fiestasmp.github.io/news/'
+baseURL = 'https://fiestamc.neocities.org/news/'
 title = 'FiestaSMP - News & Updates'
 languageCode = 'en-US'
 publishDir = 'news'

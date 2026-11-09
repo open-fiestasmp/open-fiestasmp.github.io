@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>FiestaSMP - News &amp; Updates</title>
-    <link>https://open-fiestasmp.github.io/news/</link>
+    <link>https://fiestamc.neocities.org/news/</link>
     <description>Official news, update logs, and announcements for FiestaSMP.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
@@ -11,15 +11,15 @@
     <copyright>&#169; 2019 - 2026 debarkak &#8226; 2026+ FiestaSMP Team</copyright>
     <lastBuildDate>Mon, 09 Nov 2026 00:30:00 +0530</lastBuildDate>
     
-    <atom:link href="https://open-fiestasmp.github.io/news/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://fiestamc.neocities.org/news/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Transitioning to Semi-No-Rules Survival (Effective Nov 10)</title>
-      <link>https://open-fiestasmp.github.io/news/semi-no-rules-survival-update/</link>
+      <link>https://fiestamc.neocities.org/news/semi-no-rules-survival-update/</link>
       <pubDate>Mon, 09 Nov 2026 00:30:00 +0530</pubDate>
       <dc:creator>cbladeOfficial</dc:creator>
-      <guid isPermaLink="true">https://open-fiestasmp.github.io/news/semi-no-rules-survival-update/</guid>
+      <guid isPermaLink="true">https://fiestamc.neocities.org/news/semi-no-rules-survival-update/</guid>
       <description>Starting November 10, 2026, FiestaSMP is shifting to semi-no-rules. Griefing, stealing, raiding, and PvP are allowed. Cheating, doxxing, slurs, lag machines, and duping remain strictly banned.</description>
       <content:encoded><![CDATA[<p>Starting tomorrow, <strong>November 10, 2026</strong>, FiestaSMP is shifting toward a <strong>semi-no-rules</strong> survival server.</p>
 <p>We ran polls in Discord and talked through how we want survival to feel. The server has always had a candid, rough-around-the-edges community, and handling endless claim dispute tickets when people raid each other takes away from what makes vanilla survival fun. So we are opening up the wild:</p>

@@ -6,12 +6,12 @@ Documentation and player web portal featuring 2009 Microsoft Aero styling, calen
 
 ## Pages
 
-- **[Home](https://open-fiestasmp.github.io/)** (`index.html` / `home.html`): Server connection specs, live status pill, screenshot, broadcast calendar, and footer links.
-- **[News & Updates](https://open-fiestasmp.github.io/news/)** (`news/index.html` / `news.html`): Hugo-powered bulletins feed with tag filters, search, and Markdown article pages.
-- **[Terms](https://open-fiestasmp.github.io/terms.html)** (`terms.html`): Server rules, allowed mechanics, anti-cheat limits, barter economy charter, and community conduct.
-- **[Gallery](https://open-fiestasmp.github.io/gallery.html)** (`gallery.html`): In-game screenshot gallery with player skin avatar attribution.
-- **[Socials](https://open-fiestasmp.github.io/socials.html)** (`socials.html`): Streaming platforms (Twitch, Kick, YouTube), communication channels (Mail, Discord, X), and GitHub repositories.
-- **[Contact / Support](https://open-fiestasmp.github.io/contactsupport.html)** (`contactsupport.html` / `support.html`): Direct mail notices, forms for ban appeals, player reports, and gallery submissions.
+- **[Home](https://fiestamc.neocities.org/)** (`index.html` / `home.html`): Server connection specs, live status pill, screenshot, broadcast calendar, and footer links.
+- **[News & Updates](https://fiestamc.neocities.org/news/)** (`news/index.html` / `news.html`): Hugo-powered bulletins feed with tag filters, search, and Markdown article pages.
+- **[Terms](https://fiestamc.neocities.org/terms.html)** (`terms.html`): Server rules, allowed mechanics, anti-cheat limits, barter economy charter, and community conduct.
+- **[Gallery](https://fiestamc.neocities.org/gallery.html)** (`gallery.html`): In-game screenshot gallery with player skin avatar attribution.
+- **[Socials](https://fiestamc.neocities.org/socials.html)** (`socials.html`): Streaming platforms (Twitch, Kick, YouTube), communication channels (Mail, Discord, X), and GitHub repositories.
+- **[Contact / Support](https://fiestamc.neocities.org/contactsupport.html)** (`contactsupport.html` / `support.html`): Direct mail notices, forms for ban appeals, player reports, and gallery submissions.
 
 ## Creating & Publishing News Posts with Markdown (Hugo)
 
