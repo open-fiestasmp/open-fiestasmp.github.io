@@ -1360,6 +1360,30 @@ button {
   line-height: 1.55;
 }
 
+.ms-support-form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.ms-support-ticket-link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--gold);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: color 0.15s ease;
+}
+
+.ms-support-ticket-link:hover {
+  color: var(--gold-hover);
+  text-decoration: underline;
+}
+
 /* Directory / Socials Page */
 .ms-directory-grid {
   display: grid;
