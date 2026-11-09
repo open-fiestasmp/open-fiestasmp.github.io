@@ -59,43 +59,59 @@
     </item>
     
     <item>
-      <title>Season 2 Information &amp; Getting Started</title>
+      <title>Season 2 Launch &amp; Map Reset</title>
       <link>https://open-fiestasmp.github.io/news/season-2-launch-server-guide/</link>
-      <pubDate>Fri, 06 Nov 2026 15:00:00 +0530</pubDate>
+      <pubDate>Thu, 06 Nov 2025 15:00:00 +0530</pubDate>
       <dc:creator>debarkak</dc:creator>
       <guid isPermaLink="true">https://open-fiestasmp.github.io/news/season-2-launch-server-guide/</guid>
-      <description>How to connect on Java and Bedrock, complete in-game GUI authentication, set custom skins, and start playing on Season 2.</description>
-      <content:encoded><![CDATA[<p>Season 2 is up and running on a fresh map with crossplay between Java and Bedrock, and any account type can join. Here are the basics if you are new to the server.</p>
-<h2 id="joining-the-server">Joining the Server</h2>
-<p>You can connect on both Java and Bedrock using the same address:</p>
+      <description>Season 2 has officially launched and the map reset is complete. Hop on fiesta.debarkak.xyz on Java or Bedrock to start fresh.</description>
+      <content:encoded><![CDATA[<p>Season 2 has officially begun! The map reset is complete and the brand new world is live.</p>
+<p>Everyone starts with an empty inventory on a completely fresh map. Here is how to join and get started:</p>
+<h2 id="server-address--ports">Server Address &amp; Ports</h2>
+<p>You can join on both Java and Bedrock editions:</p>
 <ul>
-<li><strong>Server IP:</strong> <code>fiesta.debarkak.xyz</code></li>
+<li><strong>Server Address:</strong> <code>fiesta.debarkak.xyz</code></li>
 <li><strong>Java Port:</strong> <code>25565</code> (default)</li>
 <li><strong>Bedrock Port:</strong> <code>19132</code> (default)</li>
+<li><strong>Accounts:</strong> Both premium and offline/cracked accounts are supported.</li>
 </ul>
-<p>Both premium and offline/cracked accounts can connect directly without needing special launchers.</p>
-<h2 id="account-authentication-in-game-gui">Account Authentication (In-Game GUI)</h2>
-<p>When you join the server for the first time, an in-game GUI prompt will appear on your screen to secure your account name.</p>
-<p>We use an interactive GUI menu rather than chat commands like <code>/register</code> or <code>/login</code>. This keeps automated spam bots from flooding the server and skewing player counts. Simply follow the on-screen prompt when you log in.</p>
-<h2 id="setting-your-skin">Setting Your Skin</h2>
-<p>If your skin appears as a default Steve or Alex:</p>
-<ul>
-<li>Type <code>/skin &lt;username&gt;</code> to copy the skin of any Java player.</li>
-<li>Type <code>/skin &lt;directPngUrl&gt;</code> to load a skin directly from an image link.</li>
-<li>Once set, other players will see your skin in-game and on the website gallery.</li>
-</ul>
-<h2 id="survival--bases">Survival &amp; Bases</h2>
-<p>There is no spawn protection radius on FiestaSMP. The entire map outside the starter docks is open survival with PvP and base raiding enabled. Grab starter food from the public spawn docks, head a few thousand blocks out into the wilderness, hide your chests underground, and build your base away from heavily traveled paths.</p>
-<h2 id="reset-policy">Reset Policy</h2>
-<p>Map resets happen only when the community agrees to a fresh start. We always announce resets at least 45 days in advance so everyone has time to wrap up builds. After any season shuts down, we upload the complete world map archive so anyone can download it and keep their builds forever.</p>
-<p>If you have questions or need help, join our <a href="https://discord.gg/6wS2dpyX57">Discord</a> or check out the <a href="/terms.html">Terms &amp; Rules</a>.</p>
+<h2 id="first-login-in-game-gui">First Login (In-Game GUI)</h2>
+<p>When you join the server for the first time, follow the in-game GUI prompt on your screen to secure your account. We use a visual GUI menu instead of chat commands like <code>/register</code> or <code>/login</code> to keep automated spam bots from flooding the server.</p>
+<h2 id="starting-out">Starting Out</h2>
+<p>Grab some starter food at the spawn docks, craft a boat, and head out into the wilderness to find a spot for your base.</p>
+<p>If you run into any issues or want to chat with the community, hop into our <a href="https://discord.gg/6wS2dpyX57">Discord</a>.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Season 1 Ending &amp; 46-Day Reset Notice</title>
+      <link>https://open-fiestasmp.github.io/news/season-1-map-shutdown-notice/</link>
+      <pubDate>Sun, 21 Sep 2025 18:00:00 +0530</pubDate>
+      <dc:creator>debarkak</dc:creator>
+      <guid isPermaLink="true">https://open-fiestasmp.github.io/news/season-1-map-shutdown-notice/</guid>
+      <description>Season 1 is coming to a close after 6 years and 5 months. The map has grown past 500GB, making full backups impossible, so take your final screenshots before November 6th.</description>
+      <content:encoded><![CDATA[<p>After running continuously since April 2019—a run of <strong>6 years and 5 months</strong>—Season 1 of FiestaSMP is finally coming to an end.</p>
+<p>We will be resetting the server and launching <strong>Season 2 in 46 days, on November 6, 2025</strong>.</p>
+<h2 id="the-500gb-map--world-downloads">The 500GB Map &amp; World Downloads</h2>
+<p>Over the past six-plus years, thousands of chunks have been generated and explored across the world. The server map currently sits at <strong>over 500GB</strong> in size.</p>
+<p>Because of this massive size, we unfortunately cannot back up the full world folder or provide it as a public world download. Our hosting and bandwidth simply cannot handle distributing half a terabyte of world files. We know many of you spent months or years on your builds, and we are sorry that we cannot offer an archive download for this map.</p>
+<h2 id="what-you-should-do-before-november-6th">What You Should Do Before November 6th</h2>
+<p>You have 46 days before the world is wiped clean. During this time:</p>
+<ol>
+<li><strong>Take Screenshots &amp; Clips:</strong> Press <code>F1</code> in-game and take plenty of screenshots or video walkthroughs of your bases, farms, redstone contraptions, and favorite spots.</li>
+<li><strong>Share Your Builds:</strong> Post your favorite screenshots in <code>#media</code> on our <a href="https://discord.gg/6wS2dpyX57">Discord</a> or send them through the <a href="/contactsupport.html">Support Form</a> so we can preserve them in the website <a href="/gallery.html">Gallery</a>.</li>
+<li><strong>Hang Out:</strong> Spend these final weeks finishing any projects you want to see completed or visiting other players&rsquo; builds across the map.</li>
+</ol>
+<h2 id="thank-you">Thank You</h2>
+<p>Running Season 1 for 6 years and 5 months has been an incredible journey. Thank you to everyone who built bases, traded, fought, and called FiestaSMP home since 2019.</p>
+<p>We will see you all on a fresh map on <strong>November 6th</strong> for Season 2!</p>
 ]]></content:encoded>
     </item>
     
     <item>
       <title>Spawn Docks &amp; Submitting Screenshots</title>
       <link>https://open-fiestasmp.github.io/news/spawn-archipelago-harbor-grand-opening/</link>
-      <pubDate>Sun, 18 Oct 2026 16:30:00 +0530</pubDate>
+      <pubDate>Sun, 09 Mar 2025 16:30:00 +0530</pubDate>
       <dc:creator>debarkak</dc:creator>
       <guid isPermaLink="true">https://open-fiestasmp.github.io/news/spawn-archipelago-harbor-grand-opening/</guid>
       <description>Spawn docks with starter food and boat ramps, plus how to get your base screenshots on the gallery.</description>

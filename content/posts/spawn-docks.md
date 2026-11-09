@@ -1,6 +1,6 @@
 ---
 title: "Spawn Docks & Submitting Screenshots"
-date: 2026-10-18T16:30:00+05:30
+date: 2025-03-09T16:30:00+05:30
 draft: false
 slug: "spawn-archipelago-harbor-grand-opening"
 author: "debarkak"
