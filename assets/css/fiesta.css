@@ -1451,9 +1451,14 @@ button {
 .ms-btn-aero-rss, .ms-btn-aero-copy {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
-  padding: 7px 12px;
+  height: 32px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  font-family: inherit;
   font-size: 0.8rem;
+  line-height: 1;
   font-weight: 600;
   border-radius: 4px;
   background: var(--bg-card-alt);
@@ -1461,16 +1466,25 @@ button {
   color: var(--text-main);
   text-decoration: none;
   cursor: pointer;
+  margin: 0;
+  vertical-align: middle;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 .ms-btn-aero-rss:hover, .ms-btn-aero-copy:hover {
   background: var(--bg-card-hover);
   color: #ffffff;
   text-decoration: none;
 }
+.ms-btn-aero-copy.copied {
+  background: var(--green-tint);
+  border-color: var(--green-border);
+  color: #4ade80;
+}
 .ms-btn-aero-rss svg, .ms-btn-aero-copy svg {
   width: 14px;
   height: 14px;
   fill: currentColor;
+  flex-shrink: 0;
 }
 
 /* Post Detail View */
