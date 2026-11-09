@@ -3,12 +3,11 @@ title: "Season 2 Information & Getting Started"
 date: 2026-11-06T15:00:00+05:30
 draft: false
 slug: "season-2-launch-server-guide"
-author: "cbladeOfficial"
-coauthor: "debarkak"
-summary: "How to connect, register your account password, set your custom skin, and start playing on Season 2."
+author: "debarkak"
+summary: "How to connect on Java and Bedrock, complete in-game GUI authentication, set custom skins, and start playing on Season 2."
 ---
 
-Season 2 is up and running. debarkak and I set up a fresh map, crossplay works between Java and Bedrock, and any account type can join. Here are the basics if you are new to the server.
+Season 2 is up and running on a fresh map with crossplay between Java and Bedrock, and any account type can join. Here are the basics if you are new to the server.
 
 ## Joining the Server
 
@@ -18,30 +17,28 @@ You can connect on both Java and Bedrock using the same address:
 - **Java Port:** `25565` (default)
 - **Bedrock Port:** `19132` (default)
 
-## Registering Your Password
+Both premium and offline/cracked accounts can connect directly without needing special launchers.
 
-When you log in for the first time, register a password so nobody else can join with your name:
+## Account Authentication (In-Game GUI)
 
-1. Type `/register <password> <confirmPassword>` in chat.
-2. When you log in next time, type `/login <password>`.
-3. If you ever want to change it later, type `/changepassword <oldPassword> <newPassword>`.
+When you join the server for the first time, an in-game GUI prompt will appear on your screen to secure your account name. 
 
-If your game crashes or you disconnect for a minute, there is a short grace period so you will not need to re-type your password right away.
+We use an interactive GUI menu rather than chat commands like `/register` or `/login`. This keeps automated spam bots from flooding the server and skewing player counts. Simply follow the on-screen prompt when you log in.
 
 ## Setting Your Skin
 
-If your skin shows up as a default Steve or Alex:
+If your skin appears as a default Steve or Alex:
 
 - Type `/skin <username>` to copy the skin of any Java player.
 - Type `/skin <directPngUrl>` to load a skin directly from an image link.
-- Once you set it, everyone can see it in-game and on the website gallery.
+- Once set, other players will see your skin in-game and on the website gallery.
 
 ## Survival & Bases
 
-There is no spawn protection radius on FiestaSMP. The entire map is open survival with PvP and base raiding enabled. Grab some food from the public spawn docks, head out thousands of blocks into the wilderness, hide your chests underground, and build your base away from main travel paths.
+There is no spawn protection radius on FiestaSMP. The entire map outside the starter docks is open survival with PvP and base raiding enabled. Grab starter food from the public spawn docks, head a few thousand blocks out into the wilderness, hide your chests underground, and build your base away from heavily traveled paths.
 
 ## Reset Policy
 
-Map resets happen whenever we feel like doing a fresh start. We always give a 45-day notice before any reset so you have plenty of time to finish whatever you are building. After a season shuts down, we upload the world map archive so anyone can download it and keep their builds.
+Map resets happen only when the community agrees to a fresh start. We always announce resets at least 45 days in advance so everyone has time to wrap up builds. After any season shuts down, we upload the complete world map archive so anyone can download it and keep their builds forever.
 
-If you have questions or need help, join our [Discord](https://discord.gg/6wS2dpyX57) or check out the [Rules](/terms.html).
+If you have questions or need help, join our [Discord](https://discord.gg/6wS2dpyX57) or check out the [Terms & Rules](/terms.html).
