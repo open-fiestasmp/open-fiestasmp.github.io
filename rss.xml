@@ -9,10 +9,39 @@
     <managingEditor>debarkak@fiestasmp (FiestaSMP Newsroom)</managingEditor>
     <webMaster>fiestamg@murena.io (FiestaSMP Webmaster)</webMaster>
     <copyright>&#169; 2019 - 2026 debarkak &#8226; 2026+ FiestaSMP Team</copyright>
-    <lastBuildDate>Mon, 09 Nov 2026 00:30:00 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 20:51:23 +0530</lastBuildDate>
     
     <atom:link href="https://fiestamc.neocities.org/news/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>FiestaSMP × Celunah Partnership</title>
+      <link>https://fiestamc.neocities.org/news/fiestasmp-celunah-partnership/</link>
+      <pubDate>Fri, 13 Nov 2026 20:51:23 +0530</pubDate>
+      <dc:creator>gautam652</dc:creator>
+      <guid isPermaLink="true">https://fiestamc.neocities.org/news/fiestasmp-celunah-partnership/</guid>
+      <description>We&#39;re partnering with celunah to work on smoother connections, security, and a more reliable FiestaSMP.</description>
+      <content:encoded><![CDATA[
+
+
+
+
+
+<figure class="ms-media-figure ms-align-center">
+  <a href="/assets/img/news/fiestasmp-celunah-partnership.png" target="_blank" rel="noopener" class="ms-media-link" title="Click to view full image">
+    <img src="/assets/img/news/fiestasmp-celunah-partnership.png" alt="FiestaSMP and Celunah partnership banner" class="ms-media-img" style="max-width: 100%; height: auto; display: block;" loading="lazy" decoding="async">
+  </a>
+  
+</figure>
+
+<p>hey everyone!</p>
+<p>we’re partnering with <a href="https://github.com/celunah">celunah</a> to help improve FiestaSMP.</p>
+<p>as part of this, he’s gonna provide us with a Contabo VPS in the USA. we’re planning to use it as a proxy, so players joining from different countries can hopefully have a smoother connection. it’ll also help us add another layer of security to the server.</p>
+<p>celunah will be working with us on the server itself too, helping us improve security and fix things that have been causing interruptions. we know it’s been annoying when stuff goes wrong while everyone’s trying to play, so we’re putting some work into making fiesta more reliable.</p>
+<p>it’s gonna take a bit of time to get everything set up and tested properly. we’ll keep you guys updated, and once the project is finished, we’ll make another official announcement explaining what we’ve done.</p>
+<p>thanks to celunah for helping us with this, and thanks to everyone for sticking with fiesta ❤️</p>
+]]></content:encoded>
+    </item>
     
     <item>
       <title>Transitioning to Semi-No-Rules Survival (Effective Nov 10)</title>
@@ -28,7 +57,7 @@
 <li><strong>Griefing &amp; Base Raiding:</strong> Raiding rival bases, breaching defenses with TNT, and claiming whatever loot you find.</li>
 <li><strong>Stealing &amp; Looting:</strong> Finding hidden chests, looting farms, and taking resources anywhere in the wild.</li>
 <li><strong>Open-World PvP:</strong> Combat is enabled across the map outside of spawn docks—ambushes, bounties, and team skirmishes.</li>
-<li><strong>Server Economy &amp; Free Barter:</strong> Earn balance by selling resources with /sell and /shop, trade player surplus in /auction, send funds with /pay, or trade physical diamonds directly without server taxes.</li>
+<li><strong>Free Barter &amp; Diamond Economy:</strong> Unrestricted player-to-player trade with physical diamonds and barter without artificial server taxes.</li>
 <li><strong>Alliances &amp; Clan Rivalries:</strong> Teaming up with friends, building secret shared bases, and settling rivalries in-game.</li>
 <li><strong>Performance &amp; Visual Mods:</strong> Client-side optimization mods like Sodium, Iris shaders, Lithium, OptiFine, and clean HUDs.</li>
 </ul>
@@ -57,7 +86,7 @@
 <li><strong>Account Types:</strong> Both premium and offline-mode accounts can join.</li>
 </ul>
 <p>When you log in, follow the in-game GUI authentication prompt to secure your username against spam bots.</p>
-<p>If you have any questions or want to jump into the discussion, hop into our <a href="https://discord.gg/FKZpXS4QEe">Discord</a> or read the updated <a href="/terms.html">Terms &amp; Rules</a>.</p>
+<p>If you have any questions or want to jump into the discussion, hop into our <a href="https://discord.gg/6wS2dpyX57">Discord</a> or read the updated <a href="/terms.html">Terms &amp; Rules</a>.</p>
 ]]></content:encoded>
     </item>
     

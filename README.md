@@ -42,8 +42,8 @@ hugo
 ```
 Hugo will compile your Markdown post into `news/<slug>/index.html` and update the news archive at `news/index.html`.
 
-### 3. Automatic Deployment
-Pushing your changes to GitHub triggers the automated GitHub Action (`.github/workflows/hugo.yml`) which automatically compiles Hugo and publishes the static pages to GitHub Pages.
+### 3. Publish to GitHub Pages
+GitHub Pages serves the committed files from the root of the `main` branch. After running Hugo, copy `news/index.xml` to `news/rss.xml`, `rss.xml`, and `feed.xml`, then commit and push the generated files along with the source. The primary website is hosted on Neocities; keep the GitHub Pages copy in sync with it.
 
 ## Server Connection
 
@@ -51,7 +51,7 @@ Pushing your changes to GitHub triggers the automated GitHub Action (`.github/wo
 - **Bedrock IP**: `fiesta.debarkak.xyz`
 - **Platform**: Java & Bedrock Crossplay
 - **Official Contact**: `fiestamg@murena.io`
-- **Discord**: [discord.gg/FKZpXS4QEe](https://discord.gg/FKZpXS4QEe)
+- **Discord**: [discord.gg/6wS2dpyX57](https://discord.gg/6wS2dpyX57)
 
 ## Repository Structure
 

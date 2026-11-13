@@ -9,7 +9,7 @@ import sys
 import time
 import requests
 
-API_KEY = os.environ.get("NEOCITIES_API_KEY", "129a7410d44b1f40481b65f88b8b3972")
+API_KEY = os.environ.get("NEOCITIES_API_KEY", "").strip()
 API_URL = "https://neocities.org/api/upload"
 REPO_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -35,6 +35,10 @@ def collect_files():
     return files_to_deploy
 
 def deploy(batch_size=10):
+    if not API_KEY:
+        print("NEOCITIES_API_KEY is required.", file=sys.stderr)
+        return False
+
     files = collect_files()
     total = len(files)
     print(f"Deploying {total} files to Neocities (batch size: {batch_size})...")
