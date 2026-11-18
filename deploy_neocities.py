@@ -7,10 +7,12 @@ Uploads all static web assets, HTML pages, news archives, and feeds.
 import os
 import sys
 import time
+import hashlib
 import requests
 
 API_KEY = os.environ.get("NEOCITIES_API_KEY", "").strip()
 API_URL = "https://neocities.org/api/upload"
+HASH_URL = "https://neocities.org/api/upload_hash"
 REPO_DIR = os.path.dirname(os.path.abspath(__file__))
 
 DEPLOYABLE_EXTENSIONS = (
@@ -39,11 +41,34 @@ def deploy(batch_size=10):
         print("NEOCITIES_API_KEY is required.", file=sys.stderr)
         return False
 
-    files = collect_files()
-    total = len(files)
-    print(f"Deploying {total} files to Neocities (batch size: {batch_size})...")
-
     headers = {"Authorization": f"Bearer {API_KEY}"}
+    files = collect_files()
+    hashes = {}
+    for rel_path, full_path in files:
+        with open(full_path, "rb") as fh:
+            hashes[rel_path] = hashlib.sha1(fh.read()).hexdigest()
+
+    try:
+        hash_resp = requests.post(HASH_URL, headers=headers, data=hashes, timeout=60)
+        hash_resp.raise_for_status()
+        hash_json = hash_resp.json()
+    except (requests.RequestException, ValueError) as exc:
+        print(f"Could not compare deployed files: {exc}", file=sys.stderr)
+        return False
+
+    if hash_json.get("result") != "success" or not isinstance(hash_json.get("files"), dict):
+        print(f"Neocities hash check failed: {hash_json}", file=sys.stderr)
+        return False
+
+    remote_hashes = hash_json["files"]
+    files = [(path, full_path) for path, full_path in files if not remote_hashes.get(path, False)]
+    total = len(files)
+    if total == 0:
+        print("Neocities is already up to date.")
+        return True
+
+    print(f"Deploying {total} changed files to Neocities (batch size: {batch_size})...")
+
     uploaded = 0
 
     for i in range(0, total, batch_size):

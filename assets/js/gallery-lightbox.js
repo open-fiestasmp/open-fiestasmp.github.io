@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     items.push({
       src: card.getAttribute("data-img"),
       player: card.getAttribute("data-player") || "FiestaSMP Player",
-      avatar: card.getAttribute("data-avatar") || "assets/img/avatars/debarkak.png",
+      avatar: card.getAttribute("data-avatar") || "",
       date: card.getAttribute("data-date") || ""
     });
 
@@ -59,11 +59,18 @@ document.addEventListener("DOMContentLoaded", function() {
       lbImg.alt = "Screenshot by " + item.player;
     }
     if (lbAvatar) {
-      lbAvatar.src = item.avatar;
-      lbAvatar.alt = item.player;
-      lbAvatar.onerror = function() {
-        this.src = "assets/img/avatars/debarkak.png";
-      };
+      if (item.avatar) {
+        lbAvatar.style.display = "";
+        lbAvatar.src = item.avatar;
+        lbAvatar.alt = item.player;
+        lbAvatar.onerror = function() {
+          this.style.display = "none";
+        };
+      } else {
+        lbAvatar.removeAttribute("src");
+        lbAvatar.alt = "";
+        lbAvatar.style.display = "none";
+      }
     }
     if (lbPlayer) lbPlayer.textContent = item.player;
     if (lbDate) lbDate.textContent = item.date;
