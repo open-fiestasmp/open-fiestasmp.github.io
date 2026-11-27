@@ -92,7 +92,7 @@
 
     .progress span {
       display: block;
-      width: 25%;
+      width: 43.8%;
       height: 100%;
       border: 1px solid #0055a4;
       background: linear-gradient(to bottom, #60b2f7 0%, #1682d2 46%, #0052a1 100%);
@@ -117,8 +117,10 @@
     .status-table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid #ddd; border-radius: 3px; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
     .status-table th, .status-table td { padding: 11px 12px; border-bottom: 1px solid #ddd; text-align: left; vertical-align: top; }
     .status-table tr:last-child th, .status-table tr:last-child td { border-bottom: 0; }
-    .status-table th { width: 23%; color: #404040; font-size: 13px; font-weight: 600; }
+    .status-table th { width: 21%; color: #404040; font-size: 13px; font-weight: 600; }
+    .status-table thead th:nth-child(2) { width: 13%; text-align: center; }
     .status-table td { color: #555; font-size: 13px; }
+    .status-table td.score { width: 13%; color: #0878b9; font-weight: 700; text-align: center; white-space: nowrap; }
     .status-table tbody tr:nth-child(odd) { background: #f9f9f9; }
     .status-table tbody tr:nth-child(even) { background: #fff; }
     .status-label {
@@ -179,6 +181,8 @@
       .status-table tr:last-child { border-bottom: 0; }
       .status-table th, .status-table td { padding: 0; border: 0; }
       .status-table td { margin-top: 6px; }
+      .status-table td.score { text-align: left; }
+      .status-table td.score::before { content: attr(data-label) ": "; color: #777; font-weight: 400; }
       .details { grid-template-columns: 1fr; gap: 18px; }
     }
 
@@ -208,19 +212,19 @@
   </section>
 
   <main class="container">
-    <p class="updated">Last checked · page updated: <time datetime="2026-11-27T15:09:00+05:30">27 November 2026, 15:09 IST</time></p>
+    <p class="updated">Last checked · page updated: <time datetime="2026-11-27T16:32:00+05:30">27 November 2026, 16:32 IST</time></p>
 
     <section class="summary" aria-labelledby="overall-title">
       <h2 id="overall-title">Overall progress</h2>
-      <strong class="percent">25%</strong>
+      <strong class="percent">43.8%</strong>
       <div class="summary-copy">
-        <strong>1 of 4 current workstreams complete</strong>
-        Each workstream is weighted equally.
+        <strong>Rough average of four equal workstream estimates</strong>
+        (100.0 + 25.0 + 50.0 + 0.0) ÷ 4 = 43.8%.
       </div>
-      <div class="progress" role="progressbar" aria-label="Rough progress across four current workstreams" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25">
+      <div class="progress" role="progressbar" aria-label="Rough progress across four current workstreams" aria-valuemin="0" aria-valuemax="100" aria-valuenow="43.8">
         <span></span>
       </div>
-      <p class="scope">This is a rough estimate for these four workstreams only, not a measure of all past FiestaSMP work.</p>
+      <p class="scope">Rounded to one decimal. This is a rough estimate for these four current workstreams only, not a measure of all past FiestaSMP work.</p>
     </section>
 
     <section aria-labelledby="workstreams-title">
@@ -230,30 +234,34 @@
       </div>
 
       <table class="status-table">
-        <thead><tr><th scope="col">Workstream</th><th scope="col">Current status</th></tr></thead>
+        <thead><tr><th scope="col">Workstream</th><th scope="col">Estimate</th><th scope="col">Status and evidence</th></tr></thead>
         <tbody>
           <tr>
             <th scope="row">Public world archives<br><span class="status-label complete">Complete</span></th>
+            <td class="score" data-label="Estimated completion">100.0%</td>
             <td>The Overworld, Nether, End, and maintenance archives each have a public <code>snapshot-2026-11-27-5</code> release. The older archive repository is public too.</td>
           </tr>
           <tr>
             <th scope="row">Archive verification<br><span class="status-label progressing">In progress</span></th>
+            <td class="score" data-label="Estimated completion">25.0%</td>
             <td>
-              <p>Snapshot-5 download endpoints returned HTTP 200, but the ZIPs have not had full CRC checks.</p>
+              <p>2 of 8 archive CRC checks passed: snapshot-4 End and maintenance. Snapshot-5 download endpoints returned HTTP 200, but its ZIPs have not had full CRC checks.</p>
               <ul>
-                <li>Snapshot-4 End and maintenance ZIPs passed CRC checks.</li>
                 <li>The snapshot-4 Nether check stopped when a player joined.</li>
                 <li>The snapshot-4 Overworld ZIP remains unchecked.</li>
+                <li>CRC checks remain for all four snapshot-5 ZIPs.</li>
               </ul>
             </td>
           </tr>
           <tr>
             <th scope="row">WorldTier Paper safety<br><span class="status-label progressing">In progress</span></th>
-            <td>The offload-timeout cleanup fix passed the marker fixture and is in an open draft PR. It has not been deployed; production world eviction remains disabled.</td>
+            <td class="score" data-label="Estimated completion">50.0%</td>
+            <td>Two of four estimate milestones are met: the marker fixture passed and the cleanup fix is in an open draft PR. Review/merge and deployment with post-deployment verification remain. World-tier eviction is inactive; no remote world markers were found.</td>
           </tr>
           <tr>
             <th scope="row">Oracle Main Server India / Contabo USA Server by Luna<br><span class="status-label progressing">In progress</span></th>
-            <td>Routing and latency work continues. External checks and real-client tests remain before this workstream is complete.</td>
+            <td class="score" data-label="Verified acceptance checks">0.0%</td>
+            <td>The routing investigation has narrowed the issue, but a Java status connection from Contabo USA Server by Luna timed out. The check did not determine whether Oracle cloud ingress or Luna egress is the cause. Bedrock UDP validation remains incomplete. Neither external checks nor real-client checks have passed.</td>
           </tr>
         </tbody>
       </table>
@@ -271,13 +279,14 @@
         <ul>
           <li>CRC-check snapshot-5 ZIPs and finish the pending snapshot-4 Nether and Overworld checks.</li>
           <li>Review and deploy the WorldTier cleanup fix; production world eviction remains disabled.</li>
-          <li>Finish external and real-client tests for Oracle Main Server India and Contabo USA Server by Luna.</li>
+          <li>Resolve the routing boundary and complete external and real-client checks for Oracle Main Server India and Contabo USA Server by Luna.</li>
         </ul>
       </div>
     </section>
 
     <aside class="notice">
-      <strong>Archive note.</strong> The latest archives capture saved files on disk. Autosave stayed enabled, but unsaved in-memory changes may be missing. Snapshot-5 ZIPs have not passed full integrity checks. The proxy showed 0/20 players at the last check above.
+      <strong>Runtime check.</strong> Services remained active. The last successful proxy count was 0/20 at 16:19 IST; later status probes failed to parse. The queue reported 0/100 at 16:22 IST.<br><br>
+      <strong>Archive note.</strong> The latest archives capture saved files on disk. Autosave stayed enabled, but unsaved in-memory changes may be missing. Snapshot-5 ZIPs have not passed full integrity checks.
     </aside>
 
     <footer class="footer">FiestaSMP · Status snapshot · All estimates are approximate</footer>
