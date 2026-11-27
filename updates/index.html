@@ -1,465 +1,344 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>FiestaSMP Status</title>
+  <title>Project Status · FiestaSMP</title>
   <meta name="description" content="A dated progress snapshot for four current FiestaSMP workstreams.">
   <style>
     :root {
-      color-scheme: dark;
-      --page: #111510;
-      --panel: #1b211b;
-      --panel-raised: #222a22;
-      --line: #394438;
-      --text: #f1f4ec;
-      --muted: #bac4b7;
-      --quiet: #879487;
-      --green: #a5e65b;
-      --green-deep: #547c31;
-      --amber: #f0c365;
-      --amber-bg: #3b311d;
-      --green-bg: #25351e;
-      --radius: 12px;
+      --page: #151311;
+      --container: #1c1a17;
+      --card: #23201b;
+      --card-alt: #1a1815;
+      --border: #363027;
+      --border-strong: #4a4235;
+      --text: #f2eee4;
+      --muted: #b8aea0;
+      --faint: #887e71;
+      --gold: #d97706;
+      --gold-soft: rgba(217, 119, 6, .12);
+      --green: #22c55e;
+      --green-soft: rgba(34, 197, 94, .12);
     }
 
     * { box-sizing: border-box; }
-
     html { min-width: 320px; background: var(--page); }
-
     body {
-      min-height: 100vh;
       margin: 0;
+      min-height: 100vh;
+      background: var(--page);
       color: var(--text);
-      background:
-        radial-gradient(ellipse at 50% -15%, rgba(117, 157, 70, .13), transparent 48rem),
-        var(--page);
-      font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font: 15px/1.55 Lato, "Segoe UI", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
     }
 
     .page {
-      width: min(100% - 32px, 960px);
-      margin-inline: auto;
-      padding: 38px 0 52px;
+      width: 100%;
+      max-width: 1140px;
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 0 16px 34px;
+      display: flex;
+      flex-direction: column;
     }
 
-    .masthead {
+    .site-header {
+      min-height: 73px;
       display: flex;
       align-items: center;
-      gap: 14px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--line);
+      justify-content: space-between;
+      gap: 16px;
+      padding: 15px 0 13px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .mark {
+    .brand-title {
+      margin: 0;
+      color: #faf7f0;
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -.02em;
+      line-height: 1.15;
+    }
+
+    .brand-title span { color: var(--gold); }
+    .brand-subtitle { margin: 3px 0 0; color: var(--muted); font-size: .8rem; }
+
+    .season-label {
+      padding: 5px 10px;
+      border: 1px solid rgba(217, 119, 6, .4);
+      border-radius: 4px;
+      background: var(--gold-soft);
+      color: #fef08a;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+    }
+
+    .page-heading {
+      margin: 22px 0 18px;
+      padding: 22px 20px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--card);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    .page-heading h1 { margin-bottom: 6px; color: #faf7f0; font-size: 1.75rem; font-weight: 600; letter-spacing: -.02em; line-height: 1.25; }
+    .page-heading p { max-width: 720px; margin-bottom: 0; color: var(--muted); font-size: .95rem; }
+
+    .panel {
+      margin-bottom: 18px;
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--card);
+    }
+
+    .panel-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      margin-bottom: 14px;
+    }
+
+    .panel-heading h2, .section-heading h2 { margin-bottom: 0; color: #fff; font-size: 1.08rem; font-weight: 600; }
+    .updated { margin: 0; color: var(--faint); font-size: .8rem; }
+    .updated time { color: var(--muted); }
+
+    .progress-summary {
       display: grid;
-      grid-template-columns: repeat(2, 11px);
-      grid-template-rows: repeat(2, 11px);
-      gap: 3px;
-      flex: 0 0 auto;
-      transform: rotate(-3deg);
+      grid-template-columns: 100px minmax(0, 1fr);
+      align-items: center;
+      gap: 8px 20px;
     }
 
-    .mark span { background: var(--green); border-radius: 2px; }
-    .mark span:nth-child(2) { opacity: .62; }
-    .mark span:nth-child(3) { opacity: .78; }
-    .mark span:nth-child(4) { background: #718357; }
+    .percentage { color: var(--gold); font-size: 2.7rem; font-weight: 700; letter-spacing: -.04em; line-height: 1; }
+    .progress-copy { color: var(--muted); font-size: .9rem; }
+    .progress-copy strong { display: block; margin-bottom: 2px; color: var(--text); font-size: .95rem; font-weight: 600; }
 
-    .brand-name {
-      margin: 0;
-      font-size: .9rem;
-      font-weight: 800;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    .brand-subtitle { margin: 1px 0 0; color: var(--muted); font-size: .82rem; }
-
-    .updated-top {
-      margin-left: auto;
-      color: var(--muted);
-      font-size: .8rem;
-      text-align: right;
-    }
-
-    .updated-top strong { display: block; color: var(--text); font-weight: 650; }
-
-    .intro { padding: 34px 0 24px; }
-
-    .eyebrow {
-      margin: 0 0 8px;
-      color: var(--green);
-      font-size: .76rem;
-      font-weight: 800;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      max-width: 720px;
-      margin: 0;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      letter-spacing: -.045em;
-      line-height: 1.08;
-    }
-
-    .intro-copy { max-width: 690px; margin: 13px 0 0; color: var(--muted); }
-
-    .overall {
-      padding: clamp(20px, 4vw, 32px);
-      border: 1px solid #526348;
-      border-radius: var(--radius);
-      background: linear-gradient(135deg, rgba(57, 78, 43, .55), rgba(27, 33, 27, .98) 65%);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, .18);
-    }
-
-    .overall-heading {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .overall h2, .section-title { margin: 0; font-size: 1.13rem; line-height: 1.35; }
-    .overall-kicker { margin: 4px 0 0; color: var(--muted); font-size: .88rem; }
-
-    .percentage {
-      flex: 0 0 auto;
-      color: var(--green);
-      font-size: clamp(2.3rem, 7vw, 3.8rem);
-      font-weight: 850;
-      letter-spacing: -.07em;
-      line-height: .95;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .meter {
-      height: 15px;
-      margin: 23px 0 12px;
+    .progress-track {
+      grid-column: 1 / -1;
+      height: 14px;
+      margin-top: 7px;
       overflow: hidden;
-      border: 1px solid #44503f;
+      border: 1px solid var(--border-strong);
       border-radius: 3px;
-      background: #10140f;
+      background: var(--card-alt);
     }
 
-    .meter-fill {
-      width: 25%;
-      height: 100%;
-      border-right: 2px solid #d6f4b2;
-      background: repeating-linear-gradient(135deg, var(--green) 0 9px, #8fce49 9px 18px);
-    }
-
-    .meter-caption {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      color: var(--muted);
-      font-size: .82rem;
-    }
-
-    .meter-caption strong { color: var(--text); font-weight: 650; }
-
-    .scope-note {
-      margin: 17px 0 0;
-      padding-top: 14px;
-      border-top: 1px solid rgba(186, 196, 183, .18);
-      color: var(--muted);
-      font-size: .84rem;
-    }
-
-    .section { margin-top: 34px; }
+    .progress-fill { width: 25%; height: 100%; background: var(--gold); }
+    .scope-note { grid-column: 1 / -1; margin: 1px 0 0; color: var(--faint); font-size: .82rem; }
 
     .section-heading {
       display: flex;
-      align-items: end;
+      align-items: baseline;
       justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 13px;
+      gap: 10px;
+      margin: 25px 0 11px;
     }
 
-    .section-heading p { margin: 0; color: var(--quiet); font-size: .8rem; }
+    .section-heading p { margin-bottom: 0; color: var(--faint); font-size: .8rem; }
 
-    .workstreams { display: grid; gap: 12px; }
-
+    .workstreams { display: grid; gap: 10px; }
     .workstream {
-      position: relative;
-      overflow: hidden;
-      padding: 20px 22px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--panel);
+      padding: 17px 19px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--card);
     }
 
-    .workstream::before {
-      position: absolute;
-      inset: 0 auto 0 0;
-      width: 4px;
-      background: var(--amber);
-      content: "";
-    }
-
-    .workstream.complete::before { background: var(--green); }
-
-    .workstream-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 14px;
-    }
-
-    .workstream h3 { margin: 0; font-size: 1.04rem; line-height: 1.35; }
+    .workstream-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .workstream h3 { margin: 0; color: #fff; font-size: 1rem; font-weight: 600; }
 
     .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
       flex: 0 0 auto;
-      padding: 4px 9px;
-      border: 1px solid #6e5b31;
-      border-radius: 4px;
-      background: var(--amber-bg);
-      color: #f6d88f;
-      font-size: .68rem;
-      font-weight: 800;
-      letter-spacing: .08em;
-      line-height: 1.4;
-      text-transform: uppercase;
-    }
-
-    .status::before {
-      width: 7px;
-      height: 7px;
-      border-radius: 1px;
-      background: currentColor;
-      content: "";
-    }
-
-    .complete .status {
-      border-color: #526b3d;
-      background: var(--green-bg);
-      color: #bde993;
-    }
-
-    .workstream p { margin: 12px 0 0; color: var(--muted); font-size: .91rem; }
-
-    .workstream ul { margin: 11px 0 0; padding-left: 19px; color: var(--muted); font-size: .88rem; }
-    .workstream li + li { margin-top: 5px; }
-    .workstream li::marker { color: #91b86b; }
-
-    .detail-tag {
-      display: inline-block;
-      margin: 12px 7px 0 0;
       padding: 3px 8px;
-      border: 1px solid #3d493d;
+      border: 1px solid rgba(217, 119, 6, .4);
       border-radius: 4px;
-      background: #171c17;
-      color: #c7d1c2;
-      font-size: .73rem;
-      font-weight: 650;
+      background: var(--gold-soft);
+      color: #fbbf24;
+      font-size: .72rem;
+      font-weight: 600;
+      white-space: nowrap;
     }
 
-    .lower-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 30px; }
-
-    .info-card {
-      padding: 21px 22px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--panel);
+    .status.complete {
+      border-color: rgba(34, 197, 94, .35);
+      background: var(--green-soft);
+      color: #86efac;
     }
 
-    .info-card h2 { margin: 0; font-size: 1rem; }
+    .workstream p { margin: 9px 0 0; color: var(--muted); font-size: .88rem; }
+    .workstream ul { margin: 8px 0 0; padding-left: 20px; color: var(--muted); font-size: .87rem; }
+    .workstream li + li { margin-top: 4px; }
+    code { color: #fef08a; font: .88em ui-monospace, Consolas, monospace; }
 
-    .remaining-list { margin: 11px 0 0; padding-left: 19px; color: var(--muted); font-size: .86rem; }
-    .remaining-list li + li { margin-top: 7px; }
-    .remaining-list li::marker { color: var(--amber); }
+    .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+    .detail-panel { padding: 18px 20px; border: 1px solid var(--border); border-radius: 6px; background: var(--card); }
+    .detail-panel h2 { margin-bottom: 8px; color: #fff; font-size: 1rem; font-weight: 600; }
+    .eta { margin: 0; color: #fbbf24; font-size: 1.15rem; font-weight: 600; }
+    .confidence { margin: 2px 0 0; color: var(--faint); font-size: .82rem; }
+    .detail-panel p, .detail-panel ul { margin-bottom: 0; color: var(--muted); font-size: .86rem; }
+    .detail-panel p + p { margin-top: 9px; }
+    .detail-panel ul { padding-left: 19px; }
+    .detail-panel li + li { margin-top: 6px; }
 
-    .eta-value {
-      display: block;
-      margin-top: 10px;
-      color: var(--amber);
-      font-size: clamp(1.35rem, 3vw, 1.72rem);
-      font-weight: 800;
-      letter-spacing: -.035em;
-      line-height: 1.25;
-    }
-
-    .confidence {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 3px 8px;
-      border: 1px solid #6e5b31;
+    .snapshot-note {
+      margin-top: 14px;
+      padding: 14px 17px;
+      border: 1px solid var(--border-strong);
+      border-left: 4px solid var(--gold);
       border-radius: 4px;
-      background: var(--amber-bg);
-      color: #f6d88f;
-      font-size: .69rem;
-      font-weight: 800;
-      letter-spacing: .08em;
-      text-transform: uppercase;
+      background: var(--card-alt);
     }
 
-    .info-card p { margin: 11px 0 0; color: var(--muted); font-size: .86rem; }
+    .snapshot-note h2 { margin-bottom: 4px; color: #fff; font-size: .95rem; font-weight: 600; }
+    .snapshot-note p { margin-bottom: 0; color: var(--muted); font-size: .86rem; }
 
-    .caveat {
-      grid-column: 1 / -1;
-      border-color: #655333;
-      background: #262219;
-    }
-
-    .caveat h2 { color: #f3d391; }
-
-    footer {
+    .site-footer {
       display: flex;
       justify-content: space-between;
-      gap: 14px;
-      margin-top: 25px;
-      padding-top: 17px;
-      border-top: 1px solid var(--line);
-      color: var(--quiet);
-      font-size: .77rem;
+      gap: 12px;
+      margin-top: auto;
+      padding-top: 20px;
+      color: var(--faint);
+      font-size: .78rem;
     }
 
-    @media (max-width: 640px) {
-      .page { width: min(100% - 24px, 960px); padding-top: 23px; }
-      .masthead { align-items: flex-start; gap: 11px; padding-bottom: 17px; }
-      .updated-top { max-width: 135px; font-size: .72rem; }
-      .intro { padding-top: 27px; }
-      .overall-heading { align-items: center; }
-      .meter-caption { font-size: .76rem; }
-      .workstream { padding: 17px 16px; }
-      .workstream-top { flex-direction: column; gap: 9px; }
-      .lower-grid { grid-template-columns: 1fr; }
-      .caveat { grid-column: auto; }
-      .info-card { padding: 18px; }
-      footer { flex-direction: column; gap: 5px; }
+    @media (max-width: 700px) {
+      .page { padding-right: 12px; padding-left: 12px; }
+      .site-header { min-height: 65px; }
+      .page-heading { padding: 18px 16px; }
+      .page-heading h1 { font-size: 1.45rem; }
+      .panel { padding: 16px; }
+      .progress-summary { grid-template-columns: 78px minmax(0, 1fr); gap: 8px 13px; }
+      .percentage { font-size: 2.25rem; }
+      .workstream { padding: 15px; }
+      .workstream-header { align-items: flex-start; }
+      .details-grid { grid-template-columns: 1fr; gap: 10px; }
+      .detail-panel { padding: 16px; }
+      .site-footer { flex-direction: column; gap: 4px; }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; }
+    @media (max-width: 400px) {
+      .workstream-header { flex-direction: column; gap: 7px; }
+      .updated { width: 100%; }
     }
   </style>
 </head>
 <body>
-  <main class="page">
-    <!-- Refresh this single timestamp when updating the status snapshot. -->
-    <header class="masthead">
-      <div class="mark" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="page">
+    <header class="site-header">
       <div>
-        <p class="brand-name">FiestaSMP</p>
-        <p class="brand-subtitle">Project status · current workstreams</p>
+        <p class="brand-title">Fiesta<span>SMP</span></p>
+        <p class="brand-subtitle">Project status</p>
       </div>
-      <div class="updated-top">
-        Last checked · page updated
-        <strong><time datetime="2026-11-27T15:09:00+05:30">27 November 2026, 15:09 IST</time></strong>
-      </div>
+      <span class="season-label">SEASON 2</span>
     </header>
 
-    <section class="intro" aria-labelledby="page-title">
-      <p class="eyebrow">Status snapshot</p>
-      <h1 id="page-title">Worlds, safety &amp; routing</h1>
-      <p class="intro-copy">A point-in-time view of four current FiestaSMP workstreams. Each workstream counts equally in the rough overall estimate below.</p>
-    </section>
+    <main>
+      <section class="page-heading" aria-labelledby="page-title">
+        <h1 id="page-title">World &amp; Network Progress</h1>
+        <p>Current work across public world archives, archive verification, WorldTier safety, and Oracle / Luna routing.</p>
+      </section>
 
-    <section class="overall" aria-labelledby="overall-title">
-      <div class="overall-heading">
-        <div>
+      <section class="panel" aria-labelledby="overall-title">
+        <div class="panel-heading">
           <h2 id="overall-title">Overall progress</h2>
-          <p class="overall-kicker">1 of 4 current workstreams complete</p>
+          <p class="updated">Last checked · page updated: <time datetime="2026-11-27T15:09:00+05:30">27 November 2026, 15:09 IST</time></p>
         </div>
-        <div class="percentage" aria-label="25 percent">25%</div>
-      </div>
-      <div class="meter" role="progressbar" aria-label="Rough progress across four current workstreams" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25">
-        <div class="meter-fill"></div>
-      </div>
-      <div class="meter-caption"><span>0%</span><strong>Rough estimate · equal weighting</strong><span>100%</span></div>
-      <p class="scope-note">This 25% meter reflects only these four current workstreams. It is not a measure of all past FiestaSMP work.</p>
-    </section>
-
-    <section class="section" aria-labelledby="workstreams-title">
-      <div class="section-heading">
-        <h2 class="section-title" id="workstreams-title">Workstream status</h2>
-        <p>Four current tracks</p>
-      </div>
-
-      <div class="workstreams">
-        <article class="workstream complete">
-          <div class="workstream-top">
-            <h3>Public world archives</h3>
-            <span class="status">Complete</span>
+        <div class="progress-summary">
+          <strong class="percentage">25%</strong>
+          <div class="progress-copy">
+            <strong>1 of 4 workstreams complete</strong>
+            Four current workstreams, weighted equally.
           </div>
-          <p>The Overworld, Nether, End, and maintenance archive repositories each have a public <code>snapshot-2026-11-27-5</code> release. The older archive repository is public too.</p>
-          <div>
-            <span class="detail-tag">Overworld</span>
-            <span class="detail-tag">Nether</span>
-            <span class="detail-tag">End</span>
-            <span class="detail-tag">Maintenance</span>
-            <span class="detail-tag">snapshot-2026-11-27-5</span>
+          <div class="progress-track" role="progressbar" aria-label="Rough progress across the four current workstreams" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25">
+            <div class="progress-fill"></div>
           </div>
+          <p class="scope-note">This is a rough estimate for these four workstreams only, not a measure of all past FiestaSMP work.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="workstreams-title">
+        <div class="section-heading">
+          <h2 id="workstreams-title">Workstreams</h2>
+          <p>1 complete · 3 in progress</p>
+        </div>
+
+        <div class="workstreams">
+          <article class="workstream">
+            <div class="workstream-header">
+              <h3>Public world archives</h3>
+              <span class="status complete">Complete</span>
+            </div>
+            <p>The Overworld, Nether, End, and maintenance archives each have a public <code>snapshot-2026-11-27-5</code> release. The older archive repository is public too.</p>
+          </article>
+
+          <article class="workstream">
+            <div class="workstream-header">
+              <h3>Archive verification</h3>
+              <span class="status">In progress</span>
+            </div>
+            <p>Snapshot-5 download endpoints returned HTTP 200, but their ZIP files have not had full CRC checks.</p>
+            <ul>
+              <li>Snapshot-4 End and maintenance ZIPs passed CRC checks.</li>
+              <li>The snapshot-4 Nether check stopped when a player joined.</li>
+              <li>The snapshot-4 Overworld ZIP remains unchecked.</li>
+            </ul>
+          </article>
+
+          <article class="workstream">
+            <div class="workstream-header">
+              <h3>WorldTier Paper safety</h3>
+              <span class="status">In progress</span>
+            </div>
+            <p>The offload-timeout cleanup fix passed the marker fixture and is in an open draft PR. It has not been deployed; production world eviction remains disabled.</p>
+          </article>
+
+          <article class="workstream">
+            <div class="workstream-header">
+              <h3>Oracle / Luna routing and latency</h3>
+              <span class="status">In progress</span>
+            </div>
+            <p>External and real-client checks remain before this workstream is complete.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="details-grid" aria-label="Estimate and remaining work">
+        <article class="detail-panel">
+          <h2>Rough ETA</h2>
+          <p class="eta">Weeks to a few months</p>
+          <p class="confidence">Low confidence</p>
+          <p>Depends on archive checks, PR review and deployment, plus external or real-client testing. No completion date is promised.</p>
         </article>
 
-        <article class="workstream">
-          <div class="workstream-top">
-            <h3>Archive verification</h3>
-            <span class="status">In progress</span>
-          </div>
-          <p>Snapshot-5 download endpoints returned HTTP 200. That confirms the endpoints responded; the ZIP files have not had full CRC checks.</p>
+        <article class="detail-panel">
+          <h2>What remains</h2>
           <ul>
-            <li>Snapshot-4 End and maintenance ZIPs passed CRC checks.</li>
-            <li>The snapshot-4 Nether check stopped when a player joined; its check is not complete.</li>
-            <li>The snapshot-4 Overworld ZIP remains unchecked.</li>
+            <li>CRC-check the snapshot-5 ZIPs and finish the pending Nether and Overworld checks.</li>
+            <li>Review and deploy the WorldTier cleanup fix; production eviction remains disabled.</li>
+            <li>Complete external and real-client Oracle / Luna checks.</li>
           </ul>
         </article>
+      </section>
 
-        <article class="workstream">
-          <div class="workstream-top">
-            <h3>WorldTier Paper safety</h3>
-            <span class="status">In progress</span>
-          </div>
-          <p>The offload-timeout cleanup fix passed the marker fixture and is in an open draft pull request. It has not been deployed. Production world eviction remains disabled.</p>
-        </article>
-
-        <article class="workstream">
-          <div class="workstream-top">
-            <h3>Oracle / Luna routing &amp; latency</h3>
-            <span class="status">In progress</span>
-          </div>
-          <p>External checks and real-client testing remain before this workstream can be marked complete.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="lower-grid" aria-label="Estimate and check details">
-      <article class="info-card">
-        <h2>Rough ETA</h2>
-        <strong class="eta-value">Weeks to a few months</strong>
-        <span class="confidence">Low confidence</span>
-        <p>This depends on finishing archive checks, pull request review and deployment, and external or real-client testing. No completion date is promised.</p>
-      </article>
-
-      <article class="info-card">
-        <h2>What remains</h2>
-        <ul class="remaining-list">
-          <li>CRC-check the snapshot-5 ZIPs and finish the pending snapshot-4 Nether and Overworld checks.</li>
-          <li>Review and deploy the WorldTier cleanup fix; production world eviction remains disabled.</li>
-          <li>Complete external and real-client Oracle / Luna checks.</li>
-        </ul>
-      </article>
-
-      <article class="info-card">
-        <h2>Proxy at last check</h2>
-        <p>0/20 players were shown at the check time above.</p>
-      </article>
-
-      <aside class="info-card caveat">
-        <h2>Snapshot note</h2>
-        <p>The latest archives capture saved files on disk. Autosave stayed enabled, but unsaved in-memory changes may be missing. Snapshot-5 ZIPs have not passed full integrity checks.</p>
+      <aside class="snapshot-note">
+        <h2>Archive snapshot note</h2>
+        <p>The latest archives capture saved files on disk. Autosave stayed enabled, but unsaved in-memory changes may be missing. Snapshot-5 ZIPs have not passed full integrity checks. The proxy showed 0/20 players at the last check above.</p>
       </aside>
-    </section>
+    </main>
 
-    <footer>
-      <span>FiestaSMP · Status snapshot</span>
-      <span>Four-workstream estimate</span>
+    <footer class="site-footer">
+      <span>FiestaSMP · Player-Run Minecraft Survival</span>
+      <span>Status snapshot</span>
     </footer>
-  </main>
+  </div>
 </body>
 </html>
