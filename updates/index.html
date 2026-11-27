@@ -92,7 +92,7 @@
 
     .progress span {
       display: block;
-      width: 53.1%;
+      width: 56.3%;
       height: 100%;
       border: 1px solid #0055a4;
       background: linear-gradient(to bottom, #60b2f7 0%, #1682d2 46%, #0052a1 100%);
@@ -212,16 +212,16 @@
   </section>
 
   <main class="container">
-    <p class="updated">Diagnostics checked: <time datetime="2026-11-27T16:32:00+05:30">27 November 2026, 16:32 IST</time> · Report updated: <time datetime="2026-11-27T16:37:00+05:30">27 November 2026, 16:37 IST</time></p>
+    <p class="updated">Diagnostics checked: <time datetime="2026-11-27T20:38:00+05:30">27 November 2026, 20:38 IST</time> · Report updated: <time datetime="2026-11-27T20:42:00+05:30">27 November 2026, 20:42 IST</time></p>
 
     <section class="summary" aria-labelledby="overall-title">
       <h2 id="overall-title">Overall progress</h2>
-      <strong class="percent">53.1%</strong>
+      <strong class="percent">56.3%</strong>
       <div class="summary-copy">
         <strong>Rough average of four equal workstream estimates</strong>
-        (100.0 + 62.5 + 50.0 + 0.0) / 4 = 53.1%.
+        (100.0 + 25.0 + 50.0 + 50.0) / 4 = 56.3%.
       </div>
-      <div class="progress" role="progressbar" aria-label="Rough progress across four current workstreams" aria-valuemin="0" aria-valuemax="100" aria-valuenow="53.1">
+      <div class="progress" role="progressbar" aria-label="Rough progress across four current workstreams" aria-valuemin="0" aria-valuemax="100" aria-valuenow="56.3">
         <span></span>
       </div>
       <p class="scope">Rounded to one decimal. This is a rough estimate for these four current workstreams only, not a measure of all past FiestaSMP work.</p>
@@ -230,7 +230,7 @@
     <section aria-labelledby="workstreams-title">
       <div class="section-title">
         <h2 id="workstreams-title">Workstream status</h2>
-        <span>1 complete · 2 in progress · 1 not verified</span>
+        <span>1 complete · 3 in progress</span>
       </div>
 
       <table class="status-table">
@@ -243,13 +243,11 @@
           </tr>
           <tr>
             <th scope="row">Archive verification<br><span class="status-label progressing">In progress</span></th>
-            <td class="score" data-label="Estimated completion">62.5%</td>
+            <td class="score" data-label="Estimated completion">25.0%</td>
             <td>
-              <p>5 of 8 full archive CRC checks passed: snapshot-4 End and maintenance, plus snapshot-5 End, Nether, and maintenance. Snapshot-5 download endpoints returned HTTP 200; that confirms availability, not ZIP integrity.</p>
+              <p>Two of eight full archive CRC checks are supported by retained results: snapshot-4 End and maintenance. A 17:50 report recorded 5/8, but the additional three passes have no retained per-archive results. The later 19:57 report ran no CRC checks, so it did not establish a new count. Snapshot-5 endpoints returned HTTP 200; that confirms availability, not ZIP integrity.</p>
               <ul>
-                <li>The snapshot-4 Nether check stopped when a player joined.</li>
-                <li>The snapshot-4 Overworld ZIP remains unchecked.</li>
-                <li>The snapshot-5 Overworld ZIP remains unchecked.</li>
+                <li>Six snapshot/world combinations remain without substantiated full CRC results.</li>
               </ul>
             </td>
           </tr>
@@ -259,9 +257,9 @@
             <td>Two of four estimate milestones are met: the marker fixture passed and the cleanup fix is in an open draft PR. Review/merge and deployment with post-deployment verification remain. World-tier eviction is inactive; no remote world markers were found.</td>
           </tr>
           <tr>
-            <th scope="row">Oracle Main Server India / Contabo USA Server by Luna<br><span class="status-label">Not verified</span></th>
-            <td class="score" data-label="Verified acceptance checks">0.0%</td>
-            <td>The routing investigation has narrowed the issue, but a Java status connection from Contabo USA Server by Luna timed out. The check did not determine whether Oracle cloud ingress or Luna egress is the cause. Bedrock UDP validation remains incomplete. Neither external checks nor real-client checks have passed.</td>
+            <th scope="row">Oracle Main Server India / Contabo USA Server by Luna<br><span class="status-label progressing">In progress</span></th>
+            <td class="score" data-label="Estimated completion">50.0%</td>
+            <td>Three of three host-to-host Java status probes to Contabo USA Server by Luna succeeded; the latest round trip was about 481 ms. This confirms status reachability, not player gameplay latency. The public hostname routes to Oracle Main Server India, and real-client checks remain.</td>
           </tr>
         </tbody>
       </table>
@@ -272,21 +270,21 @@
         <h2>Rough ETA</h2>
         <p class="eta">Weeks to a few months</p>
         <p class="confidence">Low confidence</p>
-        <p>Depends on archive checks, PR review and deployment, and external or real-client testing. No completion date is promised.</p>
+        <p>Depends on resolving archive checks, PR review and deployment verification, and real-client testing. No completion date is promised.</p>
       </div>
       <div>
         <h2>What remains</h2>
         <ul>
-          <li>Finish the three remaining CRC checks: snapshot-4 Nether and Overworld, plus snapshot-5 Overworld.</li>
-          <li>Review and deploy the WorldTier cleanup fix; production world eviction remains disabled.</li>
-          <li>Resolve the routing boundary and complete external and real-client checks for Oracle Main Server India and Contabo USA Server by Luna.</li>
+          <li>Resolve the archive record discrepancy and retain full CRC results for the six unverified snapshot/world combinations.</li>
+          <li>Review and merge the WorldTier PR, then deploy and verify the fix. Production world eviction remains disabled.</li>
+          <li>Complete real-client routing and latency checks. Host-to-host status probes do not measure player gameplay latency.</li>
         </ul>
       </div>
     </section>
 
     <aside class="notice">
-      <strong>Runtime check.</strong> Services remained active. A current proxy count could not be confirmed; the last successful count was 0/20 at 16:19 IST and is historical. Later status probes failed to parse. The queue last reported 0/100 at 16:22 IST (historical).<br><br>
-      <strong>Archive note.</strong> Archives capture saved files on disk, with autosave enabled at capture time; unsaved in-memory changes may be missing. Snapshot-5 End, Nether, and maintenance ZIPs passed CRC checks; its Overworld ZIP has not. HTTP 200 alone does not verify ZIP integrity.
+      <strong>Runtime check.</strong> The Oracle proxy showed 2/20 on the latest read-only status ping at 20:38 IST. This count is historical, not live.<br><br>
+      <strong>Archive note.</strong> The latest archives capture saved files on disk; autosave stayed enabled, but unsaved in-memory changes may be missing. Snapshot-5 ZIPs have not passed full integrity checks. No CRC checks were run for this report; HTTP 200 alone does not verify ZIP integrity.
     </aside>
 
     <footer class="footer">FiestaSMP · Status snapshot · All estimates are approximate</footer>
